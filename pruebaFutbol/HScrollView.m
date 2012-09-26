@@ -78,14 +78,15 @@
     }
 }
 
-- (void) scrollViewDidEndScrollingAnimation:(HScrollView *)scrollView {
+- (void) scrollViewDidEndDecelerating:(HScrollView *)scrollView {
     for (int i = 0; i < scrollView.elements.count; i++) {
         UIView *view = (UIView *)[scrollView.elements objectAtIndex:i];
         [view removeFromSuperview];
         [scrollView.superview insertSubview:view atIndex:2];
+        NSLog(@"%d", i);
     }
     if ([_userDelegate respondsToSelector:_cmd])
-            [_userDelegate scrollViewDidEndScrollingAnimation:scrollView];
+            [_userDelegate scrollViewDidEndDecelerating:scrollView];
     
 }
 
