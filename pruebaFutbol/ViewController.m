@@ -21,10 +21,22 @@
 - (void) loadView {
     [super loadView];
     CGRect screenRect = [[UIScreen mainScreen] bounds];
+    int numberOfPlayers = 14;
+    
+    CGFloat wideScroll;
+    
+    if (numberOfPlayers < 10) {
+        wideScroll = screenRect.size.height + 40;
+    }
+    else {
+        wideScroll = numberOfPlayers * 110;
+    }
+    
+ //Declaracion de scrollviews
     
     self.upScrollView = [[[HScrollView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.height, 100)]autorelease];
     self.upScrollView.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
-    self.upScrollView.contentSize = CGSizeMake(screenRect.size.height+40, 100);
+    self.upScrollView.contentSize = CGSizeMake(wideScroll, 100);
     self.upScrollView.delegate = self.upScrollView.delegate;
     
     self.downScrollView = [[[HScrollView alloc] initWithFrame:CGRectMake(0, screenRect.size.width - 120, screenRect.size.height, 100)]autorelease];
@@ -32,7 +44,7 @@
     self.downScrollView.contentSize = CGSizeMake(screenRect.size.height+40, 100);
      
     
-    int numberOfPlayers = 5;
+    
     self.dragViews = [NSMutableArray arrayWithCapacity: numberOfPlayers];
     NSMutableArray *goodFrames = [[NSMutableArray alloc] initWithCapacity:numberOfPlayers];
     NSMutableArray *badFrames = [[NSMutableArray alloc] initWithCapacity:numberOfPlayers];
@@ -52,6 +64,9 @@
     NSString *path = [bundle pathForResource:@"tile_green.png" ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
+    
+    
+    //Se agregan jugadores al scroll view
     for (int i = 0; i < numberOfPlayers; i++) {
         CGFloat xOrigin = i * 110;
         CGRect startFrame = CGRectMake(xOrigin, 0, 100, 100);
@@ -59,7 +74,8 @@
         TKDragView *dragView = [[TKDragView alloc] initWithImage:image startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:self];
         dragView.canDragMultipleDragViewsAtOnce = NO;
         dragView.canUseSameEndFrameManyTimes = NO;
-        [self.upScrollView.elements insertObject:dragView atIndex:i];
+        
+        [self.upScrollView.elements addObject:dragView];
         [self.dragViews addObject:dragView];
         [self.view insertSubview:dragView atIndex:2];
         [dragView release];
