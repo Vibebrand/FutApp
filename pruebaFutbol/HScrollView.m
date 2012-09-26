@@ -78,17 +78,15 @@
     }
 }
 
-- (void)scrollViewDidEndDragging:(HScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+- (void) scrollViewDidEndScrollingAnimation:(HScrollView *)scrollView {
     for (int i = 0; i < scrollView.elements.count; i++) {
         UIView *view = (UIView *)[scrollView.elements objectAtIndex:i];
-            [view removeFromSuperview];
-            [scrollView.superview insertSubview:view atIndex:2];
+        [view removeFromSuperview];
+        [scrollView.superview insertSubview:view atIndex:2];
     }
+    if ([_userDelegate respondsToSelector:_cmd])
+            [_userDelegate scrollViewDidEndScrollingAnimation:scrollView];
     
-    
-    if ([_userDelegate respondsToSelector:_cmd]) {
-        [_userDelegate scrollViewDidEndDragging:scrollView willDecelerate:YES];
-    }
 }
 
 @end
