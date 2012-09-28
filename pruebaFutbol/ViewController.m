@@ -21,8 +21,8 @@
 - (void) loadView {
     [super loadView];
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-    int numberOfPlayers = 14;
-    
+    int numberOfPlayers = 17;
+    float sizeOfPlayers = 50;
     CGFloat wideScroll;
     
     if (numberOfPlayers < 10) {
@@ -34,29 +34,21 @@
     
  //Declaracion de scrollviews
     
-    self.upScrollView = [[[HScrollView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.height, 100)]autorelease];
+    self.upScrollView = [[[HScrollView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.height, 50)]autorelease];
     self.upScrollView.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
-    self.upScrollView.contentSize = CGSizeMake(wideScroll, 100);
-    self.upScrollView.delegate = self.upScrollView.delegate;
+    self.upScrollView.contentSize = CGSizeMake(wideScroll-50, 50 );
+    self.upScrollView.scrollEnabled = NO;
     
-    self.downScrollView = [[[HScrollView alloc] initWithFrame:CGRectMake(0, screenRect.size.width - 120, screenRect.size.height, 100)]autorelease];
+    self.downScrollView = [[[HScrollView alloc] initWithFrame:CGRectMake(0, screenRect.size.width - 60, screenRect.size.height, 50)]autorelease];
     self.downScrollView.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
     self.downScrollView.contentSize = CGSizeMake(screenRect.size.height+40, 100);
      
-    
+    //Declaracion de dragviews
     
     self.dragViews = [NSMutableArray arrayWithCapacity: numberOfPlayers];
     NSMutableArray *goodFrames = [[NSMutableArray alloc] initWithCapacity:numberOfPlayers];
     NSMutableArray *badFrames = [[NSMutableArray alloc] initWithCapacity:numberOfPlayers];
     
-    for (int i = 0; i < numberOfPlayers; i++) {
-        CGRect endFrame = CGRectMake(6 + i * 103, 200, 100, 100);
-        CGRect badFrame = CGRectMake(6 + i * 103, 340, 100, 100);
-        
-        [goodFrames addObject:TKCGRectValue(endFrame)];
-        [badFrames addObject:TKCGRectValue(badFrame)];
-        
-    }
     
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
@@ -68,8 +60,8 @@
     
     //Se agregan jugadores al scroll view
     for (int i = 0; i < numberOfPlayers; i++) {
-        CGFloat xOrigin = i * 110;
-        CGRect startFrame = CGRectMake(xOrigin, 0, 100, 100);
+        CGFloat xOrigin = i * 60;
+        CGRect startFrame = CGRectMake(xOrigin, 0, 50, 50);
         
         TKDragView *dragView = [[TKDragView alloc] initWithImage:image startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:self];
         dragView.canDragMultipleDragViewsAtOnce = NO;
@@ -83,6 +75,20 @@
 
     [self.view insertSubview:self.upScrollView atIndex:0];
     [self.view insertSubview:self.downScrollView  atIndex:0];
+    
+    //Crear matriz para la cancha
+    int limit = ([[UIScreen mainScreen]bounds].size.width - sizeOfPlayers * 2)/sizeOfPlayers;
+    int oLimit = [[UIScreen mainScreen]bounds].size.height / sizeOfPlayers;
+    for (int i = 1; i <= limit; i++) {
+        for (int j = 0; j < oLimit; j++) {
+            float x = 10.7 + j * 53;
+            if (x <= [[UIScreen mainScreen]bounds].size.height - sizeOfPlayers) {
+                CGRect endFrame = CGRectMake(x, 3 + i * 50, sizeOfPlayers, sizeOfPlayers);
+                [goodFrames addObject:TKCGRectValue(endFrame)];
+            }
+            
+        }
+    }
 
 }
 
