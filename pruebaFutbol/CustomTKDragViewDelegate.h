@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TKDragView.h"
 
-@interface CustomTKDragViewDelegate : NSObject
+@interface CustomTKDragViewDelegate : NSObject<TKDragViewDelegate> {
+    @public
+    id<TKDragViewDelegate> _userDelegate;
+    int viewsInBar;
+    
+}
+@property (nonatomic, retain) NSMutableArray *dragViews;
 
+- (id)initWithDragviews: (NSMutableArray *)dragViews;
 @end

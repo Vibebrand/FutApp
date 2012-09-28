@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TKDragView.h"
+#import "CustomTKDragViewDelegate.h"
 
 
 @interface ViewController ()
@@ -42,12 +43,14 @@
     self.downScrollView = [[[HScrollView alloc] initWithFrame:CGRectMake(0, screenRect.size.width - 60, screenRect.size.height, 50)]autorelease];
     self.downScrollView.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
     self.downScrollView.contentSize = CGSizeMake(screenRect.size.height+40, 100);
-     
+    
     //Declaracion de dragviews
     
     self.dragViews = [NSMutableArray arrayWithCapacity: numberOfPlayers];
     NSMutableArray *goodFrames = [[NSMutableArray alloc] initWithCapacity:numberOfPlayers];
     NSMutableArray *badFrames = [[NSMutableArray alloc] initWithCapacity:numberOfPlayers];
+    
+    CustomTKDragViewDelegate *delegado = [[CustomTKDragViewDelegate alloc] init];
     
     
     self.canUseTheSameFrameManyTimes = NO;
@@ -66,12 +69,13 @@
         TKDragView *dragView = [[TKDragView alloc] initWithImage:image startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:self];
         dragView.canDragMultipleDragViewsAtOnce = NO;
         dragView.canUseSameEndFrameManyTimes = NO;
-        
+        dragView.delegate = delegado;
         [self.upScrollView.elements addObject:dragView];
         [self.dragViews addObject:dragView];
         [self.view insertSubview:dragView atIndex:2];
         [dragView release];
     }
+    delegado.dragViews = self.dragViews;
 
     [self.view insertSubview:self.upScrollView atIndex:0];
     [self.view insertSubview:self.downScrollView  atIndex:0];
