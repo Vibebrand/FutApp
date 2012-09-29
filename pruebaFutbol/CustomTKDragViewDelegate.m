@@ -38,33 +38,38 @@
     [super dealloc];
 }
 
+-(void)setDragViews:(NSMutableArray *)dragViewsArray {
+    if (dragViews != dragViewsArray) {
+        [dragViews release];
+        dragViews = [dragViewsArray retain];
+        viewsInBar = dragViews.count;
+    }
+}
+
 - (void)dragViewDidLeaveStartFrame:(TKDragView *)dragView {
-    int index = [self.dragViews indexOfObject:dragView];
-    for (int i = index + 1; i < self.dragViews.count; i++) {
+    if (viewsInBar > 0) {
+        viewsInBar--;
+    }
+    
+    for (int i = 0; i < self.dragViews.count; i++) {
         TKDragView *view = (TKDragView *)[self.dragViews objectAtIndex:i];
-        view.startFrame = CGRectMake(view.startFrame.origin.x - 60, view.startFrame.origin.y, view.startFrame.size.width, view.startFrame.size.height);
-        if (view.frame.origin.y == view.startFrame.origin.y) {
+        if (view.isAtStartFrame && view.frame.origin.x > dragView.frame.origin.x) {
+            view.startFrame = CGRectMake(view.startFrame.origin.x - 60, view.startFrame.origin.y, view.startFrame.size.width, view.startFrame.size.height);
             [view swapToStartPosition];
         }
     }
-    viewsInBar--;
-    NSLog(@"%d", viewsInBar*60);
-dragView.startFrame = CGRectMake(viewsInBar * 60, dragView.startFrame.origin.y, dragView.startFrame.size.width, dragView.startFrame.size.height);
-    [self.dragViews removeObjectAtIndex:index];
-    [self.dragViews addObject:dragView];
+    dragView.startFrame = CGRectMake(-660, dragView.startFrame.origin.y, dragView.startFrame.size.width, dragView.startFrame.size.height);
     
 }
 
 - (void)dragViewWillSwapToStartFrame:(TKDragView *)dragView {
-   /* for (int i = 0; i < self.dragViews.count; i++) {
-        TKDragView *view = (TKDragView *)[self.dragViews objectAtIndex:i];
-        if (view.frame.origin.y != view.startFrame.origin.y) {
-            CGRect temp = dragView.startFrame;
-            dragView.startFrame = view.startFrame;
-            view.startFrame = temp;
-            break;
-        }
-    }*/
+  
+    if (!dragView.isAtStartFrame || dragView.startFrame.origin.x == -660) {
+        dragView.startFrame = CGRectMake(viewsInBar * 60, dragView.startFrame.origin.y, dragView.startFrame.size.width, dragView.startFrame.size.height);
+        viewsInBar++;
+    }
+    
 }
+
 
 @end
