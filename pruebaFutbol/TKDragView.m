@@ -147,7 +147,7 @@ CGFloat TKDistanceBetweenFrames(CGRect rect1, CGRect rect2){
     
     self.startFrame = startFrame;
     
-    self.imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    self.imageView = [[[UIImageView alloc] initWithFrame:self.bounds]autorelease];
     [self.imageView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
     [self.imageView setImage:image];
     [self addSubview:self.imageView];

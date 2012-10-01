@@ -78,12 +78,35 @@
     }
 }
 
+
+-(void)scrollViewWillBeginDecelerating:(HScrollView *)scrollView {
+    for (int i = 0; i < scrollView.elements.count; i++) {
+        UIView *view = (UIView *)[scrollView.elements objectAtIndex:i];
+        if (!view.frame.origin.y) {
+            [view removeFromSuperview];
+            [scrollView insertSubview:view atIndex:0];
+        }
+    }
+    if ([_userDelegate respondsToSelector:_cmd]) {
+        [_userDelegate scrollViewWillBeginDecelerating:scrollView];
+    }
+}
+
+- (void)scrollViewDidEndDragging:(HScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    for (int i = 0; i < scrollView.elements.count; i++) {
+        UIView *view = (UIView *)[scrollView.elements objectAtIndex:i];
+        [view removeFromSuperview];
+        [scrollView.superview insertSubview:view atIndex:2];
+    }
+    if ([_userDelegate respondsToSelector:_cmd])
+        [_userDelegate scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
+}
+
 - (void) scrollViewDidEndDecelerating:(HScrollView *)scrollView {
     for (int i = 0; i < scrollView.elements.count; i++) {
         UIView *view = (UIView *)[scrollView.elements objectAtIndex:i];
         [view removeFromSuperview];
         [scrollView.superview insertSubview:view atIndex:2];
-        NSLog(@"%d", i);
     }
     if ([_userDelegate respondsToSelector:_cmd])
             [_userDelegate scrollViewDidEndDecelerating:scrollView];

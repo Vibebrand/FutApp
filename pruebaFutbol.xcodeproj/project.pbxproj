@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		923B18E01611197D00856A9D /* TKDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 923B18DF1611197D00856A9D /* TKDragView.m */; };
 		923B18E216111ECD00856A9D /* tile_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 923B18E116111ECD00856A9D /* tile_green.png */; };
+		924AB69016162A4B006FCA89 /* CustomTKDragViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 924AB68F16162A4B006FCA89 /* CustomTKDragViewDelegate.m */; };
 		92912F03160EA18A00A4C05E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92912F02160EA18A00A4C05E /* UIKit.framework */; };
 		92912F05160EA18A00A4C05E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92912F04160EA18A00A4C05E /* Foundation.framework */; };
 		92912F07160EA18A00A4C05E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92912F06160EA18A00A4C05E /* CoreGraphics.framework */; };
@@ -28,6 +29,8 @@
 		923B18DE1611197D00856A9D /* TKDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKDragView.h; sourceTree = "<group>"; };
 		923B18DF1611197D00856A9D /* TKDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKDragView.m; sourceTree = "<group>"; };
 		923B18E116111ECD00856A9D /* tile_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile_green.png; sourceTree = "<group>"; };
+		924AB68E16162A4B006FCA89 /* CustomTKDragViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTKDragViewDelegate.h; sourceTree = "<group>"; };
+		924AB68F16162A4B006FCA89 /* CustomTKDragViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTKDragViewDelegate.m; sourceTree = "<group>"; };
 		92912EFE160EA18A00A4C05E /* pruebaFutbol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pruebaFutbol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92912F02160EA18A00A4C05E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		92912F04160EA18A00A4C05E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,6 +100,8 @@
 			children = (
 				923B18E116111ECD00856A9D /* tile_green.png */,
 				923B18DE1611197D00856A9D /* TKDragView.h */,
+				924AB68E16162A4B006FCA89 /* CustomTKDragViewDelegate.h */,
+				924AB68F16162A4B006FCA89 /* CustomTKDragViewDelegate.m */,
 				923B18DF1611197D00856A9D /* TKDragView.m */,
 				92912F11160EA18A00A4C05E /* AppDelegate.h */,
 				92912F12160EA18A00A4C05E /* AppDelegate.m */,
@@ -196,6 +201,7 @@
 				92912F1C160EA18A00A4C05E /* ViewController.m in Sources */,
 				92918DE51610E757002CD6A4 /* HScrollView.m in Sources */,
 				923B18E01611197D00856A9D /* TKDragView.m in Sources */,
+				924AB69016162A4B006FCA89 /* CustomTKDragViewDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
