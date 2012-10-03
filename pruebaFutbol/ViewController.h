@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "TKDragView.h"
-#import "HScrollView.h"
+@class HScrollView;
+@class SmoothLineView;
+@class MGDrawingSlate;
 
-@interface ViewController : UIViewController <TKDragViewDelegate>
+
+@interface ViewController : UIViewController <TKDragViewDelegate> {
+    SmoothLineView *slv;
+    MGDrawingSlate *mds;
+    MGDrawingSlate *mdsG;
+}
 
 @property (nonatomic, retain) HScrollView *downScrollView;
 @property (nonatomic, retain) HScrollView *upScrollView;
