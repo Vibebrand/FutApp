@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "TestFlight.h"
 
 @implementation AppDelegate
 
@@ -23,6 +24,11 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
+    #define TESTING 1
+    #ifdef TESTING
+        [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+    #endif
+    [TestFlight takeOff:@"fc94afbf9058e48097c399875eb34c13_MTA5NjA4MjAxMi0wNy0xMiAxNDozNDowOC40ODc0MjA"];
     self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];

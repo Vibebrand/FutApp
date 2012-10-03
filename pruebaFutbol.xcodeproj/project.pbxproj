@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921DCC25161CBFFC00386E5E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC22161CBFB400386E5E /* libTestFlight.a */; };
+		921DCC26161CBFFC00386E5E /* TestFlight.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC23161CBFB400386E5E /* TestFlight.h */; };
+		921DCC28161CC03200386E5E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC27161CC03200386E5E /* libz.dylib */; };
 		923B18E01611197D00856A9D /* TKDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 923B18DF1611197D00856A9D /* TKDragView.m */; };
 		923B18E216111ECD00856A9D /* tile_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 923B18E116111ECD00856A9D /* tile_green.png */; };
 		924AB69016162A4B006FCA89 /* CustomTKDragViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 924AB68F16162A4B006FCA89 /* CustomTKDragViewDelegate.m */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		921DCC22161CBFB400386E5E /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		921DCC23161CBFB400386E5E /* TestFlight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		921DCC27161CC03200386E5E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		923B18DE1611197D00856A9D /* TKDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKDragView.h; sourceTree = "<group>"; };
 		923B18DF1611197D00856A9D /* TKDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKDragView.m; sourceTree = "<group>"; };
 		923B18E116111ECD00856A9D /* tile_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile_green.png; sourceTree = "<group>"; };
@@ -63,6 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				921DCC28161CC03200386E5E /* libz.dylib in Frameworks */,
+				921DCC25161CBFFC00386E5E /* libTestFlight.a in Frameworks */,
+				921DCC26161CBFFC00386E5E /* TestFlight.h in Frameworks */,
 				92912F26160EA1E300A4C05E /* QuartzCore.framework in Frameworks */,
 				92912F03160EA18A00A4C05E /* UIKit.framework in Frameworks */,
 				92912F05160EA18A00A4C05E /* Foundation.framework in Frameworks */,
@@ -93,6 +102,9 @@
 		92912F01160EA18A00A4C05E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				921DCC27161CC03200386E5E /* libz.dylib */,
+				921DCC22161CBFB400386E5E /* libTestFlight.a */,
+				921DCC23161CBFB400386E5E /* TestFlight.h */,
 				92912F25160EA1E300A4C05E /* QuartzCore.framework */,
 				92912F02160EA18A00A4C05E /* UIKit.framework */,
 				92912F04160EA18A00A4C05E /* Foundation.framework */,
@@ -275,7 +287,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -291,10 +303,17 @@
 		92912F23160EA18A00A4C05E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pruebaFutbol/pruebaFutbol-Prefix.pch";
 				INFOPLIST_FILE = "pruebaFutbol/pruebaFutbol-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -302,10 +321,19 @@
 		92912F24160EA18A00A4C05E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pruebaFutbol/pruebaFutbol-Prefix.pch";
 				INFOPLIST_FILE = "pruebaFutbol/pruebaFutbol-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
