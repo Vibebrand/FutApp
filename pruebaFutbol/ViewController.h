@@ -19,7 +19,6 @@
     MGDrawingSlate *mdsG;
 }
 
-@property (nonatomic, retain) HScrollView *downScrollView;
 @property (nonatomic, retain) HScrollView *upScrollView;
 @property (nonatomic, retain) NSMutableArray *dragViews;
 @property BOOL canDragMultipleViewsAtOnce;

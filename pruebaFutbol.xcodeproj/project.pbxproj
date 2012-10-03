@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		920F4D29161CD253005129D6 /* soccerField.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 920F4D28161CD253005129D6 /* soccerField.jpeg */; };
+		920F4D2C161CD6B0005129D6 /* soccer.png in Resources */ = {isa = PBXBuildFile; fileRef = 920F4D2B161CD6B0005129D6 /* soccer.png */; };
 		921DCC25161CBFFC00386E5E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC22161CBFB400386E5E /* libTestFlight.a */; };
 		921DCC26161CBFFC00386E5E /* TestFlight.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC23161CBFB400386E5E /* TestFlight.h */; };
 		921DCC28161CC03200386E5E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC27161CC03200386E5E /* libz.dylib */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		920F4D28161CD253005129D6 /* soccerField.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soccerField.jpeg; sourceTree = "<group>"; };
+		920F4D2B161CD6B0005129D6 /* soccer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soccer.png; sourceTree = "<group>"; };
 		921DCC22161CBFB400386E5E /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		921DCC23161CBFB400386E5E /* TestFlight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		921DCC27161CC03200386E5E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -116,6 +120,8 @@
 		92912F08160EA18A00A4C05E /* pruebaFutbol */ = {
 			isa = PBXGroup;
 			children = (
+				920F4D2B161CD6B0005129D6 /* soccer.png */,
+				920F4D28161CD253005129D6 /* soccerField.jpeg */,
 				92912F11160EA18A00A4C05E /* AppDelegate.h */,
 				92912F12160EA18A00A4C05E /* AppDelegate.m */,
 				924AB68E16162A4B006FCA89 /* CustomTKDragViewDelegate.h */,
@@ -208,6 +214,8 @@
 				92912F19160EA18A00A4C05E /* Default-568h@2x.png in Resources */,
 				92912F1F160EA18A00A4C05E /* ViewController.xib in Resources */,
 				923B18E216111ECD00856A9D /* tile_green.png in Resources */,
+				920F4D29161CD253005129D6 /* soccerField.jpeg in Resources */,
+				920F4D2C161CD6B0005129D6 /* soccer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
