@@ -96,14 +96,13 @@
     int limit = ([[UIScreen mainScreen]bounds].size.width - sizeOfPlayers)/(sizeOfPlayers * 0.75);
     int oLimit = [[UIScreen mainScreen]bounds].size.height / (sizeOfPlayers * 0.75);
     CGFloat miniSize = sizeOfPlayers * 0.75;
-    for (int i = 1; i <= limit; i++) {
+    for (int i = 1; i < limit; i++) {
         for (int j = 0; j < oLimit; j++) {
             CGRect endFrame = CGRectMake(j*miniSize + 5, 30 + i * miniSize, miniSize, miniSize);
             [goodFrames addObject:TKCGRectValue(endFrame)];
             
         }
     }
-
     //Posicionar jugadores titulares
     [[self.dragViews objectAtIndex:0] swapToEndPositionAtIndex: 9 * oLimit];
     

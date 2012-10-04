@@ -46,26 +46,6 @@
     }
 }
 
-- (void)dragViewDidLeaveStartFrame:(TKDragView *)dragView {
-   /* for (int i = 0; i < self.dragViews.count; i++) {
-        TKDragView *view = (TKDragView *)[self.dragViews objectAtIndex:i];
-        if (view.isAtStartFrame && view.frame.origin.x > dragView.frame.origin.x) {
-            view.startFrame = CGRectMake(view.startFrame.origin.x - 60, view.startFrame.origin.y, view.startFrame.size.width, view.startFrame.size.height);
-            [view swapToStartPosition];
-        }
-    }
-    dragView.startFrame = CGRectMake(-660, dragView.startFrame.origin.y, dragView.startFrame.size.width, dragView.startFrame.size.height);
-    */
-}
-
-- (void)dragViewWillSwapToStartFrame:(TKDragView *)dragView {
-  
-    /*if (!dragView.isAtStartFrame || dragView.startFrame.origin.x == -660) {
-        dragView.startFrame = CGRectMake([self viewsInStartFrame] * 60, dragView.startFrame.origin.y, dragView.startFrame.size.width, dragView.startFrame.size.height);
-    }*/
-    
-}
-
 - (void)dragViewDidSwapToEndFrame:(TKDragView *)dragView atIndex:(NSInteger)index {
     CGRect rect = [[[dragView goodFramesArray] objectAtIndex:index]CGRectValue];
     TKDragView *temp = [self canDragView:dragView DragTo:rect];
