@@ -24,14 +24,15 @@
 
 - (void) loadView {
     [super loadView];
+    canDrag = YES;
     slv = nil;
-    mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-115)];
-    mds.drawingColor = [UIColor redColor];
-    [self.view insertSubview:mds atIndex:1];
+    mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
+    mds.drawingColor = [UIColor yellowColor];
+    [self.view insertSubview:mds atIndex:0];
     mds.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-    mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-115)];
-    mdsG.drawingColor = [UIColor greenColor];
-    [self.view insertSubview:mdsG atIndex:2];
+    mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
+    mdsG.drawingColor = [UIColor whiteColor];
+    [self.view insertSubview:mdsG atIndex:1];
     mdsG.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
@@ -90,31 +91,47 @@
     [self.view insertSubview:self.upScrollView atIndex:3];
     
     //Crear matriz para la cancha
-    int limit = ([[UIScreen mainScreen]bounds].size.width - sizeOfPlayers * 2)/sizeOfPlayers;
-    int oLimit = [[UIScreen mainScreen]bounds].size.height / sizeOfPlayers;
+    int limit = ([[UIScreen mainScreen]bounds].size.width - sizeOfPlayers)/(sizeOfPlayers * 0.75);
+    int oLimit = [[UIScreen mainScreen]bounds].size.height / (sizeOfPlayers * 0.75);
+    CGFloat miniSize = sizeOfPlayers * 0.75;
     for (int i = 1; i <= limit; i++) {
         for (int j = 0; j < oLimit; j++) {
-            float x = 10.7 + j * 53;
-            if (x <= [[UIScreen mainScreen]bounds].size.height - sizeOfPlayers) {
-                CGRect endFrame = CGRectMake(x, 3 + i * 50, sizeOfPlayers, sizeOfPlayers);
+          //  if (x <= [[UIScreen mainScreen]bounds].size.height - sizeOfPlayers) {
+                CGRect endFrame = CGRectMake(j*miniSize + 5, 30 + i * miniSize, miniSize, miniSize);
                 [goodFrames addObject:TKCGRectValue(endFrame)];
-            }
+        //    }
             
         }
     }
+
+    //Posicionar jugadores titulares
+    [[self.dragViews objectAtIndex:0] swapToEndPositionAtIndex: 9 * oLimit];
+    
+    [[self.dragViews objectAtIndex:1] swapToEndPositionAtIndex: 7 * oLimit + 5];
+    [[self.dragViews objectAtIndex:2] swapToEndPositionAtIndex: 11 * oLimit + 5];
+    
+    [[self.dragViews objectAtIndex:3] swapToEndPositionAtIndex: 6 * oLimit + 9];
+    [[self.dragViews objectAtIndex:4] swapToEndPositionAtIndex: 8 * oLimit + 9];
+    [[self.dragViews objectAtIndex:5] swapToEndPositionAtIndex: 10 * oLimit + 9];
+    [[self.dragViews objectAtIndex:6] swapToEndPositionAtIndex: 12 * oLimit + 9];
+    
+    [[self.dragViews objectAtIndex:7] swapToEndPositionAtIndex: 6 * oLimit + 13];
+    [[self.dragViews objectAtIndex:8] swapToEndPositionAtIndex: 8 * oLimit + 13];
+    [[self.dragViews objectAtIndex:9] swapToEndPositionAtIndex: 10 * oLimit + 13];
+    [[self.dragViews objectAtIndex:10] swapToEndPositionAtIndex: 12 * oLimit + 13];
     
     
     //Botones
     UIButton *greenColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [greenColorButton setTitle:@"Verde" forState:UIControlStateNormal];
+    [greenColorButton setTitle:@"White" forState:UIControlStateNormal];
     greenColorButton.frame = CGRectMake(0, -12, 100, 60);
-    [greenColorButton addTarget:self action:@selector(greenColorButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [greenColorButton addTarget:self action:@selector(whiteColorButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:greenColorButton];
     
     UIButton *redColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [redColorButton setTitle:@"Rojo" forState:UIControlStateNormal];
+    [redColorButton setTitle:@"Yellow" forState:UIControlStateNormal];
     redColorButton.frame = CGRectMake(100, -12, 100, 60);
-    [redColorButton addTarget:self action:@selector(redColorButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [redColorButton addTarget:self action:@selector(yellowColorButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:redColorButton];
     
     UIButton *undoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -123,13 +140,19 @@
     [undoButton addTarget:self action:@selector(undoButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:undoButton];
     
+    UIButton *drawButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [drawButton setTitle:@"Draw" forState:UIControlStateNormal];
+    drawButton.frame = CGRectMake(300, -12, 100, 60);
+    [drawButton addTarget:self action:@selector(drawColorButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:drawButton];
+    
 
     //Imagen del campo
     path = [bundle pathForResource:@"soccer.png" ofType:nil];
     image = [UIImage imageWithContentsOfFile:path];
-    UIImageView *soccerField = [[UIImageView alloc] initWithFrame:CGRectMake(0, upScrollView.frame.origin.y + upScrollView.frame.size.height, screenRect.size.height, screenRect.size.width)];
+    soccerField = [[UIImageView alloc] initWithFrame:CGRectMake(0, upScrollView.frame.origin.y + upScrollView.frame.size.height, screenRect.size.height, screenRect.size.width)];
     soccerField.image = image;
-    [self.view insertSubview:soccerField atIndex:0];
+    [self.view insertSubview:soccerField atIndex:2];
     [soccerField release];
 }
 
@@ -146,22 +169,44 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)greenColorButtonClicked:(UIButton *)sender {
-    if ([[self.view subviews] indexOfObject:mdsG] == 1) {
-        [self.view exchangeSubviewAtIndex:1 withSubviewAtIndex:2];
+- (void)whiteColorButtonClicked:(UIButton *)sender {
+    int indexOfYellow = [[self.view subviews] indexOfObject:mds];
+    int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
+    if (indexOfYellow > indexOfWhite) {
+        [self.view exchangeSubviewAtIndex:indexOfWhite withSubviewAtIndex:indexOfYellow];
     }
 }
 
-- (void)redColorButtonClicked:(UIButton *)sender {
-    if ([[self.view subviews] indexOfObject:mds] == 1) {
-        [self.view exchangeSubviewAtIndex:1 withSubviewAtIndex:2];
+- (void)yellowColorButtonClicked:(UIButton *)sender {
+    int indexOfYellow = [[self.view subviews] indexOfObject:mds];
+    int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
+    if (indexOfYellow < indexOfWhite) {
+        [self.view exchangeSubviewAtIndex:indexOfYellow withSubviewAtIndex:indexOfWhite];
     }
 
+}
+
+- (void)drawColorButtonClicked: (UIButton *)sender {
+    int indexOfYellow = [[self.view subviews] indexOfObject:mds];
+    int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
+    int indexOfField = [[self.view subviews] indexOfObject:soccerField];
+    int actualColor = (indexOfWhite > indexOfYellow) ? indexOfWhite : indexOfYellow;
+    int subColor = (indexOfWhite > indexOfYellow) ? indexOfYellow : indexOfWhite;
+    if (canDrag) {
+        [self.view exchangeSubviewAtIndex:indexOfField withSubviewAtIndex:subColor];
+        [self.view exchangeSubviewAtIndex:indexOfField withSubviewAtIndex:actualColor];
+    }
+    else {
+        [self.view exchangeSubviewAtIndex:indexOfField withSubviewAtIndex:actualColor];
+        [self.view exchangeSubviewAtIndex:indexOfField withSubviewAtIndex:subColor];
+    }
+    canDrag = !canDrag;
 }
 
 
 - (void)undoButtonClicked:(UIButton *)sender {
-    int indexOfRed = [[self.view subviews] indexOfObject:mds];
+    int indexOfYellow = [[self.view subviews] indexOfObject:mds];
+    int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
     [mds removeFromSuperview];
     [mdsG removeFromSuperview];
     [mdsG release];
@@ -169,18 +214,15 @@
     [mds release];
     mds = nil;
     mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-115)];
-    mds.drawingColor = [UIColor redColor];
+    mds.drawingColor = [UIColor yellowColor];
     mds.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-115)];
-    mdsG.drawingColor = [UIColor greenColor];
+    mdsG.drawingColor = [UIColor whiteColor];
     mdsG.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-    [self.view insertSubview:mds atIndex:1];
-    [self.view insertSubview:mdsG atIndex:2];
+    [self.view insertSubview:mds atIndex:indexOfYellow];
+    [self.view insertSubview:mdsG atIndex:indexOfWhite];
     
-    if (indexOfRed == 1) {
-        [self.view insertSubview:mds atIndex:2];
-        [self.view insertSubview:mdsG atIndex:1];
-    }
+
 }
 
 @end

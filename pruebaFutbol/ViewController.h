@@ -17,6 +17,8 @@
     SmoothLineView *slv;
     MGDrawingSlate *mds;
     MGDrawingSlate *mdsG;
+    UIImageView *soccerField;
+    BOOL canDrag;
 }
 
 @property (nonatomic, retain) HScrollView *upScrollView;
