@@ -27,11 +27,11 @@
         
     canDrag = YES;
     slv = nil;
-    mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width+40)];
+    mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
     mds.drawingColor = [UIColor yellowColor];
     [self.view insertSubview:mds atIndex:1];
     mds.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-    mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width+40)];
+    mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
     mdsG.drawingColor = [UIColor whiteColor];
     [self.view insertSubview:mdsG atIndex:2];
     mdsG.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
@@ -124,8 +124,6 @@
     
     
     //Botones
-    path = [bundle pathForResource:@"gray.jpeg" ofType:nil];
-    image = [UIImage imageWithContentsOfFile:path];
     UIButton *greenColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [greenColorButton setTitle:@"White" forState:UIControlStateNormal];
     greenColorButton.frame = CGRectMake(0, -12, 100, 60);
@@ -148,7 +146,6 @@
     [drawButton setTitle:@"Draw" forState:UIControlStateNormal];
     drawButton.frame = CGRectMake(300, -12, 100, 60);
     [drawButton addTarget:self action:@selector(drawColorButtonClicked:) forControlEvents:UIControlEventTouchDown];
-    
     [self.view addSubview:drawButton];
     
 
@@ -159,6 +156,8 @@
     soccerField.image = image;
     [self.view insertSubview:soccerField atIndex:0];
     [soccerField release];
+    
+    
 }
 
 - (void)viewDidLoad
@@ -199,6 +198,14 @@
     [mdsG setUserInteractionEnabled:!mdsG.userInteractionEnabled];
     [mds setUserInteractionEnabled:!mds.userInteractionEnabled];
     canDrag = !canDrag;
+    
+    int sum = 0;
+    for (int i = 0 ; i < self.dragViews.count; i++) {
+        if ([[self.dragViews objectAtIndex:i] isAtStartFrame]) {
+            sum++;
+        }
+    }
+    NSLog(@"en start: %d",sum);
 }
 
 
@@ -211,10 +218,10 @@
     mdsG = nil;
     [mds release];
     mds = nil;
-    mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-115)];
+    mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
     mds.drawingColor = [UIColor yellowColor];
     mds.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-    mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-115)];
+    mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
     mdsG.drawingColor = [UIColor whiteColor];
     mdsG.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     [self.view insertSubview:mds atIndex:indexOfYellow];
