@@ -195,10 +195,18 @@
     if (canDrag) {
         [self.view exchangeSubviewAtIndex:indexOfField withSubviewAtIndex:subColor];
         [self.view exchangeSubviewAtIndex:indexOfField withSubviewAtIndex:actualColor];
+        for (int i = 0; i < self.dragViews.count; i++) {
+            TKDragView *view = (TKDragView *)[self.dragViews objectAtIndex:i];
+            view.canDragFromEndPosition = NO;
+        }
     }
     else {
         [self.view exchangeSubviewAtIndex:indexOfField withSubviewAtIndex:actualColor];
         [self.view exchangeSubviewAtIndex:indexOfField withSubviewAtIndex:subColor];
+        for (int i = 0; i < self.dragViews.count; i++) {
+            TKDragView *view = (TKDragView *)[self.dragViews objectAtIndex:i];
+            view.canDragFromEndPosition = YES;
+        }
     }
     canDrag = !canDrag;
 }
