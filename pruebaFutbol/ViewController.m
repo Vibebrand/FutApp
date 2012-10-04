@@ -24,16 +24,19 @@
 
 - (void) loadView {
     [super loadView];
+        
     canDrag = YES;
     slv = nil;
     mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
     mds.drawingColor = [UIColor yellowColor];
-    [self.view insertSubview:mds atIndex:0];
+    [self.view insertSubview:mds atIndex:1];
     mds.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
     mdsG.drawingColor = [UIColor whiteColor];
-    [self.view insertSubview:mdsG atIndex:1];
+    [self.view insertSubview:mdsG atIndex:2];
     mdsG.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+    [mds setUserInteractionEnabled:NO];
+    [mdsG setUserInteractionEnabled:NO];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     int numberOfPlayers = 17;
@@ -79,7 +82,6 @@
         
         TKDragView *dragView = [[TKDragView alloc] initWithImage:image startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:self];
         dragView.canDragMultipleDragViewsAtOnce = NO;
-        dragView.canUseSameEndFrameManyTimes = NO;
         dragView.delegate = delegado;
         [self.upScrollView.elements addObject:dragView];
         [self.dragViews addObject:dragView];
@@ -152,7 +154,7 @@
     image = [UIImage imageWithContentsOfFile:path];
     soccerField = [[UIImageView alloc] initWithFrame:CGRectMake(0, upScrollView.frame.origin.y + upScrollView.frame.size.height, screenRect.size.height, screenRect.size.width)];
     soccerField.image = image;
-    [self.view insertSubview:soccerField atIndex:2];
+    [self.view insertSubview:soccerField atIndex:0];
     [soccerField release];
 }
 
@@ -187,7 +189,7 @@
 }
 
 - (void)drawColorButtonClicked: (UIButton *)sender {
-    int indexOfYellow = [[self.view subviews] indexOfObject:mds];
+    /*int indexOfYellow = [[self.view subviews] indexOfObject:mds];
     int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
     int indexOfField = [[self.view subviews] indexOfObject:soccerField];
     int actualColor = (indexOfWhite > indexOfYellow) ? indexOfWhite : indexOfYellow;
@@ -197,7 +199,7 @@
         [self.view exchangeSubviewAtIndex:indexOfField withSubviewAtIndex:actualColor];
         for (int i = 0; i < self.dragViews.count; i++) {
             TKDragView *view = (TKDragView *)[self.dragViews objectAtIndex:i];
-            view.canDragFromEndPosition = NO;
+            [view setUserInteractionEnabled:NO];
         }
     }
     else {
@@ -207,7 +209,13 @@
             TKDragView *view = (TKDragView *)[self.dragViews objectAtIndex:i];
             view.canDragFromEndPosition = YES;
         }
+    }*/
+    for (int i = 0; i < self.dragViews.count; i++) {
+        TKDragView *view = (TKDragView *)[self.dragViews objectAtIndex:i];
+        [view setUserInteractionEnabled: !view.userInteractionEnabled];
     }
+    [mdsG setUserInteractionEnabled:!mdsG.userInteractionEnabled];
+    [mds setUserInteractionEnabled:!mds.userInteractionEnabled];
     canDrag = !canDrag;
 }
 
