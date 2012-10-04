@@ -67,29 +67,19 @@
 }
 
 - (void)dragViewDidSwapToEndFrame:(TKDragView *)dragView atIndex:(NSInteger)index {
-    /*if (!dragView.startFrame .origin.y) {
-        [dragView swapToStartPosition];
-    }*/
     CGRect rect = [[[dragView goodFramesArray] objectAtIndex:index]CGRectValue];
-    NSLog(@"destination: (%f, %f)", rect.origin.x, rect.origin.y);
-    NSLog(@"actual frame: (%f, %f)", dragView.frame.origin.x, dragView.frame.origin.y);
-    NSLog(@"start frame: (%f, %f)", dragView.startFrame.origin.x, dragView.startFrame.origin.y);
     TKDragView *temp = [self canDragView:dragView DragTo:rect];
-    NSLog(@"T actual frame: (%f, %f)", temp.frame.origin.x, temp.frame.origin.y);
-    NSLog(@"T start frame: (%f, %f)", temp.startFrame.origin.x, temp.startFrame.origin.y);
     if (temp) {
         temp.startFrame = dragView.startFrame;
         dragView.startFrame = rect;
         [temp swapToStartPosition];
         [dragView swapToStartPosition];
     }
-    NSLog(@"--------------------");
-    NSLog(@"destination: (%f, %f)", rect.origin.x, rect.origin.y);
-    NSLog(@"actual frame: (%f, %f)", dragView.frame.origin.x, dragView.frame.origin.y);
-    NSLog(@"start frame: (%f, %f)", dragView.startFrame.origin.x, dragView.startFrame.origin.y);
-    NSLog(@"T actual frame: (%f, %f)", temp.frame.origin.x, temp.frame.origin.y);
-    NSLog(@"T start frame: (%f, %f)", temp.startFrame.origin.x, temp.startFrame.origin.y);
-    
+    else {
+        if (!dragView.startFrame.origin.y) {
+            [dragView swapToStartPosition];
+        }
+    }
 }
 
 - (TKDragView *)canDragView: (TKDragView *)dragView DragTo:(CGRect)destination {
