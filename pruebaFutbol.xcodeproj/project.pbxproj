@@ -12,6 +12,8 @@
 		921DCC25161CBFFC00386E5E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC22161CBFB400386E5E /* libTestFlight.a */; };
 		921DCC26161CBFFC00386E5E /* TestFlight.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC23161CBFB400386E5E /* TestFlight.h */; };
 		921DCC28161CC03200386E5E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC27161CC03200386E5E /* libz.dylib */; };
+		9226CE0C161D292100511116 /* tshirt-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9226CE0B161D292100511116 /* tshirt-icon.png */; };
+		9226CE0F161D2B2B00511116 /* gray.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9226CE0E161D2B2B00511116 /* gray.jpeg */; };
 		923B18E01611197D00856A9D /* TKDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 923B18DF1611197D00856A9D /* TKDragView.m */; };
 		923B18E216111ECD00856A9D /* tile_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 923B18E116111ECD00856A9D /* tile_green.png */; };
 		924AB69016162A4B006FCA89 /* CustomTKDragViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 924AB68F16162A4B006FCA89 /* CustomTKDragViewDelegate.m */; };
@@ -38,6 +40,8 @@
 		921DCC22161CBFB400386E5E /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		921DCC23161CBFB400386E5E /* TestFlight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		921DCC27161CC03200386E5E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		9226CE0B161D292100511116 /* tshirt-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tshirt-icon.png"; sourceTree = "<group>"; };
+		9226CE0E161D2B2B00511116 /* gray.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gray.jpeg; sourceTree = "<group>"; };
 		923B18DE1611197D00856A9D /* TKDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKDragView.h; sourceTree = "<group>"; };
 		923B18DF1611197D00856A9D /* TKDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKDragView.m; sourceTree = "<group>"; };
 		923B18E116111ECD00856A9D /* tile_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile_green.png; sourceTree = "<group>"; };
@@ -120,9 +124,11 @@
 		92912F08160EA18A00A4C05E /* pruebaFutbol */ = {
 			isa = PBXGroup;
 			children = (
+				9226CE0B161D292100511116 /* tshirt-icon.png */,
 				920F4D2B161CD6B0005129D6 /* soccer.png */,
 				920F4D28161CD253005129D6 /* soccerField.jpeg */,
 				92912F11160EA18A00A4C05E /* AppDelegate.h */,
+				9226CE0E161D2B2B00511116 /* gray.jpeg */,
 				92912F12160EA18A00A4C05E /* AppDelegate.m */,
 				924AB68E16162A4B006FCA89 /* CustomTKDragViewDelegate.h */,
 				924AB68F16162A4B006FCA89 /* CustomTKDragViewDelegate.m */,
@@ -216,6 +222,8 @@
 				923B18E216111ECD00856A9D /* tile_green.png in Resources */,
 				920F4D29161CD253005129D6 /* soccerField.jpeg in Resources */,
 				920F4D2C161CD6B0005129D6 /* soccer.png in Resources */,
+				9226CE0C161D292100511116 /* tshirt-icon.png in Resources */,
+				9226CE0F161D2B2B00511116 /* gray.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

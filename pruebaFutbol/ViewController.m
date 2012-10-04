@@ -27,11 +27,11 @@
         
     canDrag = YES;
     slv = nil;
-    mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
+    mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width+40)];
     mds.drawingColor = [UIColor yellowColor];
     [self.view insertSubview:mds atIndex:1];
     mds.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-    mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
+    mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width+40)];
     mdsG.drawingColor = [UIColor whiteColor];
     [self.view insertSubview:mdsG atIndex:2];
     mdsG.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
@@ -70,7 +70,7 @@
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"tile_green.png" ofType:nil];
+    NSString *path = [bundle pathForResource:@"tshirt-icon.png" ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
     
@@ -124,6 +124,8 @@
     
     
     //Botones
+    path = [bundle pathForResource:@"gray.jpeg" ofType:nil];
+    image = [UIImage imageWithContentsOfFile:path];
     UIButton *greenColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [greenColorButton setTitle:@"White" forState:UIControlStateNormal];
     greenColorButton.frame = CGRectMake(0, -12, 100, 60);
@@ -146,6 +148,7 @@
     [drawButton setTitle:@"Draw" forState:UIControlStateNormal];
     drawButton.frame = CGRectMake(300, -12, 100, 60);
     [drawButton addTarget:self action:@selector(drawColorButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    
     [self.view addSubview:drawButton];
     
 
