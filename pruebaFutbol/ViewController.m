@@ -192,27 +192,6 @@
 }
 
 - (void)drawColorButtonClicked: (UIButton *)sender {
-    /*int indexOfYellow = [[self.view subviews] indexOfObject:mds];
-    int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
-    int indexOfField = [[self.view subviews] indexOfObject:soccerField];
-    int actualColor = (indexOfWhite > indexOfYellow) ? indexOfWhite : indexOfYellow;
-    int subColor = (indexOfWhite > indexOfYellow) ? indexOfYellow : indexOfWhite;
-    if (canDrag) {
-        [self.view exchangeSubviewAtIndex:indexOfField withSubviewAtIndex:subColor];
-        [self.view exchangeSubviewAtIndex:indexOfField withSubviewAtIndex:actualColor];
-        for (int i = 0; i < self.dragViews.count; i++) {
-            TKDragView *view = (TKDragView *)[self.dragViews objectAtIndex:i];
-            [view setUserInteractionEnabled:NO];
-        }
-    }
-    else {
-        [self.view exchangeSubviewAtIndex:indexOfField withSubviewAtIndex:actualColor];
-        [self.view exchangeSubviewAtIndex:indexOfField withSubviewAtIndex:subColor];
-        for (int i = 0; i < self.dragViews.count; i++) {
-            TKDragView *view = (TKDragView *)[self.dragViews objectAtIndex:i];
-            view.canDragFromEndPosition = YES;
-        }
-    }*/
     for (int i = 0; i < self.dragViews.count; i++) {
         TKDragView *view = (TKDragView *)[self.dragViews objectAtIndex:i];
         [view setUserInteractionEnabled: !view.userInteractionEnabled];
@@ -240,6 +219,11 @@
     mdsG.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     [self.view insertSubview:mds atIndex:indexOfYellow];
     [self.view insertSubview:mdsG atIndex:indexOfWhite];
+    
+    if (canDrag) {
+        [mdsG setUserInteractionEnabled:NO];
+        [mds setUserInteractionEnabled:NO];
+    }
     
 
 }
