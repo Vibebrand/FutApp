@@ -764,7 +764,7 @@ static TKDragManager *manager; // it's a singleton, but how to relase it under A
 
 - (BOOL)dragView:(TKDragView*)dragView wantSwapToEndFrame:(CGRect)endFrame{
     
-    
+    NSLog(@"len: %d", self.managerArray.count);
     for (TKOccupancyIndicator *ind in self.managerArray) {
         
         CGRect frame = ind.frame;

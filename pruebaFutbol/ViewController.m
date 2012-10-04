@@ -98,10 +98,8 @@
     CGFloat miniSize = sizeOfPlayers * 0.75;
     for (int i = 1; i <= limit; i++) {
         for (int j = 0; j < oLimit; j++) {
-          //  if (x <= [[UIScreen mainScreen]bounds].size.height - sizeOfPlayers) {
-                CGRect endFrame = CGRectMake(j*miniSize + 5, 30 + i * miniSize, miniSize, miniSize);
-                [goodFrames addObject:TKCGRectValue(endFrame)];
-        //    }
+            CGRect endFrame = CGRectMake(j*miniSize + 5, 30 + i * miniSize, miniSize, miniSize);
+            [goodFrames addObject:TKCGRectValue(endFrame)];
             
         }
     }
@@ -122,7 +120,14 @@
     [[self.dragViews objectAtIndex:9] swapToEndPositionAtIndex: 10 * oLimit + 13];
     [[self.dragViews objectAtIndex:10] swapToEndPositionAtIndex: 12 * oLimit + 13];
     
+    //Igualo los start frames con los frames actuales
+    for (int i = 0; i < 11; i++) {
+        TKDragView *view = [self.dragViews objectAtIndex:i];        
+        view.startFrame = view.frame;
+    }
     
+    
+    [[TKDragManager manager] addDragView:[self.dragViews objectAtIndex:10]];
     //Botones
     UIButton *greenColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [greenColorButton setTitle:@"White" forState:UIControlStateNormal];
@@ -198,14 +203,6 @@
     [mdsG setUserInteractionEnabled:!mdsG.userInteractionEnabled];
     [mds setUserInteractionEnabled:!mds.userInteractionEnabled];
     canDrag = !canDrag;
-    
-    int sum = 0;
-    for (int i = 0 ; i < self.dragViews.count; i++) {
-        if ([[self.dragViews objectAtIndex:i] isAtStartFrame]) {
-            sum++;
-        }
-    }
-    NSLog(@"en start: %d",sum);
 }
 
 
