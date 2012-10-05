@@ -13,14 +13,13 @@
 #import "SmoothLineView.h"
 #import "MGDrawingSlate.h"
 
-
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
 
-@synthesize  upScrollView, dragViews;
+@synthesize  upScrollView, dragViews, logger;
 
 - (void) loadView {
     [super loadView];
@@ -65,12 +64,12 @@
     NSMutableArray *badFrames = [[NSMutableArray alloc] initWithCapacity:numberOfPlayers];
     
     CustomTKDragViewDelegate *delegado = [[CustomTKDragViewDelegate alloc] init];
-    
+    delegado.logger = self.logger;
     
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"chivasadidas.png" ofType:nil];
+    NSString *path = [bundle pathForResource:@"tshirt-icon.png" ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
     
@@ -182,8 +181,7 @@
         [self.view exchangeSubviewAtIndex:indexOfWhite withSubviewAtIndex:indexOfYellow];
         [sender setTitle:@"Yellow" forState:UIControlStateNormal];
     }
-    
-    
+    [logger checkpointPassed:@"cambio de color"];
 }
 
 - (void)drawColorButtonClicked: (UIButton *)sender {
@@ -200,6 +198,8 @@
     else {
         [sender setTitle:@"Draw" forState:UIControlStateNormal];
     }
+    
+    [logger checkpointPassed:@"cambio drag-draw"];
 }
 
 
@@ -226,7 +226,7 @@
         [mds setUserInteractionEnabled:NO];
     }
     
-
+    [logger checkpointPassed:@"undo"];
 }
 
 @end

@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "TKDragView.h"
+#import "ICheckpointMessages.h"
 
 @interface CustomTKDragViewDelegate : NSObject<TKDragViewDelegate> {
     @public
-    id<TKDragViewDelegate> _userDelegate;
-    int viewsInBar;
-    
+    id<TKDragViewDelegate> _userDelegate;    
 }
 @property (nonatomic, retain) NSMutableArray *dragViews;
+@property (nonatomic, retain) id<ICheckpointMessages> logger;
 
 - (id)initWithDragviews: (NSMutableArray *)dragViews;
 @end

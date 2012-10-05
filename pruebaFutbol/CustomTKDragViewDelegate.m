@@ -11,14 +11,13 @@
 
 @implementation CustomTKDragViewDelegate
 
-@synthesize dragViews;
+@synthesize dragViews, logger;
 
 - (id)init
 {
     self = [super init];
     if (self) {
         self.dragViews = nil;
-        viewsInBar = 0;
     }
     return self;
 }
@@ -27,7 +26,6 @@
     self = [super init];
     if (self) {
         self.dragViews = dragViewsArray;
-        viewsInBar = dragViewsArray.count;
     }
     return self;
 }
@@ -35,6 +33,7 @@
 - (void)dealloc
 {
     self.dragViews = nil;
+    self.logger = nil;
     [super dealloc];
 }
 
@@ -42,7 +41,6 @@
     if (dragViews != dragViewsArray) {
         [dragViews release];
         dragViews = [dragViewsArray retain];
-        viewsInBar = dragViews.count;
     }
 }
 
@@ -54,6 +52,11 @@
         dragView.startFrame = rect;
         [temp swapToStartPosition];
         [dragView swapToStartPosition];
+        if (temp.frame.origin.y == [[UIScreen mainScreen] bounds].size.width - 70) {
+            [logger checkpointPassed:@"cambio con banca"];
+        } else {
+            [logger checkpointPassed:@"cambio entre jugadores"];
+        }
     }
     else {
         if (dragView.startFrame.origin.y == [[UIScreen mainScreen] bounds].size.width - 70) {

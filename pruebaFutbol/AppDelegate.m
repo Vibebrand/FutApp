@@ -10,6 +10,7 @@
 
 #import "ViewController.h"
 #import "TestFlight.h"
+#import "TestFlightLogger.h"
 
 @implementation AppDelegate
 
@@ -30,6 +31,11 @@
     #endif
     [TestFlight takeOff:@"fc94afbf9058e48097c399875eb34c13_MTA5NjA4MjAxMi0wNy0xMiAxNDozNDowOC40ODc0MjA"];
     self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
+    TestFlightLogger *tfl = [[TestFlightLogger alloc] init];
+    self.viewController.logger = tfl;
+    [tfl release];
+    
+    
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
