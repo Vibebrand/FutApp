@@ -27,11 +27,11 @@
         
     canDrag = YES;
     slv = nil;
-    mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
+    mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
     mds.drawingColor = [UIColor yellowColor];
     [self.view insertSubview:mds atIndex:1];
     mds.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-    mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
+    mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
     mdsG.drawingColor = [UIColor whiteColor];
     [self.view insertSubview:mdsG atIndex:2];
     mdsG.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
@@ -70,7 +70,7 @@
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"tshirt-icon.png" ofType:nil];
+    NSString *path = [bundle pathForResource:@"chivasadidas.png" ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
     
@@ -130,26 +130,21 @@
     //Botones
     UIButton *greenColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [greenColorButton setTitle:@"White" forState:UIControlStateNormal];
-    greenColorButton.frame = CGRectMake(0, screenRect.size.width - 70, 100, 60);
-    [greenColorButton addTarget:self action:@selector(whiteColorButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    greenColorButton.frame = CGRectMake(4, screenRect.size.width - 65, 100, 40);
+    [greenColorButton addTarget:self action:@selector(colorButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:greenColorButton];
-    
-    UIButton *redColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [redColorButton setTitle:@"Yellow" forState:UIControlStateNormal];
-    redColorButton.frame = CGRectMake(100, screenRect.size.width - 70, 100, 60);
-    [redColorButton addTarget:self action:@selector(yellowColorButtonClicked:) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:redColorButton];
     
     UIButton *undoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [undoButton setTitle:@"Undo" forState:UIControlStateNormal];
-    undoButton.frame = CGRectMake(200, screenRect.size.width - 70, 100, 60);
+    undoButton.frame = CGRectMake(108, screenRect.size.width - 65, 100, 40);
     [undoButton addTarget:self action:@selector(undoButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:undoButton];
     
-    UISwitch *drawButton = [[UISwitch alloc] initWithFrame:CGRectMake(300, screenRect.size.width - 55, 100, 60)];
-    [drawButton addTarget:self action:@selector(drawColorButtonClicked:) forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:drawButton];
-    [drawButton release];
+    UIButton *drawColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [drawColorButton setTitle:@"Drag" forState:UIControlStateNormal];
+    drawColorButton.frame = CGRectMake(212, screenRect.size.width - 65, 100, 40);
+    [drawColorButton addTarget:self action:@selector(drawColorButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:drawColorButton];
     
 
     //Imagen del campo
@@ -176,21 +171,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)whiteColorButtonClicked:(UIButton *)sender {
+- (void)colorButtonClicked:(UIButton *)sender {
     int indexOfYellow = [[self.view subviews] indexOfObject:mds];
     int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
     if (indexOfYellow > indexOfWhite) {
         [self.view exchangeSubviewAtIndex:indexOfWhite withSubviewAtIndex:indexOfYellow];
+        [sender setTitle:@"White" forState:UIControlStateNormal];
     }
-}
-
-- (void)yellowColorButtonClicked:(UIButton *)sender {
-    int indexOfYellow = [[self.view subviews] indexOfObject:mds];
-    int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
-    if (indexOfYellow < indexOfWhite) {
-        [self.view exchangeSubviewAtIndex:indexOfYellow withSubviewAtIndex:indexOfWhite];
+    else {
+        [self.view exchangeSubviewAtIndex:indexOfWhite withSubviewAtIndex:indexOfYellow];
+        [sender setTitle:@"Yellow" forState:UIControlStateNormal];
     }
-
+    
+    
 }
 
 - (void)drawColorButtonClicked: (UIButton *)sender {
@@ -201,6 +194,12 @@
     [mdsG setUserInteractionEnabled:!mdsG.userInteractionEnabled];
     [mds setUserInteractionEnabled:!mds.userInteractionEnabled];
     canDrag = !canDrag;
+    if (canDrag) {
+        [sender setTitle:@"Drag" forState:UIControlStateNormal];
+    }
+    else {
+        [sender setTitle:@"Draw" forState:UIControlStateNormal];
+    }
 }
 
 
@@ -213,10 +212,10 @@
     mdsG = nil;
     [mds release];
     mds = nil;
-    mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
+    mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
     mds.drawingColor = [UIColor yellowColor];
     mds.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-    mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
+    mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
     mdsG.drawingColor = [UIColor whiteColor];
     mdsG.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     [self.view insertSubview:mds atIndex:indexOfYellow];
