@@ -178,6 +178,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self becomeFirstResponder];
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    [self eraseDrawings];
+    [logger checkpointPassed:@"shake para borrar dibujos"];
+}
+
 - (void)colorButtonClicked:(UIButton *)sender {
     int indexOfYellow = [[self.view subviews] indexOfObject:mds];
     int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
@@ -212,6 +225,11 @@
 
 
 - (void)undoButtonClicked:(UIButton *)sender {
+    [self eraseDrawings];
+    [logger checkpointPassed:@"undo"];
+}
+
+- (void)eraseDrawings {
     int indexOfYellow = [[self.view subviews] indexOfObject:mds];
     int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
     [mds removeFromSuperview];
@@ -233,8 +251,6 @@
         [mdsG setUserInteractionEnabled:NO];
         [mds setUserInteractionEnabled:NO];
     }
-    
-    [logger checkpointPassed:@"undo"];
 }
 
 @end
