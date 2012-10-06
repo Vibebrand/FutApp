@@ -10,7 +10,6 @@
 #import "TKDragView.h"
 #import "CustomTKDragViewDelegate.h"
 #import "HScrollView.h"
-#import "SmoothLineView.h"
 #import "MGDrawingSlate.h"
 
 @interface ViewController ()
@@ -69,7 +68,7 @@
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"tshirt-icon.png" ofType:nil];
+    NSString *path = [bundle pathForResource:@"chivasBadge.png" ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
     
