@@ -20,6 +20,14 @@
 
 @synthesize  upScrollView, dragViews, logger;
 
+- (void)dealloc
+{
+    self.upScrollView = nil;
+    self.dragViews = nil;
+    self.logger = nil;
+    [super dealloc];
+}
+
 - (void) loadView {
     [super loadView];
         
@@ -192,34 +200,23 @@
 }
 
 - (void)colorButtonClicked:(UIButton *)sender {
-    int indexOfYellow = [[self.view subviews] indexOfObject:mds];
-    int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
-    if (indexOfYellow > indexOfWhite) {
-        [self.view exchangeSubviewAtIndex:indexOfWhite withSubviewAtIndex:indexOfYellow];
-        [sender setTitle:@"White" forState:UIControlStateNormal];
-    }
-    else {
-        [self.view exchangeSubviewAtIndex:indexOfWhite withSubviewAtIndex:indexOfYellow];
+    [self changeCholor];
+    if ([[sender titleForState:UIControlStateNormal] isEqualToString:@"White"]) {
         [sender setTitle:@"Yellow" forState:UIControlStateNormal];
+    } else {
+        [sender setTitle:@"White" forState:UIControlStateNormal];
     }
     [logger checkpointPassed:@"cambio de color"];
 }
 
 - (void)drawColorButtonClicked: (UIButton *)sender {
-    for (int i = 0; i < self.dragViews.count; i++) {
-        TKDragView *view = (TKDragView *)[self.dragViews objectAtIndex:i];
-        [view setUserInteractionEnabled: !view.userInteractionEnabled];
-    }
-    [mdsG setUserInteractionEnabled:!mdsG.userInteractionEnabled];
-    [mds setUserInteractionEnabled:!mds.userInteractionEnabled];
-    canDrag = !canDrag;
+    [self changeDragDraw]; 
     if (canDrag) {
         [sender setTitle:@"Drag" forState:UIControlStateNormal];
     }
     else {
         [sender setTitle:@"Draw" forState:UIControlStateNormal];
     }
-    
     [logger checkpointPassed:@"cambio drag-draw"];
 }
 
@@ -227,6 +224,23 @@
 - (void)undoButtonClicked:(UIButton *)sender {
     [self eraseDrawings];
     [logger checkpointPassed:@"undo"];
+}
+
+- (void)changeCholor {
+    int indexOfYellow = [[self.view subviews] indexOfObject:mds];
+    int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
+    [self.view exchangeSubviewAtIndex:indexOfWhite withSubviewAtIndex:indexOfYellow];
+}
+
+- (void)changeDragDraw {
+    for (int i = 0; i < self.dragViews.count; i++) {
+        TKDragView *view = (TKDragView *)[self.dragViews objectAtIndex:i];
+        [view setUserInteractionEnabled: !view.userInteractionEnabled];
+    }
+    [mdsG setUserInteractionEnabled:!mdsG.userInteractionEnabled];
+    [mds setUserInteractionEnabled:!mds.userInteractionEnabled];
+    canDrag = !canDrag;
+    
 }
 
 - (void)eraseDrawings {
