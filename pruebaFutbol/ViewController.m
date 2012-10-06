@@ -18,7 +18,7 @@
 
 @implementation ViewController
 
-@synthesize  upScrollView, dragViews, logger;
+@synthesize  upScrollView, dragViews, logger, drawColorButton;
 
 - (void)dealloc
 {
@@ -151,13 +151,13 @@
     
     UIButton *undoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [undoButton setTitle:@"Undo" forState:UIControlStateNormal];
-    undoButton.frame = CGRectMake(108, screenRect.size.width - 65, 100, 40);
+    undoButton.frame = CGRectMake(124, screenRect.size.width - 65, 100, 40);
     [undoButton addTarget:self action:@selector(undoButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:undoButton];
     
-    UIButton *drawColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.drawColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [drawColorButton setTitle:@"Drag" forState:UIControlStateNormal];
-    drawColorButton.frame = CGRectMake(212, screenRect.size.width - 65, 100, 40);
+    drawColorButton.frame = CGRectMake(244, screenRect.size.width - 65, 100, 40);
     [drawColorButton addTarget:self action:@selector(drawColorButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:drawColorButton];
     
@@ -230,6 +230,10 @@
     int indexOfYellow = [[self.view subviews] indexOfObject:mds];
     int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
     [self.view exchangeSubviewAtIndex:indexOfWhite withSubviewAtIndex:indexOfYellow];
+    
+    if (canDrag) {
+        [self drawColorButtonClicked:self.drawColorButton];
+    }
 }
 
 - (void)changeDragDraw {

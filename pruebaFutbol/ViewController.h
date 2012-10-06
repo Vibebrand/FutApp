@@ -29,5 +29,6 @@
 @property BOOL canDragMultipleViewsAtOnce;
 @property BOOL canUseTheSameFrameManyTimes;
 @property (nonatomic, retain) id<ICheckpointMessages> logger;
+@property (nonatomic, retain) UIButton *drawColorButton;
 
 @end
