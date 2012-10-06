@@ -96,11 +96,20 @@
     CGFloat miniSize = sizeOfPlayers * 0.75;
     for (int i = 0; i < limit; i++) {
         for (int j = 0; j < oLimit; j++) {
-            CGRect endFrame = CGRectMake(j*miniSize + 5, i * miniSize, miniSize, miniSize);
-            [goodFrames addObject:TKCGRectValue(endFrame)];
+            if (i < limit -1 ) {
+                CGRect endFrame = CGRectMake(j*miniSize + 5, i * miniSize, miniSize, miniSize);
+                [goodFrames addObject:TKCGRectValue(endFrame)];
+            }
+            else {
+                CGRect endFrame = CGRectMake(j*miniSize + 5,((i-1) * miniSize)+miniSize/2, miniSize, miniSize);
+                [goodFrames addObject:TKCGRectValue(endFrame)];
+            }
             
         }
     }
+    
+    
+    
     //Posicionar jugadores titulares
     [[self.dragViews objectAtIndex:0] swapToEndPositionAtIndex: 9 * oLimit];
     
