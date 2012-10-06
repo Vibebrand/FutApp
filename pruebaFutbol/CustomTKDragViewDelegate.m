@@ -11,14 +11,13 @@
 
 @implementation CustomTKDragViewDelegate
 
-@synthesize dragViews;
+@synthesize dragViews, logger;
 
 - (id)init
 {
     self = [super init];
     if (self) {
         self.dragViews = nil;
-        viewsInBar = 0;
     }
     return self;
 }
@@ -27,7 +26,6 @@
     self = [super init];
     if (self) {
         self.dragViews = dragViewsArray;
-        viewsInBar = dragViewsArray.count;
     }
     return self;
 }
@@ -35,6 +33,7 @@
 - (void)dealloc
 {
     self.dragViews = nil;
+    self.logger = nil;
     [super dealloc];
 }
 
@@ -42,33 +41,47 @@
     if (dragViews != dragViewsArray) {
         [dragViews release];
         dragViews = [dragViewsArray retain];
-        viewsInBar = dragViews.count;
     }
 }
 
-- (void)dragViewDidLeaveStartFrame:(TKDragView *)dragView {
-    if (viewsInBar > 0) {
-        viewsInBar--;
-    }
-    
-    for (int i = 0; i < self.dragViews.count; i++) {
-        TKDragView *view = (TKDragView *)[self.dragViews objectAtIndex:i];
-        if (view.isAtStartFrame && view.frame.origin.x > dragView.frame.origin.x) {
-            view.startFrame = CGRectMake(view.startFrame.origin.x - 60, view.startFrame.origin.y, view.startFrame.size.width, view.startFrame.size.height);
-            [view swapToStartPosition];
+- (void)dragViewDidSwapToEndFrame:(TKDragView *)dragView atIndex:(NSInteger)index {
+    CGRect rect = [[[dragView goodFramesArray] objectAtIndex:index]CGRectValue];
+    TKDragView *temp = [self canDragView:dragView DragTo:rect];
+    if (temp) {
+        temp.startFrame = dragView.startFrame;
+        dragView.startFrame = rect;
+        [temp swapToStartPosition];
+        [dragView swapToStartPosition];
+        if (temp.frame.origin.y == [[UIScreen mainScreen] bounds].size.width - 70) {
+            [logger checkpointPassed:@"cambio con banca"];
+        } else {
+            [logger checkpointPassed:@"cambio entre jugadores"];
         }
     }
-    dragView.startFrame = CGRectMake(-660, dragView.startFrame.origin.y, dragView.startFrame.size.width, dragView.startFrame.size.height);
-    
+    else {
+        if (dragView.startFrame.origin.y == [[UIScreen mainScreen] bounds].size.width - 70) {
+            [dragView swapToStartPosition];
+        }
+    }
 }
 
-- (void)dragViewWillSwapToStartFrame:(TKDragView *)dragView {
-  
-    if (!dragView.isAtStartFrame || dragView.startFrame.origin.x == -660) {
-        dragView.startFrame = CGRectMake(viewsInBar * 60, dragView.startFrame.origin.y, dragView.startFrame.size.width, dragView.startFrame.size.height);
-        viewsInBar++;
+- (TKDragView *)canDragView: (TKDragView *)dragView DragTo:(CGRect)destination {
+    for (TKDragView *view in self.dragViews) {
+        if (view != dragView && CGRectIntersectsRect(destination, view.frame)) {
+            return view;
+        }
     }
-    
+    return nil;
+}
+
+-(int)viewsInStartFrame {
+    int sum = 0;
+    for (int i = 0; i < self.dragViews.count; i++) {
+        if ([[self.dragViews objectAtIndex:i] isAtStartFrame]) {
+            sum++;
+        }
+    }
+    return sum;
 }
 
 

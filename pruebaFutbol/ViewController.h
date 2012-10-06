@@ -8,21 +8,26 @@
 
 #import <UIKit/UIKit.h>
 #import "TKDragView.h"
+#import "ICheckpointMessages.h"
+
 @class HScrollView;
 @class SmoothLineView;
 @class MGDrawingSlate;
+
 
 
 @interface ViewController : UIViewController <TKDragViewDelegate> {
     SmoothLineView *slv;
     MGDrawingSlate *mds;
     MGDrawingSlate *mdsG;
+    UIImageView *soccerField;
+    BOOL canDrag;
 }
 
-@property (nonatomic, retain) HScrollView *downScrollView;
 @property (nonatomic, retain) HScrollView *upScrollView;
 @property (nonatomic, retain) NSMutableArray *dragViews;
 @property BOOL canDragMultipleViewsAtOnce;
 @property BOOL canUseTheSameFrameManyTimes;
+@property (nonatomic, retain) id<ICheckpointMessages> logger;
 
 @end
