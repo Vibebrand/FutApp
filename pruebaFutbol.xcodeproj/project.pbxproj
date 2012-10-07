@@ -35,8 +35,8 @@
 		92918DE51610E757002CD6A4 /* HScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92918DE41610E757002CD6A4 /* HScrollView.m */; };
 		92A362A51620922E0095A4F8 /* chivasBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362A11620922E0095A4F8 /* chivasBadge.png */; };
 		92A362A61620922E0095A4F8 /* chivasBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362A21620922E0095A4F8 /* chivasBadge@2x.png */; };
-		92A362A71620922E0095A4F8 /* chivasBadgeNum.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362A31620922E0095A4F8 /* chivasBadgeNum.png */; };
-		92A362A81620922E0095A4F8 /* chivasBadgeNum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362A41620922E0095A4F8 /* chivasBadgeNum@2x.png */; };
+		92A362C9162117410095A4F8 /* chivasBadgeNum.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362C8162117410095A4F8 /* chivasBadgeNum.png */; };
+		92A362CB162117CA0095A4F8 /* chivasBadgeNum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362CA162117CA0095A4F8 /* chivasBadgeNum@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,8 +79,8 @@
 		92918DE41610E757002CD6A4 /* HScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HScrollView.m; sourceTree = "<group>"; };
 		92A362A11620922E0095A4F8 /* chivasBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasBadge.png; sourceTree = "<group>"; };
 		92A362A21620922E0095A4F8 /* chivasBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chivasBadge@2x.png"; sourceTree = "<group>"; };
-		92A362A31620922E0095A4F8 /* chivasBadgeNum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasBadgeNum.png; sourceTree = "<group>"; };
-		92A362A41620922E0095A4F8 /* chivasBadgeNum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chivasBadgeNum@2x.png"; sourceTree = "<group>"; };
+		92A362C8162117410095A4F8 /* chivasBadgeNum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasBadgeNum.png; sourceTree = "<group>"; };
+		92A362CA162117CA0095A4F8 /* chivasBadgeNum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chivasBadgeNum@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,10 +177,10 @@
 				920F4D28161CD253005129D6 /* soccerField.jpeg */,
 				9226CE0E161D2B2B00511116 /* gray.jpeg */,
 				923B18E116111ECD00856A9D /* tile_green.png */,
+				92A362C8162117410095A4F8 /* chivasBadgeNum.png */,
+				92A362CA162117CA0095A4F8 /* chivasBadgeNum@2x.png */,
 				92A362A11620922E0095A4F8 /* chivasBadge.png */,
 				92A362A21620922E0095A4F8 /* chivasBadge@2x.png */,
-				92A362A31620922E0095A4F8 /* chivasBadgeNum.png */,
-				92A362A41620922E0095A4F8 /* chivasBadgeNum@2x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -300,8 +300,8 @@
 				925B639E161E565000954A55 /* chivasadidas.png in Resources */,
 				92A362A51620922E0095A4F8 /* chivasBadge.png in Resources */,
 				92A362A61620922E0095A4F8 /* chivasBadge@2x.png in Resources */,
-				92A362A71620922E0095A4F8 /* chivasBadgeNum.png in Resources */,
-				92A362A81620922E0095A4F8 /* chivasBadgeNum@2x.png in Resources */,
+				92A362C9162117410095A4F8 /* chivasBadgeNum.png in Resources */,
+				92A362CB162117CA0095A4F8 /* chivasBadgeNum@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

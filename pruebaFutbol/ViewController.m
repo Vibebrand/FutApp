@@ -76,7 +76,7 @@
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"chivasBadge.png" ofType:nil];
+    NSString *path = [bundle pathForResource:@"chivasBadgeNum.png" ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
     
@@ -298,11 +298,11 @@
 - (UIImage *) drawText:(NSString*) text inImage:(UIImage*)  image atPoint:(CGPoint)   point
 {
     
-    UIFont *font = [UIFont fontWithName:@"Verdana-Bold" size:19];
+    UIFont *font = [UIFont fontWithName:@"Verdana-Bold" size:18];
     UIGraphicsBeginImageContext(image.size);
     [image drawInRect:CGRectMake(0,0,image.size.width,image.size.height)];
     CGRect rect = CGRectMake(point.x, point.y, image.size.width, image.size.height);
-    [[UIColor blueColor] set];
+    [[UIColor whiteColor] set];
     [text drawInRect:CGRectIntegral(rect) withFont:font];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
