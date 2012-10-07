@@ -91,7 +91,7 @@
     [numbersOfPlayers addObject:@"25"];
     [numbersOfPlayers addObject:@"28"];
     [numbersOfPlayers addObject:@"14"];
-    [numbersOfPlayers addObject:@"21"];
+    [numbersOfPlayers addObject:@"17"];
     [numbersOfPlayers addObject:@"19"];
     [numbersOfPlayers addObject:@"20"];
     [numbersOfPlayers addObject:@" 7"];
