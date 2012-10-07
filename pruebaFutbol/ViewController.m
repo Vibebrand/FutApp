@@ -80,13 +80,32 @@
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
     
+    //Numbers of players
+    NSMutableArray *numbersOfPlayers = [[NSMutableArray alloc] initWithCapacity:17];
+    [numbersOfPlayers addObject:@" 1"];
+    [numbersOfPlayers addObject:@"21"];
+    [numbersOfPlayers addObject:@" 4"];
+    [numbersOfPlayers addObject:@"24"];
+    [numbersOfPlayers addObject:@" 3"];
+    [numbersOfPlayers addObject:@"13"];
+    [numbersOfPlayers addObject:@"25"];
+    [numbersOfPlayers addObject:@"28"];
+    [numbersOfPlayers addObject:@"14"];
+    [numbersOfPlayers addObject:@"21"];
+    [numbersOfPlayers addObject:@"19"];
+    [numbersOfPlayers addObject:@"20"];
+    [numbersOfPlayers addObject:@" 7"];
+    [numbersOfPlayers addObject:@" 5"];
+    [numbersOfPlayers addObject:@"26"];
+    [numbersOfPlayers addObject:@"10"];
+    [numbersOfPlayers addObject:@" 2"];
+    
     
     //Se agregan jugadores al scroll view
     for (int i = 0; i < numberOfPlayers; i++) {
         CGFloat xOrigin = i * 60;
         CGRect startFrame = CGRectMake(xOrigin, screenRect.size.width - 70, 50, 50);
-        
-        TKDragView *dragView = [[TKDragView alloc] initWithImage:image startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:self];
+        TKDragView *dragView = [[TKDragView alloc] initWithImage:[self drawText:[numbersOfPlayers objectAtIndex:i] inImage:image atPoint:CGPointMake(image.size.width/4, image.size.height/4)] startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:self];
         dragView.canDragMultipleDragViewsAtOnce = NO;
         dragView.delegate = delegado;
         [self.upScrollView.elements addObject:dragView];
@@ -95,10 +114,15 @@
         [dragView release];
     }
     delegado.dragViews = self.dragViews;
-    
+    [numbersOfPlayers release];
     [self.view insertSubview:self.upScrollView atIndex:3];
     
-    //Crear matriz para la cancha
+    
+    
+        
+    
+    
+    //Create matrix for the field
     int limit = ([[UIScreen mainScreen]bounds].size.width - sizeOfPlayers)/(sizeOfPlayers * 0.75);
     int oLimit = [[UIScreen mainScreen]bounds].size.height / (sizeOfPlayers * 0.75);
     CGFloat miniSize = sizeOfPlayers * 0.75;
@@ -269,6 +293,21 @@
         [mdsG setUserInteractionEnabled:NO];
         [mds setUserInteractionEnabled:NO];
     }
+}
+
+- (UIImage *) drawText:(NSString*) text inImage:(UIImage*)  image atPoint:(CGPoint)   point
+{
+    
+    UIFont *font = [UIFont fontWithName:@"Verdana-Bold" size:19];
+    UIGraphicsBeginImageContext(image.size);
+    [image drawInRect:CGRectMake(0,0,image.size.width,image.size.height)];
+    CGRect rect = CGRectMake(point.x, point.y, image.size.width, image.size.height);
+    [[UIColor blueColor] set];
+    [text drawInRect:CGRectIntegral(rect) withFont:font];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
 }
 
 @end
