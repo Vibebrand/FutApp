@@ -58,14 +58,14 @@
 		925B63A3161E650B00954A55 /* TestFlightLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFlightLogger.m; sourceTree = "<group>"; };
 		926FF757161A78B1003E4B29 /* MGDrawingSlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDrawingSlate.h; sourceTree = "<group>"; };
 		926FF758161A78B1003E4B29 /* MGDrawingSlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDrawingSlate.m; sourceTree = "<group>"; };
-		92912EFE160EA18A00A4C05E /* pruebaFutbol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pruebaFutbol.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92912EFE160EA18A00A4C05E /* FutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92912F02160EA18A00A4C05E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		92912F04160EA18A00A4C05E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		92912F06160EA18A00A4C05E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		92912F0A160EA18A00A4C05E /* pruebaFutbol-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pruebaFutbol-Info.plist"; sourceTree = "<group>"; };
+		92912F0A160EA18A00A4C05E /* FutApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FutApp-Info.plist"; sourceTree = "<group>"; };
 		92912F0C160EA18A00A4C05E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		92912F0E160EA18A00A4C05E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		92912F10160EA18A00A4C05E /* pruebaFutbol-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pruebaFutbol-Prefix.pch"; sourceTree = "<group>"; };
+		92912F10160EA18A00A4C05E /* FutApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FutApp-Prefix.pch"; sourceTree = "<group>"; };
 		92912F11160EA18A00A4C05E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92912F12160EA18A00A4C05E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		92912F14160EA18A00A4C05E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		92912EFF160EA18A00A4C05E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				92912EFE160EA18A00A4C05E /* pruebaFutbol.app */,
+				92912EFE160EA18A00A4C05E /* FutApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,10 +157,10 @@
 		92912F09160EA18A00A4C05E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				92912F0A160EA18A00A4C05E /* pruebaFutbol-Info.plist */,
+				92912F0A160EA18A00A4C05E /* FutApp-Info.plist */,
 				92912F0B160EA18A00A4C05E /* InfoPlist.strings */,
 				92912F0E160EA18A00A4C05E /* main.m */,
-				92912F10160EA18A00A4C05E /* pruebaFutbol-Prefix.pch */,
+				92912F10160EA18A00A4C05E /* FutApp-Prefix.pch */,
 				92912F14160EA18A00A4C05E /* Default.png */,
 				92912F16160EA18A00A4C05E /* Default@2x.png */,
 				92912F18160EA18A00A4C05E /* Default-568h@2x.png */,
@@ -239,9 +239,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		92912EFD160EA18A00A4C05E /* pruebaFutbol */ = {
+		92912EFD160EA18A00A4C05E /* FutApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92912F22160EA18A00A4C05E /* Build configuration list for PBXNativeTarget "pruebaFutbol" */;
+			buildConfigurationList = 92912F22160EA18A00A4C05E /* Build configuration list for PBXNativeTarget "FutApp" */;
 			buildPhases = (
 				92912EFA160EA18A00A4C05E /* Sources */,
 				92912EFB160EA18A00A4C05E /* Frameworks */,
@@ -251,9 +251,9 @@
 			);
 			dependencies = (
 			);
-			name = pruebaFutbol;
+			name = FutApp;
 			productName = pruebaFutbol;
-			productReference = 92912EFE160EA18A00A4C05E /* pruebaFutbol.app */;
+			productReference = 92912EFE160EA18A00A4C05E /* FutApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -265,7 +265,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Ivo;
 			};
-			buildConfigurationList = 92912EF8160EA18A00A4C05E /* Build configuration list for PBXProject "pruebaFutbol" */;
+			buildConfigurationList = 92912EF8160EA18A00A4C05E /* Build configuration list for PBXProject "FutApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -277,7 +277,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				92912EFD160EA18A00A4C05E /* pruebaFutbol */,
+				92912EFD160EA18A00A4C05E /* FutApp */,
 			);
 		};
 /* End PBXProject section */
@@ -400,13 +400,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "pruebaFutbol/pruebaFutbol-Prefix.pch";
-				INFOPLIST_FILE = "pruebaFutbol/pruebaFutbol-Info.plist";
+				GCC_PREFIX_HEADER = "pruebaFutbol/FutApp-Prefix.pch";
+				INFOPLIST_FILE = "pruebaFutbol/FutApp-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FutApp;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -419,13 +419,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "pruebaFutbol/pruebaFutbol-Prefix.pch";
-				INFOPLIST_FILE = "pruebaFutbol/pruebaFutbol-Info.plist";
+				GCC_PREFIX_HEADER = "pruebaFutbol/FutApp-Prefix.pch";
+				INFOPLIST_FILE = "pruebaFutbol/FutApp-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FutApp;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
@@ -435,7 +435,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		92912EF8160EA18A00A4C05E /* Build configuration list for PBXProject "pruebaFutbol" */ = {
+		92912EF8160EA18A00A4C05E /* Build configuration list for PBXProject "FutApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92912F20160EA18A00A4C05E /* Debug */,
@@ -444,7 +444,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92912F22160EA18A00A4C05E /* Build configuration list for PBXNativeTarget "pruebaFutbol" */ = {
+		92912F22160EA18A00A4C05E /* Build configuration list for PBXNativeTarget "FutApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92912F23160EA18A00A4C05E /* Debug */,

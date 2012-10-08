@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "92912EFD160EA18A00A4C05E"
                BuildableName = "pruebaFutbol.app"
-               BlueprintName = "pruebaFutbol"
-               ReferencedContainer = "container:pruebaFutbol.xcodeproj">
+               BlueprintName = "FutApp"
+               ReferencedContainer = "container:FutApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92912EFD160EA18A00A4C05E"
             BuildableName = "pruebaFutbol.app"
-            BlueprintName = "pruebaFutbol"
-            ReferencedContainer = "container:pruebaFutbol.xcodeproj">
+            BlueprintName = "FutApp"
+            ReferencedContainer = "container:FutApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92912EFD160EA18A00A4C05E"
             BuildableName = "pruebaFutbol.app"
-            BlueprintName = "pruebaFutbol"
-            ReferencedContainer = "container:pruebaFutbol.xcodeproj">
+            BlueprintName = "FutApp"
+            ReferencedContainer = "container:FutApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "92912EFD160EA18A00A4C05E"
             BuildableName = "pruebaFutbol.app"
-            BlueprintName = "pruebaFutbol"
-            ReferencedContainer = "container:pruebaFutbol.xcodeproj">
+            BlueprintName = "FutApp"
+            ReferencedContainer = "container:FutApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
