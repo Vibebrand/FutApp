@@ -16,7 +16,7 @@
 
 
 
-@interface ViewController : UIViewController <TKDragViewDelegate> {
+@interface ViewController : UIViewController {
     SmoothLineView *slv;
     MGDrawingSlate *mds;
     MGDrawingSlate *mdsG;

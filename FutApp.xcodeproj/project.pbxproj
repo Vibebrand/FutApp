@@ -38,6 +38,24 @@
 		92A362C9162117410095A4F8 /* chivasBadgeNum.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362C8162117410095A4F8 /* chivasBadgeNum.png */; };
 		92A362CB162117CA0095A4F8 /* chivasBadgeNum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362CA162117CA0095A4F8 /* chivasBadgeNum@2x.png */; };
 		92C47E2716236555002FC10C /* UIImage+UIImageDrawText.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C47E2616236555002FC10C /* UIImage+UIImageDrawText.m */; };
+		92C47E2B16236B3C002FC10C /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C47E2916236B3C002FC10C /* MenuViewController.m */; };
+		92C47E2C16236B3C002FC10C /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E2A16236B3C002FC10C /* MenuViewController.xib */; };
+		92C47E3C1623709B002FC10C /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C47E391623709B002FC10C /* AwesomeMenu.m */; };
+		92C47E3D1623709B002FC10C /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C47E3B1623709B002FC10C /* AwesomeMenuItem.m */; };
+		92C47E4D16237109002FC10C /* bg-addbutton-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E3F16237109002FC10C /* bg-addbutton-highlighted.png */; };
+		92C47E4E16237109002FC10C /* bg-addbutton-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4016237109002FC10C /* bg-addbutton-highlighted@2x.png */; };
+		92C47E4F16237109002FC10C /* bg-addbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4116237109002FC10C /* bg-addbutton.png */; };
+		92C47E5016237109002FC10C /* bg-addbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4216237109002FC10C /* bg-addbutton@2x.png */; };
+		92C47E5116237109002FC10C /* bg-menuitem-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4316237109002FC10C /* bg-menuitem-highlighted.png */; };
+		92C47E5216237109002FC10C /* bg-menuitem-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4416237109002FC10C /* bg-menuitem-highlighted@2x.png */; };
+		92C47E5316237109002FC10C /* bg-menuitem.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4516237109002FC10C /* bg-menuitem.png */; };
+		92C47E5416237109002FC10C /* bg-menuitem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4616237109002FC10C /* bg-menuitem@2x.png */; };
+		92C47E5516237109002FC10C /* icon-plus-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4716237109002FC10C /* icon-plus-highlighted.png */; };
+		92C47E5616237109002FC10C /* icon-plus-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4816237109002FC10C /* icon-plus-highlighted@2x.png */; };
+		92C47E5716237109002FC10C /* icon-plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4916237109002FC10C /* icon-plus.png */; };
+		92C47E5816237109002FC10C /* icon-plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4A16237109002FC10C /* icon-plus@2x.png */; };
+		92C47E5916237109002FC10C /* icon-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4B16237109002FC10C /* icon-star.png */; };
+		92C47E5A16237109002FC10C /* icon-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4C16237109002FC10C /* icon-star@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +102,27 @@
 		92A362CA162117CA0095A4F8 /* chivasBadgeNum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chivasBadgeNum@2x.png"; sourceTree = "<group>"; };
 		92C47E2516236555002FC10C /* UIImage+UIImageDrawText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIImageDrawText.h"; sourceTree = "<group>"; };
 		92C47E2616236555002FC10C /* UIImage+UIImageDrawText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UIImageDrawText.m"; sourceTree = "<group>"; };
+		92C47E2816236B3C002FC10C /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		92C47E2916236B3C002FC10C /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		92C47E2A16236B3C002FC10C /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		92C47E381623709B002FC10C /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
+		92C47E391623709B002FC10C /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
+		92C47E3A1623709B002FC10C /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
+		92C47E3B1623709B002FC10C /* AwesomeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenuItem.m; sourceTree = "<group>"; };
+		92C47E3F16237109002FC10C /* bg-addbutton-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-addbutton-highlighted.png"; sourceTree = "<group>"; };
+		92C47E4016237109002FC10C /* bg-addbutton-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-addbutton-highlighted@2x.png"; sourceTree = "<group>"; };
+		92C47E4116237109002FC10C /* bg-addbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-addbutton.png"; sourceTree = "<group>"; };
+		92C47E4216237109002FC10C /* bg-addbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-addbutton@2x.png"; sourceTree = "<group>"; };
+		92C47E4316237109002FC10C /* bg-menuitem-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-menuitem-highlighted.png"; sourceTree = "<group>"; };
+		92C47E4416237109002FC10C /* bg-menuitem-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-menuitem-highlighted@2x.png"; sourceTree = "<group>"; };
+		92C47E4516237109002FC10C /* bg-menuitem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-menuitem.png"; sourceTree = "<group>"; };
+		92C47E4616237109002FC10C /* bg-menuitem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-menuitem@2x.png"; sourceTree = "<group>"; };
+		92C47E4716237109002FC10C /* icon-plus-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-plus-highlighted.png"; sourceTree = "<group>"; };
+		92C47E4816237109002FC10C /* icon-plus-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-plus-highlighted@2x.png"; sourceTree = "<group>"; };
+		92C47E4916237109002FC10C /* icon-plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-plus.png"; sourceTree = "<group>"; };
+		92C47E4A16237109002FC10C /* icon-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-plus@2x.png"; sourceTree = "<group>"; };
+		92C47E4B16237109002FC10C /* icon-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-star.png"; sourceTree = "<group>"; };
+		92C47E4C16237109002FC10C /* icon-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-star@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +214,7 @@
 		92A362AA1620923C0095A4F8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				92C47E5B16237111002FC10C /* AwesomeMenu */,
 				9226CE0B161D292100511116 /* tshirt-icon.png */,
 				925B639D161E564F00954A55 /* chivasadidas.png */,
 				920F4D2B161CD6B0005129D6 /* soccer.png */,
@@ -192,6 +232,7 @@
 		92A362AB162096010095A4F8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				92C47E3E162370A2002FC10C /* AwesomeMenu */,
 				923B18DE1611197D00856A9D /* TKDragView.h */,
 				923B18DF1611197D00856A9D /* TKDragView.m */,
 				92918DE31610E757002CD6A4 /* HScrollView.h */,
@@ -226,6 +267,7 @@
 		92A362AE1620969E0095A4F8 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				92C47E2A16236B3C002FC10C /* MenuViewController.xib */,
 				92912F1D160EA18A00A4C05E /* ViewController.xib */,
 			);
 			name = Xib;
@@ -236,6 +278,8 @@
 			children = (
 				92912F1A160EA18A00A4C05E /* ViewController.h */,
 				92912F1B160EA18A00A4C05E /* ViewController.m */,
+				92C47E2816236B3C002FC10C /* MenuViewController.h */,
+				92C47E2916236B3C002FC10C /* MenuViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -247,6 +291,38 @@
 				92C47E2616236555002FC10C /* UIImage+UIImageDrawText.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		92C47E3E162370A2002FC10C /* AwesomeMenu */ = {
+			isa = PBXGroup;
+			children = (
+				92C47E381623709B002FC10C /* AwesomeMenu.h */,
+				92C47E391623709B002FC10C /* AwesomeMenu.m */,
+				92C47E3A1623709B002FC10C /* AwesomeMenuItem.h */,
+				92C47E3B1623709B002FC10C /* AwesomeMenuItem.m */,
+			);
+			name = AwesomeMenu;
+			sourceTree = "<group>";
+		};
+		92C47E5B16237111002FC10C /* AwesomeMenu */ = {
+			isa = PBXGroup;
+			children = (
+				92C47E3F16237109002FC10C /* bg-addbutton-highlighted.png */,
+				92C47E4016237109002FC10C /* bg-addbutton-highlighted@2x.png */,
+				92C47E4116237109002FC10C /* bg-addbutton.png */,
+				92C47E4216237109002FC10C /* bg-addbutton@2x.png */,
+				92C47E4316237109002FC10C /* bg-menuitem-highlighted.png */,
+				92C47E4416237109002FC10C /* bg-menuitem-highlighted@2x.png */,
+				92C47E4516237109002FC10C /* bg-menuitem.png */,
+				92C47E4616237109002FC10C /* bg-menuitem@2x.png */,
+				92C47E4716237109002FC10C /* icon-plus-highlighted.png */,
+				92C47E4816237109002FC10C /* icon-plus-highlighted@2x.png */,
+				92C47E4916237109002FC10C /* icon-plus.png */,
+				92C47E4A16237109002FC10C /* icon-plus@2x.png */,
+				92C47E4B16237109002FC10C /* icon-star.png */,
+				92C47E4C16237109002FC10C /* icon-star@2x.png */,
+			);
+			name = AwesomeMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +391,21 @@
 				92A362A61620922E0095A4F8 /* chivasBadge@2x.png in Resources */,
 				92A362C9162117410095A4F8 /* chivasBadgeNum.png in Resources */,
 				92A362CB162117CA0095A4F8 /* chivasBadgeNum@2x.png in Resources */,
+				92C47E2C16236B3C002FC10C /* MenuViewController.xib in Resources */,
+				92C47E4D16237109002FC10C /* bg-addbutton-highlighted.png in Resources */,
+				92C47E4E16237109002FC10C /* bg-addbutton-highlighted@2x.png in Resources */,
+				92C47E4F16237109002FC10C /* bg-addbutton.png in Resources */,
+				92C47E5016237109002FC10C /* bg-addbutton@2x.png in Resources */,
+				92C47E5116237109002FC10C /* bg-menuitem-highlighted.png in Resources */,
+				92C47E5216237109002FC10C /* bg-menuitem-highlighted@2x.png in Resources */,
+				92C47E5316237109002FC10C /* bg-menuitem.png in Resources */,
+				92C47E5416237109002FC10C /* bg-menuitem@2x.png in Resources */,
+				92C47E5516237109002FC10C /* icon-plus-highlighted.png in Resources */,
+				92C47E5616237109002FC10C /* icon-plus-highlighted@2x.png in Resources */,
+				92C47E5716237109002FC10C /* icon-plus.png in Resources */,
+				92C47E5816237109002FC10C /* icon-plus@2x.png in Resources */,
+				92C47E5916237109002FC10C /* icon-star.png in Resources */,
+				92C47E5A16237109002FC10C /* icon-star@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +425,9 @@
 				926FF759161A78B1003E4B29 /* MGDrawingSlate.m in Sources */,
 				925B63A4161E650B00954A55 /* TestFlightLogger.m in Sources */,
 				92C47E2716236555002FC10C /* UIImage+UIImageDrawText.m in Sources */,
+				92C47E2B16236B3C002FC10C /* MenuViewController.m in Sources */,
+				92C47E3C1623709B002FC10C /* AwesomeMenu.m in Sources */,
+				92C47E3D1623709B002FC10C /* AwesomeMenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

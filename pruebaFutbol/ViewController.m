@@ -106,9 +106,8 @@
     for (int i = 0; i < numberOfPlayers; i++) {
         CGFloat xOrigin = i * 60;
         CGRect startFrame = CGRectMake(xOrigin, screenRect.size.width - 70, 50, 50);
-        TKDragView *dragView = [[TKDragView alloc] initWithImage:[UIImage drawText:[numbersOfPlayers objectAtIndex:i] inImage:image atPoint:CGPointMake(image.size.width/4, image.size.height/4)] startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:self];
+        TKDragView *dragView = [[TKDragView alloc] initWithImage:[UIImage drawText:[numbersOfPlayers objectAtIndex:i] inImage:image atPoint:CGPointMake(image.size.width/4, image.size.height/4)] startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:delegado];
         dragView.canDragMultipleDragViewsAtOnce = NO;
-        dragView.delegate = delegado;
         [self.upScrollView.elements addObject:dragView];
         [self.dragViews addObject:dragView];
         [self.view insertSubview:dragView atIndex:4];
