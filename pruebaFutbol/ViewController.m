@@ -11,6 +11,7 @@
 #import "CustomTKDragViewDelegate.h"
 #import "HScrollView.h"
 #import "MGDrawingSlate.h"
+#import "UIImage+UIImageDrawText.h"
 
 @interface ViewController ()
 
@@ -105,7 +106,7 @@
     for (int i = 0; i < numberOfPlayers; i++) {
         CGFloat xOrigin = i * 60;
         CGRect startFrame = CGRectMake(xOrigin, screenRect.size.width - 70, 50, 50);
-        TKDragView *dragView = [[TKDragView alloc] initWithImage:[self drawText:[numbersOfPlayers objectAtIndex:i] inImage:image atPoint:CGPointMake(image.size.width/4, image.size.height/4)] startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:self];
+        TKDragView *dragView = [[TKDragView alloc] initWithImage:[UIImage drawText:[numbersOfPlayers objectAtIndex:i] inImage:image atPoint:CGPointMake(image.size.width/4, image.size.height/4)] startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:self];
         dragView.canDragMultipleDragViewsAtOnce = NO;
         dragView.delegate = delegado;
         [self.upScrollView.elements addObject:dragView];
@@ -293,21 +294,6 @@
         [mdsG setUserInteractionEnabled:NO];
         [mds setUserInteractionEnabled:NO];
     }
-}
-
-- (UIImage *) drawText:(NSString*) text inImage:(UIImage*)  image atPoint:(CGPoint)   point
-{
-    
-    UIFont *font = [UIFont fontWithName:@"Verdana-Bold" size:18];
-    UIGraphicsBeginImageContext(image.size);
-    [image drawInRect:CGRectMake(0,0,image.size.width,image.size.height)];
-    CGRect rect = CGRectMake(point.x, point.y, image.size.width, image.size.height);
-    [[UIColor whiteColor] set];
-    [text drawInRect:CGRectIntegral(rect) withFont:font];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return newImage;
 }
 
 @end

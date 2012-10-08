@@ -37,6 +37,7 @@
 		92A362A61620922E0095A4F8 /* chivasBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362A21620922E0095A4F8 /* chivasBadge@2x.png */; };
 		92A362C9162117410095A4F8 /* chivasBadgeNum.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362C8162117410095A4F8 /* chivasBadgeNum.png */; };
 		92A362CB162117CA0095A4F8 /* chivasBadgeNum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362CA162117CA0095A4F8 /* chivasBadgeNum@2x.png */; };
+		92C47E2716236555002FC10C /* UIImage+UIImageDrawText.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C47E2616236555002FC10C /* UIImage+UIImageDrawText.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,8 @@
 		92A362A21620922E0095A4F8 /* chivasBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chivasBadge@2x.png"; sourceTree = "<group>"; };
 		92A362C8162117410095A4F8 /* chivasBadgeNum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasBadgeNum.png; sourceTree = "<group>"; };
 		92A362CA162117CA0095A4F8 /* chivasBadgeNum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chivasBadgeNum@2x.png"; sourceTree = "<group>"; };
+		92C47E2516236555002FC10C /* UIImage+UIImageDrawText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIImageDrawText.h"; sourceTree = "<group>"; };
+		92C47E2616236555002FC10C /* UIImage+UIImageDrawText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UIImageDrawText.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,7 @@
 		92912F08160EA18A00A4C05E /* pruebaFutbol */ = {
 			isa = PBXGroup;
 			children = (
+				92C47E1F162364D1002FC10C /* Categories */,
 				92A362AF162096B30095A4F8 /* ViewControllers */,
 				925B63A0161E640000954A55 /* protocolos */,
 				92A362AD162096760095A4F8 /* Delegates */,
@@ -236,6 +240,15 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		92C47E1F162364D1002FC10C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				92C47E2516236555002FC10C /* UIImage+UIImageDrawText.h */,
+				92C47E2616236555002FC10C /* UIImage+UIImageDrawText.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -320,6 +333,7 @@
 				924AB69016162A4B006FCA89 /* CustomTKDragViewDelegate.m in Sources */,
 				926FF759161A78B1003E4B29 /* MGDrawingSlate.m in Sources */,
 				925B63A4161E650B00954A55 /* TestFlightLogger.m in Sources */,
+				92C47E2716236555002FC10C /* UIImage+UIImageDrawText.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
