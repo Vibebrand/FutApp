@@ -7,7 +7,6 @@
 //
 
 #import "CustomTKDragViewDelegate.h"
-#import "TKDragView.h"
 
 @implementation CustomTKDragViewDelegate
 
