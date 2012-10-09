@@ -56,6 +56,7 @@
 		92C47E5816237109002FC10C /* icon-plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4A16237109002FC10C /* icon-plus@2x.png */; };
 		92C47E5916237109002FC10C /* icon-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4B16237109002FC10C /* icon-star.png */; };
 		92C47E5A16237109002FC10C /* icon-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4C16237109002FC10C /* icon-star@2x.png */; };
+		92C47E5F1623AAF2002FC10C /* MasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C47E5E1623AAF2002FC10C /* MasterController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +124,9 @@
 		92C47E4A16237109002FC10C /* icon-plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-plus@2x.png"; sourceTree = "<group>"; };
 		92C47E4B16237109002FC10C /* icon-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-star.png"; sourceTree = "<group>"; };
 		92C47E4C16237109002FC10C /* icon-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-star@2x.png"; sourceTree = "<group>"; };
+		92C47E5D1623AAF2002FC10C /* MasterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterController.h; sourceTree = "<group>"; };
+		92C47E5E1623AAF2002FC10C /* MasterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterController.m; sourceTree = "<group>"; };
+		92C47E601623B861002FC10C /* IFlowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFlowManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				925B63A1161E643E00954A55 /* ICheckpointMessages.h */,
+				92C47E601623B861002FC10C /* IFlowManager.h */,
 			);
 			name = protocolos;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 		92912F08160EA18A00A4C05E /* pruebaFutbol */ = {
 			isa = PBXGroup;
 			children = (
+				92C47E5C1623AA01002FC10C /* Controllers */,
 				92C47E1F162364D1002FC10C /* Categories */,
 				92A362AF162096B30095A4F8 /* ViewControllers */,
 				925B63A0161E640000954A55 /* protocolos */,
@@ -325,6 +331,15 @@
 			name = AwesomeMenu;
 			sourceTree = "<group>";
 		};
+		92C47E5C1623AA01002FC10C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				92C47E5D1623AAF2002FC10C /* MasterController.h */,
+				92C47E5E1623AAF2002FC10C /* MasterController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -428,6 +443,7 @@
 				92C47E2B16236B3C002FC10C /* MenuViewController.m in Sources */,
 				92C47E3C1623709B002FC10C /* AwesomeMenu.m in Sources */,
 				92C47E3D1623709B002FC10C /* AwesomeMenuItem.m in Sources */,
+				92C47E5F1623AAF2002FC10C /* MasterController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

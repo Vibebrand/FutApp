@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "AwesomeMenu.h"
+#import "IFlowManager.h"
+
+@class ViewController;
 
 @interface MenuViewController : UIViewController <AwesomeMenuDelegate>
+
+@property (nonatomic, retain) id<IFlowManager> flowManager;
+
 
 @end

@@ -8,18 +8,15 @@
 
 #import "MenuViewController.h"
 #import "AwesomeMenuItem.h"
-
-typedef enum {
-    Elegir_equipos = 0,
-    Seleccion_mexicana = 1,
-    Modo_libre = 2
-    } GameModes;
+#import "ViewController.h"
 
 @interface MenuViewController ()
 
 @end
 
 @implementation MenuViewController
+
+@synthesize flowManager;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,12 +34,15 @@ typedef enum {
     UIImage *storyMenuItemImage = [UIImage imageNamed:@"bg-menuitem.png"];
     UIImage *storyMenuitemImagePressed = [UIImage imageNamed:@"bg-menuitem-highlighted.png"];
     UIImage *starImage = [UIImage imageNamed:@"icon-star.png"];
+    
     AwesomeMenuItem *menuItem1 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage highlightedImage:storyMenuItemImage ContentImage:starImage highlightedContentImage:nil];
     AwesomeMenuItem *menuItem2 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage highlightedImage:storyMenuitemImagePressed ContentImage:starImage highlightedContentImage:nil];
     AwesomeMenuItem *menuItem3 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage highlightedImage:storyMenuitemImagePressed ContentImage:starImage highlightedContentImage:nil];
+    
     NSArray *menus = [NSArray arrayWithObjects:menuItem1, menuItem2, menuItem3, nil];
     [menuItem1 release];
     [menuItem2 release];
+    [menuItem3 release];
     
     AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:self.view.bounds menus:menus];
     [menu setDelegate:self];
@@ -50,7 +50,12 @@ typedef enum {
     menu.menuWholeAngle = M_PI_2;
     [self.view addSubview:menu];
     [menu release];
-    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,22 +65,7 @@ typedef enum {
 }
 
 - (void)AwesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx {
-    switch (idx) {
-        case Elegir_equipos:
-            //TODO
-            break;
-            
-        case Seleccion_mexicana:
-            //TODO
-            break;
-        
-        case Modo_libre:
-            //TODO
-            break;
-            
-        default:
-            break;
-    }
+    [flowManager willchangeToOption:idx];
 }
 
 @end
