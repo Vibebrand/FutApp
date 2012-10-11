@@ -16,15 +16,7 @@
 
 @implementation PlayersTableViewController
 
-@synthesize playersInfo, idx;
-
-- (void)dealloc
-{
-    self.playersInfo = nil;
-    [selectedMarks release];
-    self.idx = nil;
-    [super dealloc];
-}
+@synthesize playersInfo;
 
 - (id)init
 {
@@ -43,9 +35,17 @@
     
     UIImageView* header = [[UIImageView alloc] initWithFrame: CGRectMake(0.0, 0.0, self.view.bounds.size.width, 45.0)];
     [header setImage: [UIImage imageNamed:@"ToolBar_479x45.png"]];
-    [self.segmentedView setHeaderView: header];
+    
+    UIButton *doneButton = [UIButton buttonWithType:UIBarButtonItemStyleBordered];
+    [doneButton setTitle:@"Done" forState:UIControlStateNormal];
+    doneButton.frame = CGRectMake(400, 8, 70, 30);
+    [header addSubview:doneButton];
+    [self.segmentedView setHeaderView:header];
+    [header release];
     
     [self setShowRoundedCorners: YES];
+    self.tableView.allowsMultipleSelection = YES;
+    self.tableView.allowsMultipleSelectionDuringEditing = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,23 +67,17 @@
     return [playersInfo numberOfPlayersInSelectedTeam];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CRTableViewCellIdentifier = @"cellIdentifier";
-    CRTableViewCell *cell = (CRTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CRTableViewCellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CRTableViewCellIdentifier];
     
-    if (!cell) {
-        cell = [[[CRTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CRTableViewCellIdentifier] autorelease];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CRTableViewCellIdentifier];
     }
     
     NSString *text = [[[self.playersInfo playersOfSelectedTeam] allValues] objectAtIndex:indexPath.row];
-    cell.isSelected = [selectedMarks containsObject:text] ? YES : NO;
     cell.textLabel.text = text;
     
     return cell;
@@ -97,8 +91,6 @@
     } else {
         [selectedMarks addObject:text];
     }
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero];
-    
 }
 
 @end

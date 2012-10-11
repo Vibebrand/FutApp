@@ -15,6 +15,5 @@
 }
 
 @property(nonatomic, retain) id<IPlayerInfoService> playersInfo;
-@property(nonatomic, retain) NSIndexPath *idx;
 
 @end

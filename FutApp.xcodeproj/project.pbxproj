@@ -24,6 +24,7 @@
 		9261F1CA1626A0B400467C6F /* PlayersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9261F1C91626A0B400467C6F /* PlayersTableViewController.m */; };
 		9261F1CC1626A34200467C6F /* ToolBar_479x45.png in Resources */ = {isa = PBXBuildFile; fileRef = 9261F1CB1626A34200467C6F /* ToolBar_479x45.png */; };
 		926FF759161A78B1003E4B29 /* MGDrawingSlate.m in Sources */ = {isa = PBXBuildFile; fileRef = 926FF758161A78B1003E4B29 /* MGDrawingSlate.m */; };
+		927D01011627609A00BF2D2E /* CRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927D01001627609A00BF2D2E /* CRTableViewController.m */; };
 		927F51AB16260BAD002DA762 /* TeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927F51AA16260BAD002DA762 /* TeamsViewController.m */; };
 		927F51AF16262C99002DA762 /* TeamsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927F51AE16262C99002DA762 /* TeamsViewController.xib */; };
 		927F51B116264864002DA762 /* Categories_header_view_289x89.png in Resources */ = {isa = PBXBuildFile; fileRef = 927F51B016264864002DA762 /* Categories_header_view_289x89.png */; };
@@ -114,6 +115,8 @@
 		9261F1CD1626A59800467C6F /* IPlayerInfoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPlayerInfoService.h; sourceTree = "<group>"; };
 		926FF757161A78B1003E4B29 /* MGDrawingSlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDrawingSlate.h; sourceTree = "<group>"; };
 		926FF758161A78B1003E4B29 /* MGDrawingSlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDrawingSlate.m; sourceTree = "<group>"; };
+		927D00FF1627609A00BF2D2E /* CRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRTableViewController.h; sourceTree = "<group>"; };
+		927D01001627609A00BF2D2E /* CRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTableViewController.m; sourceTree = "<group>"; };
 		927F51A916260BAD002DA762 /* TeamsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamsViewController.h; sourceTree = "<group>"; };
 		927F51AA16260BAD002DA762 /* TeamsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamsViewController.m; sourceTree = "<group>"; };
 		927F51AE16262C99002DA762 /* TeamsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamsViewController.xib; sourceTree = "<group>"; };
@@ -247,6 +250,8 @@
 		9261F1C416269B5900467C6F /* CRMultiRowSelect */ = {
 			isa = PBXGroup;
 			children = (
+				927D00FF1627609A00BF2D2E /* CRTableViewController.h */,
+				927D01001627609A00BF2D2E /* CRTableViewController.m */,
 				9261F1C516269B7A00467C6F /* CRTableViewCell.h */,
 				9261F1C616269B7A00467C6F /* CRTableViewCell.m */,
 			);
@@ -640,6 +645,7 @@
 				927F51BF162661A0002DA762 /* TeamInfoDataSource.m in Sources */,
 				9261F1C716269B7A00467C6F /* CRTableViewCell.m in Sources */,
 				9261F1CA1626A0B400467C6F /* PlayersTableViewController.m in Sources */,
+				927D01011627609A00BF2D2E /* CRTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

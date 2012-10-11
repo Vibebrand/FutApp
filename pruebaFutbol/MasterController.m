@@ -36,13 +36,13 @@ typedef enum {
 
 - (void)willchangeToOption:(int)index
 {
-    switch (index) {
+    switch (index) {;
         case Elegir_equipos:
-            [self.navigator pushViewController:self.cancha animated:YES];
+            [self.navigator pushViewController:self.cascadeController.splitCascadeViewController animated:YES];
             break;
             
         case Seleccion_mexicana:
-            [self.navigator pushViewController:self.cascadeController.splitCascadeViewController animated:YES];
+            
             break;
             
         case Modo_libre:
