@@ -8,6 +8,7 @@
 
 #import "MasterController.h"
 #import "ViewController.h"
+#import "CascadeController.h"
 
 typedef enum {
     Elegir_equipos = 0,
@@ -17,13 +18,20 @@ typedef enum {
 
 @implementation MasterController
 
-@synthesize navigator, cancha, logger;
+@synthesize navigator, cancha, logger, cascadeController;
 
 - (ViewController *)cancha {
     if (!cancha) {
         cancha = [[ViewController alloc] init];
     }
     return cancha;
+}
+
+- (CascadeController *)cascadeController {
+    if (!cascadeController) {
+        cascadeController = [[CascadeController alloc] init];
+    }
+    return cascadeController;
 }
 
 - (void)willchangeToOption:(int)index
@@ -34,6 +42,7 @@ typedef enum {
             break;
             
         case Seleccion_mexicana:
+            [self.navigator pushViewController:self.cascadeController.splitCascadeViewController animated:YES];
             break;
             
         case Modo_libre:
