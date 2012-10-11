@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IFlowManager.h"
 
 @class CLCascadeNavigationController;
 @class TeamsViewController;
 @class CLSplitCascadeViewController;
 
-@interface CascadeController : NSObject
+@interface CascadeController : NSObject<IFlowManager>
 
 @property(nonatomic, retain) CLCascadeNavigationController *cascadeNavController;
 @property(nonatomic, retain) TeamsViewController *teamsViewController;

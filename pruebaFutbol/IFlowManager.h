@@ -10,7 +10,9 @@
 
 @protocol IFlowManager <NSObject>
 
+@optional
 - (void)willchangeToOption: (int)index;
+- (void)asignCascadeView: (int)row;
 
 
 @end

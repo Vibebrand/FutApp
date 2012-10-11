@@ -19,11 +19,15 @@
 		924AB69016162A4B006FCA89 /* CustomTKDragViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 924AB68F16162A4B006FCA89 /* CustomTKDragViewDelegate.m */; };
 		925B639E161E565000954A55 /* chivasadidas.png in Resources */ = {isa = PBXBuildFile; fileRef = 925B639D161E564F00954A55 /* chivasadidas.png */; };
 		925B63A4161E650B00954A55 /* TestFlightLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 925B63A3161E650B00954A55 /* TestFlightLogger.m */; };
+		9261F1BE162697E800467C6F /* america.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9261F1BD162697E800467C6F /* america.jpeg */; };
+		9261F1C716269B7A00467C6F /* CRTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9261F1C616269B7A00467C6F /* CRTableViewCell.m */; };
 		926FF759161A78B1003E4B29 /* MGDrawingSlate.m in Sources */ = {isa = PBXBuildFile; fileRef = 926FF758161A78B1003E4B29 /* MGDrawingSlate.m */; };
 		927F51AB16260BAD002DA762 /* TeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927F51AA16260BAD002DA762 /* TeamsViewController.m */; };
 		927F51AF16262C99002DA762 /* TeamsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927F51AE16262C99002DA762 /* TeamsViewController.xib */; };
 		927F51B116264864002DA762 /* Categories_header_view_289x89.png in Resources */ = {isa = PBXBuildFile; fileRef = 927F51B016264864002DA762 /* Categories_header_view_289x89.png */; };
-		927F51BC16265410002DA762 /* TeamInfoDataSourceDict.m in Sources */ = {isa = PBXBuildFile; fileRef = 927F51BB16265410002DA762 /* TeamInfoDataSourceDict.m */; };
+		927F51BC16265410002DA762 /* TeamInfoServiceArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 927F51BB16265410002DA762 /* TeamInfoServiceArray.m */; };
+		927F51BF162661A0002DA762 /* TeamInfoDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 927F51BE162661A0002DA762 /* TeamInfoDataSource.m */; };
+		927F51C1162681F3002DA762 /* guadalajara.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 927F51C0162681F3002DA762 /* guadalajara.jpeg */; };
 		92912F03160EA18A00A4C05E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92912F02160EA18A00A4C05E /* UIKit.framework */; };
 		92912F05160EA18A00A4C05E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92912F04160EA18A00A4C05E /* Foundation.framework */; };
 		92912F07160EA18A00A4C05E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92912F06160EA18A00A4C05E /* CoreGraphics.framework */; };
@@ -99,15 +103,21 @@
 		925B63A1161E643E00954A55 /* ICheckpointMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICheckpointMessages.h; sourceTree = "<group>"; };
 		925B63A2161E650B00954A55 /* TestFlightLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlightLogger.h; sourceTree = "<group>"; };
 		925B63A3161E650B00954A55 /* TestFlightLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFlightLogger.m; sourceTree = "<group>"; };
+		9261F1BD162697E800467C6F /* america.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = america.jpeg; sourceTree = "<group>"; };
+		9261F1C516269B7A00467C6F /* CRTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRTableViewCell.h; sourceTree = "<group>"; };
+		9261F1C616269B7A00467C6F /* CRTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTableViewCell.m; sourceTree = "<group>"; };
 		926FF757161A78B1003E4B29 /* MGDrawingSlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDrawingSlate.h; sourceTree = "<group>"; };
 		926FF758161A78B1003E4B29 /* MGDrawingSlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDrawingSlate.m; sourceTree = "<group>"; };
 		927F51A916260BAD002DA762 /* TeamsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamsViewController.h; sourceTree = "<group>"; };
 		927F51AA16260BAD002DA762 /* TeamsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamsViewController.m; sourceTree = "<group>"; };
 		927F51AE16262C99002DA762 /* TeamsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamsViewController.xib; sourceTree = "<group>"; };
 		927F51B016264864002DA762 /* Categories_header_view_289x89.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Categories_header_view_289x89.png; sourceTree = "<group>"; };
-		927F51B916265328002DA762 /* ITeamInfoDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITeamInfoDataSource.h; sourceTree = "<group>"; };
-		927F51BA16265410002DA762 /* TeamInfoDataSourceDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamInfoDataSourceDict.h; sourceTree = "<group>"; };
-		927F51BB16265410002DA762 /* TeamInfoDataSourceDict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamInfoDataSourceDict.m; sourceTree = "<group>"; };
+		927F51B916265328002DA762 /* ITeamInfoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITeamInfoService.h; sourceTree = "<group>"; };
+		927F51BA16265410002DA762 /* TeamInfoServiceArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamInfoServiceArray.h; sourceTree = "<group>"; };
+		927F51BB16265410002DA762 /* TeamInfoServiceArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamInfoServiceArray.m; sourceTree = "<group>"; };
+		927F51BD162661A0002DA762 /* TeamInfoDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamInfoDataSource.h; sourceTree = "<group>"; };
+		927F51BE162661A0002DA762 /* TeamInfoDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamInfoDataSource.m; sourceTree = "<group>"; };
+		927F51C0162681F3002DA762 /* guadalajara.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guadalajara.jpeg; sourceTree = "<group>"; };
 		92912EFE160EA18A00A4C05E /* FutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92912F02160EA18A00A4C05E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		92912F04160EA18A00A4C05E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -222,16 +232,25 @@
 			children = (
 				925B63A1161E643E00954A55 /* ICheckpointMessages.h */,
 				92C47E601623B861002FC10C /* IFlowManager.h */,
-				927F51B916265328002DA762 /* ITeamInfoDataSource.h */,
+				927F51B916265328002DA762 /* ITeamInfoService.h */,
 			);
 			name = protocolos;
+			sourceTree = "<group>";
+		};
+		9261F1C416269B5900467C6F /* CRMultiRowSelect */ = {
+			isa = PBXGroup;
+			children = (
+				9261F1C516269B7A00467C6F /* CRTableViewCell.h */,
+				9261F1C616269B7A00467C6F /* CRTableViewCell.m */,
+			);
+			name = CRMultiRowSelect;
 			sourceTree = "<group>";
 		};
 		927F51B516265019002DA762 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				927F51BA16265410002DA762 /* TeamInfoDataSourceDict.h */,
-				927F51BB16265410002DA762 /* TeamInfoDataSourceDict.m */,
+				927F51BD162661A0002DA762 /* TeamInfoDataSource.h */,
+				927F51BE162661A0002DA762 /* TeamInfoDataSource.m */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -256,6 +275,7 @@
 		92912F01160EA18A00A4C05E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9261F1C416269B5900467C6F /* CRMultiRowSelect */,
 				92EC17E91625E427004811E9 /* Cascade */,
 				921DCC27161CC03200386E5E /* libz.dylib */,
 				921DCC22161CBFB400386E5E /* libTestFlight.a */,
@@ -304,6 +324,8 @@
 			children = (
 				92C47E5B16237111002FC10C /* AwesomeMenu */,
 				9226CE0B161D292100511116 /* tshirt-icon.png */,
+				9261F1BD162697E800467C6F /* america.jpeg */,
+				927F51C0162681F3002DA762 /* guadalajara.jpeg */,
 				925B639D161E564F00954A55 /* chivasadidas.png */,
 				920F4D2B161CD6B0005129D6 /* soccer.png */,
 				920F4D28161CD253005129D6 /* soccerField.jpeg */,
@@ -335,6 +357,8 @@
 		92A362AC162096680095A4F8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				927F51BA16265410002DA762 /* TeamInfoServiceArray.h */,
+				927F51BB16265410002DA762 /* TeamInfoServiceArray.m */,
 				925B63A2161E650B00954A55 /* TestFlightLogger.h */,
 				925B63A3161E650B00954A55 /* TestFlightLogger.m */,
 			);
@@ -557,6 +581,8 @@
 				92EC18091625E46B004811E9 /* CLSplitCascadeViewController.xib in Resources */,
 				927F51AF16262C99002DA762 /* TeamsViewController.xib in Resources */,
 				927F51B116264864002DA762 /* Categories_header_view_289x89.png in Resources */,
+				927F51C1162681F3002DA762 /* guadalajara.jpeg in Resources */,
+				9261F1BE162697E800467C6F /* america.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,7 +625,9 @@
 				92EC18221625E488004811E9 /* CLRetractableSectionItem.m in Sources */,
 				92EC183B1625EFA5004811E9 /* CascadeController.m in Sources */,
 				927F51AB16260BAD002DA762 /* TeamsViewController.m in Sources */,
-				927F51BC16265410002DA762 /* TeamInfoDataSourceDict.m in Sources */,
+				927F51BC16265410002DA762 /* TeamInfoServiceArray.m in Sources */,
+				927F51BF162661A0002DA762 /* TeamInfoDataSource.m in Sources */,
+				9261F1C716269B7A00467C6F /* CRTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

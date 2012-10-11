@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ITeamInfoDataSource.h"
+#import "ITeamInfoService.h"
 
-@interface TeamInfoDataSourceDict : NSObject<ITeamInfoDataSource> {
-    NSDictionary *teams;
+@interface TeamInfoServiceArray : NSObject<ITeamInfoService> {
+    NSArray *names;
+    NSArray *images;
 }
 
 @end

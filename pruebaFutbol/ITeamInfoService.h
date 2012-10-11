@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol ITeamInfoDataSource <NSObject>
+@protocol ITeamInfoService <NSObject>
 
-- (NSDictionary *)teamsInfo;
+- (NSArray *)teamsNames;
+- (NSArray *)teamsImages;
 - (int)numberOfTeams;
 
 @end

@@ -10,6 +10,7 @@
 #import "CLCascadeNavigationController.h"
 #import "TeamsViewController.h"
 #import "CLSplitCascadeViewController.h"
+#import "TeamInfoServiceArray.h"
 
 @implementation CascadeController
 
@@ -21,6 +22,8 @@
     if (self) {
         self.cascadeNavController = [[[CLCascadeNavigationController alloc] init] autorelease];
         self.teamsViewController = [[[TeamsViewController alloc] initWithNibName:@"TeamsViewController" bundle:nil] autorelease];
+        self.teamsViewController.teamsInfo = [[[TeamInfoServiceArray alloc] init] autorelease];
+        self.teamsViewController.flowManager = self;
         self.splitCascadeViewController = [[[CLSplitCascadeViewController alloc] initWithNavigationController:self.cascadeNavController] autorelease];
         [self.splitCascadeViewController setCategoriesViewController:self.teamsViewController];
     }
@@ -33,6 +36,10 @@
     self.splitCascadeViewController = nil;
     self.teamsViewController = nil;
     [super dealloc];
+}
+
+- (void)asignCascadeView:(int)row {
+    NSLog(@"wii");
 }
 
 @end
