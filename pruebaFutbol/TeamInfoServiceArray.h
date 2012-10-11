@@ -8,10 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "ITeamInfoService.h"
+#import "IPlayerInfoService.h"
 
-@interface TeamInfoServiceArray : NSObject<ITeamInfoService> {
+@interface TeamInfoServiceArray : NSObject<ITeamInfoService, IPlayerInfoService> {
     NSArray *names;
     NSArray *images;
+    NSDictionary *america;
+    NSDictionary *guadalajara;
+    NSDictionary *teams;
 }
+
+@property(nonatomic, retain) NSString *teamSelected;
 
 @end

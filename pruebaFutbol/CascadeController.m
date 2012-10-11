@@ -11,6 +11,7 @@
 #import "TeamsViewController.h"
 #import "CLSplitCascadeViewController.h"
 #import "TeamInfoServiceArray.h"
+#import "PlayersTableViewController.h"
 
 @implementation CascadeController
 
@@ -20,9 +21,10 @@
 {
     self = [super init];
     if (self) {
+        info = [[TeamInfoServiceArray alloc] init];
         self.cascadeNavController = [[[CLCascadeNavigationController alloc] init] autorelease];
         self.teamsViewController = [[[TeamsViewController alloc] initWithNibName:@"TeamsViewController" bundle:nil] autorelease];
-        self.teamsViewController.teamsInfo = [[[TeamInfoServiceArray alloc] init] autorelease];
+        self.teamsViewController.teamsInfo = info;
         self.teamsViewController.flowManager = self;
         self.splitCascadeViewController = [[[CLSplitCascadeViewController alloc] initWithNavigationController:self.cascadeNavController] autorelease];
         [self.splitCascadeViewController setCategoriesViewController:self.teamsViewController];
@@ -39,7 +41,10 @@
 }
 
 - (void)asignCascadeView:(int)row {
-    NSLog(@"wii");
+    info.teamSelected = [[info teamsNames] objectAtIndex:row];
+    PlayersTableViewController *playersTable = [[PlayersTableViewController alloc] init];
+    playersTable.playersInfo = info;
+    [self.cascadeNavController setRootViewController:playersTable animated:YES];
 }
 
 @end

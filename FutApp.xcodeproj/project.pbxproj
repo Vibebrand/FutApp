@@ -21,6 +21,8 @@
 		925B63A4161E650B00954A55 /* TestFlightLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 925B63A3161E650B00954A55 /* TestFlightLogger.m */; };
 		9261F1BE162697E800467C6F /* america.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9261F1BD162697E800467C6F /* america.jpeg */; };
 		9261F1C716269B7A00467C6F /* CRTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9261F1C616269B7A00467C6F /* CRTableViewCell.m */; };
+		9261F1CA1626A0B400467C6F /* PlayersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9261F1C91626A0B400467C6F /* PlayersTableViewController.m */; };
+		9261F1CC1626A34200467C6F /* ToolBar_479x45.png in Resources */ = {isa = PBXBuildFile; fileRef = 9261F1CB1626A34200467C6F /* ToolBar_479x45.png */; };
 		926FF759161A78B1003E4B29 /* MGDrawingSlate.m in Sources */ = {isa = PBXBuildFile; fileRef = 926FF758161A78B1003E4B29 /* MGDrawingSlate.m */; };
 		927F51AB16260BAD002DA762 /* TeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927F51AA16260BAD002DA762 /* TeamsViewController.m */; };
 		927F51AF16262C99002DA762 /* TeamsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927F51AE16262C99002DA762 /* TeamsViewController.xib */; };
@@ -106,6 +108,10 @@
 		9261F1BD162697E800467C6F /* america.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = america.jpeg; sourceTree = "<group>"; };
 		9261F1C516269B7A00467C6F /* CRTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRTableViewCell.h; sourceTree = "<group>"; };
 		9261F1C616269B7A00467C6F /* CRTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTableViewCell.m; sourceTree = "<group>"; };
+		9261F1C81626A0B400467C6F /* PlayersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersTableViewController.h; sourceTree = "<group>"; };
+		9261F1C91626A0B400467C6F /* PlayersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersTableViewController.m; sourceTree = "<group>"; };
+		9261F1CB1626A34200467C6F /* ToolBar_479x45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToolBar_479x45.png; sourceTree = "<group>"; };
+		9261F1CD1626A59800467C6F /* IPlayerInfoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPlayerInfoService.h; sourceTree = "<group>"; };
 		926FF757161A78B1003E4B29 /* MGDrawingSlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDrawingSlate.h; sourceTree = "<group>"; };
 		926FF758161A78B1003E4B29 /* MGDrawingSlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDrawingSlate.m; sourceTree = "<group>"; };
 		927F51A916260BAD002DA762 /* TeamsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamsViewController.h; sourceTree = "<group>"; };
@@ -233,6 +239,7 @@
 				925B63A1161E643E00954A55 /* ICheckpointMessages.h */,
 				92C47E601623B861002FC10C /* IFlowManager.h */,
 				927F51B916265328002DA762 /* ITeamInfoService.h */,
+				9261F1CD1626A59800467C6F /* IPlayerInfoService.h */,
 			);
 			name = protocolos;
 			sourceTree = "<group>";
@@ -327,6 +334,7 @@
 				9261F1BD162697E800467C6F /* america.jpeg */,
 				927F51C0162681F3002DA762 /* guadalajara.jpeg */,
 				925B639D161E564F00954A55 /* chivasadidas.png */,
+				9261F1CB1626A34200467C6F /* ToolBar_479x45.png */,
 				920F4D2B161CD6B0005129D6 /* soccer.png */,
 				920F4D28161CD253005129D6 /* soccerField.jpeg */,
 				9226CE0E161D2B2B00511116 /* gray.jpeg */,
@@ -395,6 +403,8 @@
 				92C47E2916236B3C002FC10C /* MenuViewController.m */,
 				927F51A916260BAD002DA762 /* TeamsViewController.h */,
 				927F51AA16260BAD002DA762 /* TeamsViewController.m */,
+				9261F1C81626A0B400467C6F /* PlayersTableViewController.h */,
+				9261F1C91626A0B400467C6F /* PlayersTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -583,6 +593,7 @@
 				927F51B116264864002DA762 /* Categories_header_view_289x89.png in Resources */,
 				927F51C1162681F3002DA762 /* guadalajara.jpeg in Resources */,
 				9261F1BE162697E800467C6F /* america.jpeg in Resources */,
+				9261F1CC1626A34200467C6F /* ToolBar_479x45.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +639,7 @@
 				927F51BC16265410002DA762 /* TeamInfoServiceArray.m in Sources */,
 				927F51BF162661A0002DA762 /* TeamInfoDataSource.m in Sources */,
 				9261F1C716269B7A00467C6F /* CRTableViewCell.m in Sources */,
+				9261F1CA1626A0B400467C6F /* PlayersTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

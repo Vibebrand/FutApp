@@ -12,8 +12,11 @@
 @class CLCascadeNavigationController;
 @class TeamsViewController;
 @class CLSplitCascadeViewController;
+@class TeamInfoServiceArray;
 
-@interface CascadeController : NSObject<IFlowManager>
+@interface CascadeController : NSObject<IFlowManager> {
+    TeamInfoServiceArray *info;
+}
 
 @property(nonatomic, retain) CLCascadeNavigationController *cascadeNavController;
 @property(nonatomic, retain) TeamsViewController *teamsViewController;
