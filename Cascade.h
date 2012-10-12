@@ -3,20 +3,20 @@
 
 
 //TODO : define trully public headers
-#import <Cascade/CLCascadeNavigationController/CLCascadeNavigationController.h>
-#import <Cascade/CLCascadeNavigationController/CLCascadeView.h>
-#import <Cascade/CLCategories/CLCategoriesView.h>
-#import <Cascade/CLCategories/CLCategoriesViewController.h>
-#import <Cascade/CLCustomViewControllers/CLTableViewController.h>
-#import <Cascade/CLCustomViewControllers/CLViewController.h>
-#import <Cascade/CLCustomViewControllers/CLViewControllerDelegate.h>
-#import <Cascade/CLCustomViewControllers/CLWebViewController.h>
-#import <Cascade/CLSplitViewController/CLSplitCascadeView.h>
-#import <Cascade/CLSplitViewController/CLSplitCascadeViewController.h>
-#import <Cascade/Other/CLBorderShadowView.h>
-#import <Cascade/Other/CLGlobal.h>
-#import <Cascade/Other/CLScrollView.h>
-#import <Cascade/Other/CLSegmentedView.h>
-#import <Cascade/Other/UIViewController+CLSegmentedView.h>
+#import <CLCascadeNavigationController.h>
+#import <CLCascadeView.h>
+#import <CLCategoriesView.h>
+#import <CLCategoriesViewController.h>
+#import <CLTableViewController.h>
+#import <CLViewController.h>
+#import <CLViewControllerDelegate.h>
+#import <CLWebViewController.h>
+#import <CLSplitCascadeView.h>
+#import <CLSplitCascadeViewController.h>
+#import <CLBorderShadowView.h>
+#import <CLGlobal.h>
+#import <CLScrollView.h>
+#import <CLSegmentedView.h>
+#import <UIViewController+CLSegmentedView.h>
 
 #endif

@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "IFlowManager.h"
+#import "IInstantiatorDelegate.h"
 
 @class CLCascadeNavigationController;
 @class TeamsViewController;
 @class CLSplitCascadeViewController;
 @class TeamInfoServiceArray;
 
-@interface CascadeController : NSObject<IFlowManager> {
+@interface CascadeController : NSObject<IFlowManager, IInstantiatorDelegate> {
     TeamInfoServiceArray *info;
 }
 

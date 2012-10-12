@@ -9,6 +9,10 @@
 #import "PlayersTableViewController.h"
 #import "UIViewController+CLSegmentedView.h"
 #import "CRTableViewCell.h"
+#import "ViewController.h"
+#import "ProfileViewController.h"
+
+#import "TeamInfoServiceArray.h"
 
 @interface PlayersTableViewController ()
 
@@ -16,13 +20,15 @@
 
 @implementation PlayersTableViewController
 
-@synthesize playersInfo;
+@synthesize playersInfo, instantiator;
 
 - (id)init
 {
     self = [super init];
     if (self) {
         selectedMarks = [NSMutableArray new];
+        self.playersInfo = nil;
+        self.instantiator = nil;
     }
     return self;
 }
@@ -39,6 +45,7 @@
     UIButton *doneButton = [UIButton buttonWithType:UIBarButtonItemStyleBordered];
     [doneButton setTitle:@"Done" forState:UIControlStateNormal];
     doneButton.frame = CGRectMake(400, 8, 70, 30);
+    [doneButton addTarget:self action:@selector(doneButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [header addSubview:doneButton];
     [self.segmentedView setHeaderView:header];
     [header release];
@@ -52,6 +59,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)doneButtonClicked: (UIButton *)sender {
+    NSLog(@"%@", selectedMarks);
 }
 
 
@@ -84,13 +95,23 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSLog(@"didSelectRowAtIndexPath");
     NSString *text = [[[self.playersInfo playersOfSelectedTeam] allValues] objectAtIndex:indexPath.row];
     if ([selectedMarks containsObject:text]) {
         [selectedMarks removeObject:text];
     } else {
         [selectedMarks addObject:text];
     }
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    NSString *selectedPlayer = [[[self.playersInfo playersOfSelectedTeam] allValues] objectAtIndex:indexPath.row];
+    ProfileViewController *profile = [self.instantiator profileFactory:selectedPlayer];
+    [self pushDetailViewController:profile animated:YES];
 }
 
 @end

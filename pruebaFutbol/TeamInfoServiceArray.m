@@ -10,7 +10,7 @@
 
 @implementation TeamInfoServiceArray
 
-@synthesize teamSelected;
+@synthesize teamSelected, playerSelected;
 
 - (id)init
 {
@@ -18,7 +18,8 @@
     
     self = [super init];
     if (self) {
-        teamSelected = nil;
+        self.teamSelected = nil;
+        self.playerSelected = nil;
         [self fillData];
     }
     return self;
@@ -31,7 +32,8 @@
     [america release];
     [guadalajara release];
     [teams release];
-    teamSelected = nil;
+    self.teamSelected = nil;
+    self.playerSelected = nil;
     [super dealloc];
 }
 
@@ -74,6 +76,35 @@
 
 - (NSArray *)allPlayers {
     return [NSArray arrayWithArray:teams.allValues];
+}
+
+- (NSString *)imageOfPlayer {
+    return @"UnknownProfile1.png";
+}
+
+- (NSString *)nameOfPlayer {
+    return self.playerSelected;
+}
+
+- (int)numberOfPlayer {
+    NSArray *numbers = [[teams objectForKey:teamSelected] allKeysForObject:self.playerSelected];
+    return [[numbers objectAtIndex:0] intValue];
+}
+
+- (NSString *)descriptionOfPlayer{
+    return @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero libero, dapibus semper ullamcorper vitae, faucibus eu lectus. Morbi euismod augue non massa tincidunt consequat. Mauris velit tellus, dapibus vitae interdum quis, aliquam eu est. Quisque consequat sem purus, eu hendrerit nulla. Praesent interdum, dui id feugiat euismod, diam lacus varius augue, a iaculis orci neque ac quam. Duis ante orci, vulputate at faucibus non, egestas vitae ipsum. Curabitur interdum enim vel velit euismod viverra. Aenean dignissim mi vitae libero volutpat ut sodales nisl euismod. Integer imperdiet, tellus sed tincidunt tincidunt, libero purus placerat ipsum, a rutrum ligula metus non sem. Integer feugiat blandit turpis, in volutpat tellus volutpat eget.";
+}
+
+- (int)ageOfPlayer {
+    return 24;
+}
+
+- (float)weightOfPlayer {
+    return 88.5;
+}
+
+- (NSString *)positionOfPlayer {
+    return @"Delantero";
 }
 
 - (void)fillData {

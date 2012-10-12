@@ -12,6 +12,7 @@
 #import "CLSplitCascadeViewController.h"
 #import "TeamInfoServiceArray.h"
 #import "PlayersTableViewController.h"
+#import "ProfileViewController.h"
 
 @implementation CascadeController
 
@@ -32,6 +33,13 @@
     return self;
 }
 
+- (ProfileViewController *)profileFactory: (NSString *)selectedPlayer {
+    info.playerSelected = selectedPlayer;
+    ProfileViewController *profile = [[[ProfileViewController alloc]initWithSize:CLViewSizeNormal] autorelease];
+    profile.playerInfo = info;
+    return profile;
+}
+
 - (void)dealloc
 {
     self.cascadeNavController = nil;
@@ -44,6 +52,7 @@
     info.teamSelected = [[info teamsNames] objectAtIndex:row];
     PlayersTableViewController *playersTable = [[PlayersTableViewController alloc] init];
     playersTable.playersInfo = info;
+    playersTable.instantiator = self;
     [self.cascadeNavController setRootViewController:playersTable animated:YES];
 }
 

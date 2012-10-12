@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "CLTableViewController.h"
 #import "IPlayerInfoService.h"
+#import "IInstantiatorDelegate.h"
 
 @interface PlayersTableViewController : CLTableViewController {
     NSMutableArray *selectedMarks;
 }
 
 @property(nonatomic, retain) id<IPlayerInfoService> playersInfo;
+@property(nonatomic, retain) id<IInstantiatorDelegate> instantiator;
 
 @end

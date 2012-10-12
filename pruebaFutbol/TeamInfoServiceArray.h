@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "ITeamInfoService.h"
 #import "IPlayerInfoService.h"
+#import "IPlayerInfo.h"
 
-@interface TeamInfoServiceArray : NSObject<ITeamInfoService, IPlayerInfoService> {
+@interface TeamInfoServiceArray : NSObject<ITeamInfoService, IPlayerInfoService, IPlayerInfo> {
     NSArray *names;
     NSArray *images;
     NSDictionary *america;
@@ -19,5 +20,6 @@
 }
 
 @property(nonatomic, retain) NSString *teamSelected;
+@property(nonatomic, retain) NSString *playerSelected;
 
 @end
