@@ -31,7 +31,7 @@
 	// Do any additional setup after loading the view.
     self.tableView.rowHeight = 88;
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [backButton setTitle:@"Atrás" forState:UIControlStateNormal];
+    [backButton setTitle:@"Volver" forState:UIControlStateNormal];
     [backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchDown];
     backButton.frame = CGRectMake(10, 10, 60, 25);
     [backButton setBackgroundImage:[UIImage imageNamed:@"Categories_header_view_289x89.png"] forState:UIControlStateNormal];

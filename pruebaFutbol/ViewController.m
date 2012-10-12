@@ -168,25 +168,25 @@
     [[TKDragManager manager] addDragView:[self.dragViews objectAtIndex:10]];
     //Botones
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [backButton setTitle:@"Back" forState:UIControlStateNormal];
+    [backButton setTitle:@"Volver" forState:UIControlStateNormal];
     backButton.frame = CGRectMake(4, screenRect.size.width - 65, 100, 40);
     [backButton addTarget:self action:@selector(backButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:backButton];
     
     UIButton *greenColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [greenColorButton setTitle:@"White" forState:UIControlStateNormal];
+    [greenColorButton setTitle:@"Blanco" forState:UIControlStateNormal];
     greenColorButton.frame = CGRectMake(124, screenRect.size.width - 65, 100, 40);
     [greenColorButton addTarget:self action:@selector(colorButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:greenColorButton];
     
     UIButton *undoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [undoButton setTitle:@"Undo" forState:UIControlStateNormal];
+    [undoButton setTitle:@"Deshacer" forState:UIControlStateNormal];
     undoButton.frame = CGRectMake(244, screenRect.size.width - 65, 100, 40);
     [undoButton addTarget:self action:@selector(undoButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:undoButton];
     
     self.drawColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [drawColorButton setTitle:@"Drag" forState:UIControlStateNormal];
+    [drawColorButton setTitle:@"Arrastrar" forState:UIControlStateNormal];
     drawColorButton.frame = CGRectMake(364, screenRect.size.width - 65, 100, 40);
     [drawColorButton addTarget:self action:@selector(drawColorButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:drawColorButton];
@@ -235,10 +235,10 @@
 
 - (void)colorButtonClicked:(UIButton *)sender {
     [self changeCholor];
-    if ([[sender titleForState:UIControlStateNormal] isEqualToString:@"White"]) {
-        [sender setTitle:@"Yellow" forState:UIControlStateNormal];
+    if ([[sender titleForState:UIControlStateNormal] isEqualToString:@"Blanco"]) {
+        [sender setTitle:@"Amarillo" forState:UIControlStateNormal];
     } else {
-        [sender setTitle:@"White" forState:UIControlStateNormal];
+        [sender setTitle:@"Blanco" forState:UIControlStateNormal];
     }
     [logger checkpointPassed:@"cambio de color"];
 }
@@ -246,10 +246,10 @@
 - (void)drawColorButtonClicked: (UIButton *)sender {
     [self changeDragDraw]; 
     if (canDrag) {
-        [sender setTitle:@"Drag" forState:UIControlStateNormal];
+        [sender setTitle:@"Arrastrar" forState:UIControlStateNormal];
     }
     else {
-        [sender setTitle:@"Draw" forState:UIControlStateNormal];
+        [sender setTitle:@"Dibujar" forState:UIControlStateNormal];
     }
     [logger checkpointPassed:@"cambio drag-draw"];
 }

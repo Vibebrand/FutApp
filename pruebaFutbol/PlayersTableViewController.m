@@ -46,11 +46,18 @@
     [header setImage: [UIImage imageNamed:@"ToolBar_479x45.png"]];
     
     doneButton = [UIButton buttonWithType:UIBarButtonItemStyleBordered];
-    [doneButton setTitle:@"Done" forState:UIControlStateNormal];
+    [doneButton setTitle:@"Ok" forState:UIControlStateNormal];
     [doneButton setBackgroundImage:[UIImage imageNamed:@"ToolBar_479x45.png"] forState:UIControlStateNormal];
     doneButton.frame = CGRectMake(400, 8, 70, 30);
     [doneButton addTarget:self action:@selector(doneButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [header addSubview:doneButton];
+    
+    playersLeft = [[UILabel alloc] initWithFrame:CGRectMake(220, 8, 70, 30)];
+    [playersLeft setText:@"11"];
+    playersLeft.textColor = [UIColor whiteColor];
+    [playersLeft setBackgroundColor:[UIColor colorWithWhite:0 alpha:0]];
+    [header addSubview:playersLeft];
+    
     [self.segmentedView setHeaderView:header];
     [doneButton setHidden:YES];
     
@@ -100,6 +107,7 @@
     
     NSString *text = [[[self.playersInfo playersOfSelectedTeam] allValues] objectAtIndex:indexPath.row];
     cell.textLabel.text = text;
+    cell.imageView.image = [UIImage imageNamed:@"UnknownProfile1.png"];
     
     return cell;
 }
@@ -113,7 +121,14 @@
     } else {
         selectedCells++;
     }
-    [doneButton setHidden: (selectedCells==11) ? NO : YES];
+    [playersLeft setText:[NSString stringWithFormat:@"%d",11-selectedCells]];
+    if (selectedCells == 11) {
+        [doneButton setHidden:NO];
+        [playersLeft setHidden:YES];
+    } else {
+        [doneButton setHidden:YES];
+        [playersLeft setHidden:NO];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {

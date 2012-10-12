@@ -15,6 +15,7 @@
 @interface PlayersTableViewController : CLTableViewController {
     NSMutableArray *selectedMarks;
     UIButton *doneButton;
+    UILabel *playersLeft;
     int selectedCells;
 }
 
