@@ -22,5 +22,6 @@
 @property(nonatomic, retain) CLCascadeNavigationController *cascadeNavController;
 @property(nonatomic, retain) TeamsViewController *teamsViewController;
 @property(nonatomic, retain) CLSplitCascadeViewController *splitCascadeViewController;
+@property(nonatomic, assign) BOOL twoTeams;
 
 @end

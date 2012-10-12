@@ -29,6 +29,7 @@
         self.teamsViewController.flowManager = self;
         self.splitCascadeViewController = [[[CLSplitCascadeViewController alloc] initWithNavigationController:self.cascadeNavController] autorelease];
         [self.splitCascadeViewController setCategoriesViewController:self.teamsViewController];
+        self.twoTeams = NO;
     }
     return self;
 }
@@ -54,6 +55,10 @@
     playersTable.playersInfo = info;
     playersTable.instantiator = self;
     [self.cascadeNavController setRootViewController:playersTable animated:YES];
+}
+
+- (void)backToRootView {
+    [self.splitCascadeViewController.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

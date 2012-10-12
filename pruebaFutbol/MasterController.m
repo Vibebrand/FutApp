@@ -10,12 +10,6 @@
 #import "ViewController.h"
 #import "CascadeController.h"
 
-typedef enum {
-    Elegir_equipos = 0,
-    Seleccion_mexicana = 1,
-    Modo_libre = 2
-} GameModes;
-
 @implementation MasterController
 
 @synthesize navigator, cancha, logger, cascadeController;
@@ -36,21 +30,9 @@ typedef enum {
 
 - (void)willchangeToOption:(int)index
 {
-    switch (index) {;
-        case Elegir_equipos:
-            [self.navigator pushViewController:self.cascadeController.splitCascadeViewController animated:YES];
-            break;
-            
-        case Seleccion_mexicana:
-            
-            break;
-            
-        case Modo_libre:
-            break;
-            
-        default:
-            break;
-    }
+    NSLog(@"willchangeToOption");
+    self.cascadeController.twoTeams = index;
+    [self.navigator pushViewController:self.cascadeController.splitCascadeViewController animated:YES];
 }
 
 @end

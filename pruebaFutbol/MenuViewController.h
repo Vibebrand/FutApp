@@ -12,7 +12,7 @@
 
 @class ViewController;
 
-@interface MenuViewController : UIViewController <AwesomeMenuDelegate>
+@interface MenuViewController : UIViewController
 
 @property (nonatomic, retain) id<IFlowManager> flowManager;
 

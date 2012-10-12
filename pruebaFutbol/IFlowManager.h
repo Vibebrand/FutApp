@@ -13,6 +13,6 @@
 @optional
 - (void)willchangeToOption: (int)index;
 - (void)asignCascadeView: (int)row;
-
+- (void)backToRootView;
 
 @end

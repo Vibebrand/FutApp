@@ -98,7 +98,6 @@
 								<int key="NSvFlags">274</int>
 								<string key="NSFrameSize">{768, 40}</string>
 								<reference key="NSSuperview" ref="622239563"/>
-								<reference key="NSNextKeyView"/>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<reference key="IBUIImage" ref="372706364"/>

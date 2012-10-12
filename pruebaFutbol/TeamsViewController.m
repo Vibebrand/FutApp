@@ -8,6 +8,7 @@
 
 #import "TeamsViewController.h"
 #import "TeamInfoServiceArray.h"
+#import "UIViewController+CLSegmentedView.h"
 
 @interface TeamsViewController ()
 
@@ -29,6 +30,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.tableView.rowHeight = 88;
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [backButton setTitle:@"Atrás" forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchDown];
+    backButton.frame = CGRectMake(10, 10, 60, 25);
+    [backButton setBackgroundImage:[UIImage imageNamed:@"Categories_header_view_289x89.png"] forState:UIControlStateNormal];
+    [self.view addSubview:backButton];
+    [backButton release];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -72,6 +80,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [flowManager asignCascadeView:indexPath.row];
+}
+
+- (void)backButtonPressed {
+    [flowManager backToRootView];
 }
 
 @end
