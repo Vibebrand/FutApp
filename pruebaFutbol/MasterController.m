@@ -16,7 +16,8 @@
 
 - (ViewController *)cancha {
     if (!cancha) {
-        cancha = [[ViewController alloc] init];
+        cancha = [[[ViewController alloc] init] autorelease];
+        cancha.flowManager = self;
     }
     return cancha;
 }
@@ -28,10 +29,22 @@
     return cascadeController;
 }
 
+- (void)toField {
+    self.cancha = [[ViewController new] autorelease];
+    cancha.flowManager = self;
+    [self.navigator pushViewController:self.cancha animated:YES];
+}
+
+- (void)backToRootView {
+    [self.navigator popToRootViewControllerAnimated:YES];
+}
+
 - (void)willchangeToOption:(int)index
 {
     NSLog(@"willchangeToOption");
+    self.cascadeController = [[CascadeController alloc] init];
     self.cascadeController.twoTeams = index;
+    self.cascadeController.flowManager = self;
     [self.navigator pushViewController:self.cascadeController.splitCascadeViewController animated:YES];
 }
 

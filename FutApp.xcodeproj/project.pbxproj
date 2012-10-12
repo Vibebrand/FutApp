@@ -70,6 +70,7 @@
 		92C47E5916237109002FC10C /* icon-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4B16237109002FC10C /* icon-star.png */; };
 		92C47E5A16237109002FC10C /* icon-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4C16237109002FC10C /* icon-star@2x.png */; };
 		92C47E5F1623AAF2002FC10C /* MasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C47E5E1623AAF2002FC10C /* MasterController.m */; };
+		92E7F00516281868003A460E /* SecondTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E7F00416281868003A460E /* SecondTeamViewController.m */; };
 		92EC17F01625E445004811E9 /* CLCascadeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC17ED1625E445004811E9 /* CLCascadeNavigationController.m */; };
 		92EC17F11625E445004811E9 /* CLCascadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC17EF1625E445004811E9 /* CLCascadeView.m */; };
 		92EC17F61625E451004811E9 /* CLCategoriesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC17F31625E451004811E9 /* CLCategoriesView.m */; };
@@ -183,6 +184,8 @@
 		92C47E5D1623AAF2002FC10C /* MasterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterController.h; sourceTree = "<group>"; };
 		92C47E5E1623AAF2002FC10C /* MasterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterController.m; sourceTree = "<group>"; };
 		92C47E601623B861002FC10C /* IFlowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFlowManager.h; sourceTree = "<group>"; };
+		92E7F00316281868003A460E /* SecondTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondTeamViewController.h; sourceTree = "<group>"; };
+		92E7F00416281868003A460E /* SecondTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondTeamViewController.m; sourceTree = "<group>"; };
 		92EC17EB1625E436004811E9 /* Cascade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cascade.h; sourceTree = "<group>"; };
 		92EC17EC1625E445004811E9 /* CLCascadeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCascadeNavigationController.h; sourceTree = "<group>"; };
 		92EC17ED1625E445004811E9 /* CLCascadeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCascadeNavigationController.m; sourceTree = "<group>"; };
@@ -422,6 +425,8 @@
 				9261F1C91626A0B400467C6F /* PlayersTableViewController.m */,
 				927D012D162789EA00BF2D2E /* ProfileViewController.h */,
 				927D012E162789EA00BF2D2E /* ProfileViewController.m */,
+				92E7F00316281868003A460E /* SecondTeamViewController.h */,
+				92E7F00416281868003A460E /* SecondTeamViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -660,6 +665,7 @@
 				9261F1CA1626A0B400467C6F /* PlayersTableViewController.m in Sources */,
 				927D01011627609A00BF2D2E /* CRTableViewController.m in Sources */,
 				927D012F162789EA00BF2D2E /* ProfileViewController.m in Sources */,
+				92E7F00516281868003A460E /* SecondTeamViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,5 +23,6 @@
 @property(nonatomic, retain) TeamsViewController *teamsViewController;
 @property(nonatomic, retain) CLSplitCascadeViewController *splitCascadeViewController;
 @property(nonatomic, assign) BOOL twoTeams;
+@property(nonatomic, retain) id<IFlowManager> flowManager;
 
 @end

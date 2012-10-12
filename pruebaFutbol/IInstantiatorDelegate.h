@@ -9,9 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @class ProfileViewController;
+@class SecondTeamViewController;
+@class PlayersTableViewController;
 
 @protocol IInstantiatorDelegate <NSObject>
 
 - (ProfileViewController *)profileFactory: (NSString *)selectedPlayer;
+- (SecondTeamViewController *)teamsFactory;
+- (PlayersTableViewController *)playersFactory: (int)row;
 
 @end

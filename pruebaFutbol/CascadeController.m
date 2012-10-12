@@ -13,10 +13,11 @@
 #import "TeamInfoServiceArray.h"
 #import "PlayersTableViewController.h"
 #import "ProfileViewController.h"
+#import "SecondTeamViewController.h"
 
 @implementation CascadeController
 
-@synthesize cascadeNavController, splitCascadeViewController, teamsViewController;
+@synthesize cascadeNavController, splitCascadeViewController, teamsViewController, twoTeams, flowManager;
 
 - (id)init
 {
@@ -41,6 +42,24 @@
     return profile;
 }
 
+- (SecondTeamViewController *)teamsFactory {
+    SecondTeamViewController *teams = [[[SecondTeamViewController alloc] initWithNibName:@"TeamsViewController" bundle:nil] autorelease];
+    teams.teamsInfo = info;
+    teams.flowManager = self;
+    teams.instantiator = self;
+    return teams;
+}
+
+- (PlayersTableViewController *)playersFactory:(int)row {
+    info.teamSelected = [[info teamsNames] objectAtIndex:row];
+    PlayersTableViewController *playersTable = [[PlayersTableViewController alloc] init];
+    playersTable.playersInfo = info;
+    playersTable.isFinal = 1;
+    playersTable.instantiator = self;
+    playersTable.flowManager = self;
+    return playersTable;
+}
+
 - (void)dealloc
 {
     self.cascadeNavController = nil;
@@ -49,11 +68,17 @@
     [super dealloc];
 }
 
+- (void)toField {
+    [self.flowManager toField];
+}
+
 - (void)asignCascadeView:(int)row {
     info.teamSelected = [[info teamsNames] objectAtIndex:row];
     PlayersTableViewController *playersTable = [[PlayersTableViewController alloc] init];
     playersTable.playersInfo = info;
     playersTable.instantiator = self;
+    playersTable.flowManager = self;
+    playersTable.isFinal = !self.twoTeams;
     [self.cascadeNavController setRootViewController:playersTable animated:YES];
 }
 

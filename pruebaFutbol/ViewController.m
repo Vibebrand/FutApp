@@ -19,7 +19,7 @@
 
 @implementation ViewController
 
-@synthesize  upScrollView, dragViews, logger, drawColorButton;
+@synthesize  upScrollView, dragViews, logger, drawColorButton, flowManager;
 
 - (void)dealloc
 {
@@ -167,21 +167,27 @@
     
     [[TKDragManager manager] addDragView:[self.dragViews objectAtIndex:10]];
     //Botones
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [backButton setTitle:@"Back" forState:UIControlStateNormal];
+    backButton.frame = CGRectMake(4, screenRect.size.width - 65, 100, 40);
+    [backButton addTarget:self action:@selector(backButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:backButton];
+    
     UIButton *greenColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [greenColorButton setTitle:@"White" forState:UIControlStateNormal];
-    greenColorButton.frame = CGRectMake(4, screenRect.size.width - 65, 100, 40);
+    greenColorButton.frame = CGRectMake(124, screenRect.size.width - 65, 100, 40);
     [greenColorButton addTarget:self action:@selector(colorButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:greenColorButton];
     
     UIButton *undoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [undoButton setTitle:@"Undo" forState:UIControlStateNormal];
-    undoButton.frame = CGRectMake(124, screenRect.size.width - 65, 100, 40);
+    undoButton.frame = CGRectMake(244, screenRect.size.width - 65, 100, 40);
     [undoButton addTarget:self action:@selector(undoButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:undoButton];
     
     self.drawColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [drawColorButton setTitle:@"Drag" forState:UIControlStateNormal];
-    drawColorButton.frame = CGRectMake(244, screenRect.size.width - 65, 100, 40);
+    drawColorButton.frame = CGRectMake(364, screenRect.size.width - 65, 100, 40);
     [drawColorButton addTarget:self action:@selector(drawColorButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:drawColorButton];
     
@@ -221,6 +227,10 @@
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     [self eraseDrawings];
     [logger checkpointPassed:@"shake para borrar dibujos"];
+}
+
+- (void)backButtonClicked: (UIButton *)sender {
+    [flowManager backToRootView];
 }
 
 - (void)colorButtonClicked:(UIButton *)sender {

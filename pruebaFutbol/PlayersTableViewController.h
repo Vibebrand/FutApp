@@ -10,12 +10,17 @@
 #import "CLTableViewController.h"
 #import "IPlayerInfoService.h"
 #import "IInstantiatorDelegate.h"
+#import "IFlowManager.h"
 
 @interface PlayersTableViewController : CLTableViewController {
     NSMutableArray *selectedMarks;
+    UIButton *doneButton;
+    int selectedCells;
 }
 
 @property(nonatomic, retain) id<IPlayerInfoService> playersInfo;
 @property(nonatomic, retain) id<IInstantiatorDelegate> instantiator;
+@property(nonatomic, assign) BOOL isFinal;
+@property(nonatomic, assign) id<IFlowManager> flowManager;
 
 @end

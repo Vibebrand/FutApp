@@ -11,6 +11,7 @@
 #import "CRTableViewCell.h"
 #import "ViewController.h"
 #import "ProfileViewController.h"
+#import "SecondTeamViewController.h"
 
 #import "TeamInfoServiceArray.h"
 
@@ -20,7 +21,7 @@
 
 @implementation PlayersTableViewController
 
-@synthesize playersInfo, instantiator;
+@synthesize playersInfo, instantiator, isFinal;
 
 - (id)init
 {
@@ -29,6 +30,8 @@
         selectedMarks = [NSMutableArray new];
         self.playersInfo = nil;
         self.instantiator = nil;
+        self.isFinal = NO;
+        selectedCells = 0;
     }
     return self;
 }
@@ -42,13 +45,14 @@
     UIImageView* header = [[UIImageView alloc] initWithFrame: CGRectMake(0.0, 0.0, self.view.bounds.size.width, 45.0)];
     [header setImage: [UIImage imageNamed:@"ToolBar_479x45.png"]];
     
-    UIButton *doneButton = [UIButton buttonWithType:UIBarButtonItemStyleBordered];
+    doneButton = [UIButton buttonWithType:UIBarButtonItemStyleBordered];
     [doneButton setTitle:@"Done" forState:UIControlStateNormal];
+    [doneButton setBackgroundImage:[UIImage imageNamed:@"ToolBar_479x45.png"] forState:UIControlStateNormal];
     doneButton.frame = CGRectMake(400, 8, 70, 30);
     [doneButton addTarget:self action:@selector(doneButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [header addSubview:doneButton];
     [self.segmentedView setHeaderView:header];
-    [header release];
+    [doneButton setHidden:YES];
     
     [self setShowRoundedCorners: YES];
     self.tableView.allowsMultipleSelection = YES;
@@ -62,7 +66,13 @@
 }
 
 - (void)doneButtonClicked: (UIButton *)sender {
-    NSLog(@"%@", selectedMarks);
+    if (isFinal) {
+        [self.flowManager toField];
+    } else {
+        [doneButton setHidden:YES];
+        SecondTeamViewController *s = [self.instantiator teamsFactory];
+        [self pushDetailViewController:s animated:YES];
+    }
 }
 
 
@@ -70,7 +80,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -94,14 +104,16 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"didSelectRowAtIndexPath");
-    NSString *text = [[[self.playersInfo playersOfSelectedTeam] allValues] objectAtIndex:indexPath.row];
-    if ([selectedMarks containsObject:text]) {
-        [selectedMarks removeObject:text];
+
+
+- (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    if (cell.isSelected) {
+        selectedCells--;
     } else {
-        [selectedMarks addObject:text];
+        selectedCells++;
     }
+    [doneButton setHidden: (selectedCells==11) ? NO : YES];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
