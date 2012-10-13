@@ -21,7 +21,7 @@
 
 @implementation PlayersTableViewController
 
-@synthesize playersInfo, instantiator, isFinal;
+@synthesize playersInfo, instantiator, isFinal, selectedCells;
 
 - (id)init
 {
@@ -31,7 +31,7 @@
         self.playersInfo = nil;
         self.instantiator = nil;
         self.isFinal = NO;
-        selectedCells = [NSMutableArray new];
+        self.selectedCells = [[NSMutableArray new] autorelease];
     }
     return self;
 }

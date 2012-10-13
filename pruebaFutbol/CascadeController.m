@@ -31,6 +31,7 @@
         self.splitCascadeViewController = [[[CLSplitCascadeViewController alloc] initWithNavigationController:self.cascadeNavController] autorelease];
         [self.splitCascadeViewController setCategoriesViewController:self.teamsViewController];
         self.twoTeams = NO;
+        numOfPlayers = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -57,6 +58,7 @@
     playersTable.isFinal = 1;
     playersTable.instantiator = self;
     playersTable.flowManager = self;
+    [numOfPlayers insertObject:playersTable.selectedCells atIndex:1];
     return playersTable;
 }
 
@@ -65,11 +67,21 @@
     self.cascadeNavController = nil;
     self.splitCascadeViewController = nil;
     self.teamsViewController = nil;
+    [numOfPlayers release];
     [super dealloc];
 }
 
 - (void)toField {
-    [self.flowManager toField];
+    if (numOfPlayers.count == 1){
+        if ([[numOfPlayers objectAtIndex:0] count] >= 11) {
+            [self.flowManager toField];
+        }
+    } else {
+        if ([[numOfPlayers objectAtIndex:0] count] >= 11 && [[numOfPlayers objectAtIndex:1] count] >= 11) {
+            [self.flowManager toField];
+        }
+    }
+
 }
 
 - (void)asignCascadeView:(int)row {
@@ -79,6 +91,7 @@
     playersTable.instantiator = self;
     playersTable.flowManager = self;
     playersTable.isFinal = !self.twoTeams;
+    [numOfPlayers insertObject:playersTable.selectedCells atIndex:0];
     [self.cascadeNavController setRootViewController:playersTable animated:YES];
 }
 

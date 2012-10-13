@@ -17,6 +17,7 @@
 
 @interface CascadeController : NSObject<IFlowManager, IInstantiatorDelegate> {
     TeamInfoServiceArray *info;
+    NSMutableArray *numOfPlayers;
 }
 
 @property(nonatomic, retain) CLCascadeNavigationController *cascadeNavController;

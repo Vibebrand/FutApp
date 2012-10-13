@@ -18,12 +18,12 @@
     NSMutableArray *selectedMarks;
     UIButton *doneButton;
     UILabel *playersLeft;
-    NSMutableArray *selectedCells;
 }
 
 @property(nonatomic, retain) id<IPlayerInfoService> playersInfo;
 @property(nonatomic, retain) id<IInstantiatorDelegate> instantiator;
 @property(nonatomic, assign) BOOL isFinal;
 @property(nonatomic, assign) id<IFlowManager> flowManager;
+@property(nonatomic, retain) NSMutableArray *selectedCells;
 
 @end
