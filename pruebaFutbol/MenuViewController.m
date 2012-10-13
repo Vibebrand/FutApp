@@ -31,25 +31,19 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    UIImage *storyMenuItemImage = [UIImage imageNamed:@"bg-menuitem.png"];
-    UIImage *storyMenuitemImagePressed = [UIImage imageNamed:@"bg-menuitem-highlighted.png"];
-    UIImage *starImage = [UIImage imageNamed:@"icon-star.png"];
+    UIButton *oneTeam = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [oneTeam setTitle:@"Un equipo" forState:UIControlStateNormal];
+    oneTeam.frame = CGRectMake([[UIScreen mainScreen] bounds].size.height - 200, [[UIScreen mainScreen] bounds].size.width - 160, 160, 40);
+    [oneTeam addTarget:self action:@selector(oneTeamButtonClicked) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:oneTeam];
+    [oneTeam release];
     
-    AwesomeMenuItem *menuItem1 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage highlightedImage:storyMenuItemImage ContentImage:starImage highlightedContentImage:nil];
-    AwesomeMenuItem *menuItem2 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage highlightedImage:storyMenuitemImagePressed ContentImage:starImage highlightedContentImage:nil];
-    AwesomeMenuItem *menuItem3 = [[AwesomeMenuItem alloc] initWithImage:storyMenuItemImage highlightedImage:storyMenuitemImagePressed ContentImage:starImage highlightedContentImage:nil];
-    
-    NSArray *menus = [NSArray arrayWithObjects:menuItem1, menuItem2, menuItem3, nil];
-    [menuItem1 release];
-    [menuItem2 release];
-    [menuItem3 release];
-    
-    AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:self.view.bounds menus:menus];
-    [menu setDelegate:self];
-    menu.startPoint = CGPointMake(30, [[UIScreen mainScreen] bounds].size.width - 50);
-    menu.menuWholeAngle = M_PI_2;
-    [self.view addSubview:menu];
-    [menu release];
+    UIButton *twoTeams = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [twoTeams setTitle:@"Dos equipos" forState:UIControlStateNormal];
+    twoTeams.frame = CGRectMake([[UIScreen mainScreen] bounds].size.height - 200, [[UIScreen mainScreen] bounds].size.width - 100, 160, 40);
+    [twoTeams addTarget:self action:@selector(twoTeamsButtonClicked) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:twoTeams];
+    [twoTeams release];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -64,8 +58,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)AwesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx {
-    [flowManager willchangeToOption:idx];
+- (void)oneTeamButtonClicked {
+    [flowManager willchangeToOption:0];
 }
+
+- (void)twoTeamsButtonClicked {
+    [flowManager willchangeToOption:1];
+}
+
+
 
 @end

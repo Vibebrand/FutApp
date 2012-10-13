@@ -11,11 +11,13 @@
 #import "IFlowManager.h"
 
 @class ViewController;
+@class CascadeController;
 
 @interface MasterController : NSObject<IFlowManager>
 
 @property(nonatomic, retain) id<ICheckpointMessages> logger;
 @property(nonatomic, retain) UINavigationController *navigator;
-@property (nonatomic, retain) ViewController *cancha;
+@property(nonatomic, retain) ViewController *cancha;
+@property(nonatomic, retain) CascadeController *cascadeController;
 
 @end

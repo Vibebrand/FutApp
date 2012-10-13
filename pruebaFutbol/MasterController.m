@@ -8,40 +8,44 @@
 
 #import "MasterController.h"
 #import "ViewController.h"
-
-typedef enum {
-    Elegir_equipos = 0,
-    Seleccion_mexicana = 1,
-    Modo_libre = 2
-} GameModes;
+#import "CascadeController.h"
 
 @implementation MasterController
 
-@synthesize navigator, cancha, logger;
+@synthesize navigator, cancha, logger, cascadeController;
 
 - (ViewController *)cancha {
     if (!cancha) {
-        cancha = [[ViewController alloc] init];
+        cancha = [[[ViewController alloc] init] autorelease];
+        cancha.flowManager = self;
     }
     return cancha;
 }
 
+- (CascadeController *)cascadeController {
+    if (!cascadeController) {
+        cascadeController = [[CascadeController alloc] init];
+    }
+    return cascadeController;
+}
+
+- (void)toField {
+    self.cancha = [[ViewController new] autorelease];
+    cancha.flowManager = self;
+    [self.navigator pushViewController:self.cancha animated:YES];
+}
+
+- (void)backToRootView {
+    [self.navigator popToRootViewControllerAnimated:YES];
+}
+
 - (void)willchangeToOption:(int)index
 {
-    switch (index) {
-        case Elegir_equipos:
-            [self.navigator pushViewController:self.cancha animated:YES];
-            break;
-            
-        case Seleccion_mexicana:
-            break;
-            
-        case Modo_libre:
-            break;
-            
-        default:
-            break;
-    }
+    NSLog(@"willchangeToOption");
+    self.cascadeController = [[CascadeController alloc] init];
+    self.cascadeController.twoTeams = index;
+    self.cascadeController.flowManager = self;
+    [self.navigator pushViewController:self.cascadeController.splitCascadeViewController animated:YES];
 }
 
 @end
