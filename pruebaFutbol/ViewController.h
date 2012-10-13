@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TKDragView.h"
 #import "ICheckpointMessages.h"
+#import "IFlowManager.h"
 
 @class HScrollView;
 @class SmoothLineView;
@@ -16,7 +17,7 @@
 
 
 
-@interface ViewController : UIViewController <TKDragViewDelegate> {
+@interface ViewController : UIViewController {
     SmoothLineView *slv;
     MGDrawingSlate *mds;
     MGDrawingSlate *mdsG;
@@ -30,5 +31,6 @@
 @property BOOL canUseTheSameFrameManyTimes;
 @property (nonatomic, retain) id<ICheckpointMessages> logger;
 @property (nonatomic, retain) UIButton *drawColorButton;
+@property (nonatomic, retain) id<IFlowManager> flowManager;
 
 @end
