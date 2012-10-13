@@ -12,11 +12,13 @@
 #import "IInstantiatorDelegate.h"
 #import "IFlowManager.h"
 
-@interface PlayersTableViewController : CLTableViewController {
+#import "CLCascadeNavigationController.h"
+
+@interface PlayersTableViewController : CLTableViewController<CLCascadeViewDelegate> {
     NSMutableArray *selectedMarks;
     UIButton *doneButton;
     UILabel *playersLeft;
-    int selectedCells;
+    NSMutableArray *selectedCells;
 }
 
 @property(nonatomic, retain) id<IPlayerInfoService> playersInfo;

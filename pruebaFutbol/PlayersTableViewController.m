@@ -31,7 +31,7 @@
         self.playersInfo = nil;
         self.instantiator = nil;
         self.isFinal = NO;
-        selectedCells = 0;
+        selectedCells = [NSMutableArray new];
     }
     return self;
 }
@@ -76,7 +76,6 @@
     if (isFinal) {
         [self.flowManager toField];
     } else {
-        [doneButton setHidden:YES];
         SecondTeamViewController *s = [self.instantiator teamsFactory];
         [self pushDetailViewController:s animated:YES];
     }
@@ -87,7 +86,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -103,36 +102,49 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CRTableViewCellIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
     }
     
     NSString *text = [[[self.playersInfo playersOfSelectedTeam] allValues] objectAtIndex:indexPath.row];
     cell.textLabel.text = text;
+        
     cell.imageView.image = [UIImage imageNamed:@"UnknownProfile1.png"];
-    
     return cell;
 }
 
-
-
-- (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-    if (cell.isSelected) {
-        selectedCells--;
-    } else {
-        selectedCells++;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger i = selectedCells.count;
+    if (![selectedCells containsObject:[NSNumber numberWithInt:indexPath.row]] && selectedCells.count < 17) {
+        [selectedCells addObject:[NSNumber numberWithInt:indexPath.row]];
     }
-    [playersLeft setText:[NSString stringWithFormat:@"%d",11-selectedCells]];
-    if (selectedCells == 11) {
+    if (selectedCells.count == i)
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [playersLeft setText:[NSString stringWithFormat:@"%d",11-selectedCells.count]];
+    if (selectedCells.count >= 11) {
         [doneButton setHidden:NO];
         [playersLeft setHidden:YES];
     } else {
-        [doneButton setHidden:YES];
         [playersLeft setHidden:NO];
+        [doneButton setHidden:YES];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([selectedCells containsObject:[NSNumber numberWithInt:indexPath.row]]) {
+        [selectedCells removeObject:[NSNumber numberWithInt:indexPath.row]];
+    }
+    [playersLeft setText:[NSString stringWithFormat:@"%d",11-selectedCells.count]];
+    if (selectedCells.count >= 11) {
+        [doneButton setHidden:NO];
+        [playersLeft setHidden:YES];
+    } else {
+        [playersLeft setHidden:NO];
+        [doneButton setHidden:YES];
     }
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;    
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
