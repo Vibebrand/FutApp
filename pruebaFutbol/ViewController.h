@@ -23,14 +23,19 @@
     MGDrawingSlate *mdsG;
     UIImageView *soccerField;
     BOOL canDrag;
+    UIButton *drawDragButton;
+    UIButton *undoButton;
+    UIButton *colorButton;
+    UIButton *backButton;
+    HScrollView *downScrollView;
 }
 
-@property (nonatomic, retain) HScrollView *upScrollView;
 @property (nonatomic, retain) NSMutableArray *dragViews;
 @property BOOL canDragMultipleViewsAtOnce;
 @property BOOL canUseTheSameFrameManyTimes;
 @property (nonatomic, retain) id<ICheckpointMessages> logger;
-@property (nonatomic, retain) UIButton *drawColorButton;
 @property (nonatomic, retain) id<IFlowManager> flowManager;
+
+- (void)positionatePlayers:(int)numberOfPlayers screenRect:(CGRect)screenRect sizeOfPlayers:(float)sizeOfPlayers;
 
 @end

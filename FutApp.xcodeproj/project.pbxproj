@@ -46,6 +46,7 @@
 		92912F1F160EA18A00A4C05E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92912F1D160EA18A00A4C05E /* ViewController.xib */; };
 		92912F26160EA1E300A4C05E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92912F25160EA1E300A4C05E /* QuartzCore.framework */; };
 		92918DE51610E757002CD6A4 /* HScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92918DE41610E757002CD6A4 /* HScrollView.m */; };
+		929BF887162A4187007B2C8A /* TwoTeamsFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929BF886162A4187007B2C8A /* TwoTeamsFieldViewController.m */; };
 		92A362A51620922E0095A4F8 /* chivasBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362A11620922E0095A4F8 /* chivasBadge.png */; };
 		92A362A61620922E0095A4F8 /* chivasBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362A21620922E0095A4F8 /* chivasBadge@2x.png */; };
 		92A362C9162117410095A4F8 /* chivasBadgeNum.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362C8162117410095A4F8 /* chivasBadgeNum.png */; };
@@ -154,6 +155,8 @@
 		92912F25160EA1E300A4C05E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		92918DE31610E757002CD6A4 /* HScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HScrollView.h; sourceTree = "<group>"; };
 		92918DE41610E757002CD6A4 /* HScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HScrollView.m; sourceTree = "<group>"; };
+		929BF885162A4187007B2C8A /* TwoTeamsFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoTeamsFieldViewController.h; sourceTree = "<group>"; };
+		929BF886162A4187007B2C8A /* TwoTeamsFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoTeamsFieldViewController.m; sourceTree = "<group>"; };
 		92A362A11620922E0095A4F8 /* chivasBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasBadge.png; sourceTree = "<group>"; };
 		92A362A21620922E0095A4F8 /* chivasBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chivasBadge@2x.png"; sourceTree = "<group>"; };
 		92A362C8162117410095A4F8 /* chivasBadgeNum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasBadgeNum.png; sourceTree = "<group>"; };
@@ -427,6 +430,8 @@
 				927D012E162789EA00BF2D2E /* ProfileViewController.m */,
 				92E7F00316281868003A460E /* SecondTeamViewController.h */,
 				92E7F00416281868003A460E /* SecondTeamViewController.m */,
+				929BF885162A4187007B2C8A /* TwoTeamsFieldViewController.h */,
+				929BF886162A4187007B2C8A /* TwoTeamsFieldViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -666,6 +671,7 @@
 				927D01011627609A00BF2D2E /* CRTableViewController.m in Sources */,
 				927D012F162789EA00BF2D2E /* ProfileViewController.m in Sources */,
 				92E7F00516281868003A460E /* SecondTeamViewController.m in Sources */,
+				929BF887162A4187007B2C8A /* TwoTeamsFieldViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

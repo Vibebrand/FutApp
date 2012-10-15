@@ -19,11 +19,10 @@
 
 @implementation ViewController
 
-@synthesize  upScrollView, dragViews, logger, drawColorButton, flowManager;
+@synthesize  dragViews, logger, flowManager;
 
 - (void)dealloc
 {
-    self.upScrollView = nil;
     self.dragViews = nil;
     self.logger = nil;
     [super dealloc];
@@ -32,39 +31,12 @@
 - (void) loadView {
     [super loadView];
         
-    canDrag = YES;
-    slv = nil;
-    mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
-    mds.drawingColor = [UIColor yellowColor];
-    [self.view insertSubview:mds atIndex:1];
-    mds.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-    mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
-    mdsG.drawingColor = [UIColor whiteColor];
-    [self.view insertSubview:mdsG atIndex:2];
-    mdsG.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-    [mds setUserInteractionEnabled:NO];
-    [mdsG setUserInteractionEnabled:NO];
     
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    int numberOfPlayers = 17;
-    float sizeOfPlayers = 50;
-    CGFloat wideScroll;
     
-    if (numberOfPlayers < 10) {
-        wideScroll = screenRect.size.height + 40;
-    }
-    else {
-        wideScroll = numberOfPlayers * 110;
-    }
-    
-    //Declaracion de scrollviews
-    
-    self.upScrollView = [[[HScrollView alloc] initWithFrame:CGRectMake(0, screenRect.size.width - 70, screenRect.size.height, 50)]autorelease];
-    self.upScrollView.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
-    self.upScrollView.contentSize = CGSizeMake(wideScroll-50, 50 );
-    self.upScrollView.scrollEnabled = NO;
-    
+}
 
+- (void)positionatePlayers:(int)numberOfPlayers screenRect:(CGRect)screenRect sizeOfPlayers:(float)sizeOfPlayers
+{
     //Declaracion de dragviews
     
     self.dragViews = [NSMutableArray arrayWithCapacity: numberOfPlayers];
@@ -108,18 +80,18 @@
         CGRect startFrame = CGRectMake(xOrigin, screenRect.size.width - 70, 50, 50);
         TKDragView *dragView = [[TKDragView alloc] initWithImage:[UIImage drawText:[numbersOfPlayers objectAtIndex:i] inImage:image atPoint:CGPointMake(image.size.width/4, image.size.height/4)] startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:delegado];
         dragView.canDragMultipleDragViewsAtOnce = NO;
-        [self.upScrollView.elements addObject:dragView];
+        [downScrollView.elements addObject:dragView];
         [self.dragViews addObject:dragView];
         [self.view insertSubview:dragView atIndex:4];
         [dragView release];
     }
     delegado.dragViews = self.dragViews;
     [numbersOfPlayers release];
-    [self.view insertSubview:self.upScrollView atIndex:3];
+    [self.view insertSubview:downScrollView atIndex:3];
     
     
     
-        
+    
     
     
     //Create matrix for the field
@@ -160,47 +132,12 @@
     
     //Igualo los start frames con los frames actuales
     for (int i = 0; i < 11; i++) {
-        TKDragView *view = [self.dragViews objectAtIndex:i];        
+        TKDragView *view = [self.dragViews objectAtIndex:i];
         view.startFrame = view.frame;
     }
     
     
     [[TKDragManager manager] addDragView:[self.dragViews objectAtIndex:10]];
-    //Botones
-    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [backButton setTitle:@"Volver" forState:UIControlStateNormal];
-    backButton.frame = CGRectMake(4, screenRect.size.width - 65, 100, 40);
-    [backButton addTarget:self action:@selector(backButtonClicked:) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:backButton];
-    
-    UIButton *greenColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [greenColorButton setTitle:@"Blanco" forState:UIControlStateNormal];
-    greenColorButton.frame = CGRectMake(124, screenRect.size.width - 65, 100, 40);
-    [greenColorButton addTarget:self action:@selector(colorButtonClicked:) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:greenColorButton];
-    
-    UIButton *undoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [undoButton setTitle:@"Deshacer" forState:UIControlStateNormal];
-    undoButton.frame = CGRectMake(244, screenRect.size.width - 65, 100, 40);
-    [undoButton addTarget:self action:@selector(undoButtonClicked:) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:undoButton];
-    
-    self.drawColorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [drawColorButton setTitle:@"Arrastrar" forState:UIControlStateNormal];
-    drawColorButton.frame = CGRectMake(364, screenRect.size.width - 65, 100, 40);
-    [drawColorButton addTarget:self action:@selector(drawColorButtonClicked:) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:drawColorButton];
-    
-
-    //Imagen del campo
-    path = [bundle pathForResource:@"soccer.png" ofType:nil];
-    image = [UIImage imageWithContentsOfFile:path];
-    soccerField = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.height, screenRect.size.width-70)];
-    soccerField.image = image;
-    [self.view insertSubview:soccerField atIndex:0];
-    [soccerField release];
-    
-    
 }
 
 - (void)viewDidLoad
@@ -208,6 +145,77 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    canDrag = YES;
+    slv = nil;
+    mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
+    mds.drawingColor = [UIColor yellowColor];
+    [self.view insertSubview:mds atIndex:1];
+    mds.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+    mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
+    mdsG.drawingColor = [UIColor whiteColor];
+    [self.view insertSubview:mdsG atIndex:2];
+    mdsG.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+    [mds setUserInteractionEnabled:NO];
+    [mdsG setUserInteractionEnabled:NO];
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    int numberOfPlayers = 17;
+    float sizeOfPlayers = 50;
+    CGFloat wideScroll;
+    
+    if (numberOfPlayers < 10) {
+        wideScroll = screenRect.size.height + 40;
+    }
+    else {
+        wideScroll = numberOfPlayers * 110;
+    }
+    
+    //Declaracion de scrollviews
+    
+    downScrollView = [[[HScrollView alloc] initWithFrame:CGRectMake(0, screenRect.size.width - 70, screenRect.size.height, 50)]autorelease];
+    downScrollView.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
+    downScrollView.contentSize = CGSizeMake(wideScroll-50, 50 );
+    downScrollView.scrollEnabled = NO;
+    
+    
+    UIImage *image;
+    
+    [self positionatePlayers:numberOfPlayers screenRect:screenRect sizeOfPlayers:sizeOfPlayers];
+    
+    //Botones
+    backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [backButton setTitle:@"Volver" forState:UIControlStateNormal];
+    backButton.frame = CGRectMake(4, screenRect.size.width - 65, 100, 40);
+    [backButton addTarget:self action:@selector(backButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:backButton];
+    
+    colorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [colorButton setTitle:@"Blanco" forState:UIControlStateNormal];
+    colorButton.frame = CGRectMake(124, screenRect.size.width - 65, 100, 40);
+    [colorButton addTarget:self action:@selector(colorButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:colorButton];
+    
+    undoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [undoButton setTitle:@"Borrar" forState:UIControlStateNormal];
+    undoButton.frame = CGRectMake(244, screenRect.size.width - 65, 100, 40);
+    [undoButton addTarget:self action:@selector(undoButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:undoButton];
+    
+    drawDragButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [drawDragButton setTitle:@"Arrastrar" forState:UIControlStateNormal];
+    drawDragButton.frame = CGRectMake(364, screenRect.size.width - 65, 100, 40);
+    [drawDragButton addTarget:self action:@selector(drawDragButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:drawDragButton];
+    
+    
+    //Imagen del campo
+    NSString *Path = [[NSBundle mainBundle] pathForResource:@"soccer.png" ofType:nil];
+    image = [UIImage imageWithContentsOfFile:Path];
+    soccerField = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.height, screenRect.size.width-70)];
+    soccerField.image = image;
+    [self.view insertSubview:soccerField atIndex:0];
+    [soccerField release];
 }
 
 - (void)didReceiveMemoryWarning
@@ -243,7 +251,7 @@
     [logger checkpointPassed:@"cambio de color"];
 }
 
-- (void)drawColorButtonClicked: (UIButton *)sender {
+- (void)drawDragButtonClicked: (UIButton *)sender {
     [self changeDragDraw]; 
     if (canDrag) {
         [sender setTitle:@"Arrastrar" forState:UIControlStateNormal];
@@ -266,7 +274,7 @@
     [self.view exchangeSubviewAtIndex:indexOfWhite withSubviewAtIndex:indexOfYellow];
     
     if (canDrag) {
-        [self drawColorButtonClicked:self.drawColorButton];
+        [self drawDragButtonClicked:drawDragButton];
     }
 }
 
