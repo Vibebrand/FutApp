@@ -62,28 +62,19 @@
     
     
     //Numbers of players
-    NSMutableArray *numbersOfPlayers = [[NSMutableArray alloc] initWithCapacity:17];
-    [numbersOfPlayers addObject:@" 1"];
-    [numbersOfPlayers addObject:@"21"];
-    [numbersOfPlayers addObject:@" 4"];
-    [numbersOfPlayers addObject:@"24"];
-    [numbersOfPlayers addObject:@" 3"];
-    [numbersOfPlayers addObject:@"13"];
-    [numbersOfPlayers addObject:@"25"];
-    [numbersOfPlayers addObject:@"28"];
-    [numbersOfPlayers addObject:@"14"];
-    [numbersOfPlayers addObject:@"17"];
-    [numbersOfPlayers addObject:@"19"];
-    [numbersOfPlayers addObject:@"20"];
-    [numbersOfPlayers addObject:@" 7"];
-    [numbersOfPlayers addObject:@" 5"];
-    [numbersOfPlayers addObject:@"26"];
-    [numbersOfPlayers addObject:@"10"];
-    [numbersOfPlayers addObject:@" 2"];
+    NSMutableArray *numbersOfPlayers = [[NSMutableArray alloc] initWithCapacity:self.teamOneInfo.count];
+    
+    for (int i = 0; i < self.teamOneInfo.count; i++) {
+        NSString *number = [[self.teamOneInfo allKeys] objectAtIndex:i];
+        if ([number length] == 1) {
+            number = [NSString stringWithFormat:@" %@",number];
+        }
+        [numbersOfPlayers addObject: number];
+    }
     
     
     //Se agregan jugadores al scroll view
-    for (int i = 0; i < numberOfPlayers; i++) {
+    for (int i = 0; i < self.teamOneInfo.count; i++) {
         CGFloat xOrigin = i * 60;
         CGRect startFrame = CGRectMake(xOrigin, screenRect.size.width - 70, 50, 50);
         TKDragView *dragView = [[TKDragView alloc] initWithImage:[UIImage drawText:[numbersOfPlayers objectAtIndex:i] inImage:image atPoint:CGPointMake(image.size.width/4, image.size.height/4)] startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:delegado];
@@ -123,20 +114,32 @@
     
     
     //Posicionar jugadores titulares
-    [[self.dragViews objectAtIndex:0] swapToEndPositionAtIndex: 9 * oLimit];
+    [[self.dragViews objectAtIndex:0] swapToEndPositionAtIndex: 8 * oLimit];
     
-    [[self.dragViews objectAtIndex:1] swapToEndPositionAtIndex: 7 * oLimit + 5];
-    [[self.dragViews objectAtIndex:2] swapToEndPositionAtIndex: 11 * oLimit + 5];
+    [[self.dragViews objectAtIndex:1] swapToEndPositionAtIndex: 6 * oLimit + 5];
+    [[self.dragViews objectAtIndex:2] swapToEndPositionAtIndex: 10 * oLimit + 5];
     
-    [[self.dragViews objectAtIndex:3] swapToEndPositionAtIndex: 6 * oLimit + 9];
-    [[self.dragViews objectAtIndex:4] swapToEndPositionAtIndex: 8 * oLimit + 9];
-    [[self.dragViews objectAtIndex:5] swapToEndPositionAtIndex: 10 * oLimit + 9];
-    [[self.dragViews objectAtIndex:6] swapToEndPositionAtIndex: 12 * oLimit + 9];
+    [[self.dragViews objectAtIndex:3] swapToEndPositionAtIndex: 5 * oLimit + 8];
+    [[self.dragViews objectAtIndex:4] swapToEndPositionAtIndex: 7 * oLimit + 8];
+    [[self.dragViews objectAtIndex:5] swapToEndPositionAtIndex: 9 * oLimit + 8];
+    [[self.dragViews objectAtIndex:6] swapToEndPositionAtIndex: 11 * oLimit + 8];
     
-    [[self.dragViews objectAtIndex:7] swapToEndPositionAtIndex: 6 * oLimit + 13];
-    [[self.dragViews objectAtIndex:8] swapToEndPositionAtIndex: 8 * oLimit + 13];
-    [[self.dragViews objectAtIndex:9] swapToEndPositionAtIndex: 10 * oLimit + 13];
-    [[self.dragViews objectAtIndex:10] swapToEndPositionAtIndex: 12 * oLimit + 13];
+    [[self.dragViews objectAtIndex:7] swapToEndPositionAtIndex: 5 * oLimit + 11];
+    [[self.dragViews objectAtIndex:8] swapToEndPositionAtIndex: 7 * oLimit + 11];
+    [[self.dragViews objectAtIndex:9] swapToEndPositionAtIndex: 9 * oLimit + 11];
+    [[self.dragViews objectAtIndex:10] swapToEndPositionAtIndex: 11 * oLimit + 11];
+    
+    
+    if (self.teamOneInfo.count > 11) {
+        for (int i = 11; i < self.teamOneInfo.count; i++) {
+            TKDragView *dragView = [self.dragViews objectAtIndex:i];
+            dragView.startFrame = CGRectMake((i-11)*60, dragView.startFrame.origin.y, dragView.startFrame.size.width, dragView.startFrame.size.height);
+            [dragView swapToStartPosition];
+        }
+    }
+    
+    
+    
     
     //Igualo los start frames con los frames actuales
     for (int i = 0; i < 11; i++) {
@@ -146,6 +149,73 @@
     
     
     [[TKDragManager manager] addDragView:[self.dragViews objectAtIndex:10]];
+    [self addSecondTeamViews:goodFrames :badFrames :delegado sizeOfPlayers:sizeOfPlayers];
+}
+
+- (void)addSecondTeamViews: (NSMutableArray *)goodFrames :(NSMutableArray *)badFrames :(CustomTKDragViewDelegate *)delegado sizeOfPlayers:(float)sizeOfPlayers{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *path = [bundle pathForResource:@"chivasBadgeNum.png" ofType:nil];
+    UIImage *image = [UIImage imageWithContentsOfFile:path];
+    
+    
+    //Numbers of players
+    NSMutableArray *numbersOfPlayers = [[NSMutableArray alloc] initWithCapacity:self.teamOneInfo.count];
+    
+    for (int i = 0; i < self.teamTwoInfo.count; i++) {
+        NSString *number = [[self.teamTwoInfo allKeys] objectAtIndex:i];
+        if ([number length] == 1) {
+            number = [NSString stringWithFormat:@" %@",number];
+        }
+        [numbersOfPlayers addObject: number];
+    }
+    
+    
+    //Se agregan jugadores al scroll view
+    for (int i = 0; i < self.teamTwoInfo.count; i++) {
+        CGRect startFrame = CGRectMake([[UIScreen mainScreen]bounds].size.height - ((i-10)*60), [[UIScreen mainScreen] bounds].size.width - 70, 50, 50);
+        TKDragView *dragView = [[TKDragView alloc] initWithImage:[UIImage drawText:[numbersOfPlayers objectAtIndex:i] inImage:image atPoint:CGPointMake(image.size.width/4, image.size.height/4)] startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:delegado];
+        dragView.canDragMultipleDragViewsAtOnce = NO;
+        [downScrollView.elements addObject:dragView];
+        [self.dragViews addObject:dragView];
+        [self.view insertSubview:dragView atIndex:4];
+        [dragView release];
+    }
+    delegado.dragViews = self.dragViews;
+    [numbersOfPlayers release];
+    [self.view insertSubview:downScrollView atIndex:3];
+    
+    
+    int oLimit = [[UIScreen mainScreen]bounds].size.height / (sizeOfPlayers * 0.75);
+
+    
+    //Posicionar jugadores titulares
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count] swapToEndPositionAtIndex: 9 * oLimit - 1];
+    
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 1] swapToEndPositionAtIndex: 7 * oLimit - 6];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 2] swapToEndPositionAtIndex: 11 * oLimit - 6];
+    
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 3] swapToEndPositionAtIndex: 6 * oLimit - 9];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 4] swapToEndPositionAtIndex: 8 * oLimit - 9];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 5] swapToEndPositionAtIndex: 10 * oLimit - 9];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 6] swapToEndPositionAtIndex: 12 * oLimit - 9];
+    
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 7] swapToEndPositionAtIndex: 6 * oLimit - 12];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 8] swapToEndPositionAtIndex: 8 * oLimit - 12];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 9] swapToEndPositionAtIndex: 10 * oLimit - 12];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 10] swapToEndPositionAtIndex: 12 * oLimit - 12];
+
+    
+    
+    
+    
+    //Igualo los start frames con los frames actuales
+    for (int i = self.teamOneInfo.count; i < self.teamOneInfo.count + self.teamTwoInfo.count; i++) {
+        TKDragView *view = [self.dragViews objectAtIndex:i];
+        view.startFrame = view.frame;
+    }
+    
+    
+ //   [[TKDragManager manager] addDragView:[self.dragViews objectAtIndex:10]];
 }
 
 - (void)didReceiveMemoryWarning
