@@ -114,20 +114,20 @@
     
     
     //Posicionar jugadores titulares
-    [[self.dragViews objectAtIndex:0] swapToEndPositionAtIndex: 9 * oLimit];
+    [[self.dragViews objectAtIndex:0] swapToEndPositionAtIndex: 8 * oLimit];
     
-    [[self.dragViews objectAtIndex:1] swapToEndPositionAtIndex: 7 * oLimit + 5];
-    [[self.dragViews objectAtIndex:2] swapToEndPositionAtIndex: 11 * oLimit + 5];
+    [[self.dragViews objectAtIndex:1] swapToEndPositionAtIndex: 6 * oLimit + 5];
+    [[self.dragViews objectAtIndex:2] swapToEndPositionAtIndex: 10 * oLimit + 5];
     
-    [[self.dragViews objectAtIndex:3] swapToEndPositionAtIndex: 6 * oLimit + 9];
-    [[self.dragViews objectAtIndex:4] swapToEndPositionAtIndex: 8 * oLimit + 9];
-    [[self.dragViews objectAtIndex:5] swapToEndPositionAtIndex: 10 * oLimit + 9];
-    [[self.dragViews objectAtIndex:6] swapToEndPositionAtIndex: 12 * oLimit + 9];
+    [[self.dragViews objectAtIndex:3] swapToEndPositionAtIndex: 5 * oLimit + 8];
+    [[self.dragViews objectAtIndex:4] swapToEndPositionAtIndex: 7 * oLimit + 8];
+    [[self.dragViews objectAtIndex:5] swapToEndPositionAtIndex: 9 * oLimit + 8];
+    [[self.dragViews objectAtIndex:6] swapToEndPositionAtIndex: 11 * oLimit + 8];
     
-    [[self.dragViews objectAtIndex:7] swapToEndPositionAtIndex: 6 * oLimit + 13];
-    [[self.dragViews objectAtIndex:8] swapToEndPositionAtIndex: 8 * oLimit + 13];
-    [[self.dragViews objectAtIndex:9] swapToEndPositionAtIndex: 10 * oLimit + 13];
-    [[self.dragViews objectAtIndex:10] swapToEndPositionAtIndex: 12 * oLimit + 13];
+    [[self.dragViews objectAtIndex:7] swapToEndPositionAtIndex: 5 * oLimit + 11];
+    [[self.dragViews objectAtIndex:8] swapToEndPositionAtIndex: 7 * oLimit + 11];
+    [[self.dragViews objectAtIndex:9] swapToEndPositionAtIndex: 9 * oLimit + 11];
+    [[self.dragViews objectAtIndex:10] swapToEndPositionAtIndex: 11 * oLimit + 11];
     
     
     if (self.teamOneInfo.count > 11) {
@@ -186,24 +186,23 @@
     
     
     int oLimit = [[UIScreen mainScreen]bounds].size.height / (sizeOfPlayers * 0.75);
-    
-    
+
     
     //Posicionar jugadores titulares
-    [[self.dragViews objectAtIndex:self.teamOneInfo.count] swapToEndPositionAtIndex: 11 * oLimit];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count] swapToEndPositionAtIndex: 9 * oLimit - 1];
     
-    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 1] swapToEndPositionAtIndex: 9 * oLimit + 5];
-    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 2] swapToEndPositionAtIndex: 13 * oLimit + 5];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 1] swapToEndPositionAtIndex: 7 * oLimit - 6];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 2] swapToEndPositionAtIndex: 11 * oLimit - 6];
     
-    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 3] swapToEndPositionAtIndex: 8 * oLimit + 9];
-    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 4] swapToEndPositionAtIndex: 10 * oLimit + 9];
-    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 5] swapToEndPositionAtIndex: 12 * oLimit + 9];
-    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 6] swapToEndPositionAtIndex: 13 * oLimit + 9];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 3] swapToEndPositionAtIndex: 6 * oLimit - 9];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 4] swapToEndPositionAtIndex: 8 * oLimit - 9];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 5] swapToEndPositionAtIndex: 10 * oLimit - 9];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 6] swapToEndPositionAtIndex: 12 * oLimit - 9];
     
-    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 7] swapToEndPositionAtIndex: 8 * oLimit + 13];
-    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 8] swapToEndPositionAtIndex: 10 * oLimit + 13];
-    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 9] swapToEndPositionAtIndex: 12 * oLimit + 13];
-    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 10] swapToEndPositionAtIndex: 14 * oLimit + 13];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 7] swapToEndPositionAtIndex: 6 * oLimit - 12];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 8] swapToEndPositionAtIndex: 8 * oLimit - 12];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 9] swapToEndPositionAtIndex: 10 * oLimit - 12];
+    [[self.dragViews objectAtIndex:self.teamOneInfo.count + 10] swapToEndPositionAtIndex: 12 * oLimit - 12];
 
     
     

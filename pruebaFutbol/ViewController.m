@@ -115,10 +115,10 @@
     [[self.dragViews objectAtIndex:5] swapToEndPositionAtIndex: 10 * oLimit + 9];
     [[self.dragViews objectAtIndex:6] swapToEndPositionAtIndex: 12 * oLimit + 9];
     
-    [[self.dragViews objectAtIndex:7] swapToEndPositionAtIndex: 6 * oLimit + 13];
-    [[self.dragViews objectAtIndex:8] swapToEndPositionAtIndex: 8 * oLimit + 13];
-    [[self.dragViews objectAtIndex:9] swapToEndPositionAtIndex: 10 * oLimit + 13];
-    [[self.dragViews objectAtIndex:10] swapToEndPositionAtIndex: 12 * oLimit + 13];
+    [[self.dragViews objectAtIndex:7] swapToEndPositionAtIndex: 6 * oLimit + 11];
+    [[self.dragViews objectAtIndex:8] swapToEndPositionAtIndex: 8 * oLimit + 11];
+    [[self.dragViews objectAtIndex:9] swapToEndPositionAtIndex: 10 * oLimit + 11];
+    [[self.dragViews objectAtIndex:10] swapToEndPositionAtIndex: 12 * oLimit + 11];
     
     if (self.teamOneInfo.count > 11) {
         for (int i = 11; i < self.teamOneInfo.count; i++) {
