@@ -17,7 +17,7 @@
 
 @implementation CascadeController
 
-@synthesize cascadeNavController, splitCascadeViewController, teamsViewController, twoTeams, flowManager;
+@synthesize cascadeNavController, splitCascadeViewController, teamsViewController, twoTeams, flowManager, teamOne, teamTwo;
 
 - (id)init
 {
@@ -44,6 +44,7 @@
 }
 
 - (SecondTeamViewController *)teamsFactory {
+    
     SecondTeamViewController *teams = [[[SecondTeamViewController alloc] initWithNibName:@"TeamsViewController" bundle:nil] autorelease];
     teams.teamsInfo = info;
     teams.flowManager = self;
@@ -58,6 +59,7 @@
     playersTable.isFinal = 1;
     playersTable.instantiator = self;
     playersTable.flowManager = self;
+    self.teamTwo = playersTable;
     [numOfPlayers insertObject:playersTable.selectedCells atIndex:1];
     return playersTable;
 }
@@ -74,11 +76,11 @@
 - (void)toField {
     if (numOfPlayers.count == 1){
         if ([[numOfPlayers objectAtIndex:0] count] >= 11) {
-            [self.flowManager toField];
+            [self.flowManager toFieldWithOneTeam: [self.teamOne getTeamPlayers]];
         }
     } else {
         if ([[numOfPlayers objectAtIndex:0] count] >= 11 && [[numOfPlayers objectAtIndex:1] count] >= 11) {
-            [self.flowManager toField];
+            [self.flowManager toFieldWithTwoTeams:[self.teamOne getTeamPlayers] And:[self.teamTwo getTeamPlayers]];
         }
     }
 
@@ -91,6 +93,7 @@
     playersTable.instantiator = self;
     playersTable.flowManager = self;
     playersTable.isFinal = !self.twoTeams;
+    self.teamOne = playersTable;
     [numOfPlayers insertObject:playersTable.selectedCells atIndex:0];
     [self.cascadeNavController setRootViewController:playersTable animated:YES];
 }

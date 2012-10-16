@@ -17,7 +17,6 @@
 
 @property(nonatomic, retain) id<ICheckpointMessages> logger;
 @property(nonatomic, retain) UINavigationController *navigator;
-@property(nonatomic, retain) ViewController *cancha;
 @property(nonatomic, retain) CascadeController *cascadeController;
 
 @end

@@ -10,6 +10,7 @@
 
 @interface TwoTeamsFieldViewController : ViewController
 
-@property (nonatomic, retain) HScrollView *upScrollView;
+@property(nonatomic, retain) HScrollView *upScrollView;
+@property(nonatomic, retain) NSDictionary *teamTwoInfo;
 
 @end

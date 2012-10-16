@@ -19,7 +19,7 @@
 
 @implementation ViewController
 
-@synthesize  dragViews, logger, flowManager;
+@synthesize  dragViews, logger, flowManager, teamOneInfo;
 
 - (void)dealloc
 {

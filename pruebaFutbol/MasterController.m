@@ -9,18 +9,11 @@
 #import "MasterController.h"
 #import "ViewController.h"
 #import "CascadeController.h"
+#import "TwoTeamsFieldViewController.h"
 
 @implementation MasterController
 
-@synthesize navigator, cancha, logger, cascadeController;
-
-- (ViewController *)cancha {
-    if (!cancha) {
-        cancha = [[[ViewController alloc] init] autorelease];
-        cancha.flowManager = self;
-    }
-    return cancha;
-}
+@synthesize navigator, logger, cascadeController;
 
 - (CascadeController *)cascadeController {
     if (!cascadeController) {
@@ -29,10 +22,19 @@
     return cascadeController;
 }
 
-- (void)toField {
-    self.cancha = [[ViewController new] autorelease];
-    cancha.flowManager = self;
-    [self.navigator pushViewController:self.cancha animated:YES];
+- (void)toFieldWithOneTeam:(NSDictionary *)team {
+    ViewController *field = [ViewController new];
+    field.flowManager = self;
+    field.teamOneInfo = team;
+    [self.navigator pushViewController:field animated:YES];
+}
+
+- (void)toFieldWithTwoTeams:(NSDictionary *)local And:(NSDictionary *)visitor {
+    TwoTeamsFieldViewController *field = [TwoTeamsFieldViewController new];
+    field.flowManager = self;
+    field.teamOneInfo = local;
+    field.teamTwoInfo = visitor;
+    [self.navigator pushViewController:field animated:YES];
 }
 
 - (void)backToRootView {

@@ -21,7 +21,7 @@
 
 @implementation PlayersTableViewController
 
-@synthesize playersInfo, instantiator, isFinal, selectedCells;
+@synthesize playersInfo, instantiator, isFinal, selectedCells, selectedPlayers;
 
 - (id)init
 {
@@ -32,6 +32,7 @@
         self.instantiator = nil;
         self.isFinal = NO;
         self.selectedCells = [[NSMutableArray new] autorelease];
+        self.selectedPlayers = nil;
     }
     return self;
 }
@@ -64,6 +65,8 @@
     [self setShowRoundedCorners: YES];
     self.tableView.allowsMultipleSelection = YES;
     self.tableView.allowsMultipleSelectionDuringEditing = YES;
+    
+    self.selectedPlayers = [NSMutableDictionary new];
 }
 
 - (void)didReceiveMemoryWarning
@@ -116,6 +119,9 @@
     NSUInteger i = selectedCells.count;
     if (![selectedCells containsObject:[NSNumber numberWithInt:indexPath.row]] && selectedCells.count < 17) {
         [selectedCells addObject:[NSNumber numberWithInt:indexPath.row]];
+        NSString *name = [[[self.playersInfo playersOfSelectedTeam] allValues] objectAtIndex:indexPath.row];
+        NSString *number = [[[self.playersInfo playersOfSelectedTeam] allKeys] objectAtIndex:indexPath.row];
+        [self.selectedPlayers setValue:name forKey:number];
     }
     if (selectedCells.count == i)
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -130,8 +136,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     if ([selectedCells containsObject:[NSNumber numberWithInt:indexPath.row]]) {
         [selectedCells removeObject:[NSNumber numberWithInt:indexPath.row]];
+        [self.selectedPlayers removeObjectForKey:[[[self.playersInfo playersOfSelectedTeam] allKeys] objectAtIndex:indexPath.row]];
     }
     [playersLeft setText:[NSString stringWithFormat:@"%d",11-selectedCells.count]];
     if (selectedCells.count >= 11) {
@@ -152,5 +160,15 @@
     ProfileViewController *profile = [self.instantiator profileFactory:selectedPlayer];
     [self pushDetailViewController:profile animated:YES];
 }
+
+- (void)setTeamPlayers:(NSDictionary *)players {
+    self.selectedPlayers = [NSMutableDictionary dictionaryWithDictionary:players];
+}
+
+- (NSDictionary *)getTeamPlayers {
+    return self.selectedPlayers;
+}
+
+
 
 @end

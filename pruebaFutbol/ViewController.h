@@ -10,6 +10,7 @@
 #import "TKDragView.h"
 #import "ICheckpointMessages.h"
 #import "IFlowManager.h"
+#import "ISelectedPlayersInfo.h"
 
 @class HScrollView;
 @class SmoothLineView;
@@ -23,11 +24,11 @@
     MGDrawingSlate *mdsG;
     UIImageView *soccerField;
     BOOL canDrag;
-    UIButton *drawDragButton;
-    UIButton *undoButton;
-    UIButton *colorButton;
-    UIButton *backButton;
     HScrollView *downScrollView;
+    UIButton *backButton;
+    UIButton *colorButton;
+    UIButton *undoButton;
+    UIButton *drawDragButton;
 }
 
 @property (nonatomic, retain) NSMutableArray *dragViews;
@@ -35,7 +36,6 @@
 @property BOOL canUseTheSameFrameManyTimes;
 @property (nonatomic, retain) id<ICheckpointMessages> logger;
 @property (nonatomic, retain) id<IFlowManager> flowManager;
-
-- (void)positionatePlayers:(int)numberOfPlayers screenRect:(CGRect)screenRect sizeOfPlayers:(float)sizeOfPlayers;
+@property (nonatomic, retain) NSDictionary *teamOneInfo;
 
 @end

@@ -157,6 +157,7 @@
 		92918DE41610E757002CD6A4 /* HScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HScrollView.m; sourceTree = "<group>"; };
 		929BF885162A4187007B2C8A /* TwoTeamsFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoTeamsFieldViewController.h; sourceTree = "<group>"; };
 		929BF886162A4187007B2C8A /* TwoTeamsFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoTeamsFieldViewController.m; sourceTree = "<group>"; };
+		92A1DD43162CDAD10041F748 /* ISelectedPlayersInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISelectedPlayersInfo.h; sourceTree = "<group>"; };
 		92A362A11620922E0095A4F8 /* chivasBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasBadge.png; sourceTree = "<group>"; };
 		92A362A21620922E0095A4F8 /* chivasBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chivasBadge@2x.png"; sourceTree = "<group>"; };
 		92A362C8162117410095A4F8 /* chivasBadgeNum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasBadgeNum.png; sourceTree = "<group>"; };
@@ -258,6 +259,7 @@
 				9261F1CD1626A59800467C6F /* IPlayerInfoService.h */,
 				927D0130162791C400BF2D2E /* IPlayerInfo.h */,
 				927D01331627A5D200BF2D2E /* IInstantiatorDelegate.h */,
+				92A1DD43162CDAD10041F748 /* ISelectedPlayersInfo.h */,
 			);
 			name = protocolos;
 			sourceTree = "<group>";
@@ -386,8 +388,8 @@
 		92A362AC162096680095A4F8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				927F51BA16265410002DA762 /* TeamInfoServiceArray.h */,
 				927F51BB16265410002DA762 /* TeamInfoServiceArray.m */,
+				927F51BA16265410002DA762 /* TeamInfoServiceArray.h */,
 				925B63A2161E650B00954A55 /* TestFlightLogger.h */,
 				925B63A3161E650B00954A55 /* TestFlightLogger.m */,
 			);
