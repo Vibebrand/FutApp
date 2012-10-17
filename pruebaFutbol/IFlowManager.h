@@ -15,5 +15,7 @@
 - (void)asignCascadeView: (int)row;
 - (void)backToRootView;
 - (void)toField;
+- (void)toFieldWithOneTeam: (NSDictionary *)team;
+- (void)toFieldWithTwoTeams: (NSDictionary *)local And:(NSDictionary *)visitor;
 
 @end

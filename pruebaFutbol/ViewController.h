@@ -10,6 +10,7 @@
 #import "TKDragView.h"
 #import "ICheckpointMessages.h"
 #import "IFlowManager.h"
+#import "ISelectedPlayersInfo.h"
 
 @class HScrollView;
 @class SmoothLineView;
@@ -23,14 +24,21 @@
     MGDrawingSlate *mdsG;
     UIImageView *soccerField;
     BOOL canDrag;
+    HScrollView *downScrollView;
+    UIButton *backButton;
+    UIButton *whiteColorButton;
+    UIButton *yellowColorButton;
+    UIButton *redColorButton;
+    UIButton *undoButton;
+    UIButton *drawDragButton;
+    UIButton *twitterButton;
 }
 
-@property (nonatomic, retain) HScrollView *upScrollView;
 @property (nonatomic, retain) NSMutableArray *dragViews;
 @property BOOL canDragMultipleViewsAtOnce;
 @property BOOL canUseTheSameFrameManyTimes;
 @property (nonatomic, retain) id<ICheckpointMessages> logger;
-@property (nonatomic, retain) UIButton *drawColorButton;
 @property (nonatomic, retain) id<IFlowManager> flowManager;
+@property (nonatomic, retain) NSDictionary *teamOneInfo;
 
 @end

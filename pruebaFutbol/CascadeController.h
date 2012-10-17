@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "IFlowManager.h"
 #import "IInstantiatorDelegate.h"
+#import "ISelectedPlayersInfo.h"
 
 @class CLCascadeNavigationController;
 @class TeamsViewController;
@@ -25,5 +26,7 @@
 @property(nonatomic, retain) CLSplitCascadeViewController *splitCascadeViewController;
 @property(nonatomic, assign) BOOL twoTeams;
 @property(nonatomic, retain) id<IFlowManager> flowManager;
+@property(nonatomic, retain) id<ISelectedPlayersInfo> teamOne;
+@property(nonatomic, retain) id<ISelectedPlayersInfo> teamTwo;
 
 @end

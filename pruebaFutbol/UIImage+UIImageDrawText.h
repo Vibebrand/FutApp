@@ -13,4 +13,6 @@
 + (UIImage *)drawText:(NSString*)text inImage:(UIImage*)image atPoint:(CGPoint)point;
 + (UIImage *)drawText:(NSString *)text inImage:(UIImage *)image atPoint:(CGPoint)point withFont:(UIFont *)font andColor:(UIColor *)color;
 
++ (UIImage*)captureView:(UIView *)view;
+
 @end

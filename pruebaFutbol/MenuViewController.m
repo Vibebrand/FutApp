@@ -31,19 +31,26 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    UIButton *oneTeam = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [oneTeam setTitle:@"Un equipo" forState:UIControlStateNormal];
-    oneTeam.frame = CGRectMake([[UIScreen mainScreen] bounds].size.height - 200, [[UIScreen mainScreen] bounds].size.width - 160, 160, 40);
+    UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
+    background.image = [UIImage imageNamed:@"background.jpg"];
+    [self.view addSubview:background];
+    [background release];
+        
+    UIButton *oneTeam = [UIButton buttonWithType:UIButtonTypeCustom];
+    oneTeam.frame = CGRectMake(380, 450, 104, 104);
     [oneTeam addTarget:self action:@selector(oneTeamButtonClicked) forControlEvents:UIControlEventTouchDown];
+    [oneTeam setImage:[UIImage imageNamed:@"oneteamButton.png"] forState:UIControlStateNormal];
     [self.view addSubview:oneTeam];
     [oneTeam release];
     
-    UIButton *twoTeams = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [twoTeams setTitle:@"Dos equipos" forState:UIControlStateNormal];
-    twoTeams.frame = CGRectMake([[UIScreen mainScreen] bounds].size.height - 200, [[UIScreen mainScreen] bounds].size.width - 100, 160, 40);
+    UIButton *twoTeams = [UIButton buttonWithType:UIButtonTypeCustom];
+    twoTeams.frame = CGRectMake(530, 450, 104, 104);
     [twoTeams addTarget:self action:@selector(twoTeamsButtonClicked) forControlEvents:UIControlEventTouchDown];
+    [twoTeams setImage:[UIImage imageNamed:@"teambutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:twoTeams];
     [twoTeams release];
+    
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
