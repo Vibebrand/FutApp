@@ -281,8 +281,8 @@
     else
     {
         UIAlertView *alertView = [[UIAlertView alloc]
-                                  initWithTitle:@"Sorry"
-                                  message:@"You can't send a tweet right now"
+                                  initWithTitle:@"Error"
+                                  message:@"Necesita añadir una cuenta de Twitter en Ajutes"
                                   delegate:self
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil];
@@ -290,7 +290,6 @@
     }
 
 }
-
 
 - (void)undoButtonClicked:(UIButton *)sender {
     [self eraseDrawings];
@@ -301,7 +300,7 @@
     int indexOfYellow = [[self.view subviews] indexOfObject:mds];
     int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
     [self.view exchangeSubviewAtIndex:indexOfWhite withSubviewAtIndex:indexOfYellow];
-    
+
     if (canDrag) {
         [self drawDragButtonClicked:drawDragButton];
     }
