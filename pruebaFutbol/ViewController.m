@@ -173,7 +173,7 @@
     //Declaracion de scrollviews
     
     downScrollView = [[[HScrollView alloc] initWithFrame:CGRectMake(0, screenRect.size.width - 70, screenRect.size.height, 50)]autorelease];
-    downScrollView.backgroundColor = [UIColor whiteColor];
+    downScrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tabbarslice.jpg"]];
     downScrollView.contentSize = CGSizeMake(wideScroll-50, 50 );
     downScrollView.scrollEnabled = NO;
     
