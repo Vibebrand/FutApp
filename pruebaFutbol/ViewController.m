@@ -50,7 +50,7 @@
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"chivasBadgeNum.png" ofType:nil];
+    NSString *path = [bundle pathForResource:@"redteamdot.png" ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
     
@@ -173,7 +173,7 @@
     //Declaracion de scrollviews
     
     downScrollView = [[[HScrollView alloc] initWithFrame:CGRectMake(0, screenRect.size.width - 70, screenRect.size.height, 50)]autorelease];
-    downScrollView.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
+    downScrollView.backgroundColor = [UIColor whiteColor];
     downScrollView.contentSize = CGSizeMake(wideScroll-50, 50 );
     downScrollView.scrollEnabled = NO;
     
@@ -183,39 +183,39 @@
     [self positionatePlayers:numberOfPlayers screenRect:screenRect sizeOfPlayers:sizeOfPlayers];
     
     //Botones
-    backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [backButton setTitle:@"Volver" forState:UIControlStateNormal];
-    backButton.frame = CGRectMake(4, screenRect.size.width - 65, 100, 40);
+    backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    backButton.frame = CGRectMake(-3, screenRect.size.width - 65, 100, 40);
     [backButton addTarget:self action:@selector(backButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [backButton setImage:[UIImage imageNamed:@"backbutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:backButton];
     
-    colorButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [colorButton setTitle:@"Blanco" forState:UIControlStateNormal];
-    colorButton.frame = CGRectMake(124, screenRect.size.width - 65, 100, 40);
-    [colorButton addTarget:self action:@selector(colorButtonClicked:) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:colorButton];
+    whiteColorButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    whiteColorButton.frame = CGRectMake(91, screenRect.size.width - 65, 40, 40);
+    [whiteColorButton addTarget:self action:@selector(colorButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [whiteColorButton setImage:[UIImage imageNamed:@"whitebutton.png"] forState:UIControlStateNormal];
+    [self.view addSubview:whiteColorButton];
     
-    undoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [undoButton setTitle:@"Borrar" forState:UIControlStateNormal];
-    undoButton.frame = CGRectMake(244, screenRect.size.width - 65, 100, 40);
+    undoButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    undoButton.frame = CGRectMake(134, screenRect.size.width - 65, 40, 40);
     [undoButton addTarget:self action:@selector(undoButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [undoButton setImage:[UIImage imageNamed:@"bookbutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:undoButton];
     
-    drawDragButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [drawDragButton setTitle:@"Arrastrar" forState:UIControlStateNormal];
-    drawDragButton.frame = CGRectMake(364, screenRect.size.width - 65, 100, 40);
+    drawDragButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    drawDragButton.frame = CGRectMake(178, screenRect.size.width - 65, 40, 40);
     [drawDragButton addTarget:self action:@selector(drawDragButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [drawDragButton setImage:[UIImage imageNamed:@"handbutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:drawDragButton];
     
     twitterButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [twitterButton setTitle:@"Twitter" forState:UIControlStateNormal];
-    twitterButton.frame = CGRectMake(484, screenRect.size.width - 65, 100, 40);
+    twitterButton.frame = CGRectMake(222, screenRect.size.width - 65, 40, 40);
     [twitterButton addTarget:self action:@selector(twitterButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [twitterButton setImage:[UIImage imageNamed:@"tweet.png"] forState:UIControlStateNormal];
     [self.view addSubview:twitterButton];
     
     
     //Imagen del campo
-    NSString *Path = [[NSBundle mainBundle] pathForResource:@"soccer.png" ofType:nil];
+    NSString *Path = [[NSBundle mainBundle] pathForResource:@"field.jpg" ofType:nil];
     image = [UIImage imageWithContentsOfFile:Path];
     soccerField = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.height, screenRect.size.width-70)];
     soccerField.image = image;
@@ -248,10 +248,12 @@
 
 - (void)colorButtonClicked:(UIButton *)sender {
     [self changeCholor];
-    if ([[sender titleForState:UIControlStateNormal] isEqualToString:@"Blanco"]) {
-        [sender setTitle:@"Amarillo" forState:UIControlStateNormal];
+    static uint count = 0;
+    count++;
+    if (count%2) {
+        [sender setImage:[UIImage imageNamed:@"yellowbutton.png"] forState:UIControlStateNormal];
     } else {
-        [sender setTitle:@"Blanco" forState:UIControlStateNormal];
+        [sender setImage:[UIImage imageNamed:@"whitebutton.png"] forState:UIControlStateNormal];
     }
     [logger checkpointPassed:@"cambio de color"];
 }
@@ -259,10 +261,10 @@
 - (void)drawDragButtonClicked: (UIButton *)sender {
     [self changeDragDraw]; 
     if (canDrag) {
-        [sender setTitle:@"Arrastrar" forState:UIControlStateNormal];
+        [drawDragButton setImage:[UIImage imageNamed:@"handbutton.png"] forState:UIControlStateNormal];
     }
     else {
-        [sender setTitle:@"Dibujar" forState:UIControlStateNormal];
+        [drawDragButton setImage:[UIImage imageNamed:@"penbutton.png"] forState:UIControlStateNormal];
     }
     [logger checkpointPassed:@"cambio drag-draw"];
 }
