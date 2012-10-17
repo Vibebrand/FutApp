@@ -44,11 +44,11 @@
     [self addLeftBorderShadowWithWidth:20.0 andOffset:0.0f];
     
     UIImageView* header = [[UIImageView alloc] initWithFrame: CGRectMake(0.0, 0.0, self.view.bounds.size.width, 45.0)];
-    [header setImage: [UIImage imageNamed:@"ToolBar_479x45.png"]];
+    [header setImage: [UIImage imageNamed:@"navbar.jpg"]];
     
     doneButton = [UIButton buttonWithType:UIBarButtonItemStyleBordered];
     [doneButton setTitle:@"Ok" forState:UIControlStateNormal];
-    [doneButton setBackgroundImage:[UIImage imageNamed:@"ToolBar_479x45.png"] forState:UIControlStateNormal];
+    [doneButton setBackgroundImage:[UIImage imageNamed:@"navbar.jpg"] forState:UIControlStateNormal];
     doneButton.frame = CGRectMake(400, 8, 70, 30);
     [doneButton addTarget:self action:@selector(doneButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [header addSubview:doneButton];

@@ -59,7 +59,7 @@
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"chivasBadgeNum.png" ofType:nil];
+    NSString *path = [bundle pathForResource:@"redteamdot.png" ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
     
@@ -156,7 +156,7 @@
 
 - (void)addSecondTeamViews: (NSMutableArray *)goodFrames :(NSMutableArray *)badFrames :(CustomTKDragViewDelegate *)delegado sizeOfPlayers:(float)sizeOfPlayers{
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"chivasBadgeNum.png" ofType:nil];
+    NSString *path = [bundle pathForResource:@"yellowteamdot.png" ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
     

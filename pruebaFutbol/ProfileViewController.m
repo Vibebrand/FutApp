@@ -27,7 +27,7 @@
     
     // add header view
     UIImageView* header = [[UIImageView alloc] initWithFrame: CGRectMake(0.0, 0.0, self.view.bounds.size.width, 45.0)];
-    [header setImage: [UIImage imageNamed:@"ToolBar_479x45.png"]];
+    [header setImage: [UIImage imageNamed:@"navbar.jpg"]];
     [self.segmentedView setHeaderView: header];
     
     [self setShowRoundedCorners:YES];
