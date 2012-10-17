@@ -29,6 +29,7 @@
     UIButton *colorButton;
     UIButton *undoButton;
     UIButton *drawDragButton;
+    UIButton *twitterButton;
 }
 
 @property (nonatomic, retain) NSMutableArray *dragViews;
