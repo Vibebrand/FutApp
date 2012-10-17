@@ -35,4 +35,14 @@
     return newImage;
 }
 
++ (UIImage*)captureView:(UIView *)view {
+	CGRect rect = [[UIScreen mainScreen] bounds];
+	UIGraphicsBeginImageContext(rect.size);
+	CGContextRef context = UIGraphicsGetCurrentContext();
+	[view.layer renderInContext:context];
+	UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	return img;
+}
+
 @end

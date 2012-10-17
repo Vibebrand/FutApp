@@ -17,6 +17,8 @@
 		923B18E01611197D00856A9D /* TKDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 923B18DF1611197D00856A9D /* TKDragView.m */; };
 		923B18E216111ECD00856A9D /* tile_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 923B18E116111ECD00856A9D /* tile_green.png */; };
 		924AB69016162A4B006FCA89 /* CustomTKDragViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 924AB68F16162A4B006FCA89 /* CustomTKDragViewDelegate.m */; };
+		924B6C80162E3C8900B12605 /* TwitterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 924B6C7F162E3C8900B12605 /* TwitterService.m */; };
+		924B6C83162E439600B12605 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924B6C82162E439600B12605 /* Social.framework */; };
 		925B639E161E565000954A55 /* chivasadidas.png in Resources */ = {isa = PBXBuildFile; fileRef = 925B639D161E564F00954A55 /* chivasadidas.png */; };
 		925B63A4161E650B00954A55 /* TestFlightLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 925B63A3161E650B00954A55 /* TestFlightLogger.m */; };
 		9261F1BE162697E800467C6F /* america.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9261F1BD162697E800467C6F /* america.jpeg */; };
@@ -71,6 +73,7 @@
 		92C47E5916237109002FC10C /* icon-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4B16237109002FC10C /* icon-star.png */; };
 		92C47E5A16237109002FC10C /* icon-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C47E4C16237109002FC10C /* icon-star@2x.png */; };
 		92C47E5F1623AAF2002FC10C /* MasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C47E5E1623AAF2002FC10C /* MasterController.m */; };
+		92CD5C40162E2CF600793F59 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CD5C3F162E2CF600793F59 /* Twitter.framework */; };
 		92E7F00516281868003A460E /* SecondTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E7F00416281868003A460E /* SecondTeamViewController.m */; };
 		92EC17F01625E445004811E9 /* CLCascadeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC17ED1625E445004811E9 /* CLCascadeNavigationController.m */; };
 		92EC17F11625E445004811E9 /* CLCascadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC17EF1625E445004811E9 /* CLCascadeView.m */; };
@@ -106,6 +109,9 @@
 		923B18E116111ECD00856A9D /* tile_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile_green.png; sourceTree = "<group>"; };
 		924AB68E16162A4B006FCA89 /* CustomTKDragViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTKDragViewDelegate.h; sourceTree = "<group>"; };
 		924AB68F16162A4B006FCA89 /* CustomTKDragViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTKDragViewDelegate.m; sourceTree = "<group>"; };
+		924B6C7E162E3C8900B12605 /* TwitterService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterService.h; sourceTree = "<group>"; };
+		924B6C7F162E3C8900B12605 /* TwitterService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterService.m; sourceTree = "<group>"; };
+		924B6C82162E439600B12605 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		925B639D161E564F00954A55 /* chivasadidas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasadidas.png; sourceTree = "<group>"; };
 		925B63A1161E643E00954A55 /* ICheckpointMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICheckpointMessages.h; sourceTree = "<group>"; };
 		925B63A2161E650B00954A55 /* TestFlightLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlightLogger.h; sourceTree = "<group>"; };
@@ -188,6 +194,7 @@
 		92C47E5D1623AAF2002FC10C /* MasterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterController.h; sourceTree = "<group>"; };
 		92C47E5E1623AAF2002FC10C /* MasterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterController.m; sourceTree = "<group>"; };
 		92C47E601623B861002FC10C /* IFlowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFlowManager.h; sourceTree = "<group>"; };
+		92CD5C3F162E2CF600793F59 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		92E7F00316281868003A460E /* SecondTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondTeamViewController.h; sourceTree = "<group>"; };
 		92E7F00416281868003A460E /* SecondTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondTeamViewController.m; sourceTree = "<group>"; };
 		92EC17EB1625E436004811E9 /* Cascade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cascade.h; sourceTree = "<group>"; };
@@ -237,6 +244,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924B6C83162E439600B12605 /* Social.framework in Frameworks */,
+				92CD5C40162E2CF600793F59 /* Twitter.framework in Frameworks */,
 				921DCC28161CC03200386E5E /* libz.dylib in Frameworks */,
 				921DCC25161CBFFC00386E5E /* libTestFlight.a in Frameworks */,
 				921DCC26161CBFFC00386E5E /* TestFlight.h in Frameworks */,
@@ -309,6 +318,8 @@
 				921DCC27161CC03200386E5E /* libz.dylib */,
 				921DCC22161CBFB400386E5E /* libTestFlight.a */,
 				921DCC23161CBFB400386E5E /* TestFlight.h */,
+				924B6C82162E439600B12605 /* Social.framework */,
+				92CD5C3F162E2CF600793F59 /* Twitter.framework */,
 				92912F25160EA1E300A4C05E /* QuartzCore.framework */,
 				92912F02160EA18A00A4C05E /* UIKit.framework */,
 				92912F04160EA18A00A4C05E /* Foundation.framework */,
@@ -392,6 +403,8 @@
 				927F51BA16265410002DA762 /* TeamInfoServiceArray.h */,
 				925B63A2161E650B00954A55 /* TestFlightLogger.h */,
 				925B63A3161E650B00954A55 /* TestFlightLogger.m */,
+				924B6C7E162E3C8900B12605 /* TwitterService.h */,
+				924B6C7F162E3C8900B12605 /* TwitterService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -674,6 +687,7 @@
 				927D012F162789EA00BF2D2E /* ProfileViewController.m in Sources */,
 				92E7F00516281868003A460E /* SecondTeamViewController.m in Sources */,
 				929BF887162A4187007B2C8A /* TwoTeamsFieldViewController.m in Sources */,
+				924B6C80162E3C8900B12605 /* TwitterService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 #import "HScrollView.h"
 #import "MGDrawingSlate.h"
 #import "UIImage+UIImageDrawText.h"
+#import <Social/Social.h>
 
 @interface ViewController ()
 
@@ -206,6 +207,12 @@
     [drawDragButton addTarget:self action:@selector(drawDragButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:drawDragButton];
     
+    twitterButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [twitterButton setTitle:@"Twitter" forState:UIControlStateNormal];
+    twitterButton.frame = CGRectMake(484, screenRect.size.width - 65, 100, 40);
+    [twitterButton addTarget:self action:@selector(twitterButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:twitterButton];
+    
     
     //Imagen del campo
     NSString *Path = [[NSBundle mainBundle] pathForResource:@"soccer.png" ofType:nil];
@@ -258,6 +265,28 @@
         [sender setTitle:@"Dibujar" forState:UIControlStateNormal];
     }
     [logger checkpointPassed:@"cambio drag-draw"];
+}
+
+- (void)twitterButtonClicked: (UIButton *)sender {
+    UIImage *img = [UIImage captureView: self.view];
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [tweetSheet setInitialText:@"Mi jugada"];
+        [tweetSheet addImage:img];
+        [self presentViewController:tweetSheet animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Sorry"
+                                  message:@"You can't send a tweet right now"
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+
 }
 
 
