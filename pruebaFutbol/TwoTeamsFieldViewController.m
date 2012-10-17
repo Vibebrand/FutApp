@@ -40,6 +40,7 @@
     colorButton.frame = CGRectMake(124, 4, 100, 40);
     undoButton.frame = CGRectMake(244, 5, 100, 40);
     drawDragButton.frame = CGRectMake(364,5, 100, 40);
+    twitterButton.frame = CGRectMake(484, 5, 100, 40);
     
     soccerField.frame = CGRectMake(0, 50, [[UIScreen mainScreen]bounds].size.height, [[UIScreen mainScreen]bounds].size.width - 120);
     

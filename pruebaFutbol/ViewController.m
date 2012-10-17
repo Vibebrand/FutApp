@@ -272,7 +272,7 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {
         SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [tweetSheet setInitialText:@"Ay qué bonito :3"];
+        [tweetSheet setInitialText:@"Mi jugada"];
         [tweetSheet addImage:img];
         [self presentViewController:tweetSheet animated:YES completion:nil];
     }
