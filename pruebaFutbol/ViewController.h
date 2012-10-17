@@ -26,7 +26,9 @@
     BOOL canDrag;
     HScrollView *downScrollView;
     UIButton *backButton;
-    UIButton *colorButton;
+    UIButton *whiteColorButton;
+    UIButton *yellowColorButton;
+    UIButton *redColorButton;
     UIButton *undoButton;
     UIButton *drawDragButton;
     UIButton *twitterButton;

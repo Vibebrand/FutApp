@@ -31,16 +31,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.upScrollView = [[[HScrollView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, 50)]autorelease];
-    self.upScrollView.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
+    self.upScrollView.backgroundColor = [UIColor whiteColor];
     self.upScrollView.contentSize = CGSizeMake(self.upScrollView.frame.size.width, self.upScrollView.frame.size.height);
     self.upScrollView.scrollEnabled = NO;
     [self.view insertSubview:self.upScrollView atIndex:3];
     
-    backButton.frame = CGRectMake(4, 4, 100, 40);
-    colorButton.frame = CGRectMake(124, 4, 100, 40);
-    undoButton.frame = CGRectMake(244, 5, 100, 40);
-    drawDragButton.frame = CGRectMake(364,5, 100, 40);
-    twitterButton.frame = CGRectMake(484, 5, 100, 40);
+    backButton.frame = CGRectMake(4, 5, backButton.frame.size.width, backButton.frame.size.height);
+    [backButton setImage:[UIImage imageNamed:@"backupbutton.png"] forState:UIControlStateNormal];
+    whiteColorButton.frame = CGRectMake(90, 5, whiteColorButton.frame.size.width, whiteColorButton.frame.size.height);
+    undoButton.frame = CGRectMake(134, 5, undoButton.frame.size.width, undoButton.frame.size.height);
+    drawDragButton.frame = CGRectMake(178,5, drawDragButton.frame.size.width, drawDragButton.frame.size.height);
+    twitterButton.frame = CGRectMake(222, 5, twitterButton.frame.size.width, twitterButton.frame.size.height);
     
     soccerField.frame = CGRectMake(0, 50, [[UIScreen mainScreen]bounds].size.height, [[UIScreen mainScreen]bounds].size.width - 120);
     

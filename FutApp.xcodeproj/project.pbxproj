@@ -57,6 +57,7 @@
 		924B6CD7162E4C1000B12605 /* yellowteam.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6CB1162E4C1000B12605 /* yellowteam.png */; };
 		924B6CD8162E4C1000B12605 /* yellowteam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6CB2162E4C1000B12605 /* yellowteam@2x.png */; };
 		924B6CD9162E4C1000B12605 /* yellowteamdot.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6CB3162E4C1000B12605 /* yellowteamdot.png */; };
+		924B6CDB162E5D2300B12605 /* tweet.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6CDA162E5D2300B12605 /* tweet.png */; };
 		925B639E161E565000954A55 /* chivasadidas.png in Resources */ = {isa = PBXBuildFile; fileRef = 925B639D161E564F00954A55 /* chivasadidas.png */; };
 		925B63A4161E650B00954A55 /* TestFlightLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 925B63A3161E650B00954A55 /* TestFlightLogger.m */; };
 		9261F1BE162697E800467C6F /* america.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9261F1BD162697E800467C6F /* america.jpeg */; };
@@ -188,6 +189,7 @@
 		924B6CB1162E4C1000B12605 /* yellowteam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowteam.png; sourceTree = "<group>"; };
 		924B6CB2162E4C1000B12605 /* yellowteam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowteam@2x.png"; sourceTree = "<group>"; };
 		924B6CB3162E4C1000B12605 /* yellowteamdot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowteamdot.png; sourceTree = "<group>"; };
+		924B6CDA162E5D2300B12605 /* tweet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tweet.png; sourceTree = "<group>"; };
 		925B639D161E564F00954A55 /* chivasadidas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasadidas.png; sourceTree = "<group>"; };
 		925B63A1161E643E00954A55 /* ICheckpointMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICheckpointMessages.h; sourceTree = "<group>"; };
 		925B63A2161E650B00954A55 /* TestFlightLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlightLogger.h; sourceTree = "<group>"; };
@@ -523,6 +525,7 @@
 				927F51C0162681F3002DA762 /* guadalajara.jpeg */,
 				925B639D161E564F00954A55 /* chivasadidas.png */,
 				9261F1CB1626A34200467C6F /* ToolBar_479x45.png */,
+				924B6CDA162E5D2300B12605 /* tweet.png */,
 				920F4D2B161CD6B0005129D6 /* soccer.png */,
 				920F4D28161CD253005129D6 /* soccerField.jpeg */,
 				9226CE0E161D2B2B00511116 /* gray.jpeg */,
@@ -829,6 +832,7 @@
 				924B6CD7162E4C1000B12605 /* yellowteam.png in Resources */,
 				924B6CD8162E4C1000B12605 /* yellowteam@2x.png in Resources */,
 				924B6CD9162E4C1000B12605 /* yellowteamdot.png in Resources */,
+				924B6CDB162E5D2300B12605 /* tweet.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
