@@ -30,11 +30,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.tableView.rowHeight = 88;
-    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [backButton setTitle:@"Volver" forState:UIControlStateNormal];
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchDown];
     backButton.frame = CGRectMake(10, 10, 60, 25);
-    [backButton setBackgroundImage:[UIImage imageNamed:@"navbar.jpg"] forState:UIControlStateNormal];
+    [backButton setBackgroundImage:[UIImage imageNamed:@"backupbutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:backButton];
     [backButton release];
 }
