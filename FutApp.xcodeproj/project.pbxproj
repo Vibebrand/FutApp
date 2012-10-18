@@ -69,6 +69,7 @@
 		92912F1F160EA18A00A4C05E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92912F1D160EA18A00A4C05E /* ViewController.xib */; };
 		92912F26160EA1E300A4C05E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92912F25160EA1E300A4C05E /* QuartzCore.framework */; };
 		92918DE51610E757002CD6A4 /* HScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92918DE41610E757002CD6A4 /* HScrollView.m */; };
+		92977E6C16309C13009641F1 /* SelectedInfoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 92977E6B16309C13009641F1 /* SelectedInfoService.m */; };
 		9299D680162F832D004BCD9F /* backbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D65C162F832D004BCD9F /* backbutton.png */; };
 		9299D681162F832D004BCD9F /* backbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D65D162F832D004BCD9F /* backbutton@2x.png */; };
 		9299D682162F832D004BCD9F /* backupbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D65E162F832D004BCD9F /* backupbutton.png */; };
@@ -236,6 +237,10 @@
 		92912F25160EA1E300A4C05E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		92918DE31610E757002CD6A4 /* HScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HScrollView.h; sourceTree = "<group>"; };
 		92918DE41610E757002CD6A4 /* HScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HScrollView.m; sourceTree = "<group>"; };
+		92977E681630933C009641F1 /* ISelectedInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISelectedInfo.h; sourceTree = "<group>"; };
+		92977E6A16309C13009641F1 /* SelectedInfoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedInfoService.h; sourceTree = "<group>"; };
+		92977E6B16309C13009641F1 /* SelectedInfoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedInfoService.m; sourceTree = "<group>"; };
+		92977E6D1630C138009641F1 /* IDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDataSource.h; sourceTree = "<group>"; };
 		9299D65C162F832D004BCD9F /* backbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbutton.png; sourceTree = "<group>"; };
 		9299D65D162F832D004BCD9F /* backbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backbutton@2x.png"; sourceTree = "<group>"; };
 		9299D65E162F832D004BCD9F /* backupbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backupbutton.png; sourceTree = "<group>"; };
@@ -400,6 +405,8 @@
 				927D0130162791C400BF2D2E /* IPlayerInfo.h */,
 				927D01331627A5D200BF2D2E /* IInstantiatorDelegate.h */,
 				92A1DD43162CDAD10041F748 /* ISelectedPlayersInfo.h */,
+				92977E681630933C009641F1 /* ISelectedInfo.h */,
+				92977E6D1630C138009641F1 /* IDataSource.h */,
 			);
 			name = protocolos;
 			sourceTree = "<group>";
@@ -608,6 +615,8 @@
 				925B63A3161E650B00954A55 /* TestFlightLogger.m */,
 				924B6C7E162E3C8900B12605 /* TwitterService.h */,
 				924B6C7F162E3C8900B12605 /* TwitterService.m */,
+				92977E6A16309C13009641F1 /* SelectedInfoService.h */,
+				92977E6B16309C13009641F1 /* SelectedInfoService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -946,6 +955,7 @@
 				92E7F00516281868003A460E /* SecondTeamViewController.m in Sources */,
 				929BF887162A4187007B2C8A /* TwoTeamsFieldViewController.m in Sources */,
 				924B6C80162E3C8900B12605 /* TwitterService.m in Sources */,
+				92977E6C16309C13009641F1 /* SelectedInfoService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
