@@ -57,10 +57,12 @@
     
     
     //Numbers of players
-    NSMutableArray *numbersOfPlayers = [[NSMutableArray alloc] initWithCapacity:self.teamOneInfo.count];
+    NSMutableArray *numbersOfPlayers = [[NSMutableArray alloc] initWithCapacity:self.teamOneChosenData.indexOfPlayers.count];
     
-    for (int i = 0; i < self.teamOneInfo.count; i++) {
-        NSString *number = [[self.teamOneInfo allKeys] objectAtIndex:i];
+    for (int i = 0; i < self.teamOneChosenData.indexOfPlayers.count; i++) {
+        NSArray *players = [self.dataSource playersForTeam:teamOneChosenData.chosenTeam];
+        NSNumber *num = [teamOneChosenData.indexOfPlayers objectAtIndex:i];
+        NSString *number = [[players objectAtIndex:[num integerValue] ] objectForKey:@"number"];
         if ([number length] == 1) {
             number = [NSString stringWithFormat:@" %@",number];
         }
@@ -68,7 +70,7 @@
     }
     
     //Se agregan jugadores al scroll view
-    for (int i = 0; i < self.teamOneInfo.count; i++) {
+    for (int i = 0; i < self.teamOneChosenData.indexOfPlayers.count; i++) {
         CGFloat xOrigin = i * 60;
         CGRect startFrame = CGRectMake(xOrigin, screenRect.size.width - 70, 50, 50);
         TKDragView *dragView = [[TKDragView alloc] initWithImage:[UIImage drawText:[numbersOfPlayers objectAtIndex:i] inImage:image atPoint:CGPointMake(image.size.width/4, image.size.height/4)] startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:delegado];

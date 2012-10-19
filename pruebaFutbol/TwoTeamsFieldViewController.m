@@ -18,7 +18,7 @@
 
 @implementation TwoTeamsFieldViewController
 
-@synthesize teamTwoChosenData;
+@synthesize teamTwoChosenData,teamOneChosenData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -68,10 +68,12 @@
     
     
     //Numbers of players
-    NSMutableArray *numbersOfPlayers = [[NSMutableArray alloc] initWithCapacity:self.teamOneInfo.count];
+    NSMutableArray *numbersOfPlayers = [[NSMutableArray alloc] initWithCapacity:self.teamOneChosenData.indexOfPlayers.count];
     
-    for (int i = 0; i < self.teamOneInfo.count; i++) {
-        NSString *number = [[self.teamOneInfo allKeys] objectAtIndex:i];
+    for (int i = 0; i < self.teamOneChosenData.indexOfPlayers.count; i++) {
+        NSArray *players = [self.dataSource playersForTeam:self.teamOneChosenData.chosenTeam];
+        NSNumber *num = [self.teamOneChosenData.indexOfPlayers objectAtIndex:i];
+        NSString *number = [[players objectAtIndex:[num integerValue] ] objectForKey:@"number"];
         if ([number length] == 1) {
             number = [NSString stringWithFormat:@" %@",number];
         }
@@ -137,7 +139,7 @@
     
     
     if (self.teamOneInfo.count > 11) {
-        for (int i = 11; i < self.teamOneInfo.count; i++) {
+        for (int i = 11; i < self.teamOneChosenData.indexOfPlayers.count; i++) {
             TKDragView *dragView = [self.dragViews objectAtIndex:i];
             dragView.startFrame = CGRectMake((i-11)*60, dragView.startFrame.origin.y, dragView.startFrame.size.width, dragView.startFrame.size.height);
             [dragView swapToStartPosition];
@@ -167,8 +169,10 @@
     //Numbers of players
     NSMutableArray *numbersOfPlayers = [[NSMutableArray alloc] initWithCapacity:self.teamOneInfo.count];
     
-    for (int i = 0; i < self.teamTwoInfo.count; i++) {
-        NSString *number = [[self.teamTwoInfo allKeys] objectAtIndex:i];
+    for (int i = 0; i < self.teamTwoChosenData.indexOfPlayers.count; i++) {
+        NSArray *players = [self.dataSource playersForTeam:teamTwoChosenData.chosenTeam];
+        NSNumber *num = [teamTwoChosenData.indexOfPlayers objectAtIndex:i];
+        NSString *number = [[players objectAtIndex:[num integerValue] ] objectForKey:@"number"];
         if ([number length] == 1) {
             number = [NSString stringWithFormat:@" %@",number];
         }
