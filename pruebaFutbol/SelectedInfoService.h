@@ -10,9 +10,13 @@
 #import "ISelectedInfo.h"
 #import "IDataSource.h"
 
-@interface SelectedInfoService : NSObject <ISelectedInfo>
+@interface SelectedInfoService : NSObject <ISelectedInfo> {
+    
+}
 
 @property (nonatomic, retain) NSMutableArray *teams;
+@property (nonatomic, retain) NSMutableArray *firstTeamPlayers;
+@property (nonatomic, retain) NSMutableArray *secondTeamPlayers;
 @property (nonatomic, retain) id<IDataSource> dataSource;
 
 @end

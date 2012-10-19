@@ -1,5 +1,5 @@
 //
-//  IDataSource.h
+//  DataSourceService.h
 //  FutApp
 //
 //  Created by Ivo on 10/18/12.
@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IDataSource.h"
 
-@protocol IDataSource <NSObject>
-
-- (NSMutableDictionary *)allData;
+@interface DataSourceService : NSObject <IDataSource>{
+    NSArray *teams;
+}
 
 @end

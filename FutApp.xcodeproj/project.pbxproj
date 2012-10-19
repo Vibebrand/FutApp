@@ -82,6 +82,7 @@
 		92977E831630D3A1009641F1 /* facebookButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92977E7F1630D3A1009641F1 /* facebookButton@2x.png */; };
 		92977E841630D3A1009641F1 /* twitterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 92977E801630D3A1009641F1 /* twitterButton.png */; };
 		92977E851630D3A1009641F1 /* twitterButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92977E811630D3A1009641F1 /* twitterButton@2x.png */; };
+		92977E881630DDC7009641F1 /* DataSourceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 92977E871630DDC7009641F1 /* DataSourceService.m */; };
 		9299D680162F832D004BCD9F /* backbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D65C162F832D004BCD9F /* backbutton.png */; };
 		9299D681162F832D004BCD9F /* backbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D65D162F832D004BCD9F /* backbutton@2x.png */; };
 		9299D684162F832D004BCD9F /* bookbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D660162F832D004BCD9F /* bookbutton.png */; };
@@ -261,6 +262,8 @@
 		92977E7F1630D3A1009641F1 /* facebookButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebookButton@2x.png"; sourceTree = "<group>"; };
 		92977E801630D3A1009641F1 /* twitterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterButton.png; sourceTree = "<group>"; };
 		92977E811630D3A1009641F1 /* twitterButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterButton@2x.png"; sourceTree = "<group>"; };
+		92977E861630DDC7009641F1 /* DataSourceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceService.h; sourceTree = "<group>"; };
+		92977E871630DDC7009641F1 /* DataSourceService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceService.m; sourceTree = "<group>"; };
 		9299D65C162F832D004BCD9F /* backbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbutton.png; sourceTree = "<group>"; };
 		9299D65D162F832D004BCD9F /* backbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backbutton@2x.png"; sourceTree = "<group>"; };
 		9299D660162F832D004BCD9F /* bookbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookbutton.png; sourceTree = "<group>"; };
@@ -641,6 +644,8 @@
 				924B6C7F162E3C8900B12605 /* TwitterService.m */,
 				92977E6A16309C13009641F1 /* SelectedInfoService.h */,
 				92977E6B16309C13009641F1 /* SelectedInfoService.m */,
+				92977E861630DDC7009641F1 /* DataSourceService.h */,
+				92977E871630DDC7009641F1 /* DataSourceService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -988,6 +993,7 @@
 				929BF887162A4187007B2C8A /* TwoTeamsFieldViewController.m in Sources */,
 				924B6C80162E3C8900B12605 /* TwitterService.m in Sources */,
 				92977E6C16309C13009641F1 /* SelectedInfoService.m in Sources */,
+				92977E881630DDC7009641F1 /* DataSourceService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

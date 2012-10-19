@@ -47,7 +47,7 @@
 }
 
 - (NSArray *)getTeams {
-    return nil;
+    return self.teams;
 }
 
 - (NSArray *)getFirstTeamPlayers{
