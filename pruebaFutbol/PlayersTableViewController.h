@@ -14,6 +14,7 @@
 #import "ISelectedPlayersInfo.h"
 #import "CLCascadeNavigationController.h"
 #import "IDataSource.h"
+@class ChosenPlayersService;
 
 @interface PlayersTableViewController : CLTableViewController<CLCascadeViewDelegate, ISelectedPlayersInfo> {
     NSMutableArray *selectedMarks;
@@ -29,5 +30,7 @@
 @property(nonatomic, retain) NSMutableDictionary *selectedPlayers;
 @property (nonatomic, retain) NSString *chosenTeam;
 @property (nonatomic, retain) id<IDataSource> dataSource;
+@property (nonatomic, retain) ChosenPlayersService *teamOneChosen;
+@property (nonatomic, retain) ChosenPlayersService *teamTwoChosen;
 
 @end

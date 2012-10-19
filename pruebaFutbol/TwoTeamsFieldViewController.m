@@ -17,6 +17,8 @@
 
 @implementation TwoTeamsFieldViewController
 
+@synthesize teamTwoChosenData;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -231,6 +233,11 @@
 {
     self.upScrollView = nil;
     [super dealloc];
+}
+
+- (void)eraseChosenData {
+    [super eraseChosenData];
+    self.teamTwoChosenData = nil;
 }
 
 @end

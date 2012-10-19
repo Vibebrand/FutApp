@@ -13,6 +13,7 @@
 #import "MGDrawingSlate.h"
 #import "UIImage+UIImageDrawText.h"
 #import <Social/Social.h>
+#import "ChosenPlayersService.h"
 
 @interface ViewController ()
 
@@ -20,12 +21,13 @@
 
 @implementation ViewController
 
-@synthesize  dragViews, logger, flowManager, teamOneInfo;
+@synthesize  dragViews, logger, flowManager, teamOneInfo, teamOneChosenData;
 
 - (void)dealloc
 {
     self.dragViews = nil;
     self.logger = nil;
+    self.teamOneChosenData = nil;
     [super dealloc];
 }
 
@@ -250,6 +252,7 @@
 
 - (void)backButtonClicked: (UIButton *)sender {
     [flowManager backToRootView];
+    [self eraseChosenData];
 }
 
 - (void)colorButtonClicked:(UIButton *)sender {
@@ -367,6 +370,10 @@
         [mdsG setUserInteractionEnabled:NO];
         [mds setUserInteractionEnabled:NO];
     }
+}
+
+- (void)eraseChosenData {
+    self.teamOneChosenData.indexOfPlayers = nil;
 }
 
 @end

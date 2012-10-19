@@ -14,6 +14,7 @@
 
 @class ViewController;
 @class CascadeController;
+@class ChosenPlayersService;
 
 @interface MasterController : NSObject<IFlowManager>
 
@@ -21,5 +22,7 @@
 @property (nonatomic, retain) UINavigationController *navigator;
 @property (nonatomic, retain) CascadeController *cascadeController;
 @property (nonatomic, retain) id<IDataSource> dataSource;
+@property (nonatomic, retain) ChosenPlayersService *teamOneChosen;
+@property (nonatomic, retain) ChosenPlayersService *teamTwoChosen;
 
 @end

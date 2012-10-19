@@ -15,7 +15,7 @@
 @class HScrollView;
 @class SmoothLineView;
 @class MGDrawingSlate;
-
+@class ChosenPlayersService;
 
 
 @interface ViewController : UIViewController {
@@ -41,5 +41,8 @@
 @property (nonatomic, retain) id<ICheckpointMessages> logger;
 @property (nonatomic, retain) id<IFlowManager> flowManager;
 @property (nonatomic, retain) NSDictionary *teamOneInfo;
+@property (nonatomic, retain) ChosenPlayersService *teamOneChosenData;
+
+- (void)eraseChosenData;
 
 @end

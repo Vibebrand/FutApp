@@ -12,7 +12,7 @@
 #import "ViewController.h"
 #import "ProfileViewController.h"
 #import "SecondTeamViewController.h"
-
+#import "ChosenPlayersService.h"
 #import "TeamInfoServiceArray.h"
 
 @interface PlayersTableViewController ()
@@ -76,9 +76,15 @@
 
 - (void)doneButtonClicked: (UIButton *)sender {
     if (isFinal) {
+        if (self.teamOneChosen.indexOfPlayers) {
+            self.teamTwoChosen.indexOfPlayers = self.selectedCells;
+        } else {
+            self.teamOneChosen.indexOfPlayers = self.selectedCells;
+        }
         [self.flowManager toField];
     } else {
         SecondTeamViewController *s = [self.instantiator teamsFactory];
+        self.teamOneChosen.indexOfPlayers = self.selectedCells;
         [self pushDetailViewController:s animated:YES];
     }
 }

@@ -162,6 +162,7 @@
 		92F7F7E51631B730003521F7 /* field@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E11631B730003521F7 /* field@2x.jpg */; };
 		92F7F7E61631B730003521F7 /* oneteamButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E21631B730003521F7 /* oneteamButton.png */; };
 		92F7F7E71631B730003521F7 /* oneteamButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E31631B730003521F7 /* oneteamButton@2x.png */; };
+		92F7F7EB1631C9C3003521F7 /* ChosenPlayersService.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7F7EA1631C9C3003521F7 /* ChosenPlayersService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -378,6 +379,9 @@
 		92F7F7E11631B730003521F7 /* field@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "field@2x.jpg"; sourceTree = "<group>"; };
 		92F7F7E21631B730003521F7 /* oneteamButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oneteamButton.png; sourceTree = "<group>"; };
 		92F7F7E31631B730003521F7 /* oneteamButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "oneteamButton@2x.png"; sourceTree = "<group>"; };
+		92F7F7E81631C9A5003521F7 /* IChosenPlayersInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IChosenPlayersInfo.h; sourceTree = "<group>"; };
+		92F7F7E91631C9C3003521F7 /* ChosenPlayersService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChosenPlayersService.h; sourceTree = "<group>"; };
+		92F7F7EA1631C9C3003521F7 /* ChosenPlayersService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChosenPlayersService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -434,6 +438,7 @@
 				92A1DD43162CDAD10041F748 /* ISelectedPlayersInfo.h */,
 				92977E681630933C009641F1 /* ISelectedInfo.h */,
 				92977E6D1630C138009641F1 /* IDataSource.h */,
+				92F7F7E81631C9A5003521F7 /* IChosenPlayersInfo.h */,
 			);
 			name = protocolos;
 			sourceTree = "<group>";
@@ -658,6 +663,8 @@
 				92977E6B16309C13009641F1 /* SelectedInfoService.m */,
 				92977E861630DDC7009641F1 /* DataSourceService.h */,
 				92977E871630DDC7009641F1 /* DataSourceService.m */,
+				92F7F7E91631C9C3003521F7 /* ChosenPlayersService.h */,
+				92F7F7EA1631C9C3003521F7 /* ChosenPlayersService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -1010,6 +1017,7 @@
 				924B6C80162E3C8900B12605 /* TwitterService.m in Sources */,
 				92977E6C16309C13009641F1 /* SelectedInfoService.m in Sources */,
 				92977E881630DDC7009641F1 /* DataSourceService.m in Sources */,
+				92F7F7EB1631C9C3003521F7 /* ChosenPlayersService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,10 +10,24 @@
 #import "ViewController.h"
 #import "CascadeController.h"
 #import "TwoTeamsFieldViewController.h"
+#import "ChosenPlayersService.h"
 
 @implementation MasterController
 
-@synthesize navigator, logger, cascadeController;
+@synthesize navigator, logger, cascadeController, teamOneChosen, teamTwoChosen;
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.navigator = nil;
+        self.logger = nil;
+        self.cascadeController = nil;
+        self.teamOneChosen = [[ChosenPlayersService new] autorelease];
+        self.teamTwoChosen = [[ChosenPlayersService new] autorelease];
+    }
+    return self;
+}
 
 - (CascadeController *)cascadeController {
     if (!cascadeController) {
@@ -26,6 +40,7 @@
     ViewController *field = [ViewController new];
     field.flowManager = self;
     field.teamOneInfo = team;
+    field.teamOneChosenData = self.teamOneChosen;
     [self.navigator pushViewController:field animated:YES];
 }
 
@@ -47,6 +62,8 @@
     self.cascadeController.dataSource = self.dataSource;
     self.cascadeController.twoTeams = index;
     self.cascadeController.flowManager = self;
+    self.cascadeController.teamOneChosenData = self.teamOneChosen;
+    self.cascadeController.teamTwoChosenData = self.teamTwoChosen;
     [self.navigator pushViewController:self.cascadeController.splitCascadeViewController animated:YES];
 }
 
