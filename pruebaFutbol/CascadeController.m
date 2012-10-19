@@ -17,7 +17,7 @@
 
 @implementation CascadeController
 
-@synthesize cascadeNavController, splitCascadeViewController, teamsViewController, twoTeams, flowManager, teamOne, teamTwo;
+@synthesize cascadeNavController, splitCascadeViewController, teamsViewController, twoTeams, flowManager, teamOne, teamTwo,dataSource;
 
 - (id)init
 {
@@ -32,8 +32,17 @@
         [self.splitCascadeViewController setCategoriesViewController:self.teamsViewController];
         self.twoTeams = NO;
         numOfPlayers = [[NSMutableArray alloc] init];
+        self.dataSource = nil;
     }
     return self;
+}
+
+- (void)setDataSource:(id<IDataSource>)dataS {
+    if (dataSource != dataS) {
+        [dataSource release];
+        dataSource = [dataS retain];
+        self.teamsViewController.dataSource = dataSource;
+    }
 }
 
 - (ProfileViewController *)profileFactory: (NSString *)selectedPlayer {

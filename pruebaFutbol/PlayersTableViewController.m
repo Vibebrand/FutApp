@@ -46,10 +46,9 @@
     UIImageView* header = [[UIImageView alloc] initWithFrame: CGRectMake(0.0, 0.0, self.view.bounds.size.width, 45.0)];
     [header setImage: [UIImage imageNamed:@"navbar.jpg"]];
     
-    doneButton = [UIButton buttonWithType:UIBarButtonItemStyleBordered];
-    [doneButton setTitle:@"Ok" forState:UIControlStateNormal];
-    [doneButton setBackgroundImage:[UIImage imageNamed:@"navbar.jpg"] forState:UIControlStateNormal];
-    doneButton.frame = CGRectMake(400, 8, 70, 30);
+    doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [doneButton setBackgroundImage:[UIImage imageNamed:@"okbutton.png"] forState:UIControlStateNormal];
+    doneButton.frame = CGRectMake(400, 4, 60, 35);
     [doneButton addTarget:self action:@selector(doneButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [header addSubview:doneButton];
     

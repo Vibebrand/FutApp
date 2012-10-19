@@ -31,17 +31,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.upScrollView = [[[HScrollView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, 50)]autorelease];
-    self.upScrollView.backgroundColor = [UIColor whiteColor];
+    self.upScrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"navbar.jpg"]];
     self.upScrollView.contentSize = CGSizeMake(self.upScrollView.frame.size.width, self.upScrollView.frame.size.height);
     self.upScrollView.scrollEnabled = NO;
     [self.view insertSubview:self.upScrollView atIndex:3];
     
     backButton.frame = CGRectMake(4, 5, backButton.frame.size.width, backButton.frame.size.height);
-    [backButton setImage:[UIImage imageNamed:@"backupbutton.png"] forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"backbutton.png"] forState:UIControlStateNormal];
     whiteColorButton.frame = CGRectMake(90, 5, whiteColorButton.frame.size.width, whiteColorButton.frame.size.height);
     undoButton.frame = CGRectMake(134, 5, undoButton.frame.size.width, undoButton.frame.size.height);
     drawDragButton.frame = CGRectMake(178,5, drawDragButton.frame.size.width, drawDragButton.frame.size.height);
     twitterButton.frame = CGRectMake(222, 5, twitterButton.frame.size.width, twitterButton.frame.size.height);
+    facebookButton.frame = CGRectMake(266, 5, facebookButton.frame.size.width, facebookButton.frame.size.height);
     
     soccerField.frame = CGRectMake(0, 50, [[UIScreen mainScreen]bounds].size.height, [[UIScreen mainScreen]bounds].size.width - 120);
     

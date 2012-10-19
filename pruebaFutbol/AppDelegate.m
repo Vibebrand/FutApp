@@ -13,6 +13,7 @@
 #import "TestFlightLogger.h"
 #import "MasterController.h"
 #import "MenuViewController.h"
+#import "DataSourceService.h"
 
 
 @implementation AppDelegate
@@ -38,6 +39,9 @@
     TestFlightLogger *tfl = [[TestFlightLogger alloc] init];
     self.masterController.logger = tfl;
     [tfl release];
+    
+    self.masterController.dataSource = [[DataSourceService new] autorelease];
+    
     
     MenuViewController *menu = [[MenuViewController alloc] init];
     menu.flowManager = self.masterController;

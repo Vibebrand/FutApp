@@ -43,8 +43,8 @@
 
 - (void)willchangeToOption:(int)index
 {
-    NSLog(@"willchangeToOption");
     self.cascadeController = [[CascadeController alloc] init];
+    self.cascadeController.dataSource = self.dataSource;
     self.cascadeController.twoTeams = index;
     self.cascadeController.flowManager = self;
     [self.navigator pushViewController:self.cascadeController.splitCascadeViewController animated:YES];

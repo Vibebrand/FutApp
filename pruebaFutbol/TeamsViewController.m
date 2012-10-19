@@ -16,7 +16,7 @@
 
 @implementation TeamsViewController
 
-@synthesize teamsInfo, flowManager;
+@synthesize teamsInfo, flowManager, dataSource;
 
 - (id<ITeamInfoService>)teamsInfo {
     if (!teamsInfo) {
@@ -30,11 +30,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.tableView.rowHeight = 88;
-    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [backButton setTitle:@"Volver" forState:UIControlStateNormal];
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchDown];
-    backButton.frame = CGRectMake(10, 10, 60, 25);
-    [backButton setBackgroundImage:[UIImage imageNamed:@"navbar.jpg"] forState:UIControlStateNormal];
+    backButton.frame = CGRectMake(10, 8, 60, 35);
+    [backButton setBackgroundImage:[UIImage imageNamed:@"backupbutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:backButton];
     [backButton release];
 }
@@ -69,11 +68,10 @@
         
     }
     
-    NSString *name = (NSString *)[[self.teamsInfo teamsNames] objectAtIndex:indexPath.row];
-    NSString *image = (NSString *)[[self.teamsInfo teamsImages] objectAtIndex:indexPath.row];
     
-    cell.imageView.image = [UIImage imageNamed:image];
-    cell.textLabel.text = name;
+    cell.imageView.image = [UIImage imageNamed:[[[self.dataSource allData] objectAtIndex:indexPath.row] objectForKey:@"teamImage"]];
+    cell.textLabel.text = [[[self.dataSource allData] objectAtIndex:indexPath.row] objectForKey:@"name"];
+    
     
     return cell;
 }
