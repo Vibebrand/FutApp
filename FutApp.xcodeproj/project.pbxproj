@@ -158,6 +158,10 @@
 		92EC18211625E488004811E9 /* CLRetractableSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC181D1625E488004811E9 /* CLRetractableSectionHeaderView.m */; };
 		92EC18221625E488004811E9 /* CLRetractableSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC181F1625E488004811E9 /* CLRetractableSectionItem.m */; };
 		92EC183B1625EFA5004811E9 /* CascadeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC183A1625EFA5004811E9 /* CascadeController.m */; };
+		92F7F7E41631B730003521F7 /* field.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E01631B730003521F7 /* field.jpg */; };
+		92F7F7E51631B730003521F7 /* field@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E11631B730003521F7 /* field@2x.jpg */; };
+		92F7F7E61631B730003521F7 /* oneteamButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E21631B730003521F7 /* oneteamButton.png */; };
+		92F7F7E71631B730003521F7 /* oneteamButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E31631B730003521F7 /* oneteamButton@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -370,6 +374,10 @@
 		92EC181F1625E488004811E9 /* CLRetractableSectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLRetractableSectionItem.m; sourceTree = "<group>"; };
 		92EC18391625EFA5004811E9 /* CascadeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CascadeController.h; sourceTree = "<group>"; };
 		92EC183A1625EFA5004811E9 /* CascadeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CascadeController.m; sourceTree = "<group>"; };
+		92F7F7E01631B730003521F7 /* field.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = field.jpg; sourceTree = "<group>"; };
+		92F7F7E11631B730003521F7 /* field@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "field@2x.jpg"; sourceTree = "<group>"; };
+		92F7F7E21631B730003521F7 /* oneteamButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oneteamButton.png; sourceTree = "<group>"; };
+		92F7F7E31631B730003521F7 /* oneteamButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "oneteamButton@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -552,6 +560,10 @@
 				92977E7A1630CAB1009641F1 /* okbutton.png */,
 				92977E7B1630CAB1009641F1 /* okbutton@2x.png */,
 				9299D66A162F832D004BCD9F /* penbutton.png */,
+				92F7F7E01631B730003521F7 /* field.jpg */,
+				92F7F7E11631B730003521F7 /* field@2x.jpg */,
+				92F7F7E21631B730003521F7 /* oneteamButton.png */,
+				92F7F7E31631B730003521F7 /* oneteamButton@2x.png */,
 				9299D66B162F832D004BCD9F /* penbutton@2x.png */,
 				9299D66C162F832D004BCD9F /* tabbarslice@2x.jpg */,
 				9299D66D162F832D004BCD9F /* tabbarsllice.jpg */,
@@ -941,6 +953,10 @@
 				92977E831630D3A1009641F1 /* facebookButton@2x.png in Resources */,
 				92977E841630D3A1009641F1 /* twitterButton.png in Resources */,
 				92977E851630D3A1009641F1 /* twitterButton@2x.png in Resources */,
+				92F7F7E41631B730003521F7 /* field.jpg in Resources */,
+				92F7F7E51631B730003521F7 /* field@2x.jpg in Resources */,
+				92F7F7E61631B730003521F7 /* oneteamButton.png in Resources */,
+				92F7F7E71631B730003521F7 /* oneteamButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

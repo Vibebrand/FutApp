@@ -107,8 +107,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
     }
     
-    NSString *text = [[[self.playersInfo playersOfSelectedTeam] allValues] objectAtIndex:indexPath.row];
-    cell.textLabel.text = text;
+    cell.textLabel.text = [[[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"name"];
         
     cell.imageView.image = [UIImage imageNamed:@"UnknownProfile1.png"];
     return cell;

@@ -58,6 +58,7 @@
     teams.teamsInfo = info;
     teams.flowManager = self;
     teams.instantiator = self;
+    teams.dataSource = self.dataSource;
     return teams;
 }
 
@@ -68,6 +69,8 @@
     playersTable.isFinal = 1;
     playersTable.instantiator = self;
     playersTable.flowManager = self;
+    playersTable.chosenTeam = [[[self.dataSource allData] objectAtIndex:row] objectForKey:@"name"];
+    playersTable.dataSource = self.dataSource;
     self.teamTwo = playersTable;
     [numOfPlayers insertObject:playersTable.selectedCells atIndex:1];
     return playersTable;
@@ -102,6 +105,8 @@
     playersTable.instantiator = self;
     playersTable.flowManager = self;
     playersTable.isFinal = !self.twoTeams;
+    playersTable.chosenTeam = [[[self.dataSource allData] objectAtIndex:row] objectForKey:@"name"];
+    playersTable.dataSource = self.dataSource;
     self.teamOne = playersTable;
     [numOfPlayers insertObject:playersTable.selectedCells atIndex:0];
     [self.cascadeNavController setRootViewController:playersTable animated:YES];
