@@ -10,12 +10,15 @@
 #import "HScrollView.h"
 #import "CustomTKDragViewDelegate.h"
 #import "UIImage+UIImageDrawText.h"
+#import "ChosenPlayersService.h"
 
 @interface TwoTeamsFieldViewController ()
 
 @end
 
 @implementation TwoTeamsFieldViewController
+
+@synthesize teamTwoChosenData,teamOneChosenData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -60,15 +63,17 @@
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"redteamdot.png" ofType:nil];
+    NSString *path = [bundle pathForResource:[[self.dataSource dataOfTeam:self.teamOneChosenData.chosenTeam] objectForKey:@"teamBadge"] ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
     
     //Numbers of players
-    NSMutableArray *numbersOfPlayers = [[NSMutableArray alloc] initWithCapacity:self.teamOneInfo.count];
+    NSMutableArray *numbersOfPlayers = [[NSMutableArray alloc] initWithCapacity:self.teamOneChosenData.indexOfPlayers.count];
     
-    for (int i = 0; i < self.teamOneInfo.count; i++) {
-        NSString *number = [[self.teamOneInfo allKeys] objectAtIndex:i];
+    for (int i = 0; i < self.teamOneChosenData.indexOfPlayers.count; i++) {
+        NSArray *players = [self.dataSource playersForTeam:self.teamOneChosenData.chosenTeam];
+        NSNumber *num = [self.teamOneChosenData.indexOfPlayers objectAtIndex:i];
+        NSString *number = [[players objectAtIndex:[num integerValue] ] objectForKey:@"number"];
         if ([number length] == 1) {
             number = [NSString stringWithFormat:@" %@",number];
         }
@@ -134,7 +139,7 @@
     
     
     if (self.teamOneInfo.count > 11) {
-        for (int i = 11; i < self.teamOneInfo.count; i++) {
+        for (int i = 11; i < self.teamOneChosenData.indexOfPlayers.count; i++) {
             TKDragView *dragView = [self.dragViews objectAtIndex:i];
             dragView.startFrame = CGRectMake((i-11)*60, dragView.startFrame.origin.y, dragView.startFrame.size.width, dragView.startFrame.size.height);
             [dragView swapToStartPosition];
@@ -157,15 +162,17 @@
 
 - (void)addSecondTeamViews: (NSMutableArray *)goodFrames :(NSMutableArray *)badFrames :(CustomTKDragViewDelegate *)delegado sizeOfPlayers:(float)sizeOfPlayers{
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"yellowteamdot.png" ofType:nil];
+    NSString *path = [bundle pathForResource:[[self.dataSource dataOfTeam:self.teamTwoChosenData.chosenTeam] objectForKey:@"teamBadge"] ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
     
     //Numbers of players
     NSMutableArray *numbersOfPlayers = [[NSMutableArray alloc] initWithCapacity:self.teamOneInfo.count];
     
-    for (int i = 0; i < self.teamTwoInfo.count; i++) {
-        NSString *number = [[self.teamTwoInfo allKeys] objectAtIndex:i];
+    for (int i = 0; i < self.teamTwoChosenData.indexOfPlayers.count; i++) {
+        NSArray *players = [self.dataSource playersForTeam:teamTwoChosenData.chosenTeam];
+        NSNumber *num = [teamTwoChosenData.indexOfPlayers objectAtIndex:i];
+        NSString *number = [[players objectAtIndex:[num integerValue] ] objectForKey:@"number"];
         if ([number length] == 1) {
             number = [NSString stringWithFormat:@" %@",number];
         }
@@ -231,6 +238,11 @@
 {
     self.upScrollView = nil;
     [super dealloc];
+}
+
+- (void)eraseChosenData {
+    [super eraseChosenData];
+    self.teamTwoChosenData = nil;
 }
 
 @end

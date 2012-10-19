@@ -12,5 +12,6 @@
 
 @property(nonatomic, retain) HScrollView *upScrollView;
 @property(nonatomic, retain) NSDictionary *teamTwoInfo;
+@property (nonatomic, retain) ChosenPlayersService *teamTwoChosenData;
 
 @end
