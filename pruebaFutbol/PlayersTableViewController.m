@@ -48,7 +48,7 @@
     
     doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [doneButton setBackgroundImage:[UIImage imageNamed:@"okbutton.png"] forState:UIControlStateNormal];
-    doneButton.frame = CGRectMake(400, 8, 70, 30);
+    doneButton.frame = CGRectMake(400, 4, 60, 35);
     [doneButton addTarget:self action:@selector(doneButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [header addSubview:doneButton];
     

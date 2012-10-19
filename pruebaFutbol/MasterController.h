@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ICheckpointMessages.h"
 #import "IFlowManager.h"
+#import "ISelectedInfo.h"
 
 @class ViewController;
 @class CascadeController;

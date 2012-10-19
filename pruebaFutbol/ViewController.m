@@ -210,8 +210,14 @@
     twitterButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     twitterButton.frame = CGRectMake(222, screenRect.size.width - 65, 40, 40);
     [twitterButton addTarget:self action:@selector(twitterButtonClicked:) forControlEvents:UIControlEventTouchDown];
-    [twitterButton setImage:[UIImage imageNamed:@"tweet.png"] forState:UIControlStateNormal];
+    [twitterButton setImage:[UIImage imageNamed:@"twitterButton.png"] forState:UIControlStateNormal];
     [self.view addSubview:twitterButton];
+    
+    facebookButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    facebookButton.frame = CGRectMake(266, screenRect.size.width - 65, 40, 40);
+    [facebookButton addTarget:self action:@selector(facebookButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [facebookButton setImage:[UIImage imageNamed:@"facebookButton.png"] forState:UIControlStateNormal];
+    [self.view addSubview:facebookButton];
     
     
     //Imagen del campo
@@ -283,6 +289,28 @@
         UIAlertView *alertView = [[UIAlertView alloc]
                                   initWithTitle:@"Error"
                                   message:@"Necesita añadir una cuenta de Twitter en Ajutes"
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+
+}
+
+- (void)facebookButtonClicked: (UIButton *)sender {
+    UIImage *img = [UIImage captureView: self.view];
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    {
+        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        [tweetSheet setInitialText:@"Mi jugada"];
+        [tweetSheet addImage:img];
+        [self presentViewController:tweetSheet animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Error"
+                                  message:@"Necesita añadir una cuenta de Facebook en Ajutes"
                                   delegate:self
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil];
