@@ -42,6 +42,7 @@
     undoButton.frame = CGRectMake(134, 5, undoButton.frame.size.width, undoButton.frame.size.height);
     drawDragButton.frame = CGRectMake(178,5, drawDragButton.frame.size.width, drawDragButton.frame.size.height);
     twitterButton.frame = CGRectMake(222, 5, twitterButton.frame.size.width, twitterButton.frame.size.height);
+    facebookButton.frame = CGRectMake(266, 5, facebookButton.frame.size.width, facebookButton.frame.size.height);
     
     soccerField.frame = CGRectMake(0, 50, [[UIScreen mainScreen]bounds].size.height, [[UIScreen mainScreen]bounds].size.width - 120);
     

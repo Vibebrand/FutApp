@@ -32,7 +32,7 @@
     self.tableView.rowHeight = 88;
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchDown];
-    backButton.frame = CGRectMake(10, 10, 60, 25);
+    backButton.frame = CGRectMake(10, 8, 60, 35);
     [backButton setBackgroundImage:[UIImage imageNamed:@"backupbutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:backButton];
     [backButton release];
