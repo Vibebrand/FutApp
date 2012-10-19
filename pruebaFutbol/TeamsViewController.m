@@ -16,7 +16,7 @@
 
 @implementation TeamsViewController
 
-@synthesize teamsInfo, flowManager;
+@synthesize teamsInfo, flowManager, dataSource;
 
 - (id<ITeamInfoService>)teamsInfo {
     if (!teamsInfo) {
@@ -68,11 +68,10 @@
         
     }
     
-    NSString *name = (NSString *)[[self.teamsInfo teamsNames] objectAtIndex:indexPath.row];
-    NSString *image = (NSString *)[[self.teamsInfo teamsImages] objectAtIndex:indexPath.row];
     
-    cell.imageView.image = [UIImage imageNamed:image];
-    cell.textLabel.text = name;
+    cell.imageView.image = [UIImage imageNamed:[[[self.dataSource allData] objectAtIndex:indexPath.row] objectForKey:@"teamImage"]];
+    cell.textLabel.text = [[[self.dataSource allData] objectAtIndex:indexPath.row] objectForKey:@"name"];
+    
     
     return cell;
 }

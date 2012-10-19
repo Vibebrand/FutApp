@@ -25,10 +25,10 @@
     [super dealloc];
 }
 
-- (NSMutableDictionary *)allData {
-    return nil;
+- (NSArray *)allData {
+    return teams;
 }
-
+    
 - (void)initializeData {
     NSArray *gdlPlayersNames = [NSArray arrayWithObjects:@"Luis Ernesto Michel", @"Héctor Reynoso", @"Omar Esparza",@"Juan Antonio Ocampo",  @"Miguel Ángel Ponce",  @"José Antonio Rodríguez",  @"Librorio Vicente Sánches", @"Mario de Luna", @"Christian Alejandro Pérez",@"Kristian Álavarez", @"Jorge Enríquez", @"Abraham Coronado",@"Xavier Báez", @"Patricio Araujo", @"Luis Ernesto Pérez",@"Antonio Gallardo",@"Marco Fabián de la Mora",@"Erick Estefano Torres",@"Giovanni Casillas", nil];
     NSArray *gdlPlayerNumbers = [NSArray arrayWithObjects:@"1",@"4", @"6", @"24", @"16", @"26", @"30", @"2",@"27", @"3", @"14", @"13", @"18", @"5", @"8", @"25", @"10", @"19", @"20", nil];

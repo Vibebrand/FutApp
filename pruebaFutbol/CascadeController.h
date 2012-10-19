@@ -10,6 +10,7 @@
 #import "IFlowManager.h"
 #import "IInstantiatorDelegate.h"
 #import "ISelectedPlayersInfo.h"
+#import "IDataSource.h"
 
 @class CLCascadeNavigationController;
 @class TeamsViewController;
@@ -28,5 +29,9 @@
 @property(nonatomic, retain) id<IFlowManager> flowManager;
 @property(nonatomic, retain) id<ISelectedPlayersInfo> teamOne;
 @property(nonatomic, retain) id<ISelectedPlayersInfo> teamTwo;
+@property (nonatomic, retain) id<IDataSource> dataSource;
+
+
+- (id)initWithDataSource: (id<IDataSource>)dataS;
 
 @end

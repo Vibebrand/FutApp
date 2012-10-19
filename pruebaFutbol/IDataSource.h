@@ -10,6 +10,6 @@
 
 @protocol IDataSource <NSObject>
 
-- (NSMutableDictionary *)allData;
+- (NSArray *)allData;
 
 @end
