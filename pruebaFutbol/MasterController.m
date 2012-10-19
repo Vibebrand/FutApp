@@ -41,6 +41,7 @@
     field.flowManager = self;
     field.teamOneInfo = team;
     field.teamOneChosenData = self.teamOneChosen;
+    field.dataSource = self.dataSource;
     [self.navigator pushViewController:field animated:YES];
 }
 
@@ -49,6 +50,9 @@
     field.flowManager = self;
     field.teamOneInfo = local;
     field.teamTwoInfo = visitor;
+    field.teamOneChosenData = self.teamOneChosen;
+    field.teamTwoChosenData = self.teamTwoChosen;
+    field.dataSource = self.dataSource;
     [self.navigator pushViewController:field animated:YES];
 }
 

@@ -37,6 +37,16 @@
     }
     return nil;
 }
+
+- (NSDictionary *)dataOfTeam: (NSString *)team {
+    for (NSDictionary *dict in teams) {
+        if ([dict objectForKey:@"name"] == team) {
+            return dict;
+        }
+    }
+    
+    return nil;
+}
     
 - (void)initializeData {
     NSArray *gdlPlayersNames = [NSArray arrayWithObjects:@"Luis Ernesto Michel", @"Héctor Reynoso", @"Omar Esparza",@"Juan Antonio Ocampo",  @"Miguel Ángel Ponce",  @"José Antonio Rodríguez",  @"Librorio Vicente Sánches", @"Mario de Luna", @"Christian Alejandro Pérez",@"Kristian Álavarez", @"Jorge Enríquez", @"Abraham Coronado",@"Xavier Báez", @"Patricio Araujo", @"Luis Ernesto Pérez",@"Antonio Gallardo",@"Marco Fabián de la Mora",@"Erick Estefano Torres",@"Giovanni Casillas", nil];

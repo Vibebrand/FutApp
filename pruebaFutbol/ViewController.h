@@ -11,6 +11,7 @@
 #import "ICheckpointMessages.h"
 #import "IFlowManager.h"
 #import "ISelectedPlayersInfo.h"
+#import "IDataSource.h"
 
 @class HScrollView;
 @class SmoothLineView;
@@ -42,6 +43,7 @@
 @property (nonatomic, retain) id<IFlowManager> flowManager;
 @property (nonatomic, retain) NSDictionary *teamOneInfo;
 @property (nonatomic, retain) ChosenPlayersService *teamOneChosenData;
+@property (nonatomic, retain) id<IDataSource> dataSource;
 
 - (void)eraseChosenData;
 

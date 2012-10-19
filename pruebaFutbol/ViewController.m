@@ -52,8 +52,8 @@
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"redteamdot.png" ofType:nil];
-    UIImage *image = [UIImage imageWithContentsOfFile:path];
+    NSString *path = [bundle pathForResource:[[self.dataSource dataOfTeam:self.teamOneChosenData.chosenTeam] objectForKey:@"teamBadge"] ofType:nil];
+    UIImage *image = [UIImage imageWithContentsOfFile:path]; 
     
     
     //Numbers of players

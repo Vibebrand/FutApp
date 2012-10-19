@@ -10,6 +10,7 @@
 #import "HScrollView.h"
 #import "CustomTKDragViewDelegate.h"
 #import "UIImage+UIImageDrawText.h"
+#import "ChosenPlayersService.h"
 
 @interface TwoTeamsFieldViewController ()
 
@@ -62,7 +63,7 @@
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"redteamdot.png" ofType:nil];
+    NSString *path = [bundle pathForResource:[[self.dataSource dataOfTeam:self.teamOneChosenData.chosenTeam] objectForKey:@"teamBadge"] ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
     
@@ -159,7 +160,7 @@
 
 - (void)addSecondTeamViews: (NSMutableArray *)goodFrames :(NSMutableArray *)badFrames :(CustomTKDragViewDelegate *)delegado sizeOfPlayers:(float)sizeOfPlayers{
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"yellowteamdot.png" ofType:nil];
+    NSString *path = [bundle pathForResource:[[self.dataSource dataOfTeam:self.teamTwoChosenData.chosenTeam] objectForKey:@"teamBadge"] ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
     
