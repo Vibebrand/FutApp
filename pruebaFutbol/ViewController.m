@@ -48,7 +48,6 @@
     
     CustomTKDragViewDelegate *delegado = [[CustomTKDragViewDelegate alloc] init];
     delegado.logger = self.logger;
-    delegado.vC = self;
     
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
@@ -85,11 +84,6 @@
     [numbersOfPlayers release];
     [self.view insertSubview:downScrollView atIndex:3];
     
-    
-    
-    
-    
-    
     //Create matrix for the field
     int limit = ([[UIScreen mainScreen]bounds].size.width - sizeOfPlayers)/(sizeOfPlayers * 0.75);
     int oLimit = [[UIScreen mainScreen]bounds].size.height / (sizeOfPlayers * 0.75);
@@ -125,6 +119,7 @@
     [[self.dragViews objectAtIndex:8] swapToEndPositionAtIndex: 8 * oLimit + 11];
     [[self.dragViews objectAtIndex:9] swapToEndPositionAtIndex: 10 * oLimit + 11];
     [[self.dragViews objectAtIndex:10] swapToEndPositionAtIndex: 12 * oLimit + 11];
+    
     
     if (self.teamOneInfo.count > 11) {
         for (int i = 11; i < self.teamOneInfo.count; i++) {
@@ -343,6 +338,7 @@
 - (void)undoButtonClicked:(UIButton *)sender {
     [self eraseDrawings];
     [logger checkpointPassed:@"undo"];
+    [self showPlayersName];
 }
 
 - (void)changeCholor {
@@ -400,17 +396,38 @@
     for (int i =0; i < teamOneChosenData.indexOfPlayers.count; i++) {
         CGRect rect = [[self.dragViews objectAtIndex:i] frame];
         if (rect.origin.y != [[UIScreen mainScreen]bounds].size.width - 70) {
+            
+            CGRect frame;
+            NSString *img;
+            CGFloat angle;
+            if (rect.origin.x < rect.size.width/2) {
+                img = @"leftBubble.png";
+                frame = CGRectMake(rect.origin.x + rect.size.width/2, rect.origin.y - rect.size.height, 100, 35);
+            } else {
+                
+                if (rect.origin.x > [[UIScreen mainScreen] bounds].size.height - rect.size.width * 2) {
+                    img = @"rightBubble.png";
+                    frame = CGRectMake(rect.origin.x - rect.size.width * 2.2, rect.origin.y - rect.size.height, 100, 35);
+                } else {
+                
+                img = @"middlebubble.png";
+                frame = CGRectMake(rect.origin.x - rect.size.width + 8, rect.origin.y - rect.size.height, 100, 35);
+                }
+            }
+            
             NSNumber *num = [[self.teamOneChosenData indexOfPlayers] objectAtIndex:i];
             
             UIImageView *imgView = [textBoxes objectAtIndex:j];
-            imgView.image = [UIImage imageNamed:@"middlebubble.png"];
-            imgView.frame = CGRectMake(rect.origin.x - rect.size.width + 8, rect.origin.y - rect.size.height, 100, 35);
+            imgView.image = [UIImage imageNamed:img];
+            imgView.frame = frame;
+            
             
             UILabel *label = [labels objectAtIndex:j];
-            label.frame = CGRectMake(rect.origin.x - rect.size.width + 8, rect.origin.y - rect.size.height, 100, 35);
+            label.frame = frame;
             label.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
             label.textColor = [UIColor whiteColor];
             label.font = [label.font fontWithSize:12];
+            label.textAlignment = NSTextAlignmentCenter;
             label.text = [[players objectAtIndex:[num integerValue]] objectForKey:@"name"];
 
             
