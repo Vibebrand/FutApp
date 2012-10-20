@@ -11,13 +11,17 @@
 #import "ViewController.h"
 #import "TestFlight.h"
 #import "TestFlightLogger.h"
+#import "MasterController.h"
+#import "MenuViewController.h"
+#import "DataSourceService.h"
+
 
 @implementation AppDelegate
 
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
+    [_masterController release];
     [super dealloc];
 }
 
@@ -30,13 +34,22 @@
         [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
     #endif
     [TestFlight takeOff:@"fc94afbf9058e48097c399875eb34c13_MTA5NjA4MjAxMi0wNy0xMiAxNDozNDowOC40ODc0MjA"];
-    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
+    self.masterController = [[[MasterController alloc] init] autorelease];
+    
     TestFlightLogger *tfl = [[TestFlightLogger alloc] init];
-    self.viewController.logger = tfl;
+    self.masterController.logger = tfl;
     [tfl release];
     
+    self.masterController.dataSource = [[DataSourceService new] autorelease];
     
-    self.window.rootViewController = self.viewController;
+    
+    MenuViewController *menu = [[MenuViewController alloc] init];
+    menu.flowManager = self.masterController;
+    
+    self.masterController.navigator = [[[UINavigationController alloc] initWithRootViewController: menu] autorelease];
+    [menu release];
+    
+    self.window.rootViewController = self.masterController.navigator;
     [self.window makeKeyAndVisible];
     return YES;
 }

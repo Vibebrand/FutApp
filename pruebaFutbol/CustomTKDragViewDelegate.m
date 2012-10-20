@@ -7,7 +7,6 @@
 //
 
 #import "CustomTKDragViewDelegate.h"
-#import "TKDragView.h"
 
 @implementation CustomTKDragViewDelegate
 
@@ -60,6 +59,10 @@
     }
     else {
         if (dragView.startFrame.origin.y == [[UIScreen mainScreen] bounds].size.width - 70) {
+            [dragView swapToStartPosition];
+        }
+        else {
+            dragView.startFrame = rect;
             [dragView swapToStartPosition];
         }
     }
