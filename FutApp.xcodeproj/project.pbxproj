@@ -169,6 +169,7 @@
 		92F7F7E61631B730003521F7 /* oneteamButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E21631B730003521F7 /* oneteamButton.png */; };
 		92F7F7E71631B730003521F7 /* oneteamButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E31631B730003521F7 /* oneteamButton@2x.png */; };
 		92F7F7EB1631C9C3003521F7 /* ChosenPlayersService.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7F7EA1631C9C3003521F7 /* ChosenPlayersService.m */; };
+		92F95F2916332722001F08EE /* CustomMGDrawingSlate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F95F2816332722001F08EE /* CustomMGDrawingSlate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -394,6 +395,8 @@
 		92F7F7E81631C9A5003521F7 /* IChosenPlayersInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IChosenPlayersInfo.h; sourceTree = "<group>"; };
 		92F7F7E91631C9C3003521F7 /* ChosenPlayersService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChosenPlayersService.h; sourceTree = "<group>"; };
 		92F7F7EA1631C9C3003521F7 /* ChosenPlayersService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChosenPlayersService.m; sourceTree = "<group>"; };
+		92F95F2716332722001F08EE /* CustomMGDrawingSlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMGDrawingSlate.h; sourceTree = "<group>"; };
+		92F95F2816332722001F08EE /* CustomMGDrawingSlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMGDrawingSlate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -664,6 +667,8 @@
 				926FF757161A78B1003E4B29 /* MGDrawingSlate.h */,
 				926FF758161A78B1003E4B29 /* MGDrawingSlate.m */,
 				92A362AE1620969E0095A4F8 /* Nibs */,
+				92F95F2716332722001F08EE /* CustomMGDrawingSlate.h */,
+				92F95F2816332722001F08EE /* CustomMGDrawingSlate.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1042,6 +1047,7 @@
 				92977E6C16309C13009641F1 /* SelectedInfoService.m in Sources */,
 				92977E881630DDC7009641F1 /* DataSourceService.m in Sources */,
 				92F7F7EB1631C9C3003521F7 /* ChosenPlayersService.m in Sources */,
+				92F95F2916332722001F08EE /* CustomMGDrawingSlate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

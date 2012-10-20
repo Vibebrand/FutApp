@@ -149,10 +149,12 @@
     slv = nil;
     mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
     mds.drawingColor = [UIColor yellowColor];
+    mds.userInteractionEnabled = YES;
     [self.view insertSubview:mds atIndex:1];
     mds.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
     mdsG.drawingColor = [UIColor whiteColor];
+    mdsG.userInteractionEnabled = YES;
     [self.view insertSubview:mdsG atIndex:2];
     mdsG.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     [mds setUserInteractionEnabled:NO];
@@ -219,13 +221,25 @@
     [facebookButton setImage:[UIImage imageNamed:@"facebookButton.png"] forState:UIControlStateNormal];
     [self.view addSubview:facebookButton];
     
+    UIButton* show = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    show.frame = CGRectMake(310, screenRect.size.width - 65, 40, 40);
+    [show addTarget:self action:@selector(showPlayersName) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:show];
+    
+    UIButton* hide = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    hide.frame = CGRectMake(354, screenRect.size.width - 65, 40, 40);
+    [hide addTarget:self action:@selector(hidePlayersName) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:hide];
+    
     [self initTextBoxes];
+    [self showPlayersName];
     
     //Imagen del campo
     NSString *Path = [[NSBundle mainBundle] pathForResource:@"field.jpg" ofType:nil];
     image = [UIImage imageWithContentsOfFile:Path];
     soccerField = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.height, screenRect.size.width-70)];
     soccerField.image = image;
+    soccerField.userInteractionEnabled = YES;
     [self.view insertSubview:soccerField atIndex:0];
     [soccerField release];
 }
@@ -338,7 +352,6 @@
 - (void)undoButtonClicked:(UIButton *)sender {
     [self eraseDrawings];
     [logger checkpointPassed:@"undo"];
-    [self showPlayersName];
 }
 
 - (void)changeCholor {
@@ -453,5 +466,15 @@
         }
     }
 }
+
+- (void)hidePlayersName {
+    for(UILabel *lb in labels)
+         [lb removeFromSuperview];
+    for(UIImageView *img in textBoxes)
+        [img removeFromSuperview];
+}
+
+
+
 
 @end
