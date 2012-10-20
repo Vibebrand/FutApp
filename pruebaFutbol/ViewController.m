@@ -48,6 +48,7 @@
     
     CustomTKDragViewDelegate *delegado = [[CustomTKDragViewDelegate alloc] init];
     delegado.logger = self.logger;
+    delegado.vC = self;
     
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
@@ -223,6 +224,7 @@
     [facebookButton setImage:[UIImage imageNamed:@"facebookButton.png"] forState:UIControlStateNormal];
     [self.view addSubview:facebookButton];
     
+    [self initTextBoxes];
     
     //Imagen del campo
     NSString *Path = [[NSBundle mainBundle] pathForResource:@"field.jpg" ofType:nil];
@@ -231,6 +233,20 @@
     soccerField.image = image;
     [self.view insertSubview:soccerField atIndex:0];
     [soccerField release];
+}
+
+- (void)initTextBoxes {
+    textBoxes = [[NSMutableArray alloc] initWithCapacity:11];
+    labels = [[NSMutableArray alloc] initWithCapacity:11];
+    for (int i = 0; i < 11; i++) {
+        UIImageView *imgView = [[UIImageView alloc] init];
+        [textBoxes addObject:imgView];
+        [imgView release];
+        
+        UILabel *label = [[UILabel alloc] init];
+        [labels addObject:label];
+        [label release];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -376,6 +392,35 @@
 
 - (void)eraseChosenData {
     self.teamOneChosenData.indexOfPlayers = nil;
+}
+
+- (void)showPlayersName {
+    NSArray *players = [self.dataSource playersForTeam:teamOneChosenData.chosenTeam];
+    int j = 0;
+    for (int i =0; i < teamOneChosenData.indexOfPlayers.count; i++) {
+        CGRect rect = [[self.dragViews objectAtIndex:i] frame];
+        if (rect.origin.y != [[UIScreen mainScreen]bounds].size.width - 70) {
+            NSNumber *num = [[self.teamOneChosenData indexOfPlayers] objectAtIndex:i];
+            
+            UIImageView *imgView = [textBoxes objectAtIndex:j];
+            imgView.image = [UIImage imageNamed:@"middlebubble.png"];
+            imgView.frame = CGRectMake(rect.origin.x - rect.size.width + 8, rect.origin.y - rect.size.height, 100, 35);
+            
+            UILabel *label = [labels objectAtIndex:j];
+            label.frame = CGRectMake(rect.origin.x - rect.size.width + 8, rect.origin.y - rect.size.height, 100, 35);
+            label.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+            label.textColor = [UIColor whiteColor];
+            label.font = [label.font fontWithSize:12];
+            label.text = [[players objectAtIndex:[num integerValue]] objectForKey:@"name"];
+
+            
+            j++;
+            
+            
+            [self.view addSubview:imgView];
+            [self.view addSubview:label];
+        }
+    }
 }
 
 @end

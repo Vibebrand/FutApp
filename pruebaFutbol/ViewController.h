@@ -34,6 +34,8 @@
     UIButton *drawDragButton;
     UIButton *twitterButton;
     UIButton *facebookButton;
+    NSMutableArray *textBoxes;
+    NSMutableArray *labels;
 }
 
 @property (nonatomic, retain) NSMutableArray *dragViews;
@@ -46,5 +48,7 @@
 @property (nonatomic, retain) id<IDataSource> dataSource;
 
 - (void)eraseChosenData;
+- (void)showPlayersName;
+- (void)initTextBoxes;
 
 @end
