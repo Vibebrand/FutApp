@@ -399,19 +399,33 @@
             
             CGRect frame;
             NSString *img;
-            CGFloat angle;
+            CGFloat angle = 0;
             if (rect.origin.x < rect.size.width/2) {
                 img = @"leftBubble.png";
                 frame = CGRectMake(rect.origin.x + rect.size.width/2, rect.origin.y - rect.size.height, 100, 35);
+                if (rect.origin.y < rect.size.height) {
+                    angle = M_PI;
+                    img = @"rightBubble.png";
+                    frame = CGRectMake(rect.origin.x + rect.size.width/2, rect.origin.y + rect.size.height, 100, 35);
+                }
             } else {
                 
                 if (rect.origin.x > [[UIScreen mainScreen] bounds].size.height - rect.size.width * 2) {
                     img = @"rightBubble.png";
                     frame = CGRectMake(rect.origin.x - rect.size.width * 2.2, rect.origin.y - rect.size.height, 100, 35);
+                    if (rect.origin.y < rect.size.height) {
+                        angle = M_PI;
+                        img = @"leftBubble.png";
+                        frame = CGRectMake(rect.origin.x - rect.size.width * 2.2, rect.origin.y + rect.size.height, 100, 35);
+                    }
                 } else {
                 
-                img = @"middlebubble.png";
-                frame = CGRectMake(rect.origin.x - rect.size.width + 8, rect.origin.y - rect.size.height, 100, 35);
+                    img = @"middlebubble.png";
+                    frame = CGRectMake(rect.origin.x - rect.size.width + 8, rect.origin.y - rect.size.height, 100, 35);
+                    if (rect.origin.y < rect.size.height) {
+                        angle = M_PI;
+                        frame = CGRectMake(rect.origin.x - rect.size.width + 8, rect.origin.y + rect.size.height, 100, 35);
+                    }
                 }
             }
             
@@ -420,7 +434,7 @@
             UIImageView *imgView = [textBoxes objectAtIndex:j];
             imgView.image = [UIImage imageNamed:img];
             imgView.frame = frame;
-            
+            imgView.transform = CGAffineTransformMakeRotation(angle);
             
             UILabel *label = [labels objectAtIndex:j];
             label.frame = frame;
