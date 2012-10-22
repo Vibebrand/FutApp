@@ -14,6 +14,7 @@
 #import "UIImage+UIImageDrawText.h"
 #import <Social/Social.h>
 #import "ChosenPlayersService.h"
+#import "CustomTKDragView.h"
 
 @interface ViewController ()
 
@@ -73,8 +74,9 @@
     for (int i = 0; i < self.teamOneChosenData.indexOfPlayers.count; i++) {
         CGFloat xOrigin = i * 60;
         CGRect startFrame = CGRectMake(xOrigin, screenRect.size.width - 70, 50, 50);
-        TKDragView *dragView = [[TKDragView alloc] initWithImage:[UIImage drawText:[numbersOfPlayers objectAtIndex:i] inImage:image atPoint:CGPointMake(image.size.width/4, image.size.height/4)] startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:delegado];
+        CustomTKDragView *dragView = [[CustomTKDragView alloc] initWithImage:[UIImage drawText:[numbersOfPlayers objectAtIndex:i] inImage:image atPoint:CGPointMake(image.size.width/4, image.size.height/4)] startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:delegado];
         dragView.canDragMultipleDragViewsAtOnce = NO;
+        dragView.playersNames = self;
         [downScrollView.elements addObject:dragView];
         [self.dragViews addObject:dragView];
         [self.view insertSubview:dragView atIndex:4];
@@ -144,6 +146,11 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPlayersName)];
+    doubleTapGesture.numberOfTapsRequired = 2;
+    [self.view addGestureRecognizer:doubleTapGesture];
+    [doubleTapGesture release];
     
     canDrag = YES;
     slv = nil;
@@ -220,16 +227,6 @@
     [facebookButton addTarget:self action:@selector(facebookButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [facebookButton setImage:[UIImage imageNamed:@"facebookButton.png"] forState:UIControlStateNormal];
     [self.view addSubview:facebookButton];
-    
-    UIButton* show = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    show.frame = CGRectMake(310, screenRect.size.width - 65, 40, 40);
-    [show addTarget:self action:@selector(showPlayersName) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:show];
-    
-    UIButton* hide = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    hide.frame = CGRectMake(354, screenRect.size.width - 65, 40, 40);
-    [hide addTarget:self action:@selector(hidePlayersName) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:hide];
     
     [self initTextBoxes];
     [self showPlayersName];
@@ -473,7 +470,6 @@
     for(UIImageView *img in textBoxes)
         [img removeFromSuperview];
 }
-
 
 
 

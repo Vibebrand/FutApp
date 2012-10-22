@@ -120,6 +120,7 @@
 		92A04FF916323FC300026BF8 /* middlebubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF316323FC300026BF8 /* middlebubble.png */; };
 		92A04FFA16323FC300026BF8 /* rightBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF416323FC300026BF8 /* rightBubble.png */; };
 		92A04FFB16323FC300026BF8 /* leftBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF516323FC300026BF8 /* leftBubble.png */; };
+		92A2549B1635D23C009FBE1A /* CustomTKDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A2549A1635D23C009FBE1A /* CustomTKDragView.m */; };
 		92A362A51620922E0095A4F8 /* chivasBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362A11620922E0095A4F8 /* chivasBadge.png */; };
 		92A362A61620922E0095A4F8 /* chivasBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362A21620922E0095A4F8 /* chivasBadge@2x.png */; };
 		92A362C9162117410095A4F8 /* chivasBadgeNum.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362C8162117410095A4F8 /* chivasBadgeNum.png */; };
@@ -315,6 +316,9 @@
 		92A04FF416323FC300026BF8 /* rightBubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightBubble.png; sourceTree = "<group>"; };
 		92A04FF516323FC300026BF8 /* leftBubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftBubble.png; sourceTree = "<group>"; };
 		92A1DD43162CDAD10041F748 /* ISelectedPlayersInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISelectedPlayersInfo.h; sourceTree = "<group>"; };
+		92A254991635D23C009FBE1A /* CustomTKDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTKDragView.h; sourceTree = "<group>"; };
+		92A2549A1635D23C009FBE1A /* CustomTKDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTKDragView.m; sourceTree = "<group>"; };
+		92A2549C1635D277009FBE1A /* IShowPlayersNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IShowPlayersNames.h; sourceTree = "<group>"; };
 		92A362A11620922E0095A4F8 /* chivasBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasBadge.png; sourceTree = "<group>"; };
 		92A362A21620922E0095A4F8 /* chivasBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chivasBadge@2x.png"; sourceTree = "<group>"; };
 		92A362C8162117410095A4F8 /* chivasBadgeNum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasBadgeNum.png; sourceTree = "<group>"; };
@@ -454,6 +458,7 @@
 				92977E681630933C009641F1 /* ISelectedInfo.h */,
 				92977E6D1630C138009641F1 /* IDataSource.h */,
 				92F7F7E81631C9A5003521F7 /* IChosenPlayersInfo.h */,
+				92A2549C1635D277009FBE1A /* IShowPlayersNames.h */,
 			);
 			name = protocolos;
 			sourceTree = "<group>";
@@ -669,6 +674,8 @@
 				92A362AE1620969E0095A4F8 /* Nibs */,
 				92F95F2716332722001F08EE /* CustomMGDrawingSlate.h */,
 				92F95F2816332722001F08EE /* CustomMGDrawingSlate.m */,
+				92A254991635D23C009FBE1A /* CustomTKDragView.h */,
+				92A2549A1635D23C009FBE1A /* CustomTKDragView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1048,6 +1055,7 @@
 				92977E881630DDC7009641F1 /* DataSourceService.m in Sources */,
 				92F7F7EB1631C9C3003521F7 /* ChosenPlayersService.m in Sources */,
 				92F95F2916332722001F08EE /* CustomMGDrawingSlate.m in Sources */,
+				92A2549B1635D23C009FBE1A /* CustomTKDragView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
