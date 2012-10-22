@@ -12,10 +12,12 @@
 #import "ISelectedPlayersInfo.h"
 #import "IDataSource.h"
 
+
 @class CLCascadeNavigationController;
 @class TeamsViewController;
 @class CLSplitCascadeViewController;
 @class TeamInfoServiceArray;
+@class ChosenPlayersService;
 
 @interface CascadeController : NSObject<IFlowManager, IInstantiatorDelegate> {
     TeamInfoServiceArray *info;
@@ -30,6 +32,8 @@
 @property(nonatomic, retain) id<ISelectedPlayersInfo> teamOne;
 @property(nonatomic, retain) id<ISelectedPlayersInfo> teamTwo;
 @property (nonatomic, retain) id<IDataSource> dataSource;
+@property (nonatomic, retain) ChosenPlayersService *teamOneChosenData;
+@property (nonatomic, retain) ChosenPlayersService *teamTwoChosenData;
 
 
 - (id)initWithDataSource: (id<IDataSource>)dataS;

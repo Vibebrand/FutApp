@@ -11,14 +11,16 @@
 #import "ICheckpointMessages.h"
 #import "IFlowManager.h"
 #import "ISelectedPlayersInfo.h"
+#import "IDataSource.h"
+#import "IShowPlayersNames.h"
 
 @class HScrollView;
 @class SmoothLineView;
 @class MGDrawingSlate;
+@class ChosenPlayersService;
+@class CustomTKDragView;
 
-
-
-@interface ViewController : UIViewController {
+@interface ViewController : UIViewController <IShowPlayersNames> {
     SmoothLineView *slv;
     MGDrawingSlate *mds;
     MGDrawingSlate *mdsG;
@@ -33,6 +35,8 @@
     UIButton *drawDragButton;
     UIButton *twitterButton;
     UIButton *facebookButton;
+    NSMutableArray *textBoxes;
+    NSMutableArray *labels;
 }
 
 @property (nonatomic, retain) NSMutableArray *dragViews;
@@ -41,5 +45,10 @@
 @property (nonatomic, retain) id<ICheckpointMessages> logger;
 @property (nonatomic, retain) id<IFlowManager> flowManager;
 @property (nonatomic, retain) NSDictionary *teamOneInfo;
+@property (nonatomic, retain) ChosenPlayersService *teamOneChosenData;
+@property (nonatomic, retain) id<IDataSource> dataSource;
+
+- (void)eraseChosenData;
+- (void)initTextBoxes;
 
 @end

@@ -14,10 +14,11 @@
 #import "PlayersTableViewController.h"
 #import "ProfileViewController.h"
 #import "SecondTeamViewController.h"
+#import "ChosenPlayersService.h"
 
 @implementation CascadeController
 
-@synthesize cascadeNavController, splitCascadeViewController, teamsViewController, twoTeams, flowManager, teamOne, teamTwo,dataSource;
+@synthesize cascadeNavController, splitCascadeViewController, teamsViewController, twoTeams, flowManager, teamOne, teamTwo,dataSource, teamOneChosenData, teamTwoChosenData;
 
 - (id)init
 {
@@ -58,6 +59,7 @@
     teams.teamsInfo = info;
     teams.flowManager = self;
     teams.instantiator = self;
+    teams.dataSource = self.dataSource;
     return teams;
 }
 
@@ -68,6 +70,11 @@
     playersTable.isFinal = 1;
     playersTable.instantiator = self;
     playersTable.flowManager = self;
+    playersTable.chosenTeam = [[[self.dataSource allData] objectAtIndex:row] objectForKey:@"name"];
+    playersTable.dataSource = self.dataSource;
+    playersTable.teamOneChosen = self.teamOneChosenData;
+    playersTable.teamTwoChosen = self.teamTwoChosenData;
+    self.teamTwoChosenData.chosenTeam = [[[self.dataSource allData] objectAtIndex:row] objectForKey:@"name"];
     self.teamTwo = playersTable;
     [numOfPlayers insertObject:playersTable.selectedCells atIndex:1];
     return playersTable;
@@ -85,10 +92,12 @@
 - (void)toField {
     if (numOfPlayers.count == 1){
         if ([[numOfPlayers objectAtIndex:0] count] >= 11) {
+            NSLog(@"%@", self.teamOneChosenData.indexOfPlayers);
             [self.flowManager toFieldWithOneTeam: [self.teamOne getTeamPlayers]];
         }
     } else {
         if ([[numOfPlayers objectAtIndex:0] count] >= 11 && [[numOfPlayers objectAtIndex:1] count] >= 11) {
+            NSLog(@"%@ %@", self.teamOneChosenData.indexOfPlayers, self.teamTwoChosenData.indexOfPlayers);
             [self.flowManager toFieldWithTwoTeams:[self.teamOne getTeamPlayers] And:[self.teamTwo getTeamPlayers]];
         }
     }
@@ -102,6 +111,11 @@
     playersTable.instantiator = self;
     playersTable.flowManager = self;
     playersTable.isFinal = !self.twoTeams;
+    playersTable.chosenTeam = [[[self.dataSource allData] objectAtIndex:row] objectForKey:@"name"];
+    playersTable.dataSource = self.dataSource;
+    playersTable.teamOneChosen = self.teamOneChosenData;
+    playersTable.teamTwoChosen = self.teamTwoChosenData;
+    self.teamOneChosenData.chosenTeam = [[[self.dataSource allData] objectAtIndex:row] objectForKey:@"name"];
     self.teamOne = playersTable;
     [numOfPlayers insertObject:playersTable.selectedCells atIndex:0];
     [self.cascadeNavController setRootViewController:playersTable animated:YES];

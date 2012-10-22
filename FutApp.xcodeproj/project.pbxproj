@@ -114,6 +114,13 @@
 		9299D6A0162F832D004BCD9F /* yellowteam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67E162F832D004BCD9F /* yellowteam@2x.png */; };
 		9299D6A1162F832D004BCD9F /* yellowteamdot.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67F162F832D004BCD9F /* yellowteamdot.png */; };
 		929BF887162A4187007B2C8A /* TwoTeamsFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929BF886162A4187007B2C8A /* TwoTeamsFieldViewController.m */; };
+		92A04FF616323FC300026BF8 /* middlebubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF016323FC300026BF8 /* middlebubble@2x.png */; };
+		92A04FF716323FC300026BF8 /* rightBubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF116323FC300026BF8 /* rightBubble@2x.png */; };
+		92A04FF816323FC300026BF8 /* leftBubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF216323FC300026BF8 /* leftBubble@2x.png */; };
+		92A04FF916323FC300026BF8 /* middlebubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF316323FC300026BF8 /* middlebubble.png */; };
+		92A04FFA16323FC300026BF8 /* rightBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF416323FC300026BF8 /* rightBubble.png */; };
+		92A04FFB16323FC300026BF8 /* leftBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF516323FC300026BF8 /* leftBubble.png */; };
+		92A2549B1635D23C009FBE1A /* CustomTKDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A2549A1635D23C009FBE1A /* CustomTKDragView.m */; };
 		92A362A51620922E0095A4F8 /* chivasBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362A11620922E0095A4F8 /* chivasBadge.png */; };
 		92A362A61620922E0095A4F8 /* chivasBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362A21620922E0095A4F8 /* chivasBadge@2x.png */; };
 		92A362C9162117410095A4F8 /* chivasBadgeNum.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362C8162117410095A4F8 /* chivasBadgeNum.png */; };
@@ -158,6 +165,12 @@
 		92EC18211625E488004811E9 /* CLRetractableSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC181D1625E488004811E9 /* CLRetractableSectionHeaderView.m */; };
 		92EC18221625E488004811E9 /* CLRetractableSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC181F1625E488004811E9 /* CLRetractableSectionItem.m */; };
 		92EC183B1625EFA5004811E9 /* CascadeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC183A1625EFA5004811E9 /* CascadeController.m */; };
+		92F7F7E41631B730003521F7 /* field.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E01631B730003521F7 /* field.jpg */; };
+		92F7F7E51631B730003521F7 /* field@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E11631B730003521F7 /* field@2x.jpg */; };
+		92F7F7E61631B730003521F7 /* oneteamButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E21631B730003521F7 /* oneteamButton.png */; };
+		92F7F7E71631B730003521F7 /* oneteamButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E31631B730003521F7 /* oneteamButton@2x.png */; };
+		92F7F7EB1631C9C3003521F7 /* ChosenPlayersService.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7F7EA1631C9C3003521F7 /* ChosenPlayersService.m */; };
+		92F95F2916332722001F08EE /* CustomMGDrawingSlate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F95F2816332722001F08EE /* CustomMGDrawingSlate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -296,7 +309,16 @@
 		9299D67F162F832D004BCD9F /* yellowteamdot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowteamdot.png; sourceTree = "<group>"; };
 		929BF885162A4187007B2C8A /* TwoTeamsFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoTeamsFieldViewController.h; sourceTree = "<group>"; };
 		929BF886162A4187007B2C8A /* TwoTeamsFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoTeamsFieldViewController.m; sourceTree = "<group>"; };
+		92A04FF016323FC300026BF8 /* middlebubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "middlebubble@2x.png"; sourceTree = "<group>"; };
+		92A04FF116323FC300026BF8 /* rightBubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rightBubble@2x.png"; sourceTree = "<group>"; };
+		92A04FF216323FC300026BF8 /* leftBubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftBubble@2x.png"; sourceTree = "<group>"; };
+		92A04FF316323FC300026BF8 /* middlebubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = middlebubble.png; sourceTree = "<group>"; };
+		92A04FF416323FC300026BF8 /* rightBubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightBubble.png; sourceTree = "<group>"; };
+		92A04FF516323FC300026BF8 /* leftBubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftBubble.png; sourceTree = "<group>"; };
 		92A1DD43162CDAD10041F748 /* ISelectedPlayersInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISelectedPlayersInfo.h; sourceTree = "<group>"; };
+		92A254991635D23C009FBE1A /* CustomTKDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTKDragView.h; sourceTree = "<group>"; };
+		92A2549A1635D23C009FBE1A /* CustomTKDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTKDragView.m; sourceTree = "<group>"; };
+		92A2549C1635D277009FBE1A /* IShowPlayersNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IShowPlayersNames.h; sourceTree = "<group>"; };
 		92A362A11620922E0095A4F8 /* chivasBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasBadge.png; sourceTree = "<group>"; };
 		92A362A21620922E0095A4F8 /* chivasBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chivasBadge@2x.png"; sourceTree = "<group>"; };
 		92A362C8162117410095A4F8 /* chivasBadgeNum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasBadgeNum.png; sourceTree = "<group>"; };
@@ -370,6 +392,15 @@
 		92EC181F1625E488004811E9 /* CLRetractableSectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLRetractableSectionItem.m; sourceTree = "<group>"; };
 		92EC18391625EFA5004811E9 /* CascadeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CascadeController.h; sourceTree = "<group>"; };
 		92EC183A1625EFA5004811E9 /* CascadeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CascadeController.m; sourceTree = "<group>"; };
+		92F7F7E01631B730003521F7 /* field.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = field.jpg; sourceTree = "<group>"; };
+		92F7F7E11631B730003521F7 /* field@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "field@2x.jpg"; sourceTree = "<group>"; };
+		92F7F7E21631B730003521F7 /* oneteamButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oneteamButton.png; sourceTree = "<group>"; };
+		92F7F7E31631B730003521F7 /* oneteamButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "oneteamButton@2x.png"; sourceTree = "<group>"; };
+		92F7F7E81631C9A5003521F7 /* IChosenPlayersInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IChosenPlayersInfo.h; sourceTree = "<group>"; };
+		92F7F7E91631C9C3003521F7 /* ChosenPlayersService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChosenPlayersService.h; sourceTree = "<group>"; };
+		92F7F7EA1631C9C3003521F7 /* ChosenPlayersService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChosenPlayersService.m; sourceTree = "<group>"; };
+		92F95F2716332722001F08EE /* CustomMGDrawingSlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMGDrawingSlate.h; sourceTree = "<group>"; };
+		92F95F2816332722001F08EE /* CustomMGDrawingSlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMGDrawingSlate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,6 +457,8 @@
 				92A1DD43162CDAD10041F748 /* ISelectedPlayersInfo.h */,
 				92977E681630933C009641F1 /* ISelectedInfo.h */,
 				92977E6D1630C138009641F1 /* IDataSource.h */,
+				92F7F7E81631C9A5003521F7 /* IChosenPlayersInfo.h */,
+				92A2549C1635D277009FBE1A /* IShowPlayersNames.h */,
 			);
 			name = protocolos;
 			sourceTree = "<group>";
@@ -552,6 +585,10 @@
 				92977E7A1630CAB1009641F1 /* okbutton.png */,
 				92977E7B1630CAB1009641F1 /* okbutton@2x.png */,
 				9299D66A162F832D004BCD9F /* penbutton.png */,
+				92F7F7E01631B730003521F7 /* field.jpg */,
+				92F7F7E11631B730003521F7 /* field@2x.jpg */,
+				92F7F7E21631B730003521F7 /* oneteamButton.png */,
+				92F7F7E31631B730003521F7 /* oneteamButton@2x.png */,
 				9299D66B162F832D004BCD9F /* penbutton@2x.png */,
 				9299D66C162F832D004BCD9F /* tabbarslice@2x.jpg */,
 				9299D66D162F832D004BCD9F /* tabbarsllice.jpg */,
@@ -602,6 +639,12 @@
 				924B6CFF162E6E5800B12605 /* Icon-72@2x.png */,
 				92C47E5B16237111002FC10C /* AwesomeMenu */,
 				9226CE0B161D292100511116 /* tshirt-icon.png */,
+				92A04FF016323FC300026BF8 /* middlebubble@2x.png */,
+				92A04FF116323FC300026BF8 /* rightBubble@2x.png */,
+				92A04FF216323FC300026BF8 /* leftBubble@2x.png */,
+				92A04FF316323FC300026BF8 /* middlebubble.png */,
+				92A04FF416323FC300026BF8 /* rightBubble.png */,
+				92A04FF516323FC300026BF8 /* leftBubble.png */,
 				927D0131162799E300BF2D2E /* UnknownProfile1.png */,
 				9261F1BD162697E800467C6F /* america.jpeg */,
 				927F51C0162681F3002DA762 /* guadalajara.jpeg */,
@@ -629,6 +672,10 @@
 				926FF757161A78B1003E4B29 /* MGDrawingSlate.h */,
 				926FF758161A78B1003E4B29 /* MGDrawingSlate.m */,
 				92A362AE1620969E0095A4F8 /* Nibs */,
+				92F95F2716332722001F08EE /* CustomMGDrawingSlate.h */,
+				92F95F2816332722001F08EE /* CustomMGDrawingSlate.m */,
+				92A254991635D23C009FBE1A /* CustomTKDragView.h */,
+				92A2549A1635D23C009FBE1A /* CustomTKDragView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -646,6 +693,8 @@
 				92977E6B16309C13009641F1 /* SelectedInfoService.m */,
 				92977E861630DDC7009641F1 /* DataSourceService.h */,
 				92977E871630DDC7009641F1 /* DataSourceService.m */,
+				92F7F7E91631C9C3003521F7 /* ChosenPlayersService.h */,
+				92F7F7EA1631C9C3003521F7 /* ChosenPlayersService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -941,6 +990,16 @@
 				92977E831630D3A1009641F1 /* facebookButton@2x.png in Resources */,
 				92977E841630D3A1009641F1 /* twitterButton.png in Resources */,
 				92977E851630D3A1009641F1 /* twitterButton@2x.png in Resources */,
+				92F7F7E41631B730003521F7 /* field.jpg in Resources */,
+				92F7F7E51631B730003521F7 /* field@2x.jpg in Resources */,
+				92F7F7E61631B730003521F7 /* oneteamButton.png in Resources */,
+				92F7F7E71631B730003521F7 /* oneteamButton@2x.png in Resources */,
+				92A04FF616323FC300026BF8 /* middlebubble@2x.png in Resources */,
+				92A04FF716323FC300026BF8 /* rightBubble@2x.png in Resources */,
+				92A04FF816323FC300026BF8 /* leftBubble@2x.png in Resources */,
+				92A04FF916323FC300026BF8 /* middlebubble.png in Resources */,
+				92A04FFA16323FC300026BF8 /* rightBubble.png in Resources */,
+				92A04FFB16323FC300026BF8 /* leftBubble.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -994,6 +1053,9 @@
 				924B6C80162E3C8900B12605 /* TwitterService.m in Sources */,
 				92977E6C16309C13009641F1 /* SelectedInfoService.m in Sources */,
 				92977E881630DDC7009641F1 /* DataSourceService.m in Sources */,
+				92F7F7EB1631C9C3003521F7 /* ChosenPlayersService.m in Sources */,
+				92F95F2916332722001F08EE /* CustomMGDrawingSlate.m in Sources */,
+				92A2549B1635D23C009FBE1A /* CustomTKDragView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

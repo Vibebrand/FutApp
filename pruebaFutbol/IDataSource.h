@@ -11,5 +11,7 @@
 @protocol IDataSource <NSObject>
 
 - (NSArray *)allData;
+- (NSArray *)playersForTeam: (NSString *)team;
+- (NSDictionary *)dataOfTeam: (NSString *)team;
 
 @end
