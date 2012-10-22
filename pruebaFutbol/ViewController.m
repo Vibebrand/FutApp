@@ -14,6 +14,7 @@
 #import "UIImage+UIImageDrawText.h"
 #import <Social/Social.h>
 #import "ChosenPlayersService.h"
+#import "CustomTKDragView.h"
 
 @interface ViewController ()
 
@@ -48,7 +49,6 @@
     
     CustomTKDragViewDelegate *delegado = [[CustomTKDragViewDelegate alloc] init];
     delegado.logger = self.logger;
-    delegado.vC = self;
     
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
@@ -74,8 +74,9 @@
     for (int i = 0; i < self.teamOneChosenData.indexOfPlayers.count; i++) {
         CGFloat xOrigin = i * 60;
         CGRect startFrame = CGRectMake(xOrigin, screenRect.size.width - 70, 50, 50);
-        TKDragView *dragView = [[TKDragView alloc] initWithImage:[UIImage drawText:[numbersOfPlayers objectAtIndex:i] inImage:image atPoint:CGPointMake(image.size.width/4, image.size.height/4)] startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:delegado];
+        CustomTKDragView *dragView = [[CustomTKDragView alloc] initWithImage:[UIImage drawText:[numbersOfPlayers objectAtIndex:i] inImage:image atPoint:CGPointMake(image.size.width/4, image.size.height/4)] startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:delegado];
         dragView.canDragMultipleDragViewsAtOnce = NO;
+        dragView.playersNames = self;
         [downScrollView.elements addObject:dragView];
         [self.dragViews addObject:dragView];
         [self.view insertSubview:dragView atIndex:4];
@@ -84,11 +85,6 @@
     delegado.dragViews = self.dragViews;
     [numbersOfPlayers release];
     [self.view insertSubview:downScrollView atIndex:3];
-    
-    
-    
-    
-    
     
     //Create matrix for the field
     int limit = ([[UIScreen mainScreen]bounds].size.width - sizeOfPlayers)/(sizeOfPlayers * 0.75);
@@ -126,6 +122,7 @@
     [[self.dragViews objectAtIndex:9] swapToEndPositionAtIndex: 10 * oLimit + 11];
     [[self.dragViews objectAtIndex:10] swapToEndPositionAtIndex: 12 * oLimit + 11];
     
+    
     if (self.teamOneInfo.count > 11) {
         for (int i = 11; i < self.teamOneInfo.count; i++) {
             TKDragView *dragView = [self.dragViews objectAtIndex:i];
@@ -150,14 +147,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPlayersName)];
+    doubleTapGesture.numberOfTapsRequired = 2;
+    [self.view addGestureRecognizer:doubleTapGesture];
+    [doubleTapGesture release];
+    
     canDrag = YES;
     slv = nil;
     mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
     mds.drawingColor = [UIColor yellowColor];
+    mds.userInteractionEnabled = YES;
     [self.view insertSubview:mds atIndex:1];
     mds.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
     mdsG.drawingColor = [UIColor whiteColor];
+    mdsG.userInteractionEnabled = YES;
     [self.view insertSubview:mdsG atIndex:2];
     mdsG.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     [mds setUserInteractionEnabled:NO];
@@ -225,12 +229,14 @@
     [self.view addSubview:facebookButton];
     
     [self initTextBoxes];
+    [self showPlayersName];
     
     //Imagen del campo
     NSString *Path = [[NSBundle mainBundle] pathForResource:@"field.jpg" ofType:nil];
     image = [UIImage imageWithContentsOfFile:Path];
     soccerField = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.height, screenRect.size.width-70)];
     soccerField.image = image;
+    soccerField.userInteractionEnabled = YES;
     [self.view insertSubview:soccerField atIndex:0];
     [soccerField release];
 }
@@ -400,17 +406,52 @@
     for (int i =0; i < teamOneChosenData.indexOfPlayers.count; i++) {
         CGRect rect = [[self.dragViews objectAtIndex:i] frame];
         if (rect.origin.y != [[UIScreen mainScreen]bounds].size.width - 70) {
+            
+            CGRect frame;
+            NSString *img;
+            CGFloat angle = 0;
+            if (rect.origin.x < rect.size.width/2) {
+                img = @"leftBubble.png";
+                frame = CGRectMake(rect.origin.x + rect.size.width/2, rect.origin.y - rect.size.height, 100, 35);
+                if (rect.origin.y < rect.size.height) {
+                    angle = M_PI;
+                    img = @"rightBubble.png";
+                    frame = CGRectMake(rect.origin.x + rect.size.width/2, rect.origin.y + rect.size.height, 100, 35);
+                }
+            } else {
+                
+                if (rect.origin.x > [[UIScreen mainScreen] bounds].size.height - rect.size.width * 2) {
+                    img = @"rightBubble.png";
+                    frame = CGRectMake(rect.origin.x - rect.size.width * 2.2, rect.origin.y - rect.size.height, 100, 35);
+                    if (rect.origin.y < rect.size.height) {
+                        angle = M_PI;
+                        img = @"leftBubble.png";
+                        frame = CGRectMake(rect.origin.x - rect.size.width * 2.2, rect.origin.y + rect.size.height, 100, 35);
+                    }
+                } else {
+                
+                    img = @"middlebubble.png";
+                    frame = CGRectMake(rect.origin.x - rect.size.width + 8, rect.origin.y - rect.size.height, 100, 35);
+                    if (rect.origin.y < rect.size.height) {
+                        angle = M_PI;
+                        frame = CGRectMake(rect.origin.x - rect.size.width + 8, rect.origin.y + rect.size.height, 100, 35);
+                    }
+                }
+            }
+            
             NSNumber *num = [[self.teamOneChosenData indexOfPlayers] objectAtIndex:i];
             
             UIImageView *imgView = [textBoxes objectAtIndex:j];
-            imgView.image = [UIImage imageNamed:@"middlebubble.png"];
-            imgView.frame = CGRectMake(rect.origin.x - rect.size.width + 8, rect.origin.y - rect.size.height, 100, 35);
+            imgView.image = [UIImage imageNamed:img];
+            imgView.frame = frame;
+            imgView.transform = CGAffineTransformMakeRotation(angle);
             
             UILabel *label = [labels objectAtIndex:j];
-            label.frame = CGRectMake(rect.origin.x - rect.size.width + 8, rect.origin.y - rect.size.height, 100, 35);
+            label.frame = frame;
             label.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
             label.textColor = [UIColor whiteColor];
             label.font = [label.font fontWithSize:12];
+            label.textAlignment = NSTextAlignmentCenter;
             label.text = [[players objectAtIndex:[num integerValue]] objectForKey:@"name"];
 
             
@@ -422,5 +463,14 @@
         }
     }
 }
+
+- (void)hidePlayersName {
+    for(UILabel *lb in labels)
+         [lb removeFromSuperview];
+    for(UIImageView *img in textBoxes)
+        [img removeFromSuperview];
+}
+
+
 
 @end

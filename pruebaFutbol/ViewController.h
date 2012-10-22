@@ -12,14 +12,15 @@
 #import "IFlowManager.h"
 #import "ISelectedPlayersInfo.h"
 #import "IDataSource.h"
+#import "IShowPlayersNames.h"
 
 @class HScrollView;
 @class SmoothLineView;
 @class MGDrawingSlate;
 @class ChosenPlayersService;
+@class CustomTKDragView;
 
-
-@interface ViewController : UIViewController {
+@interface ViewController : UIViewController <IShowPlayersNames> {
     SmoothLineView *slv;
     MGDrawingSlate *mds;
     MGDrawingSlate *mdsG;
@@ -48,7 +49,6 @@
 @property (nonatomic, retain) id<IDataSource> dataSource;
 
 - (void)eraseChosenData;
-- (void)showPlayersName;
 - (void)initTextBoxes;
 
 @end

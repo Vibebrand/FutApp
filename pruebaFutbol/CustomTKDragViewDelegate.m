@@ -10,7 +10,7 @@
 
 @implementation CustomTKDragViewDelegate
 
-@synthesize dragViews, logger, vC;
+@synthesize dragViews, logger;
 
 - (id)init
 {
