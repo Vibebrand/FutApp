@@ -68,9 +68,7 @@
 }
 
 - (PlayersTableViewController *)playersFactory:(int)row {
-    info.teamSelected = [[info teamsNames] objectAtIndex:row];
     PlayersTableViewController *playersTable = [[PlayersTableViewController alloc] init];
-    playersTable.playersInfo = info;
     playersTable.isFinal = 1;
     playersTable.instantiator = self;
     playersTable.flowManager = self;
@@ -111,7 +109,6 @@
 - (void)asignCascadeView:(int)row {
     //info.teamSelected = [[info teamsNames] objectAtIndex:row];
     PlayersTableViewController *playersTable = [[PlayersTableViewController alloc] init];
-    playersTable.playersInfo = info;
     playersTable.instantiator = self;
     playersTable.flowManager = self;
     playersTable.isFinal = !self.twoTeams;

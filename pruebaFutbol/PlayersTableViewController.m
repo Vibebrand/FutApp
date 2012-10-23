@@ -21,14 +21,13 @@
 
 @implementation PlayersTableViewController
 
-@synthesize playersInfo, instantiator, isFinal, selectedCells, selectedPlayers;
+@synthesize instantiator, isFinal, selectedCells, selectedPlayers;
 
 - (id)init
 {
     self = [super init];
     if (self) {
         selectedMarks = [NSMutableArray new];
-        self.playersInfo = nil;
         self.instantiator = nil;
         self.isFinal = NO;
         self.selectedCells = [[NSMutableArray new] autorelease];
@@ -156,12 +155,6 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;    
-}
-
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
-    NSString *selectedPlayer = [[[self.playersInfo playersOfSelectedTeam] allValues] objectAtIndex:indexPath.row];
-    ProfileViewController *profile = [self.instantiator profileFactory:selectedPlayer];
-    [self pushDetailViewController:profile animated:YES];
 }
 
 - (void)setTeamPlayers:(NSDictionary *)players {
