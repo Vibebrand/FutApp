@@ -53,7 +53,6 @@
 		927EF93616366B750042064A /* America.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92416366B750042064A /* America.csv */; };
 		927EF93716366B750042064A /* Atlante.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92516366B750042064A /* Atlante.csv */; };
 		927EF93816366B750042064A /* Atlas.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92616366B750042064A /* Atlas.csv */; };
-		927EF93916366B750042064A /* Cruz Azul.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92716366B750042064A /* Cruz Azul.csv */; };
 		927EF93A16366B750042064A /* Guadalajara.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92816366B750042064A /* Guadalajara.csv */; };
 		927EF93B16366B750042064A /* Jaguares.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92916366B750042064A /* Jaguares.csv */; };
 		927EF93C16366B750042064A /* Leon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92A16366B750042064A /* Leon.csv */; };
@@ -71,6 +70,8 @@
 		927EF94D163686250042064A /* AmericaBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF94A163686240042064A /* AmericaBadge.png */; };
 		927EF94E163686250042064A /* AmericaBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF94B163686250042064A /* AmericaBadge@2x.png */; };
 		927EF94F163686250042064A /* AmericaTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF94C163686250042064A /* AmericaTeam@2x.png */; };
+		927EF95716369C780042064A /* DefaultTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF95516369C780042064A /* DefaultTeam@2x.png */; };
+		927EF95816369C780042064A /* DefaultTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF95616369C780042064A /* DefaultTeam.png */; };
 		927F51AB16260BAD002DA762 /* TeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927F51AA16260BAD002DA762 /* TeamsViewController.m */; };
 		927F51AF16262C99002DA762 /* TeamsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927F51AE16262C99002DA762 /* TeamsViewController.xib */; };
 		927F51B116264864002DA762 /* Categories_header_view_289x89.png in Resources */ = {isa = PBXBuildFile; fileRef = 927F51B016264864002DA762 /* Categories_header_view_289x89.png */; };
@@ -251,7 +252,7 @@
 		927EF92416366B750042064A /* America.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = America.csv; path = ../America.csv; sourceTree = "<group>"; };
 		927EF92516366B750042064A /* Atlante.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Atlante.csv; path = ../Atlante.csv; sourceTree = "<group>"; };
 		927EF92616366B750042064A /* Atlas.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Atlas.csv; path = ../Atlas.csv; sourceTree = "<group>"; };
-		927EF92716366B750042064A /* Cruz Azul.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Cruz Azul.csv"; path = "../Cruz Azul.csv"; sourceTree = "<group>"; };
+		927EF92716366B750042064A /* CruzAzul.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = CruzAzul.csv; path = ../CruzAzul.csv; sourceTree = "<group>"; };
 		927EF92816366B750042064A /* Guadalajara.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Guadalajara.csv; path = ../Guadalajara.csv; sourceTree = "<group>"; };
 		927EF92916366B750042064A /* Jaguares.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Jaguares.csv; path = ../Jaguares.csv; sourceTree = "<group>"; };
 		927EF92A16366B750042064A /* Leon.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Leon.csv; path = ../Leon.csv; sourceTree = "<group>"; };
@@ -269,6 +270,8 @@
 		927EF94A163686240042064A /* AmericaBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AmericaBadge.png; sourceTree = "<group>"; };
 		927EF94B163686250042064A /* AmericaBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AmericaBadge@2x.png"; sourceTree = "<group>"; };
 		927EF94C163686250042064A /* AmericaTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AmericaTeam@2x.png"; sourceTree = "<group>"; };
+		927EF95516369C780042064A /* DefaultTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DefaultTeam@2x.png"; sourceTree = "<group>"; };
+		927EF95616369C780042064A /* DefaultTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultTeam.png; sourceTree = "<group>"; };
 		927F51A916260BAD002DA762 /* TeamsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamsViewController.h; sourceTree = "<group>"; };
 		927F51AA16260BAD002DA762 /* TeamsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamsViewController.m; sourceTree = "<group>"; };
 		927F51AE16262C99002DA762 /* TeamsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamsViewController.xib; sourceTree = "<group>"; };
@@ -516,7 +519,7 @@
 				927EF92416366B750042064A /* America.csv */,
 				927EF92516366B750042064A /* Atlante.csv */,
 				927EF92616366B750042064A /* Atlas.csv */,
-				927EF92716366B750042064A /* Cruz Azul.csv */,
+				927EF92716366B750042064A /* CruzAzul.csv */,
 				927EF92816366B750042064A /* Guadalajara.csv */,
 				927EF92916366B750042064A /* Jaguares.csv */,
 				927EF92A16366B750042064A /* Leon.csv */,
@@ -690,6 +693,8 @@
 		92A362AA1620923C0095A4F8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				927EF95516369C780042064A /* DefaultTeam@2x.png */,
+				927EF95616369C780042064A /* DefaultTeam.png */,
 				927EF94916366B930042064A /* CSV */,
 				9299D65A162F8320004BCD9F /* Images */,
 				924B6D40162E78C900B12605 /* vibebrand icons */,
@@ -955,7 +960,6 @@
 				927EF93616366B750042064A /* America.csv in Resources */,
 				927EF93716366B750042064A /* Atlante.csv in Resources */,
 				927EF93816366B750042064A /* Atlas.csv in Resources */,
-				927EF93916366B750042064A /* Cruz Azul.csv in Resources */,
 				927EF93A16366B750042064A /* Guadalajara.csv in Resources */,
 				927EF93B16366B750042064A /* Jaguares.csv in Resources */,
 				927EF93C16366B750042064A /* Leon.csv in Resources */,
@@ -1080,6 +1084,8 @@
 				927EF94D163686250042064A /* AmericaBadge.png in Resources */,
 				927EF94E163686250042064A /* AmericaBadge@2x.png in Resources */,
 				927EF94F163686250042064A /* AmericaTeam@2x.png in Resources */,
+				927EF95716369C780042064A /* DefaultTeam@2x.png in Resources */,
+				927EF95816369C780042064A /* DefaultTeam.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

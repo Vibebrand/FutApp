@@ -105,7 +105,7 @@
 }
 
 - (void)asignCascadeView:(int)row {
-    info.teamSelected = [[info teamsNames] objectAtIndex:row];
+    //info.teamSelected = [[info teamsNames] objectAtIndex:row];
     PlayersTableViewController *playersTable = [[PlayersTableViewController alloc] init];
     playersTable.playersInfo = info;
     playersTable.instantiator = self;

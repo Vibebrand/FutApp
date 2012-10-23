@@ -44,8 +44,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (self.teamsInfo){
-        return [self.teamsInfo numberOfTeams];
+    if (self.dataSource){
+        return [[self.dataSource allData] count];
     }
     return 0;
 }
@@ -64,8 +64,13 @@
         
     }
     
-     
-    cell.imageView.image = [UIImage imageNamed:[[[self.dataSource allData] objectAtIndex:indexPath.row] objectForKey:@"teamImage"]];
+    UIImage *img = [UIImage imageNamed:[[[self.dataSource allData] objectAtIndex:indexPath.row] objectForKey:@"teamImage"]];
+    
+    if (!img) {
+        img = [UIImage imageNamed:@"DefaultTeam.png"];
+    }
+    
+    cell.imageView.image = img;
     cell.textLabel.text = [[[self.dataSource allData] objectAtIndex:indexPath.row] objectForKey:@"name"];
     
     return cell;

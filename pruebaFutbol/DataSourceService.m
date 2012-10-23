@@ -55,6 +55,7 @@
     for (file in files) {
         [self addTeamFromFile:file];
     }
+    NSLog(@"%@", teams);
 }
 
 - (void)addTeamFromFile: (NSString *)file {
