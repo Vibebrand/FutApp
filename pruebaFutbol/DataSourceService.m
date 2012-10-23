@@ -38,6 +38,15 @@
     return nil;
 }
 
+- (NSArray *)playersForSpecialTeam:(NSString *)team {
+    for (NSDictionary *dict in specialTeams) {
+        if ([dict objectForKey:@"name"] == team) {
+            return [dict objectForKey:@"players"];
+        }
+    }
+    return nil;
+}
+
 - (NSDictionary *)dataOfTeam: (NSString *)team {
     for (NSDictionary *dict in teams) {
         if ([dict objectForKey:@"name"] == team) {
@@ -67,7 +76,7 @@
         [self addTeamFromFile:file];
     }
     
-    
+    specialTeams = [[NSArray alloc] initWithObjects:locals, foreigns, nil];
 }
 
 - (NSDictionary *)locals {
@@ -76,6 +85,10 @@
 
 - (NSDictionary *)foreigns {
     return foreigns;
+}
+
+- (NSArray *)specialTeams {
+    return specialTeams;
 }
 
 - (void)addTeamFromFile: (NSString *)file {
@@ -89,6 +102,7 @@
     for (NSString *txt in lines) {
         NSArray *attr = [txt componentsSeparatedByString:@","];
         NSDictionary *player = [[NSDictionary alloc] initWithObjectsAndKeys:[attr objectAtIndex:0], @"name", [attr objectAtIndex:1], @"number", [attr objectAtIndex:2], @"position", [attr objectAtIndex:3], @"foreign", [attr objectAtIndex:4], @"short name", nil];
+        
         [players addObject:player];
         
         if ([[player objectForKey:@"foreign"] integerValue] != 1) {
@@ -102,7 +116,12 @@
     
     NSDictionary *team = [[NSDictionary alloc] initWithObjectsAndKeys:nameOfTeam, @"name", imgName, @"teamImage", imgBadge, @"teamBadge", players, @"players", nil];
     [players release];
-    [teams addObject:team];
+    
+    if ([[team objectForKey:@"players"] count]) {
+         [teams addObject:team];
+    }
+    
+   
     [team release];
 }
 

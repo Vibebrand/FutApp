@@ -21,14 +21,13 @@
 
 @implementation PlayersTableViewController
 
-@synthesize playersInfo, instantiator, isFinal, selectedCells, selectedPlayers;
+@synthesize instantiator, isFinal, selectedCells, selectedPlayers;
 
 - (id)init
 {
     self = [super init];
     if (self) {
         selectedMarks = [NSMutableArray new];
-        self.playersInfo = nil;
         self.instantiator = nil;
         self.isFinal = NO;
         self.selectedCells = [[NSMutableArray new] autorelease];
@@ -98,8 +97,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [[self.dataSource playersForTeam:self.chosenTeam] count];
+{    
+    if ([self.dataSource playersForTeam:self.chosenTeam]) {
+        return [[self.dataSource playersForTeam:self.chosenTeam] count];
+    } else {
+        NSLog(@"%@", self.chosenTeam);
+        return [[self.dataSource playersForSpecialTeam:self.chosenTeam] count];
+    }
+    
 }
 
 
@@ -110,10 +115,12 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CRTableViewCellIdentifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     }
-    
-    cell.textLabel.text = [[[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"name"];
+    if ([self.dataSource playersForTeam:self.chosenTeam])
+        cell.textLabel.text = [[[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"name"];
+    else
+        cell.textLabel.text = [[[self.dataSource playersForSpecialTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"name"];
         
     return cell;
 }
@@ -124,6 +131,12 @@
         [selectedCells addObject:[NSNumber numberWithInt:indexPath.row]];
         NSString *name = [[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row];
         NSString *number = [[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row];
+        
+        if (!name && !number) {
+            name = [[self.dataSource playersForSpecialTeam:self.chosenTeam] objectAtIndex:indexPath.row];
+            number = [[self.dataSource playersForSpecialTeam:self.chosenTeam] objectAtIndex:indexPath.row];
+        }
+        
         [self.selectedPlayers setValue:name forKey:number];
     }
     if (selectedCells.count == i)
@@ -152,16 +165,6 @@
         [playersLeft setHidden:NO];
         [doneButton setHidden:YES];
     }
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;    
-}
-
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
-    NSString *selectedPlayer = [[[self.playersInfo playersOfSelectedTeam] allValues] objectAtIndex:indexPath.row];
-    ProfileViewController *profile = [self.instantiator profileFactory:selectedPlayer];
-    [self pushDetailViewController:profile animated:YES];
 }
 
 - (void)setTeamPlayers:(NSDictionary *)players {

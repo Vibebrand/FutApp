@@ -61,9 +61,13 @@
     
     //Numbers of players
     NSMutableArray *numbersOfPlayers = [[NSMutableArray alloc] initWithCapacity:self.teamOneChosenData.indexOfPlayers.count];
-    
+    NSArray *players;
     for (int i = 0; i < self.teamOneChosenData.indexOfPlayers.count; i++) {
-        NSArray *players = [self.dataSource playersForTeam:teamOneChosenData.chosenTeam];
+        if ([self.dataSource playersForTeam:teamOneChosenData.chosenTeam]) {
+            players = [self.dataSource playersForTeam:teamOneChosenData.chosenTeam];
+        } else {
+            players = [self.dataSource playersForSpecialTeam:teamOneChosenData.chosenTeam];
+        }
         NSNumber *num = [teamOneChosenData.indexOfPlayers objectAtIndex:i];
         NSString *number = [[players objectAtIndex:[num integerValue] ] objectForKey:@"number"];
         if ([number length] == 1) {
@@ -403,7 +407,13 @@
 }
 
 - (void)showPlayersName {
-    NSArray *players = [self.dataSource playersForTeam:teamOneChosenData.chosenTeam];
+    NSArray *players;
+    if ([self.dataSource playersForTeam:teamOneChosenData.chosenTeam]) {
+        players = [self.dataSource playersForTeam:teamOneChosenData.chosenTeam];
+    } else {
+        players = [self.dataSource playersForSpecialTeam:teamOneChosenData.chosenTeam];
+    }
+    
     int j = 0;
     for (int i =0; i < teamOneChosenData.indexOfPlayers.count; i++) {
         CGRect rect = [[self.dragViews objectAtIndex:i] frame];
@@ -441,6 +451,7 @@
                 }
             }
             
+        
             NSNumber *num = [[self.teamOneChosenData indexOfPlayers] objectAtIndex:i];
             
             UIImageView *imgView = [textBoxes objectAtIndex:j];

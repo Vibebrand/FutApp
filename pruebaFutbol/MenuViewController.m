@@ -79,6 +79,7 @@
 }
 
 - (void)nationalTeamButtonClicked {
+    [flowManager willchangeToOption:2];
 }
 
 

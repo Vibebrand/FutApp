@@ -16,14 +16,8 @@
 
 @implementation TeamsViewController
 
-@synthesize teamsInfo, flowManager, dataSource;
+@synthesize  flowManager, dataSource;
 
-- (id<ITeamInfoService>)teamsInfo {
-    if (!teamsInfo) {
-        teamsInfo = [[TeamInfoServiceArray alloc] init];
-    }
-    return teamsInfo;
-}
 
 - (void)viewDidLoad
 {

@@ -22,7 +22,6 @@
     UILabel *playersLeft;
 }
 
-@property(nonatomic, retain) id<IPlayerInfoService> playersInfo;
 @property(nonatomic, retain) id<IInstantiatorDelegate> instantiator;
 @property(nonatomic, assign) BOOL isFinal;
 @property(nonatomic, assign) id<IFlowManager> flowManager;

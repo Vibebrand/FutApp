@@ -13,6 +13,7 @@
 #import "IDataSource.h"
 
 
+@class ThirdTeamViewController;
 @class CLCascadeNavigationController;
 @class TeamsViewController;
 @class CLSplitCascadeViewController;
@@ -26,6 +27,7 @@
 
 @property(nonatomic, retain) CLCascadeNavigationController *cascadeNavController;
 @property(nonatomic, retain) TeamsViewController *teamsViewController;
+@property (nonatomic, retain) ThirdTeamViewController *nationalTeamViewController;
 @property(nonatomic, retain) CLSplitCascadeViewController *splitCascadeViewController;
 @property(nonatomic, assign) BOOL twoTeams;
 @property(nonatomic, retain) id<IFlowManager> flowManager;
@@ -35,7 +37,6 @@
 @property (nonatomic, retain) ChosenPlayersService *teamOneChosenData;
 @property (nonatomic, retain) ChosenPlayersService *teamTwoChosenData;
 
-
-- (id)initWithDataSource: (id<IDataSource>)dataS;
+- (id)initForNationalTeam;
 
 @end

@@ -13,6 +13,7 @@
     NSMutableArray *teams;
     NSMutableDictionary *locals;
     NSMutableDictionary *foreigns;
+    NSArray *specialTeams;
 }
 
 @end
