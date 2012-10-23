@@ -50,6 +50,27 @@
 		927D01011627609A00BF2D2E /* CRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927D01001627609A00BF2D2E /* CRTableViewController.m */; };
 		927D012F162789EA00BF2D2E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927D012E162789EA00BF2D2E /* ProfileViewController.m */; };
 		927D0132162799E300BF2D2E /* UnknownProfile1.png in Resources */ = {isa = PBXBuildFile; fileRef = 927D0131162799E300BF2D2E /* UnknownProfile1.png */; };
+		927EF93616366B750042064A /* America.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92416366B750042064A /* America.csv */; };
+		927EF93716366B750042064A /* Atlante.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92516366B750042064A /* Atlante.csv */; };
+		927EF93816366B750042064A /* Atlas.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92616366B750042064A /* Atlas.csv */; };
+		927EF93916366B750042064A /* Cruz Azul.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92716366B750042064A /* Cruz Azul.csv */; };
+		927EF93A16366B750042064A /* Guadalajara.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92816366B750042064A /* Guadalajara.csv */; };
+		927EF93B16366B750042064A /* Jaguares.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92916366B750042064A /* Jaguares.csv */; };
+		927EF93C16366B750042064A /* Leon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92A16366B750042064A /* Leon.csv */; };
+		927EF93D16366B750042064A /* Monterrey.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92B16366B750042064A /* Monterrey.csv */; };
+		927EF93E16366B750042064A /* Morelia.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92C16366B750042064A /* Morelia.csv */; };
+		927EF93F16366B750042064A /* Pachuca.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92D16366B750042064A /* Pachuca.csv */; };
+		927EF94016366B750042064A /* Puebla.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92E16366B750042064A /* Puebla.csv */; };
+		927EF94116366B750042064A /* Pumas.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92F16366B750042064A /* Pumas.csv */; };
+		927EF94216366B750042064A /* Queretaro.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF93016366B750042064A /* Queretaro.csv */; };
+		927EF94316366B750042064A /* San Luis.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF93116366B750042064A /* San Luis.csv */; };
+		927EF94416366B750042064A /* Santos.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF93216366B750042064A /* Santos.csv */; };
+		927EF94516366B750042064A /* Tigres.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF93316366B750042064A /* Tigres.csv */; };
+		927EF94616366B750042064A /* Tijuana.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF93416366B750042064A /* Tijuana.csv */; };
+		927EF94716366B750042064A /* Toluca.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF93516366B750042064A /* Toluca.csv */; };
+		927EF94D163686250042064A /* AmericaBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF94A163686240042064A /* AmericaBadge.png */; };
+		927EF94E163686250042064A /* AmericaBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF94B163686250042064A /* AmericaBadge@2x.png */; };
+		927EF94F163686250042064A /* AmericaTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF94C163686250042064A /* AmericaTeam@2x.png */; };
 		927F51AB16260BAD002DA762 /* TeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927F51AA16260BAD002DA762 /* TeamsViewController.m */; };
 		927F51AF16262C99002DA762 /* TeamsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927F51AE16262C99002DA762 /* TeamsViewController.xib */; };
 		927F51B116264864002DA762 /* Categories_header_view_289x89.png in Resources */ = {isa = PBXBuildFile; fileRef = 927F51B016264864002DA762 /* Categories_header_view_289x89.png */; };
@@ -105,14 +126,11 @@
 		9299D697162F832D004BCD9F /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9299D674162F832D004BCD9F /* background@2x.jpg */; };
 		9299D698162F832D004BCD9F /* teambutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D675162F832D004BCD9F /* teambutton.png */; };
 		9299D699162F832D004BCD9F /* teambutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D676162F832D004BCD9F /* teambutton@2x.png */; };
-		9299D69A162F832D004BCD9F /* redteam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D678162F832D004BCD9F /* redteam.png */; };
-		9299D69B162F832D004BCD9F /* redteam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D679162F832D004BCD9F /* redteam@2x.png */; };
-		9299D69C162F832D004BCD9F /* redteamdot.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67A162F832D004BCD9F /* redteamdot.png */; };
-		9299D69D162F832D004BCD9F /* redteamdot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67B162F832D004BCD9F /* redteamdot@2x.png */; };
-		9299D69E162F832D004BCD9F /* yelloweteamdot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67C162F832D004BCD9F /* yelloweteamdot@2x.png */; };
-		9299D69F162F832D004BCD9F /* yellowteam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67D162F832D004BCD9F /* yellowteam.png */; };
-		9299D6A0162F832D004BCD9F /* yellowteam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67E162F832D004BCD9F /* yellowteam@2x.png */; };
-		9299D6A1162F832D004BCD9F /* yellowteamdot.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67F162F832D004BCD9F /* yellowteamdot.png */; };
+		9299D69A162F832D004BCD9F /* GuadalajaraTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D678162F832D004BCD9F /* GuadalajaraTeam.png */; };
+		9299D69B162F832D004BCD9F /* GuadalajaraTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D679162F832D004BCD9F /* GuadalajaraTeam@2x.png */; };
+		9299D69C162F832D004BCD9F /* GuadalajaraBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67A162F832D004BCD9F /* GuadalajaraBadge.png */; };
+		9299D69D162F832D004BCD9F /* GuadalajaraBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67B162F832D004BCD9F /* GuadalajaraBadge@2x.png */; };
+		9299D69F162F832D004BCD9F /* AmericaTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67D162F832D004BCD9F /* AmericaTeam.png */; };
 		929BF887162A4187007B2C8A /* TwoTeamsFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929BF886162A4187007B2C8A /* TwoTeamsFieldViewController.m */; };
 		92A04FF616323FC300026BF8 /* middlebubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF016323FC300026BF8 /* middlebubble@2x.png */; };
 		92A04FF716323FC300026BF8 /* rightBubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF116323FC300026BF8 /* rightBubble@2x.png */; };
@@ -230,6 +248,27 @@
 		927D0130162791C400BF2D2E /* IPlayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPlayerInfo.h; sourceTree = "<group>"; };
 		927D0131162799E300BF2D2E /* UnknownProfile1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UnknownProfile1.png; sourceTree = "<group>"; };
 		927D01331627A5D200BF2D2E /* IInstantiatorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IInstantiatorDelegate.h; sourceTree = "<group>"; };
+		927EF92416366B750042064A /* America.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = America.csv; path = ../America.csv; sourceTree = "<group>"; };
+		927EF92516366B750042064A /* Atlante.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Atlante.csv; path = ../Atlante.csv; sourceTree = "<group>"; };
+		927EF92616366B750042064A /* Atlas.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Atlas.csv; path = ../Atlas.csv; sourceTree = "<group>"; };
+		927EF92716366B750042064A /* Cruz Azul.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Cruz Azul.csv"; path = "../Cruz Azul.csv"; sourceTree = "<group>"; };
+		927EF92816366B750042064A /* Guadalajara.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Guadalajara.csv; path = ../Guadalajara.csv; sourceTree = "<group>"; };
+		927EF92916366B750042064A /* Jaguares.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Jaguares.csv; path = ../Jaguares.csv; sourceTree = "<group>"; };
+		927EF92A16366B750042064A /* Leon.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Leon.csv; path = ../Leon.csv; sourceTree = "<group>"; };
+		927EF92B16366B750042064A /* Monterrey.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Monterrey.csv; path = ../Monterrey.csv; sourceTree = "<group>"; };
+		927EF92C16366B750042064A /* Morelia.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Morelia.csv; path = ../Morelia.csv; sourceTree = "<group>"; };
+		927EF92D16366B750042064A /* Pachuca.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Pachuca.csv; path = ../Pachuca.csv; sourceTree = "<group>"; };
+		927EF92E16366B750042064A /* Puebla.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Puebla.csv; path = ../Puebla.csv; sourceTree = "<group>"; };
+		927EF92F16366B750042064A /* Pumas.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Pumas.csv; path = ../Pumas.csv; sourceTree = "<group>"; };
+		927EF93016366B750042064A /* Queretaro.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Queretaro.csv; path = ../Queretaro.csv; sourceTree = "<group>"; };
+		927EF93116366B750042064A /* San Luis.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = "San Luis.csv"; path = "../San Luis.csv"; sourceTree = "<group>"; };
+		927EF93216366B750042064A /* Santos.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Santos.csv; path = ../Santos.csv; sourceTree = "<group>"; };
+		927EF93316366B750042064A /* Tigres.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Tigres.csv; path = ../Tigres.csv; sourceTree = "<group>"; };
+		927EF93416366B750042064A /* Tijuana.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Tijuana.csv; path = ../Tijuana.csv; sourceTree = "<group>"; };
+		927EF93516366B750042064A /* Toluca.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Toluca.csv; path = ../Toluca.csv; sourceTree = "<group>"; };
+		927EF94A163686240042064A /* AmericaBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AmericaBadge.png; sourceTree = "<group>"; };
+		927EF94B163686250042064A /* AmericaBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AmericaBadge@2x.png"; sourceTree = "<group>"; };
+		927EF94C163686250042064A /* AmericaTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AmericaTeam@2x.png"; sourceTree = "<group>"; };
 		927F51A916260BAD002DA762 /* TeamsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamsViewController.h; sourceTree = "<group>"; };
 		927F51AA16260BAD002DA762 /* TeamsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamsViewController.m; sourceTree = "<group>"; };
 		927F51AE16262C99002DA762 /* TeamsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamsViewController.xib; sourceTree = "<group>"; };
@@ -299,14 +338,11 @@
 		9299D674162F832D004BCD9F /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		9299D675162F832D004BCD9F /* teambutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teambutton.png; sourceTree = "<group>"; };
 		9299D676162F832D004BCD9F /* teambutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "teambutton@2x.png"; sourceTree = "<group>"; };
-		9299D678162F832D004BCD9F /* redteam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redteam.png; sourceTree = "<group>"; };
-		9299D679162F832D004BCD9F /* redteam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redteam@2x.png"; sourceTree = "<group>"; };
-		9299D67A162F832D004BCD9F /* redteamdot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redteamdot.png; sourceTree = "<group>"; };
-		9299D67B162F832D004BCD9F /* redteamdot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redteamdot@2x.png"; sourceTree = "<group>"; };
-		9299D67C162F832D004BCD9F /* yelloweteamdot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yelloweteamdot@2x.png"; sourceTree = "<group>"; };
-		9299D67D162F832D004BCD9F /* yellowteam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowteam.png; sourceTree = "<group>"; };
-		9299D67E162F832D004BCD9F /* yellowteam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowteam@2x.png"; sourceTree = "<group>"; };
-		9299D67F162F832D004BCD9F /* yellowteamdot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowteamdot.png; sourceTree = "<group>"; };
+		9299D678162F832D004BCD9F /* GuadalajaraTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GuadalajaraTeam.png; sourceTree = "<group>"; };
+		9299D679162F832D004BCD9F /* GuadalajaraTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GuadalajaraTeam@2x.png"; sourceTree = "<group>"; };
+		9299D67A162F832D004BCD9F /* GuadalajaraBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GuadalajaraBadge.png; sourceTree = "<group>"; };
+		9299D67B162F832D004BCD9F /* GuadalajaraBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GuadalajaraBadge@2x.png"; sourceTree = "<group>"; };
+		9299D67D162F832D004BCD9F /* AmericaTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AmericaTeam.png; sourceTree = "<group>"; };
 		929BF885162A4187007B2C8A /* TwoTeamsFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoTeamsFieldViewController.h; sourceTree = "<group>"; };
 		929BF886162A4187007B2C8A /* TwoTeamsFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoTeamsFieldViewController.m; sourceTree = "<group>"; };
 		92A04FF016323FC300026BF8 /* middlebubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "middlebubble@2x.png"; sourceTree = "<group>"; };
@@ -474,6 +510,31 @@
 			name = CRMultiRowSelect;
 			sourceTree = "<group>";
 		};
+		927EF94916366B930042064A /* CSV */ = {
+			isa = PBXGroup;
+			children = (
+				927EF92416366B750042064A /* America.csv */,
+				927EF92516366B750042064A /* Atlante.csv */,
+				927EF92616366B750042064A /* Atlas.csv */,
+				927EF92716366B750042064A /* Cruz Azul.csv */,
+				927EF92816366B750042064A /* Guadalajara.csv */,
+				927EF92916366B750042064A /* Jaguares.csv */,
+				927EF92A16366B750042064A /* Leon.csv */,
+				927EF92B16366B750042064A /* Monterrey.csv */,
+				927EF92C16366B750042064A /* Morelia.csv */,
+				927EF92D16366B750042064A /* Pachuca.csv */,
+				927EF92E16366B750042064A /* Puebla.csv */,
+				927EF92F16366B750042064A /* Pumas.csv */,
+				927EF93016366B750042064A /* Queretaro.csv */,
+				927EF93116366B750042064A /* San Luis.csv */,
+				927EF93216366B750042064A /* Santos.csv */,
+				927EF93316366B750042064A /* Tigres.csv */,
+				927EF93416366B750042064A /* Tijuana.csv */,
+				927EF93516366B750042064A /* Toluca.csv */,
+			);
+			name = CSV;
+			sourceTree = "<group>";
+		};
 		927F51B516265019002DA762 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
@@ -614,14 +675,14 @@
 		9299D677162F832D004BCD9F /* Team */ = {
 			isa = PBXGroup;
 			children = (
-				9299D678162F832D004BCD9F /* redteam.png */,
-				9299D679162F832D004BCD9F /* redteam@2x.png */,
-				9299D67A162F832D004BCD9F /* redteamdot.png */,
-				9299D67B162F832D004BCD9F /* redteamdot@2x.png */,
-				9299D67C162F832D004BCD9F /* yelloweteamdot@2x.png */,
-				9299D67D162F832D004BCD9F /* yellowteam.png */,
-				9299D67E162F832D004BCD9F /* yellowteam@2x.png */,
-				9299D67F162F832D004BCD9F /* yellowteamdot.png */,
+				9299D678162F832D004BCD9F /* GuadalajaraTeam.png */,
+				9299D679162F832D004BCD9F /* GuadalajaraTeam@2x.png */,
+				9299D67A162F832D004BCD9F /* GuadalajaraBadge.png */,
+				9299D67B162F832D004BCD9F /* GuadalajaraBadge@2x.png */,
+				927EF94A163686240042064A /* AmericaBadge.png */,
+				927EF94B163686250042064A /* AmericaBadge@2x.png */,
+				927EF94C163686250042064A /* AmericaTeam@2x.png */,
+				9299D67D162F832D004BCD9F /* AmericaTeam.png */,
 			);
 			path = Team;
 			sourceTree = "<group>";
@@ -629,6 +690,7 @@
 		92A362AA1620923C0095A4F8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				927EF94916366B930042064A /* CSV */,
 				9299D65A162F8320004BCD9F /* Images */,
 				924B6D40162E78C900B12605 /* vibebrand icons */,
 				924B6D07162E6E9C00B12605 /* Default-Landscape@2x~ipad.png */,
@@ -890,6 +952,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927EF93616366B750042064A /* America.csv in Resources */,
+				927EF93716366B750042064A /* Atlante.csv in Resources */,
+				927EF93816366B750042064A /* Atlas.csv in Resources */,
+				927EF93916366B750042064A /* Cruz Azul.csv in Resources */,
+				927EF93A16366B750042064A /* Guadalajara.csv in Resources */,
+				927EF93B16366B750042064A /* Jaguares.csv in Resources */,
+				927EF93C16366B750042064A /* Leon.csv in Resources */,
+				927EF93D16366B750042064A /* Monterrey.csv in Resources */,
+				927EF93E16366B750042064A /* Morelia.csv in Resources */,
+				927EF93F16366B750042064A /* Pachuca.csv in Resources */,
+				927EF94016366B750042064A /* Puebla.csv in Resources */,
+				927EF94116366B750042064A /* Pumas.csv in Resources */,
+				927EF94216366B750042064A /* Queretaro.csv in Resources */,
+				927EF94316366B750042064A /* San Luis.csv in Resources */,
+				927EF94416366B750042064A /* Santos.csv in Resources */,
+				927EF94516366B750042064A /* Tigres.csv in Resources */,
+				927EF94616366B750042064A /* Tijuana.csv in Resources */,
+				927EF94716366B750042064A /* Toluca.csv in Resources */,
 				92912F0D160EA18A00A4C05E /* InfoPlist.strings in Resources */,
 				92912F15160EA18A00A4C05E /* Default.png in Resources */,
 				92912F17160EA18A00A4C05E /* Default@2x.png in Resources */,
@@ -970,14 +1050,11 @@
 				9299D697162F832D004BCD9F /* background@2x.jpg in Resources */,
 				9299D698162F832D004BCD9F /* teambutton.png in Resources */,
 				9299D699162F832D004BCD9F /* teambutton@2x.png in Resources */,
-				9299D69A162F832D004BCD9F /* redteam.png in Resources */,
-				9299D69B162F832D004BCD9F /* redteam@2x.png in Resources */,
-				9299D69C162F832D004BCD9F /* redteamdot.png in Resources */,
-				9299D69D162F832D004BCD9F /* redteamdot@2x.png in Resources */,
-				9299D69E162F832D004BCD9F /* yelloweteamdot@2x.png in Resources */,
-				9299D69F162F832D004BCD9F /* yellowteam.png in Resources */,
-				9299D6A0162F832D004BCD9F /* yellowteam@2x.png in Resources */,
-				9299D6A1162F832D004BCD9F /* yellowteamdot.png in Resources */,
+				9299D69A162F832D004BCD9F /* GuadalajaraTeam.png in Resources */,
+				9299D69B162F832D004BCD9F /* GuadalajaraTeam@2x.png in Resources */,
+				9299D69C162F832D004BCD9F /* GuadalajaraBadge.png in Resources */,
+				9299D69D162F832D004BCD9F /* GuadalajaraBadge@2x.png in Resources */,
+				9299D69F162F832D004BCD9F /* AmericaTeam.png in Resources */,
 				92977E701630CA7B009641F1 /* twitterButtton.jpg in Resources */,
 				92977E711630CA7B009641F1 /* twitterButtton@2x.jpg in Resources */,
 				92977E741630CA85009641F1 /* facebookButton.jpg in Resources */,
@@ -1000,6 +1077,9 @@
 				92A04FF916323FC300026BF8 /* middlebubble.png in Resources */,
 				92A04FFA16323FC300026BF8 /* rightBubble.png in Resources */,
 				92A04FFB16323FC300026BF8 /* leftBubble.png in Resources */,
+				927EF94D163686250042064A /* AmericaBadge.png in Resources */,
+				927EF94E163686250042064A /* AmericaBadge@2x.png in Resources */,
+				927EF94F163686250042064A /* AmericaTeam@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
