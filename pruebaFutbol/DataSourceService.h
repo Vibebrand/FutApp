@@ -11,6 +11,8 @@
 
 @interface DataSourceService : NSObject <IDataSource>{
     NSMutableArray *teams;
+    NSMutableDictionary *locals;
+    NSMutableDictionary *foreigns;
 }
 
 @end

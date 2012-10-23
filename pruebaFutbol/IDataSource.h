@@ -13,5 +13,7 @@
 - (NSArray *)allData;
 - (NSArray *)playersForTeam: (NSString *)team;
 - (NSDictionary *)dataOfTeam: (NSString *)team;
+- (NSDictionary *)locals;
+- (NSDictionary *)foreigns;
 
 @end
