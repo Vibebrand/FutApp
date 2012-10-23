@@ -109,7 +109,7 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CRTableViewCellIdentifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     }
     
     cell.textLabel.text = [[[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"name"];
@@ -151,10 +151,6 @@
         [playersLeft setHidden:NO];
         [doneButton setHidden:YES];
     }
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;    
 }
 
 - (void)setTeamPlayers:(NSDictionary *)players {
