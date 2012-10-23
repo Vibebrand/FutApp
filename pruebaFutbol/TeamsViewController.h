@@ -8,13 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "CLCategoriesViewController.h"
-#import "ITeamInfoService.h"
 #import "IFlowManager.h"
 #import "IDataSource.h"
 
 @interface TeamsViewController : CLCategoriesViewController
 
-@property (nonatomic, retain) id<ITeamInfoService> teamsInfo;
 @property (nonatomic, retain) id<IFlowManager> flowManager;
 @property (nonatomic, retain) id<IDataSource> dataSource;
 

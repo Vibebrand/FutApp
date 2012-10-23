@@ -38,6 +38,15 @@
     return nil;
 }
 
+- (NSArray *)playersForSpecialTeam:(NSString *)team {
+    for (NSDictionary *dict in specialTeams) {
+        if ([dict objectForKey:@"name"] == team) {
+            return [dict objectForKey:@"players"];
+        }
+    }
+    return nil;
+}
+
 - (NSDictionary *)dataOfTeam: (NSString *)team {
     for (NSDictionary *dict in teams) {
         if ([dict objectForKey:@"name"] == team) {
@@ -67,7 +76,7 @@
         [self addTeamFromFile:file];
     }
     
-    
+    specialTeams = [[NSArray alloc] initWithObjects:locals, foreigns, nil];
 }
 
 - (NSDictionary *)locals {
@@ -76,6 +85,10 @@
 
 - (NSDictionary *)foreigns {
     return foreigns;
+}
+
+- (NSArray *)specialTeams {
+    return specialTeams;
 }
 
 - (void)addTeamFromFile: (NSString *)file {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9206D8181637025F00BD73D6 /* CruzAzul.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92716366B750042064A /* CruzAzul.csv */; };
+		9206D870163729C500BD73D6 /* ThirdTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9206D86F163729C400BD73D6 /* ThirdTeamViewController.m */; };
 		921DCC25161CBFFC00386E5E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC22161CBFB400386E5E /* libTestFlight.a */; };
 		921DCC26161CBFFC00386E5E /* TestFlight.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC23161CBFB400386E5E /* TestFlight.h */; };
 		921DCC28161CC03200386E5E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC27161CC03200386E5E /* libz.dylib */; };
@@ -204,6 +205,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9206D86E163729C400BD73D6 /* ThirdTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTeamViewController.h; sourceTree = "<group>"; };
+		9206D86F163729C400BD73D6 /* ThirdTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTeamViewController.m; sourceTree = "<group>"; };
 		921DCC22161CBFB400386E5E /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		921DCC23161CBFB400386E5E /* TestFlight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		921DCC27161CC03200386E5E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -833,6 +836,8 @@
 				927D012E162789EA00BF2D2E /* ProfileViewController.m */,
 				92E7F00316281868003A460E /* SecondTeamViewController.h */,
 				92E7F00416281868003A460E /* SecondTeamViewController.m */,
+				9206D86E163729C400BD73D6 /* ThirdTeamViewController.h */,
+				9206D86F163729C400BD73D6 /* ThirdTeamViewController.m */,
 				929BF885162A4187007B2C8A /* TwoTeamsFieldViewController.h */,
 				929BF886162A4187007B2C8A /* TwoTeamsFieldViewController.m */,
 			);
@@ -1184,6 +1189,7 @@
 				92F7F7EB1631C9C3003521F7 /* ChosenPlayersService.m in Sources */,
 				92F95F2916332722001F08EE /* CustomMGDrawingSlate.m in Sources */,
 				92A2549B1635D23C009FBE1A /* CustomTKDragView.m in Sources */,
+				9206D870163729C500BD73D6 /* ThirdTeamViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

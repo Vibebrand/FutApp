@@ -11,6 +11,8 @@
 #import "CascadeController.h"
 #import "TwoTeamsFieldViewController.h"
 #import "ChosenPlayersService.h"
+#import "CLSplitCascadeViewController.h"
+#import "ThirdTeamViewController.h"
 
 @implementation MasterController
 
@@ -62,12 +64,19 @@
 
 - (void)willchangeToOption:(int)index
 {
-    self.cascadeController = [[CascadeController alloc] init];
+    
+    if (index == 2) {
+        self.cascadeController = [[CascadeController alloc] initForNationalTeam];
+    } else {
+        self.cascadeController = [[CascadeController alloc] init];
+    }
+    
     self.cascadeController.dataSource = self.dataSource;
     self.cascadeController.twoTeams = index;
     self.cascadeController.flowManager = self;
     self.cascadeController.teamOneChosenData = self.teamOneChosen;
     self.cascadeController.teamTwoChosenData = self.teamTwoChosen;
+    
     [self.navigator pushViewController:self.cascadeController.splitCascadeViewController animated:YES];
 }
 

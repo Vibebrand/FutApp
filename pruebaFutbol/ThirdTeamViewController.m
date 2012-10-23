@@ -1,21 +1,21 @@
 //
-//  SecondTeamViewController.m
+//  ThirdTeamViewController.m
 //  FutApp
 //
-//  Created by Ivo on 10/12/12.
+//  Created by Ivo on 10/23/12.
 //  Copyright (c) 2012 Ivo. All rights reserved.
 //
 
-#import "SecondTeamViewController.h"
+#import "ThirdTeamViewController.h"
 #import "PlayersTableViewController.h"
 
-@interface SecondTeamViewController ()
+@interface ThirdTeamViewController ()
 
 @end
 
-@implementation SecondTeamViewController
+@implementation ThirdTeamViewController
 
-@synthesize flowManager, instantiator;
+@synthesize instantiator, dataSource, flowManager;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,11 +26,24 @@
     return self;
 }
 
+- (void)dealloc
+{
+    self.instantiator = nil;
+    self.dataSource = nil;
+    self.flowManager = nil;
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.tableView.rowHeight = 88;
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchDown];
+    backButton.frame = CGRectMake(10, 8, 60, 35);
+    [backButton setBackgroundImage:[UIImage imageNamed:@"backupbutton.png"] forState:UIControlStateNormal];
+    [self.view addSubview:backButton];
+    [backButton release];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,10 +57,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (self.dataSource){
-        return [[self.dataSource allData] count];
-    }
-    return 0;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -64,21 +74,34 @@
         
     }
     
-    UIImage *img = [UIImage imageNamed:[[[self.dataSource allData] objectAtIndex:indexPath.row] objectForKey:@"teamImage"]];
+    
+    UIImage *img;
+    NSString *text;
+    
+    if (!indexPath.row) {
+        img = [UIImage imageNamed:[[self.dataSource locals] objectForKey:@"teamImage"]];
+        text = [[self.dataSource locals] objectForKey:@"name"];
+    } else {
+        img = [UIImage imageNamed:[[self.dataSource foreigns] objectForKey:@"teamImage"]];
+        text = [[self.dataSource foreigns] objectForKey:@"name"];
+    }
     
     if (!img) {
         img = [UIImage imageNamed:@"DefaultTeam.png"];
     }
     
     cell.imageView.image = img;
-    cell.textLabel.text = [[[self.dataSource allData] objectAtIndex:indexPath.row] objectForKey:@"name"];
+    cell.textLabel.text = text;
     
     return cell;
 }
 
+- (void)backButtonPressed {
+    [flowManager backToRootView];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    PlayersTableViewController *players = [self.instantiator playersFactory:indexPath.row];
-    [self pushDetailViewController:players animated:YES];
+    [flowManager asignCascadeViewForNational:indexPath.row];
 }
 
 @end

@@ -13,6 +13,7 @@
 @optional
 - (void)willchangeToOption: (int)index;
 - (void)asignCascadeView: (int)row;
+- (void)asignCascadeViewForNational: (int)row;
 - (void)backToRootView;
 - (void)toField;
 - (void)toFieldWithOneTeam: (NSDictionary *)team;
