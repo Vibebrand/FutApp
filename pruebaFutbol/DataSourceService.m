@@ -89,6 +89,7 @@
     for (NSString *txt in lines) {
         NSArray *attr = [txt componentsSeparatedByString:@","];
         NSDictionary *player = [[NSDictionary alloc] initWithObjectsAndKeys:[attr objectAtIndex:0], @"name", [attr objectAtIndex:1], @"number", [attr objectAtIndex:2], @"position", [attr objectAtIndex:3], @"foreign", [attr objectAtIndex:4], @"short name", nil];
+        
         [players addObject:player];
         
         if ([[player objectForKey:@"foreign"] integerValue] != 1) {
@@ -102,7 +103,12 @@
     
     NSDictionary *team = [[NSDictionary alloc] initWithObjectsAndKeys:nameOfTeam, @"name", imgName, @"teamImage", imgBadge, @"teamBadge", players, @"players", nil];
     [players release];
-    [teams addObject:team];
+    
+    if ([[team objectForKey:@"players"] count]) {
+         [teams addObject:team];
+    }
+    
+   
     [team release];
 }
 

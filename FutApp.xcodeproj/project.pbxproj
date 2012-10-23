@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9206D8181637025F00BD73D6 /* CruzAzul.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92716366B750042064A /* CruzAzul.csv */; };
 		921DCC25161CBFFC00386E5E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC22161CBFB400386E5E /* libTestFlight.a */; };
 		921DCC26161CBFFC00386E5E /* TestFlight.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC23161CBFB400386E5E /* TestFlight.h */; };
 		921DCC28161CC03200386E5E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC27161CC03200386E5E /* libz.dylib */; };
@@ -990,6 +991,7 @@
 				927EF93616366B750042064A /* America.csv in Resources */,
 				927EF93716366B750042064A /* Atlante.csv in Resources */,
 				927EF93816366B750042064A /* Atlas.csv in Resources */,
+				9206D8181637025F00BD73D6 /* CruzAzul.csv in Resources */,
 				927EF93A16366B750042064A /* Guadalajara.csv in Resources */,
 				927EF93B16366B750042064A /* Jaguares.csv in Resources */,
 				927EF93C16366B750042064A /* Leon.csv in Resources */,
