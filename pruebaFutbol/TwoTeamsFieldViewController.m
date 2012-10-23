@@ -67,6 +67,10 @@
     NSString *path = [bundle pathForResource:[[self.dataSource dataOfTeam:self.teamOneChosenData.chosenTeam] objectForKey:@"teamBadge"] ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
+    if (!image) {
+        image = [UIImage imageNamed:@"DefaultTeam.png"];
+    }
+    
     
     //Numbers of players
     NSMutableArray *numbersOfPlayers = [[NSMutableArray alloc] initWithCapacity:self.teamOneChosenData.indexOfPlayers.count];
@@ -167,6 +171,9 @@
     NSString *path = [bundle pathForResource:[[self.dataSource dataOfTeam:self.teamTwoChosenData.chosenTeam] objectForKey:@"teamBadge"] ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
+    if (!image) {
+        image = [UIImage imageNamed:@"DefaultTeam.png"];
+    }
     
     //Numbers of players
     NSMutableArray *numbersOfPlayers = [[NSMutableArray alloc] initWithCapacity:self.teamOneInfo.count];
@@ -326,7 +333,7 @@
             label.textColor = [UIColor whiteColor];
             label.font = [label.font fontWithSize:12];
             label.textAlignment = NSTextAlignmentCenter;
-            label.text = [[players objectAtIndex:[num integerValue]] objectForKey:@"name"];
+            label.text = [[players objectAtIndex:[num integerValue]] objectForKey:@"short name"];
             
             
             j++;
@@ -390,7 +397,7 @@
             label.textColor = [UIColor whiteColor];
             label.font = [label.font fontWithSize:12];
             label.textAlignment = NSTextAlignmentCenter;
-            label.text = [[players objectAtIndex:[num integerValue]] objectForKey:@"name"];
+            label.text = [[players objectAtIndex:[num integerValue]] objectForKey:@"short name"];
             
             
             j++;

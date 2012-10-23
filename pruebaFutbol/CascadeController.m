@@ -30,6 +30,10 @@
         self.teamsViewController.teamsInfo = info;
         self.teamsViewController.flowManager = self;
         self.splitCascadeViewController = [[[CLSplitCascadeViewController alloc] initWithNavigationController:self.cascadeNavController] autorelease];
+        UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"azteca.jpg"]];
+        imgView.frame = self.splitCascadeViewController.view.bounds;
+        [self.splitCascadeViewController setBackgroundView:imgView];
+        [imgView release];
         [self.splitCascadeViewController setCategoriesViewController:self.teamsViewController];
         self.twoTeams = NO;
         numOfPlayers = [[NSMutableArray alloc] init];
@@ -105,7 +109,7 @@
 }
 
 - (void)asignCascadeView:(int)row {
-    info.teamSelected = [[info teamsNames] objectAtIndex:row];
+    //info.teamSelected = [[info teamsNames] objectAtIndex:row];
     PlayersTableViewController *playersTable = [[PlayersTableViewController alloc] init];
     playersTable.playersInfo = info;
     playersTable.instantiator = self;

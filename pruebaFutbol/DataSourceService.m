@@ -51,10 +51,31 @@
 - (void)initData {
     NSArray *files = [[NSBundle mainBundle] pathsForResourcesOfType:@".csv" inDirectory:@"."];
     teams = [[NSMutableArray alloc] initWithCapacity:files.count];
+    locals = [[NSMutableDictionary alloc] init];
+    [locals setValue:[[NSMutableArray alloc] init] forKey:@"players"];
+    [locals setValue:@"En México" forKey:@"name"];
+    [locals setValue:@"DefaultTeam.png" forKey:@"teamImage"];
+    [locals setValue:@"DefaultTeam.png" forKey:@"teamBadge"];
+    foreigns = [[NSMutableDictionary alloc] init];
+    [foreigns setValue:[[NSMutableArray alloc] init] forKey:@"players"];
+    [foreigns setValue:@"En el extranjero" forKey:@"name"];
+    [foreigns setValue:@"DefaultTeam.png" forKey:@"teamImage"];
+    [foreigns setValue:@"DefaultTeam.png" forKey:@"teamBadge"];
+    
     NSString *file;
     for (file in files) {
         [self addTeamFromFile:file];
     }
+    
+    
+}
+
+- (NSDictionary *)locals {
+    return locals;
+}
+
+- (NSDictionary *)foreigns {
+    return foreigns;
 }
 
 - (void)addTeamFromFile: (NSString *)file {
@@ -62,13 +83,20 @@
     NSString *nameOfTeam = [[[components objectAtIndex:components.count - 1] componentsSeparatedByString:@"."] objectAtIndex:0];
     NSString *imgName = [NSString stringWithFormat:@"%@Team.png", nameOfTeam];
     NSString *imgBadge = [NSString stringWithFormat:@"%@Badge.png", nameOfTeam];
-    NSString *text = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];    
+    NSString *text = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
     NSArray *lines = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     NSMutableArray *players = [[NSMutableArray alloc] initWithCapacity:lines.count];
     for (NSString *txt in lines) {
         NSArray *attr = [txt componentsSeparatedByString:@","];
         NSDictionary *player = [[NSDictionary alloc] initWithObjectsAndKeys:[attr objectAtIndex:0], @"name", [attr objectAtIndex:1], @"number", [attr objectAtIndex:2], @"position", [attr objectAtIndex:3], @"foreign", [attr objectAtIndex:4], @"short name", nil];
         [players addObject:player];
+        
+        if ([[player objectForKey:@"foreign"] integerValue] != 1) {
+            [[locals objectForKey:@"players"] addObject:player];
+        } else {
+            [[foreigns objectForKey:@"players"] addObject:player];
+        }
+        
         [player release];
     }
     

@@ -99,7 +99,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [playersInfo numberOfPlayersInSelectedTeam];
+    return [[self.dataSource playersForTeam:self.chosenTeam] count];
 }
 
 
@@ -115,7 +115,6 @@
     
     cell.textLabel.text = [[[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"name"];
         
-    cell.imageView.image = [UIImage imageNamed:@"UnknownProfile1.png"];
     return cell;
 }
 
@@ -123,8 +122,8 @@
     NSUInteger i = selectedCells.count;
     if (![selectedCells containsObject:[NSNumber numberWithInt:indexPath.row]] && selectedCells.count < 17) {
         [selectedCells addObject:[NSNumber numberWithInt:indexPath.row]];
-        NSString *name = [[[self.playersInfo playersOfSelectedTeam] allValues] objectAtIndex:indexPath.row];
-        NSString *number = [[[self.playersInfo playersOfSelectedTeam] allKeys] objectAtIndex:indexPath.row];
+        NSString *name = [[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row];
+        NSString *number = [[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row];
         [self.selectedPlayers setValue:name forKey:number];
     }
     if (selectedCells.count == i)
@@ -143,7 +142,7 @@
     
     if ([selectedCells containsObject:[NSNumber numberWithInt:indexPath.row]]) {
         [selectedCells removeObject:[NSNumber numberWithInt:indexPath.row]];
-        [self.selectedPlayers removeObjectForKey:[[[self.playersInfo playersOfSelectedTeam] allKeys] objectAtIndex:indexPath.row]];
+        [self.selectedPlayers removeObjectForKey:[[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row]];
     }
     [playersLeft setText:[NSString stringWithFormat:@"%d",11-selectedCells.count]];
     if (selectedCells.count >= 11) {
