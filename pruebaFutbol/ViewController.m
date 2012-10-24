@@ -199,7 +199,7 @@
     
     //Botones
     backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    backButton.frame = CGRectMake(-3, screenRect.size.width - 65, 100, 40);
+    backButton.frame = CGRectMake(-3, screenRect.size.width - 65, 88, 40);
     [backButton addTarget:self action:@selector(backButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [backButton setImage:[UIImage imageNamed:@"backbutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:backButton];
