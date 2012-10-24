@@ -153,7 +153,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPlayersName)];
+    UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showHideNames)];
     doubleTapGesture.numberOfTapsRequired = 2;
     [self.view addGestureRecognizer:doubleTapGesture];
     [doubleTapGesture release];
@@ -236,6 +236,7 @@
     
     [self initTextBoxes];
     [self showPlayersName];
+    namesVisibles = YES;
     
     //Imagen del campo
     NSString *Path = [[NSBundle mainBundle] pathForResource:@"field.jpg" ofType:nil];
@@ -484,6 +485,13 @@
         [img removeFromSuperview];
 }
 
-
+- (void)showHideNames {
+    namesVisibles = !namesVisibles;
+    if (namesVisibles) {
+        [self hidePlayersName];
+    } else {
+        [self showPlayersName];
+    }
+}
 
 @end

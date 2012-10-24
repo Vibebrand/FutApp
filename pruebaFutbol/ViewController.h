@@ -26,6 +26,7 @@
     MGDrawingSlate *mdsG;
     UIImageView *soccerField;
     BOOL canDrag;
+    BOOL namesVisibles;
     HScrollView *downScrollView;
     UIButton *backButton;
     UIButton *whiteColorButton;
