@@ -128,9 +128,14 @@
     }
     if ([self.dataSource playersForTeam:self.chosenTeam])
         cell.textLabel.text = [[[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"name"];
-    else
+    else {
         cell.textLabel.text = [[[self.dataSource playersForSpecialTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"name"];
+        if ([self.chosenTeam isEqualToString:@"En México"]) {
+            cell.imageView.image = [UIImage imageNamed:[[[self.dataSource playersForSpecialTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"imgName"]];
+        }
         
+    }
+    
     return cell;
 }
 

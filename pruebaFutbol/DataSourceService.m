@@ -120,7 +120,7 @@
     NSMutableArray *players = [[NSMutableArray alloc] initWithCapacity:lines.count];
         for (NSString *txt in lines) {
             NSArray *attr = [txt componentsSeparatedByString:@","];
-            NSDictionary *player = [[NSDictionary alloc] initWithObjectsAndKeys:[attr objectAtIndex:0], @"name", [attr objectAtIndex:1], @"number", [attr objectAtIndex:2], @"position", [attr objectAtIndex:3], @"foreign", [attr objectAtIndex:4], @"short name", nil];
+            NSDictionary *player = [[NSDictionary alloc] initWithObjectsAndKeys:[attr objectAtIndex:0], @"name", [attr objectAtIndex:1], @"number", [attr objectAtIndex:2], @"position", [attr objectAtIndex:3], @"foreign", [attr objectAtIndex:4], @"short name",imgName, @"imgName", nil];
             
             [players addObject:player];
             
