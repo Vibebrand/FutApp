@@ -77,7 +77,7 @@
 		927EF94016366B750042064A /* Puebla.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92E16366B750042064A /* Puebla.csv */; };
 		927EF94116366B750042064A /* Pumas.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92F16366B750042064A /* Pumas.csv */; };
 		927EF94216366B750042064A /* Queretaro.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF93016366B750042064A /* Queretaro.csv */; };
-		927EF94316366B750042064A /* San Luis.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF93116366B750042064A /* San Luis.csv */; };
+		927EF94316366B750042064A /* SanLuis.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF93116366B750042064A /* SanLuis.csv */; };
 		927EF94416366B750042064A /* Santos.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF93216366B750042064A /* Santos.csv */; };
 		927EF94516366B750042064A /* Tigres.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF93316366B750042064A /* Tigres.csv */; };
 		927EF94616366B750042064A /* Tijuana.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF93416366B750042064A /* Tijuana.csv */; };
@@ -300,7 +300,7 @@
 		927EF92E16366B750042064A /* Puebla.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Puebla.csv; path = ../Puebla.csv; sourceTree = "<group>"; };
 		927EF92F16366B750042064A /* Pumas.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Pumas.csv; path = ../Pumas.csv; sourceTree = "<group>"; };
 		927EF93016366B750042064A /* Queretaro.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Queretaro.csv; path = ../Queretaro.csv; sourceTree = "<group>"; };
-		927EF93116366B750042064A /* San Luis.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = "San Luis.csv"; path = "../San Luis.csv"; sourceTree = "<group>"; };
+		927EF93116366B750042064A /* SanLuis.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = SanLuis.csv; path = ../SanLuis.csv; sourceTree = "<group>"; };
 		927EF93216366B750042064A /* Santos.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Santos.csv; path = ../Santos.csv; sourceTree = "<group>"; };
 		927EF93316366B750042064A /* Tigres.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Tigres.csv; path = ../Tigres.csv; sourceTree = "<group>"; };
 		927EF93416366B750042064A /* Tijuana.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Tijuana.csv; path = ../Tijuana.csv; sourceTree = "<group>"; };
@@ -574,7 +574,7 @@
 				927EF92E16366B750042064A /* Puebla.csv */,
 				927EF92F16366B750042064A /* Pumas.csv */,
 				927EF93016366B750042064A /* Queretaro.csv */,
-				927EF93116366B750042064A /* San Luis.csv */,
+				927EF93116366B750042064A /* SanLuis.csv */,
 				927EF93216366B750042064A /* Santos.csv */,
 				927EF93316366B750042064A /* Tigres.csv */,
 				927EF93416366B750042064A /* Tijuana.csv */,
@@ -1037,7 +1037,7 @@
 				927EF94016366B750042064A /* Puebla.csv in Resources */,
 				927EF94116366B750042064A /* Pumas.csv in Resources */,
 				927EF94216366B750042064A /* Queretaro.csv in Resources */,
-				927EF94316366B750042064A /* San Luis.csv in Resources */,
+				927EF94316366B750042064A /* SanLuis.csv in Resources */,
 				927EF94416366B750042064A /* Santos.csv in Resources */,
 				927EF94516366B750042064A /* Tigres.csv in Resources */,
 				927EF94616366B750042064A /* Tijuana.csv in Resources */,
