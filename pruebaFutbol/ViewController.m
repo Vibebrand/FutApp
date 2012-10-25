@@ -53,10 +53,11 @@
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
     NSBundle *bundle = [NSBundle mainBundle];
+    
     NSString *path = [bundle pathForResource:[[self.dataSource dataOfTeam:self.teamOneChosenData.chosenTeam] objectForKey:@"teamBadge"] ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path]; 
     if (!image) {
-        image = [UIImage imageNamed:@"DefaultTeam.png"];
+        image = [UIImage imageNamed:@"MéxicoBadge.png"];
     }
     
     //Numbers of players

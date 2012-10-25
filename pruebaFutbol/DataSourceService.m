@@ -63,8 +63,8 @@
     locals = [[NSMutableDictionary alloc] init];
     [locals setValue:[[[NSMutableArray alloc] init] autorelease] forKey:@"players"];
     [locals setValue:@"En México" forKey:@"name"];
-    [locals setValue:@"DefaultTeam.png" forKey:@"teamImage"];
-    [locals setValue:@"DefaultTeam.png" forKey:@"teamBadge"];
+    [locals setValue:@"MéxicoTeam.png" forKey:@"teamImage"];
+    [locals setValue:@"MéxicoBadge.png" forKey:@"teamBadge"];
     foreigns = [[NSMutableDictionary alloc] init];
     [foreigns setValue:[[[NSMutableArray alloc] init] autorelease] forKey:@"players"];
     [foreigns setValue:@"En el extranjero" forKey:@"name"];
