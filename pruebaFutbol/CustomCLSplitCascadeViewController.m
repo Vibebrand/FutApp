@@ -33,7 +33,7 @@
     okTutorial = [UIButton buttonWithType:UIButtonTypeCustom];
     [okTutorial setImage:[UIImage imageNamed:@"ok1.png"] forState:UIControlStateNormal];
     okTutorial.frame = CGRectMake(tutorial.frame.origin.x + tutorial.frame.size.width/2 - 74, tutorial.frame.origin.y + 70, 118, 38);
-    [okTutorial addTarget:self action:@selector(okButton) forControlEvents:UIControlEventTouchDown];
+    [okTutorial addTarget:self action:@selector(hideTutorial) forControlEvents:UIControlEventTouchDown];
     [tutorial setUserInteractionEnabled:YES];
     [okTutorial setUserInteractionEnabled:YES];
     [self.view setUserInteractionEnabled:YES];

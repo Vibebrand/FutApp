@@ -69,11 +69,29 @@
     [foreigns setValue:[[NSMutableArray alloc] init] forKey:@"players"];
     [foreigns setValue:@"En el extranjero" forKey:@"name"];
     [foreigns setValue:@"DefaultTeam.png" forKey:@"teamImage"];
-    [foreigns setValue:@"DefaultTeam.png" forKey:@"teamBadge"];
+    [foreigns setValue:@"Default.png" forKey:@"teamBadge"];
     
     NSString *file;
     for (file in files) {
-        [self addTeamFromFile:file];
+        NSArray *components = [file componentsSeparatedByString:@"/"];
+        NSString *nameOfTeam = [[[components objectAtIndex:components.count - 1] componentsSeparatedByString:@"."] objectAtIndex:0];
+        if (![nameOfTeam isEqualToString:@"Internacional"]) {
+            [self addTeamFromFile:file];
+        } else {
+            NSString *text = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
+            NSArray *lines = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+            NSMutableArray *players = [[NSMutableArray alloc] initWithCapacity:lines.count];
+            for (NSString *txt in lines) {
+                if ([txt length]) {
+                    NSArray *attr = [txt componentsSeparatedByString:@","];
+                    NSDictionary *player = [[NSDictionary alloc] initWithObjectsAndKeys:[attr objectAtIndex:0],@"name", [attr objectAtIndex:1], @"short name", [attr objectAtIndex:2], @"number", nil];
+                    [players addObject:player];
+                    [player release];
+                }
+            }
+            [foreigns setValue:players forKey:@"players"];
+        }
+    
     }
     
     specialTeams = [[NSArray alloc] initWithObjects:locals, foreigns, nil];
@@ -99,30 +117,28 @@
     NSString *text = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
     NSArray *lines = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     NSMutableArray *players = [[NSMutableArray alloc] initWithCapacity:lines.count];
-    for (NSString *txt in lines) {
-        NSArray *attr = [txt componentsSeparatedByString:@","];
-        NSDictionary *player = [[NSDictionary alloc] initWithObjectsAndKeys:[attr objectAtIndex:0], @"name", [attr objectAtIndex:1], @"number", [attr objectAtIndex:2], @"position", [attr objectAtIndex:3], @"foreign", [attr objectAtIndex:4], @"short name", nil];
-        
-        [players addObject:player];
-        
-        if ([[player objectForKey:@"foreign"] integerValue] != 1) {
-            [[locals objectForKey:@"players"] addObject:player];
-        } else {
-            [[foreigns objectForKey:@"players"] addObject:player];
+        for (NSString *txt in lines) {
+            NSArray *attr = [txt componentsSeparatedByString:@","];
+            NSDictionary *player = [[NSDictionary alloc] initWithObjectsAndKeys:[attr objectAtIndex:0], @"name", [attr objectAtIndex:1], @"number", [attr objectAtIndex:2], @"position", [attr objectAtIndex:3], @"foreign", [attr objectAtIndex:4], @"short name", nil];
+            
+            [players addObject:player];
+            
+            if ([[player objectForKey:@"foreign"] integerValue] != 1) {
+                [[locals objectForKey:@"players"] addObject:player];
+            } 
+            
+            [player release];
         }
         
-        [player release];
-    }
-    
-    NSDictionary *team = [[NSDictionary alloc] initWithObjectsAndKeys:nameOfTeam, @"name", imgName, @"teamImage", imgBadge, @"teamBadge", players, @"players", nil];
-    [players release];
-    
-    if ([[team objectForKey:@"players"] count]) {
-         [teams addObject:team];
-    }
-    
-   
-    [team release];
+        NSDictionary *team = [[NSDictionary alloc] initWithObjectsAndKeys:nameOfTeam, @"name", imgName, @"teamImage", imgBadge, @"teamBadge", players, @"players", nil];
+        [players release];
+        
+        if ([[team objectForKey:@"players"] count]) {
+            [teams addObject:team];
+        }
+        
+        
+        [team release];
 }
 
 @end

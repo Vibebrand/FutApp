@@ -62,6 +62,7 @@
 		9274F9BB1638CC3100EB5AF1 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9B91638CC3100EB5AF1 /* background@2x.jpg */; };
 		9274F9BF1638D98900EB5AF1 /* field.png in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9BD1638D98900EB5AF1 /* field.png */; };
 		9274F9C01638D98900EB5AF1 /* field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9BE1638D98900EB5AF1 /* field@2x.png */; };
+		9274F9C91638FE1100EB5AF1 /* Internacional.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9C81638FE0F00EB5AF1 /* Internacional.csv */; };
 		927D01011627609A00BF2D2E /* CRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927D01001627609A00BF2D2E /* CRTableViewController.m */; };
 		927D012F162789EA00BF2D2E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927D012E162789EA00BF2D2E /* ProfileViewController.m */; };
 		927D0132162799E300BF2D2E /* UnknownProfile1.png in Resources */ = {isa = PBXBuildFile; fileRef = 927D0131162799E300BF2D2E /* UnknownProfile1.png */; };
@@ -280,6 +281,7 @@
 		9274F9BC1638CE2500EB5AF1 /* IHideTutorial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IHideTutorial.h; sourceTree = "<group>"; };
 		9274F9BD1638D98900EB5AF1 /* field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = field.png; sourceTree = "<group>"; };
 		9274F9BE1638D98900EB5AF1 /* field@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "field@2x.png"; sourceTree = "<group>"; };
+		9274F9C81638FE0F00EB5AF1 /* Internacional.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Internacional.csv; sourceTree = "<group>"; };
 		927D00FF1627609A00BF2D2E /* CRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRTableViewController.h; sourceTree = "<group>"; };
 		927D01001627609A00BF2D2E /* CRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTableViewController.m; sourceTree = "<group>"; };
 		927D012D162789EA00BF2D2E /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
@@ -561,6 +563,7 @@
 		927EF94916366B930042064A /* CSV */ = {
 			isa = PBXGroup;
 			children = (
+				9274F9C81638FE0F00EB5AF1 /* Internacional.csv */,
 				927EF92416366B750042064A /* America.csv */,
 				927EF92516366B750042064A /* Atlante.csv */,
 				927EF92616366B750042064A /* Atlas.csv */,
@@ -1172,6 +1175,7 @@
 				9274F9BB1638CC3100EB5AF1 /* background@2x.jpg in Resources */,
 				9274F9BF1638D98900EB5AF1 /* field.png in Resources */,
 				9274F9C01638D98900EB5AF1 /* field@2x.png in Resources */,
+				9274F9C91638FE1100EB5AF1 /* Internacional.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
