@@ -55,7 +55,7 @@
     [super dealloc];
 }
 
-- (void)okButton {
+- (void)hideTutorial {
     [okTutorial setHidden:YES];
     [tutorial setHidden:YES];
 }

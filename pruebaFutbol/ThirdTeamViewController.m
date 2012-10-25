@@ -15,7 +15,7 @@
 
 @implementation ThirdTeamViewController
 
-@synthesize instantiator, dataSource, flowManager;
+@synthesize instantiator, dataSource, flowManager, hideTutorial;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +31,7 @@
     self.instantiator = nil;
     self.dataSource = nil;
     self.flowManager = nil;
+    self.hideTutorial = nil;
     [super dealloc];
 }
 
@@ -99,6 +100,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.hideTutorial hideTutorial];
     [flowManager asignCascadeViewForNational:indexPath.row];
 }
 

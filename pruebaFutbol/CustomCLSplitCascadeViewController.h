@@ -7,8 +7,9 @@
 //
 
 #import "CLSplitCascadeViewController.h"
+#import "IHideTutorial.h"
 
-@interface CustomCLSplitCascadeViewController : CLSplitCascadeViewController {
+@interface CustomCLSplitCascadeViewController : CLSplitCascadeViewController <IHideTutorial> {
     UIImageView *tutorial;
     UIButton *okTutorial;
 }

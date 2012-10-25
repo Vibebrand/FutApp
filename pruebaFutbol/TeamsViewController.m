@@ -16,7 +16,7 @@
 
 @implementation TeamsViewController
 
-@synthesize  flowManager, dataSource;
+@synthesize  flowManager, dataSource, hideTutorial;
 
 
 - (void)viewDidLoad
@@ -74,6 +74,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [hideTutorial hideTutorial];
     [flowManager asignCascadeView:indexPath.row];
 }
 

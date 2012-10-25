@@ -33,6 +33,8 @@
         self.nationalTeamViewController = [[[ThirdTeamViewController alloc] initWithNibName:@"TeamsViewController" bundle:nil] autorelease];
         self.nationalTeamViewController.flowManager = self;
         self.splitCascadeViewController = [[[CustomCLSplitCascadeViewController alloc] initWithNavigationController:self.cascadeNavController] autorelease];
+        self.teamsViewController.hideTutorial = self.splitCascadeViewController;
+        self.nationalTeamViewController.hideTutorial = self.splitCascadeViewController;
         UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"grass.jpg"]];
         imgView.frame = self.splitCascadeViewController.view.bounds;
         [self.splitCascadeViewController setBackgroundView:imgView];
@@ -54,6 +56,7 @@
         self.nationalTeamViewController = [[[ThirdTeamViewController alloc] initWithNibName:@"TeamsViewController" bundle:nil] autorelease];
         self.nationalTeamViewController.flowManager = self;
         self.splitCascadeViewController = [[[CustomCLSplitCascadeViewController alloc] initWithNavigationController:self.cascadeNavController] autorelease];
+        self.nationalTeamViewController.hideTutorial = self.splitCascadeViewController;
         UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"grass.jpg"]];
         imgView.frame = self.splitCascadeViewController.view.bounds;
         [self.splitCascadeViewController setBackgroundView:imgView];
