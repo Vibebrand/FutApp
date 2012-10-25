@@ -239,7 +239,7 @@
     namesVisibles = YES;
     
     //Imagen del campo
-    NSString *Path = [[NSBundle mainBundle] pathForResource:@"field.jpg" ofType:nil];
+    NSString *Path = [[NSBundle mainBundle] pathForResource:@"field.png" ofType:nil];
     image = [UIImage imageWithContentsOfFile:Path];
     soccerField = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.height, screenRect.size.width-70)];
     soccerField.image = image;
