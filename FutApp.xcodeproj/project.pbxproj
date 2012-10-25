@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9206D8181637025F00BD73D6 /* Cruz Azul.csv in Resources */ = {isa = PBXBuildFile; fileRef = 927EF92716366B750042064A /* Cruz Azul.csv */; };
 		9206D870163729C500BD73D6 /* ThirdTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9206D86F163729C400BD73D6 /* ThirdTeamViewController.m */; };
+		9208DFDD1639C7EF00E05A61 /* contador@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFDB1639C7EC00E05A61 /* contador@2x.png */; };
+		9208DFDE1639C7EF00E05A61 /* contador.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFDC1639C7EE00E05A61 /* contador.png */; };
 		921DCC25161CBFFC00386E5E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC22161CBFB400386E5E /* libTestFlight.a */; };
 		921DCC26161CBFFC00386E5E /* TestFlight.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC23161CBFB400386E5E /* TestFlight.h */; };
 		921DCC28161CC03200386E5E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC27161CC03200386E5E /* libz.dylib */; };
@@ -275,6 +277,8 @@
 /* Begin PBXFileReference section */
 		9206D86E163729C400BD73D6 /* ThirdTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTeamViewController.h; sourceTree = "<group>"; };
 		9206D86F163729C400BD73D6 /* ThirdTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTeamViewController.m; sourceTree = "<group>"; };
+		9208DFDB1639C7EC00E05A61 /* contador@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contador@2x.png"; sourceTree = "<group>"; };
+		9208DFDC1639C7EE00E05A61 /* contador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contador.png; sourceTree = "<group>"; };
 		921DCC22161CBFB400386E5E /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		921DCC23161CBFB400386E5E /* TestFlight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		921DCC27161CC03200386E5E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -921,6 +925,8 @@
 		92A362AA1620923C0095A4F8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9208DFDB1639C7EC00E05A61 /* contador@2x.png */,
+				9208DFDC1639C7EE00E05A61 /* contador.png */,
 				9274F9A41638ABE800EB5AF1 /* grass.jpg */,
 				9274F9A51638ABE800EB5AF1 /* grass@2x.jpg */,
 				9274F9A61638ABE800EB5AF1 /* ok1.png */,
@@ -1408,6 +1414,8 @@
 				9274FA47163922B000EB5AF1 /* TijuanaBadge@2x.png in Resources */,
 				9274FA48163922B000EB5AF1 /* TolucaBadge.png in Resources */,
 				9274FA49163922B000EB5AF1 /* TolucaBadge@2x.png in Resources */,
+				9208DFDD1639C7EF00E05A61 /* contador@2x.png in Resources */,
+				9208DFDE1639C7EF00E05A61 /* contador.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

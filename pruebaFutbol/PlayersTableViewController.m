@@ -42,20 +42,27 @@
     [self addLeftBorderShadowWithWidth:20.0 andOffset:0.0f];
     
     UIImageView* header = [[UIImageView alloc] initWithFrame: CGRectMake(0.0, 0.0, self.view.bounds.size.width, 45.0)];
-    [header setImage: [UIImage imageNamed:@"navbar.jpg"]];
     
     doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [doneButton setBackgroundImage:[UIImage imageNamed:@"okbutton.png"] forState:UIControlStateNormal];
     doneButton.frame = CGRectMake(400, 4, 60, 35);
     [doneButton addTarget:self action:@selector(doneButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [header addSubview:doneButton];
+    [header setBackgroundColor: [UIColor colorWithPatternImage:[UIImage imageNamed:@"navbar.jpg"]]];
     
-    playersLeft = [[UILabel alloc] initWithFrame:CGRectMake(220, 8, 70, 30)];
-    [playersLeft setText:@"11"];
+    UIImageView *counterBadge = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"contador.png"]];
+    counterBadge.frame = CGRectMake(183, 0, 98, 62);
+    [header addSubview:counterBadge];
+    [counterBadge release];
+    
+    playersLeft = [[UILabel alloc] initWithFrame:CGRectMake(183, 6, 98, 30)];
+    [playersLeft setText:@"0"];
+    playersLeft.font = [UIFont boldSystemFontOfSize:20];
     playersLeft.textColor = [UIColor whiteColor];
+    
     [playersLeft setBackgroundColor:[UIColor colorWithWhite:0 alpha:0]];
     [header addSubview:playersLeft];
-    
+    playersLeft.textAlignment = NSTextAlignmentCenter;
     [self.segmentedView setHeaderView:header];
     [header release];
     [doneButton setHidden:YES];
@@ -143,12 +150,10 @@
     }
     if (selectedCells.count == i)
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [playersLeft setText:[NSString stringWithFormat:@"%d",11-selectedCells.count]];
+    [playersLeft setText:[NSString stringWithFormat:@"%d",selectedCells.count]];
     if (selectedCells.count >= 11) {
         [doneButton setHidden:NO];
-        [playersLeft setHidden:YES];
     } else {
-        [playersLeft setHidden:NO];
         [doneButton setHidden:YES];
     }
 }
@@ -162,12 +167,10 @@
         else
             [self.selectedPlayers removeObjectForKey:[[self.dataSource playersForSpecialTeam:self.chosenTeam] objectAtIndex:indexPath.row]];
     }
-    [playersLeft setText:[NSString stringWithFormat:@"%d",11-selectedCells.count]];
+    [playersLeft setText:[NSString stringWithFormat:@"%d",selectedCells.count]];
     if (selectedCells.count >= 11) {
         [doneButton setHidden:NO];
-        [playersLeft setHidden:YES];
     } else {
-        [playersLeft setHidden:NO];
         [doneButton setHidden:YES];
     }
 }
