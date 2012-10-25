@@ -314,7 +314,7 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {
         SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [tweetSheet setInitialText:@"Mi jugada"];
+        [tweetSheet setInitialText:@"Mi jugada en @FutApp"];
         [tweetSheet addImage:img];
         [self presentViewController:tweetSheet animated:YES completion:nil];
     }
@@ -336,7 +336,7 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
     {
         SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        [tweetSheet setInitialText:@"Mi jugada"];
+        [tweetSheet setInitialText:@"Mi jugada en FutApp"];
         [tweetSheet addImage:img];
         [self presentViewController:tweetSheet animated:YES completion:nil];
     }
