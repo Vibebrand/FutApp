@@ -141,7 +141,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger i = selectedCells.count;
-    if (![selectedCells containsObject:[NSNumber numberWithInt:indexPath.row]] && selectedCells.count < 17) {
+    if (![selectedCells containsObject:[NSNumber numberWithInt:indexPath.row]] && selectedCells.count < 18) {
         [selectedCells addObject:[NSNumber numberWithInt:indexPath.row]];
         NSString *name = [[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row];
         NSString *number = [[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row];
