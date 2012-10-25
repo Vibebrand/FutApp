@@ -16,7 +16,7 @@
 {
     self = [super init];
     if (self) {
-        self.teams = [[NSMutableArray alloc] initWithCapacity:2];
+        self.teams = [[[NSMutableArray alloc] initWithCapacity:2] autorelease];
         [self.teams addObject:nil];
         [self.teams addObject:nil];
     }

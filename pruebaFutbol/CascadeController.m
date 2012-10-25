@@ -95,7 +95,7 @@
 }
 
 - (PlayersTableViewController *)playersFactory:(int)row {
-    PlayersTableViewController *playersTable = [[PlayersTableViewController alloc] init];
+    PlayersTableViewController *playersTable = [[[PlayersTableViewController alloc] init] autorelease];
     playersTable.isFinal = 1;
     playersTable.instantiator = self;
     playersTable.flowManager = self;
@@ -147,6 +147,7 @@
     self.teamOne = playersTable;
     [numOfPlayers insertObject:playersTable.selectedCells atIndex:0];
     [self.cascadeNavController setRootViewController:playersTable animated:YES];
+    [playersTable release];
 }
 
 - (void)asignCascadeViewForNational: (int)row {
@@ -171,7 +172,7 @@
     self.teamOne = playersTable;
     [numOfPlayers insertObject:playersTable.selectedCells atIndex:0];
     [self.cascadeNavController setRootViewController:playersTable animated:YES];
-    
+    [playersTable release];
 }
 
 - (void)backToRootView {

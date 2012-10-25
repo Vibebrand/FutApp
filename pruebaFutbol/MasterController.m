@@ -45,6 +45,7 @@
     field.teamOneChosenData = self.teamOneChosen;
     field.dataSource = self.dataSource;
     [self.navigator pushViewController:field animated:YES];
+    [field release];
 }
 
 - (void)toFieldWithTwoTeams:(NSDictionary *)local And:(NSDictionary *)visitor {
@@ -56,6 +57,7 @@
     field.teamTwoChosenData = self.teamTwoChosen;
     field.dataSource = self.dataSource;
     [self.navigator pushViewController:field animated:YES];
+    [field release];
 }
 
 - (void)backToRootView {
@@ -66,9 +68,9 @@
 {
     
     if (index == 2) {
-        self.cascadeController = [[CascadeController alloc] initForNationalTeam];
+        self.cascadeController = [[[CascadeController alloc] initForNationalTeam] autorelease];
     } else {
-        self.cascadeController = [[CascadeController alloc] init];
+        self.cascadeController = [[[CascadeController alloc] init] autorelease];
     }
     
     self.cascadeController.dataSource = self.dataSource;

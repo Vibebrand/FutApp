@@ -41,21 +41,18 @@
     [oneTeam addTarget:self action:@selector(oneTeamButtonClicked) forControlEvents:UIControlEventTouchDown];
     [oneTeam setImage:[UIImage imageNamed:@"oneteamButton.png"] forState:UIControlStateNormal];
     [self.view addSubview:oneTeam];
-    [oneTeam release];
     
     UIButton *twoTeams = [UIButton buttonWithType:UIButtonTypeCustom];
     twoTeams.frame = CGRectMake(578, 450, 104, 104);
     [twoTeams addTarget:self action:@selector(twoTeamsButtonClicked) forControlEvents:UIControlEventTouchDown];
     [twoTeams setImage:[UIImage imageNamed:@"teambutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:twoTeams];
-    [twoTeams release];
     
     UIButton *nationalTeam = [UIButton buttonWithType:UIButtonTypeCustom];
     nationalTeam.frame = CGRectMake(454, 445, 114, 114);
     [nationalTeam addTarget:self action:@selector(nationalTeamButtonClicked) forControlEvents:UIControlEventTouchDown];
     [nationalTeam setImage:[UIImage imageNamed:@"seleccion.png"] forState:UIControlStateNormal];
     [self.view addSubview:nationalTeam];
-    [nationalTeam release];
 }
 
 -(void)viewWillAppear:(BOOL)animated

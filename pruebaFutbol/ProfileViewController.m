@@ -29,6 +29,7 @@
     UIImageView* header = [[UIImageView alloc] initWithFrame: CGRectMake(0.0, 0.0, self.view.bounds.size.width, 45.0)];
     [header setImage: [UIImage imageNamed:@"navbar.jpg"]];
     [self.segmentedView setHeaderView: header];
+    [header release];
     
     [self setShowRoundedCorners:YES];
     UIImageView *photo = [[UIImageView alloc] initWithFrame:CGRectMake(210, 30, 88.0, 88.0)];

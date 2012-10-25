@@ -27,10 +27,9 @@
 {
     self = [super init];
     if (self) {
-        selectedMarks = [NSMutableArray new];
         self.instantiator = nil;
         self.isFinal = NO;
-        self.selectedCells = [[NSMutableArray new] autorelease];
+        self.selectedCells = [[[NSMutableArray alloc]init] autorelease];
         self.selectedPlayers = nil;
     }
     return self;
@@ -58,13 +57,14 @@
     [header addSubview:playersLeft];
     
     [self.segmentedView setHeaderView:header];
+    [header release];
     [doneButton setHidden:YES];
     
     [self setShowRoundedCorners: YES];
     self.tableView.allowsMultipleSelection = YES;
     self.tableView.allowsMultipleSelectionDuringEditing = YES;
     
-    self.selectedPlayers = [NSMutableDictionary new];
+    self.selectedPlayers = [[[NSMutableDictionary alloc]init] autorelease];
 }
 
 - (void)didReceiveMemoryWarning
@@ -116,7 +116,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CRTableViewCellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CRTableViewCellIdentifier];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CRTableViewCellIdentifier] autorelease];
         cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     }
     if ([self.dataSource playersForTeam:self.chosenTeam])

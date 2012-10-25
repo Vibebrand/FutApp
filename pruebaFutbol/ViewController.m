@@ -327,6 +327,8 @@
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil];
         [alertView show];
+        [alertView release];
+        
     }
 
 }
@@ -349,6 +351,7 @@
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil];
         [alertView show];
+        [alertView release];
     }
 
 }

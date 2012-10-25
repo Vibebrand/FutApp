@@ -17,7 +17,6 @@
 @class ChosenPlayersService;
 
 @interface PlayersTableViewController : CLTableViewController<CLCascadeViewDelegate, ISelectedPlayersInfo> {
-    NSMutableArray *selectedMarks;
     UIButton *doneButton;
     UILabel *playersLeft;
 }

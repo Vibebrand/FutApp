@@ -61,12 +61,12 @@
     NSArray *files = [[NSBundle mainBundle] pathsForResourcesOfType:@".csv" inDirectory:@"."];
     teams = [[NSMutableArray alloc] initWithCapacity:files.count];
     locals = [[NSMutableDictionary alloc] init];
-    [locals setValue:[[NSMutableArray alloc] init] forKey:@"players"];
+    [locals setValue:[[[NSMutableArray alloc] init] autorelease] forKey:@"players"];
     [locals setValue:@"En México" forKey:@"name"];
     [locals setValue:@"DefaultTeam.png" forKey:@"teamImage"];
     [locals setValue:@"DefaultTeam.png" forKey:@"teamBadge"];
     foreigns = [[NSMutableDictionary alloc] init];
-    [foreigns setValue:[[NSMutableArray alloc] init] forKey:@"players"];
+    [foreigns setValue:[[[NSMutableArray alloc] init] autorelease] forKey:@"players"];
     [foreigns setValue:@"En el extranjero" forKey:@"name"];
     [foreigns setValue:@"DefaultTeam.png" forKey:@"teamImage"];
     [foreigns setValue:@"Default.png" forKey:@"teamBadge"];
@@ -90,6 +90,7 @@
                 }
             }
             [foreigns setValue:players forKey:@"players"];
+            [players release];
         }
     
     }

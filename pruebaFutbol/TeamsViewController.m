@@ -29,7 +29,6 @@
     backButton.frame = CGRectMake(10, 8, 60, 35);
     [backButton setBackgroundImage:[UIImage imageNamed:@"backupbutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:backButton];
-    [backButton release];
 }
 - (void)didReceiveMemoryWarning
 {
