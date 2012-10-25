@@ -225,7 +225,7 @@
     twitterButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     twitterButton.frame = CGRectMake(222, screenRect.size.width - 65, 40, 40);
     [twitterButton addTarget:self action:@selector(twitterButtonClicked:) forControlEvents:UIControlEventTouchDown];
-    [twitterButton setImage:[UIImage imageNamed:@"twitterButton.png"] forState:UIControlStateNormal];
+    [twitterButton setImage:[UIImage imageNamed:@"tuit.png"] forState:UIControlStateNormal];
     [self.view addSubview:twitterButton];
     
     facebookButton = [UIButton buttonWithType:UIButtonTypeCustom];
