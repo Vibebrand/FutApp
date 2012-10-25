@@ -77,10 +77,12 @@
     if (isFinal) {
         if (self.teamOneChosen.indexOfPlayers) {
             self.teamTwoChosen.indexOfPlayers = self.selectedCells;
+            [self.flowManager toField];
         } else {
             self.teamOneChosen.indexOfPlayers = self.selectedCells;
+            [self.flowManager toField];
         }
-        [self.flowManager toField];
+        
     } else {
         SecondTeamViewController *s = [self.instantiator teamsFactory];
         self.teamOneChosen.indexOfPlayers = self.selectedCells;
