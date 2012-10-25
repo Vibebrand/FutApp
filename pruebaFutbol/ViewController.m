@@ -153,7 +153,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPlayersName)];
+    UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showHideNames)];
     doubleTapGesture.numberOfTapsRequired = 2;
     [self.view addGestureRecognizer:doubleTapGesture];
     [doubleTapGesture release];
@@ -199,7 +199,7 @@
     
     //Botones
     backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    backButton.frame = CGRectMake(-3, screenRect.size.width - 65, 100, 40);
+    backButton.frame = CGRectMake(-3, screenRect.size.width - 65, 88, 40);
     [backButton addTarget:self action:@selector(backButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [backButton setImage:[UIImage imageNamed:@"backbutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:backButton];
@@ -225,7 +225,7 @@
     twitterButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     twitterButton.frame = CGRectMake(222, screenRect.size.width - 65, 40, 40);
     [twitterButton addTarget:self action:@selector(twitterButtonClicked:) forControlEvents:UIControlEventTouchDown];
-    [twitterButton setImage:[UIImage imageNamed:@"twitterButton.png"] forState:UIControlStateNormal];
+    [twitterButton setImage:[UIImage imageNamed:@"tuit.png"] forState:UIControlStateNormal];
     [self.view addSubview:twitterButton];
     
     facebookButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -236,9 +236,10 @@
     
     [self initTextBoxes];
     [self showPlayersName];
+    namesVisibles = YES;
     
     //Imagen del campo
-    NSString *Path = [[NSBundle mainBundle] pathForResource:@"field.jpg" ofType:nil];
+    NSString *Path = [[NSBundle mainBundle] pathForResource:@"field.png" ofType:nil];
     image = [UIImage imageWithContentsOfFile:Path];
     soccerField = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.height, screenRect.size.width-70)];
     soccerField.image = image;
@@ -484,6 +485,13 @@
         [img removeFromSuperview];
 }
 
-
+- (void)showHideNames {
+    namesVisibles = !namesVisibles;
+    if (namesVisibles) {
+        [self hidePlayersName];
+    } else {
+        [self showPlayersName];
+    }
+}
 
 @end

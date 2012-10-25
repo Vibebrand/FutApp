@@ -40,13 +40,13 @@
     self.upScrollView.scrollEnabled = NO;
     [self.view insertSubview:self.upScrollView atIndex:3];
     
-    backButton.frame = CGRectMake(4, 5, backButton.frame.size.width, backButton.frame.size.height);
+    backButton.frame = CGRectMake(backButton.frame.origin.x, 5, backButton.frame.size.width, backButton.frame.size.height);
     [backButton setImage:[UIImage imageNamed:@"backbutton.png"] forState:UIControlStateNormal];
-    whiteColorButton.frame = CGRectMake(90, 5, whiteColorButton.frame.size.width, whiteColorButton.frame.size.height);
-    undoButton.frame = CGRectMake(134, 5, undoButton.frame.size.width, undoButton.frame.size.height);
-    drawDragButton.frame = CGRectMake(178,5, drawDragButton.frame.size.width, drawDragButton.frame.size.height);
-    twitterButton.frame = CGRectMake(222, 5, twitterButton.frame.size.width, twitterButton.frame.size.height);
-    facebookButton.frame = CGRectMake(266, 5, facebookButton.frame.size.width, facebookButton.frame.size.height);
+    whiteColorButton.frame = CGRectMake(whiteColorButton.frame.origin.x, 5, whiteColorButton.frame.size.width, whiteColorButton.frame.size.height);
+    undoButton.frame = CGRectMake(undoButton.frame.origin.x, 5, undoButton.frame.size.width, undoButton.frame.size.height);
+    drawDragButton.frame = CGRectMake(drawDragButton.frame.origin.x,5, drawDragButton.frame.size.width, drawDragButton.frame.size.height);
+    twitterButton.frame = CGRectMake(twitterButton.frame.origin.x, 5, twitterButton.frame.size.width, twitterButton.frame.size.height);
+    facebookButton.frame = CGRectMake(facebookButton.frame.origin.x, 5, facebookButton.frame.size.width, facebookButton.frame.size.height);
     
     soccerField.frame = CGRectMake(0, 50, [[UIScreen mainScreen]bounds].size.height, [[UIScreen mainScreen]bounds].size.width - 120);
     

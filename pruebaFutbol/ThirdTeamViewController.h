@@ -10,11 +10,13 @@
 #import "IFlowManager.h"
 #import "IInstantiatorDelegate.h"
 #import "IDataSource.h"
+#import "IHideTutorial.h"
 
 @interface ThirdTeamViewController : CLCategoriesViewController
 
 @property(nonatomic, retain) id<IFlowManager> flowManager;
 @property(nonatomic, retain) id<IInstantiatorDelegate> instantiator;
 @property (nonatomic, retain) id<IDataSource> dataSource;
+@property (nonatomic, retain) id<IHideTutorial> hideTutorial;
 
 @end

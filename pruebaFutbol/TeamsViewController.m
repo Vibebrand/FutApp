@@ -16,7 +16,7 @@
 
 @implementation TeamsViewController
 
-@synthesize  flowManager, dataSource;
+@synthesize  flowManager, dataSource, hideTutorial;
 
 
 - (void)viewDidLoad
@@ -56,7 +56,6 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         
         [cell.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:17.0]];
-        [cell.textLabel setTextColor: [UIColor colorWithRed:0.894117 green:0.839215 blue:0.788235 alpha:1.0]];
         [cell.textLabel setShadowOffset:CGSizeMake(0.0, 1.0)];
         
     }
@@ -75,6 +74,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [hideTutorial hideTutorial];
     [flowManager asignCascadeView:indexPath.row];
 }
 

@@ -19,6 +19,7 @@
 @class CLSplitCascadeViewController;
 @class TeamInfoServiceArray;
 @class ChosenPlayersService;
+@class CustomCLSplitCascadeViewController;
 
 @interface CascadeController : NSObject<IFlowManager, IInstantiatorDelegate> {
     TeamInfoServiceArray *info;
@@ -28,7 +29,7 @@
 @property(nonatomic, retain) CLCascadeNavigationController *cascadeNavController;
 @property(nonatomic, retain) TeamsViewController *teamsViewController;
 @property (nonatomic, retain) ThirdTeamViewController *nationalTeamViewController;
-@property(nonatomic, retain) CLSplitCascadeViewController *splitCascadeViewController;
+@property(nonatomic, retain) CustomCLSplitCascadeViewController *splitCascadeViewController;
 @property(nonatomic, assign) BOOL twoTeams;
 @property(nonatomic, retain) id<IFlowManager> flowManager;
 @property(nonatomic, retain) id<ISelectedPlayersInfo> teamOne;

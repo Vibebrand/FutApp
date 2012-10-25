@@ -16,6 +16,7 @@
 #import "SecondTeamViewController.h"
 #import "ChosenPlayersService.h"
 #import "ThirdTeamViewController.h"
+#import "CustomCLSplitCascadeViewController.h"
 
 @implementation CascadeController
 
@@ -31,8 +32,10 @@
         self.teamsViewController.flowManager = self;
         self.nationalTeamViewController = [[[ThirdTeamViewController alloc] initWithNibName:@"TeamsViewController" bundle:nil] autorelease];
         self.nationalTeamViewController.flowManager = self;
-        self.splitCascadeViewController = [[[CLSplitCascadeViewController alloc] initWithNavigationController:self.cascadeNavController] autorelease];
-        UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"azteca.jpg"]];
+        self.splitCascadeViewController = [[[CustomCLSplitCascadeViewController alloc] initWithNavigationController:self.cascadeNavController] autorelease];
+        self.teamsViewController.hideTutorial = self.splitCascadeViewController;
+        self.nationalTeamViewController.hideTutorial = self.splitCascadeViewController;
+        UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"grass.jpg"]];
         imgView.frame = self.splitCascadeViewController.view.bounds;
         [self.splitCascadeViewController setBackgroundView:imgView];
         [imgView release];
@@ -52,8 +55,9 @@
         self.cascadeNavController = [[[CLCascadeNavigationController alloc] init] autorelease];
         self.nationalTeamViewController = [[[ThirdTeamViewController alloc] initWithNibName:@"TeamsViewController" bundle:nil] autorelease];
         self.nationalTeamViewController.flowManager = self;
-        self.splitCascadeViewController = [[[CLSplitCascadeViewController alloc] initWithNavigationController:self.cascadeNavController] autorelease];
-        UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"azteca.jpg"]];
+        self.splitCascadeViewController = [[[CustomCLSplitCascadeViewController alloc] initWithNavigationController:self.cascadeNavController] autorelease];
+        self.nationalTeamViewController.hideTutorial = self.splitCascadeViewController;
+        UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"grass.jpg"]];
         imgView.frame = self.splitCascadeViewController.view.bounds;
         [self.splitCascadeViewController setBackgroundView:imgView];
         [imgView release];

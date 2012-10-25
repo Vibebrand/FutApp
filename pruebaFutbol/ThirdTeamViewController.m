@@ -15,7 +15,7 @@
 
 @implementation ThirdTeamViewController
 
-@synthesize instantiator, dataSource, flowManager;
+@synthesize instantiator, dataSource, flowManager, hideTutorial;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +31,7 @@
     self.instantiator = nil;
     self.dataSource = nil;
     self.flowManager = nil;
+    self.hideTutorial = nil;
     [super dealloc];
 }
 
@@ -68,8 +69,6 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         
         [cell.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:17.0]];
-        [cell.textLabel setTextColor: [UIColor colorWithRed:0.894117 green:0.839215 blue:0.788235 alpha:1.0]];
-        //  [cell.textLabel setShadowColor: [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.75]];
         [cell.textLabel setShadowOffset:CGSizeMake(0.0, 1.0)];
         
     }
@@ -101,6 +100,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.hideTutorial hideTutorial];
     [flowManager asignCascadeViewForNational:indexPath.row];
 }
 
