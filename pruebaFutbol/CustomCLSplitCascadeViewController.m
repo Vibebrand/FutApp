@@ -29,7 +29,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     tutorial = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"popup1.png"]];
-    tutorial.frame = CGRectMake([[UIScreen mainScreen] bounds].size.height/2-80, 140, 427, 126);
+    tutorial.frame = CGRectMake([[UIScreen mainScreen] bounds].size.height/2-80, 300, 427, 126);
     okTutorial = [UIButton buttonWithType:UIButtonTypeCustom];
     [okTutorial setImage:[UIImage imageNamed:@"ok1.png"] forState:UIControlStateNormal];
     okTutorial.frame = CGRectMake(tutorial.frame.origin.x + tutorial.frame.size.width/2 - 74, tutorial.frame.origin.y + 70, 118, 38);
