@@ -119,14 +119,12 @@
 }
 
 - (void)toField {
-    if (numOfPlayers.count == 1){
+    if (numOfPlayers.count == 1 || ![[numOfPlayers objectAtIndex:1] count]){
         if ([[numOfPlayers objectAtIndex:0] count] >= 11) {
-            NSLog(@"%@", self.teamOneChosenData.indexOfPlayers);
             [self.flowManager toFieldWithOneTeam: [self.teamOne getTeamPlayers]];
         }
     } else {
         if ([[numOfPlayers objectAtIndex:0] count] >= 11 && [[numOfPlayers objectAtIndex:1] count] >= 11) {
-            NSLog(@"%@ %@", self.teamOneChosenData.indexOfPlayers, self.teamTwoChosenData.indexOfPlayers);
             [self.flowManager toFieldWithTwoTeams:[self.teamOne getTeamPlayers] And:[self.teamTwo getTeamPlayers]];
         }
     }

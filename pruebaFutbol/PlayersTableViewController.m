@@ -155,9 +155,12 @@
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if ([selectedCells containsObject:[NSNumber numberWithInt:indexPath.row]]) {
+    if ([selectedCells containsObject:[NSNumber numberWithInt:indexPath.row]] && ([self.dataSource playersForTeam:self.chosenTeam] || [self.dataSource playersForSpecialTeam:self.chosenTeam])) {
         [selectedCells removeObject:[NSNumber numberWithInt:indexPath.row]];
-        [self.selectedPlayers removeObjectForKey:[[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row]];
+        if ([self.dataSource playersForTeam:self.chosenTeam])
+            [self.selectedPlayers removeObjectForKey:[[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row]];
+        else
+            [self.selectedPlayers removeObjectForKey:[[self.dataSource playersForSpecialTeam:self.chosenTeam] objectAtIndex:indexPath.row]];
     }
     [playersLeft setText:[NSString stringWithFormat:@"%d",11-selectedCells.count]];
     if (selectedCells.count >= 11) {
