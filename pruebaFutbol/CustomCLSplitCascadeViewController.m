@@ -29,7 +29,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     tutorial = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tutorialBueno.png"]];
-    tutorial.frame = CGRectMake(294, 430, 720, 258);
+    tutorial.frame = CGRectMake(294, 50, 720, 258);
     [tutorial setUserInteractionEnabled:YES];
     [self.view setUserInteractionEnabled:YES];
     [self.cascadeNavigationController.view addSubview:tutorial];
