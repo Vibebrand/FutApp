@@ -11,7 +11,6 @@
 
 @interface CustomCLSplitCascadeViewController : CLSplitCascadeViewController <IHideTutorial> {
     UIImageView *tutorial;
-    UIButton *okTutorial;
 }
 
 @end
