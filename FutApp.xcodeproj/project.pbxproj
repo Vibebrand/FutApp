@@ -273,6 +273,10 @@
 		92F085F1163A11B200B8E0BD /* tutorialBueno@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F085EF163A11B200B8E0BD /* tutorialBueno@2x.png */; };
 		92F085F4163A130800B8E0BD /* field@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92F085F2163A130800B8E0BD /* field@2x.jpg */; };
 		92F085F5163A130800B8E0BD /* field.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92F085F3163A130800B8E0BD /* field.jpg */; };
+		92F085FA163A164E00B8E0BD /* extranjeroBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F085F6163A164E00B8E0BD /* extranjeroBadge@2x.png */; };
+		92F085FB163A164E00B8E0BD /* extranjeroTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F085F7163A164E00B8E0BD /* extranjeroTeam@2x.png */; };
+		92F085FC163A164E00B8E0BD /* extranjeroTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F085F8163A164E00B8E0BD /* extranjeroTeam.png */; };
+		92F085FD163A164E00B8E0BD /* extranjeroBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F085F9163A164E00B8E0BD /* extranjeroBadge.png */; };
 		92F7F7E61631B730003521F7 /* oneteamButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E21631B730003521F7 /* oneteamButton.png */; };
 		92F7F7E71631B730003521F7 /* oneteamButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E31631B730003521F7 /* oneteamButton@2x.png */; };
 		92F7F7EB1631C9C3003521F7 /* ChosenPlayersService.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7F7EA1631C9C3003521F7 /* ChosenPlayersService.m */; };
@@ -609,6 +613,10 @@
 		92F085EF163A11B200B8E0BD /* tutorialBueno@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorialBueno@2x.png"; sourceTree = "<group>"; };
 		92F085F2163A130800B8E0BD /* field@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "field@2x.jpg"; sourceTree = "<group>"; };
 		92F085F3163A130800B8E0BD /* field.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = field.jpg; sourceTree = "<group>"; };
+		92F085F6163A164E00B8E0BD /* extranjeroBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "extranjeroBadge@2x.png"; sourceTree = "<group>"; };
+		92F085F7163A164E00B8E0BD /* extranjeroTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "extranjeroTeam@2x.png"; sourceTree = "<group>"; };
+		92F085F8163A164E00B8E0BD /* extranjeroTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = extranjeroTeam.png; sourceTree = "<group>"; };
+		92F085F9163A164E00B8E0BD /* extranjeroBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = extranjeroBadge.png; sourceTree = "<group>"; };
 		92F7F7E21631B730003521F7 /* oneteamButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oneteamButton.png; sourceTree = "<group>"; };
 		92F7F7E31631B730003521F7 /* oneteamButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "oneteamButton@2x.png"; sourceTree = "<group>"; };
 		92F7F7E81631C9A5003521F7 /* IChosenPlayersInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IChosenPlayersInfo.h; sourceTree = "<group>"; };
@@ -858,6 +866,10 @@
 		9299D677162F832D004BCD9F /* Team */ = {
 			isa = PBXGroup;
 			children = (
+				92F085F6163A164E00B8E0BD /* extranjeroBadge@2x.png */,
+				92F085F7163A164E00B8E0BD /* extranjeroTeam@2x.png */,
+				92F085F8163A164E00B8E0BD /* extranjeroTeam.png */,
+				92F085F9163A164E00B8E0BD /* extranjeroBadge.png */,
 				9208E075163A03B700E05A61 /* LeónTeam@2x.png */,
 				9208E02C1639FE7700E05A61 /* PachucaTeam@2x.png */,
 				9208E02D1639FE7700E05A61 /* PumasTeam@2x.png */,
@@ -1436,6 +1448,10 @@
 				92F085F1163A11B200B8E0BD /* tutorialBueno@2x.png in Resources */,
 				92F085F4163A130800B8E0BD /* field@2x.jpg in Resources */,
 				92F085F5163A130800B8E0BD /* field.jpg in Resources */,
+				92F085FA163A164E00B8E0BD /* extranjeroBadge@2x.png in Resources */,
+				92F085FB163A164E00B8E0BD /* extranjeroTeam@2x.png in Resources */,
+				92F085FC163A164E00B8E0BD /* extranjeroTeam.png in Resources */,
+				92F085FD163A164E00B8E0BD /* extranjeroBadge.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

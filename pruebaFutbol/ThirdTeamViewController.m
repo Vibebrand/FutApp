@@ -58,7 +58,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -77,13 +77,9 @@
     UIImage *img;
     NSString *text;
     
-    if (!indexPath.row) {
         img = [UIImage imageNamed:[[self.dataSource locals] objectForKey:@"teamImage"]];
         text = [[self.dataSource locals] objectForKey:@"name"];
-    } else {
-        img = [UIImage imageNamed:[[self.dataSource foreigns] objectForKey:@"teamImage"]];
-        text = [[self.dataSource foreigns] objectForKey:@"name"];
-    }
+
     
     if (!img) {
         img = [UIImage imageNamed:@"DefaultTeam.png"];
