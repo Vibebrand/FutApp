@@ -7,13 +7,39 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "pruebaFutbol/DataSourceService.m"
-         timestampString = "372905226.840071"
+         filePath = "pruebaFutbol/ViewController.m"
+         timestampString = "372977287.791148"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "94"
-         endingLineNumber = "94"
-         landmarkName = "-initData"
+         startingLineNumber = "370"
+         endingLineNumber = "370"
+         landmarkName = "-redColorTouched"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "pruebaFutbol/ViewController.m"
+         timestampString = "372977287.791148"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "378"
+         endingLineNumber = "378"
+         landmarkName = "-whiteColorTouched"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "pruebaFutbol/ViewController.m"
+         timestampString = "372977287.791148"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "386"
+         endingLineNumber = "386"
+         landmarkName = "-yellowColorTouched"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

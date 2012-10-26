@@ -302,18 +302,6 @@
     [self eraseChosenData];
 }
 
-- (void)colorButtonClicked:(UIButton *)sender {
-    [self changeCholor];
-    static uint count = 0;
-    count++;
-    if (count%2) {
-        [sender setImage:[UIImage imageNamed:@"yellowbutton.png"] forState:UIControlStateNormal];
-    } else {
-        [sender setImage:[UIImage imageNamed:@"whitebutton.png"] forState:UIControlStateNormal];
-    }
-    [logger checkpointPassed:@"cambio de color"];
-}
-
 - (void)drawDragButtonClicked: (UIButton *)sender {
     [self changeDragDraw]; 
     if (canDrag) {
@@ -377,33 +365,25 @@
     [logger checkpointPassed:@"undo"];
 }
 
-
-- (void)changeCholor {
-    int indexOfYellow = [[self.view subviews] indexOfObject:mds];
-    int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
-    [self.view exchangeSubviewAtIndex:indexOfWhite withSubviewAtIndex:indexOfYellow];
-
-    if (canDrag) {
-        [self drawDragButtonClicked:drawDragButton];
-    }
-}
-
 - (void)redColorTouched {
-    [self.view exchangeSubviewAtIndex:3 withSubviewAtIndex:[[self.view subviews]indexOfObject:mdsR]];
+    int idx = [[self.view subviews]indexOfObject:mdsR];
+    [self.view exchangeSubviewAtIndex:3 withSubviewAtIndex:idx];
     if (canDrag) {
         [self drawDragButtonClicked:drawDragButton];
     }
 }
 
 - (void)whiteColorTouched {
-    [self.view exchangeSubviewAtIndex:3 withSubviewAtIndex:[[self.view subviews]indexOfObject:mdsG]];
+    int idx = [[self.view subviews]indexOfObject:mdsG];
+    [self.view exchangeSubviewAtIndex:3 withSubviewAtIndex:idx];
     if (canDrag) {
         [self drawDragButtonClicked:drawDragButton];
     }
 }
 
 - (void)yellowColorTouched {
-    [self.view exchangeSubviewAtIndex:3 withSubviewAtIndex:[[self.view subviews]indexOfObject:mds]];
+    int idx = [[self.view subviews]indexOfObject:mds];
+    [self.view exchangeSubviewAtIndex:3 withSubviewAtIndex:idx];
     if (canDrag) {
         [self drawDragButtonClicked:drawDragButton];
     }
@@ -443,10 +423,10 @@
     mdsR = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
     mdsR.drawingColor = [UIColor redColor];
     mdsR.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-    [self.view insertSubview:mds atIndex:indexOfYellow];
-    [self.view insertSubview:mdsG atIndex:indexOfWhite];
-    [self.view insertSubview:mdsR atIndex:indexOfRed];
-    
+    [self.view insertSubview:mds atIndex:1];
+    [self.view insertSubview:mdsG atIndex:2];
+    [self.view insertSubview:mdsR atIndex:3];
+    NSLog(@"%d %d %d", [[self.view subviews] indexOfObject:mdsG], [[self.view subviews] indexOfObject:mds], [[self.view subviews] indexOfObject:mdsR]);
     if (canDrag) {
         [mdsG setUserInteractionEnabled:NO];
         [mds setUserInteractionEnabled:NO];
