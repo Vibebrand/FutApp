@@ -86,12 +86,12 @@
         dragView.playersNames = self;
         [downScrollView.elements addObject:dragView];
         [self.dragViews addObject:dragView];
-        [self.view insertSubview:dragView atIndex:4];
+        [self.view insertSubview:dragView atIndex:5];
         [dragView release];
     }
     delegado.dragViews = self.dragViews;
     [numbersOfPlayers release];
-    [self.view insertSubview:downScrollView atIndex:3];
+    [self.view insertSubview:downScrollView atIndex:4];
     
     //Create matrix for the field
     int limit = ([[UIScreen mainScreen]bounds].size.width - sizeOfPlayers)/(sizeOfPlayers * 0.75);
@@ -163,16 +163,19 @@
     slv = nil;
     mds = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
     mds.drawingColor = [UIColor yellowColor];
-    mds.userInteractionEnabled = YES;
     [self.view insertSubview:mds atIndex:1];
     mds.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
     mdsG.drawingColor = [UIColor whiteColor];
-    mdsG.userInteractionEnabled = YES;
-    [self.view insertSubview:mdsG atIndex:2];
+    [self.view insertSubview:mdsG atIndex:3];
     mdsG.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     [mds setUserInteractionEnabled:NO];
     [mdsG setUserInteractionEnabled:NO];
+    mdsR = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
+    mdsR.drawingColor = [UIColor redColor];
+    mdsR.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+    [mdsR setUserInteractionEnabled:NO];
+    [self.view insertSubview:mdsR atIndex:2];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     int numberOfPlayers = 17;
@@ -207,30 +210,42 @@
     
     whiteColorButton = [UIButton buttonWithType:UIButtonTypeCustom];
     whiteColorButton.frame = CGRectMake(91, screenRect.size.width - 65, 40, 40);
-    [whiteColorButton addTarget:self action:@selector(colorButtonClicked:) forControlEvents:UIControlEventTouchDown];
+    [whiteColorButton addTarget:self action:@selector(whiteColorTouched) forControlEvents:UIControlEventTouchDown];
     [whiteColorButton setImage:[UIImage imageNamed:@"whitebutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:whiteColorButton];
     
+    yellowColorButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    yellowColorButton.frame = CGRectMake(134, screenRect.size.width - 65, 40, 40);
+    [yellowColorButton addTarget:self action:@selector(yellowColorTouched) forControlEvents:UIControlEventTouchDown];
+    [yellowColorButton setImage:[UIImage imageNamed:@"yellowbutton.png"] forState:UIControlStateNormal];
+    [self.view addSubview:yellowColorButton];
+    
+    redColorButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    redColorButton.frame = CGRectMake(178, screenRect.size.width - 65, 40, 40);
+    [redColorButton addTarget:self action:@selector(redColorTouched) forControlEvents:UIControlEventTouchDown];
+    [redColorButton setImage:[UIImage imageNamed:@"orangebutton.png"] forState:UIControlStateNormal];
+    [self.view addSubview:redColorButton];
+    
     undoButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    undoButton.frame = CGRectMake(134, screenRect.size.width - 65, 40, 40);
+    undoButton.frame = CGRectMake(222, screenRect.size.width - 65, 40, 40);
     [undoButton addTarget:self action:@selector(undoButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [undoButton setImage:[UIImage imageNamed:@"bookbutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:undoButton];
     
     drawDragButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    drawDragButton.frame = CGRectMake(178, screenRect.size.width - 65, 40, 40);
+    drawDragButton.frame = CGRectMake(266, screenRect.size.width - 65, 40, 40);
     [drawDragButton addTarget:self action:@selector(drawDragButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [drawDragButton setImage:[UIImage imageNamed:@"handbutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:drawDragButton];
     
     twitterButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    twitterButton.frame = CGRectMake(222, screenRect.size.width - 65, 40, 40);
+    twitterButton.frame = CGRectMake(310, screenRect.size.width - 65, 40, 40);
     [twitterButton addTarget:self action:@selector(twitterButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [twitterButton setImage:[UIImage imageNamed:@"tuit.png"] forState:UIControlStateNormal];
     [self.view addSubview:twitterButton];
     
     facebookButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    facebookButton.frame = CGRectMake(266, screenRect.size.width - 65, 40, 40);
+    facebookButton.frame = CGRectMake(354, screenRect.size.width - 65, 40, 40);
     [facebookButton addTarget:self action:@selector(facebookButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [facebookButton setImage:[UIImage imageNamed:@"facebookButton.png"] forState:UIControlStateNormal];
     [self.view addSubview:facebookButton];
@@ -362,11 +377,33 @@
     [logger checkpointPassed:@"undo"];
 }
 
+
 - (void)changeCholor {
     int indexOfYellow = [[self.view subviews] indexOfObject:mds];
     int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
     [self.view exchangeSubviewAtIndex:indexOfWhite withSubviewAtIndex:indexOfYellow];
 
+    if (canDrag) {
+        [self drawDragButtonClicked:drawDragButton];
+    }
+}
+
+- (void)redColorTouched {
+    [self.view exchangeSubviewAtIndex:3 withSubviewAtIndex:[[self.view subviews]indexOfObject:mdsR]];
+    if (canDrag) {
+        [self drawDragButtonClicked:drawDragButton];
+    }
+}
+
+- (void)whiteColorTouched {
+    [self.view exchangeSubviewAtIndex:3 withSubviewAtIndex:[[self.view subviews]indexOfObject:mdsG]];
+    if (canDrag) {
+        [self drawDragButtonClicked:drawDragButton];
+    }
+}
+
+- (void)yellowColorTouched {
+    [self.view exchangeSubviewAtIndex:3 withSubviewAtIndex:[[self.view subviews]indexOfObject:mds]];
     if (canDrag) {
         [self drawDragButtonClicked:drawDragButton];
     }
@@ -379,6 +416,7 @@
     }
     [mdsG setUserInteractionEnabled:!mdsG.userInteractionEnabled];
     [mds setUserInteractionEnabled:!mds.userInteractionEnabled];
+    [mdsR setUserInteractionEnabled:!mdsR.userInteractionEnabled];
     canDrag = !canDrag;
     
 }
@@ -386,8 +424,12 @@
 - (void)eraseDrawings {
     int indexOfYellow = [[self.view subviews] indexOfObject:mds];
     int indexOfWhite = [[self.view subviews] indexOfObject:mdsG];
+    int indexOfRed = [[self.view subviews] indexOfObject:mdsR];
     [mds removeFromSuperview];
     [mdsG removeFromSuperview];
+    [mdsR removeFromSuperview];
+    [mdsR release];
+    mdsR = nil;
     [mdsG release];
     mdsG = nil;
     [mds release];
@@ -398,12 +440,17 @@
     mdsG = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
     mdsG.drawingColor = [UIColor whiteColor];
     mdsG.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+    mdsR = [[MGDrawingSlate alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width-70)];
+    mdsR.drawingColor = [UIColor redColor];
+    mdsR.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     [self.view insertSubview:mds atIndex:indexOfYellow];
     [self.view insertSubview:mdsG atIndex:indexOfWhite];
+    [self.view insertSubview:mdsR atIndex:indexOfRed];
     
     if (canDrag) {
         [mdsG setUserInteractionEnabled:NO];
         [mds setUserInteractionEnabled:NO];
+        [mdsR setUserInteractionEnabled:NO];
     }
 }
 

@@ -24,6 +24,7 @@
     SmoothLineView *slv;
     MGDrawingSlate *mds;
     MGDrawingSlate *mdsG;
+    MGDrawingSlate *mdsR;
     UIImageView *soccerField;
     BOOL canDrag;
     BOOL namesVisibles;

@@ -43,6 +43,8 @@
     backButton.frame = CGRectMake(backButton.frame.origin.x, 5, backButton.frame.size.width, backButton.frame.size.height);
     [backButton setImage:[UIImage imageNamed:@"backbutton.png"] forState:UIControlStateNormal];
     whiteColorButton.frame = CGRectMake(whiteColorButton.frame.origin.x, 5, whiteColorButton.frame.size.width, whiteColorButton.frame.size.height);
+    yellowColorButton.frame = CGRectMake(yellowColorButton.frame.origin.x, 5, yellowColorButton.frame.size.width, yellowColorButton.frame.size.height);
+    redColorButton.frame = CGRectMake(redColorButton.frame.origin.x, 5, redColorButton.frame.size.width, redColorButton.frame.size.height);
     undoButton.frame = CGRectMake(undoButton.frame.origin.x, 5, undoButton.frame.size.width, undoButton.frame.size.height);
     drawDragButton.frame = CGRectMake(drawDragButton.frame.origin.x,5, drawDragButton.frame.size.width, drawDragButton.frame.size.height);
     twitterButton.frame = CGRectMake(twitterButton.frame.origin.x, 5, twitterButton.frame.size.width, twitterButton.frame.size.height);
