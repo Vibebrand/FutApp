@@ -28,17 +28,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    tutorial = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"popup1.png"]];
-    tutorial.frame = CGRectMake([[UIScreen mainScreen] bounds].size.height/2-80, 300, 427, 126);
-    okTutorial = [UIButton buttonWithType:UIButtonTypeCustom];
-    [okTutorial setImage:[UIImage imageNamed:@"ok1.png"] forState:UIControlStateNormal];
-    okTutorial.frame = CGRectMake(tutorial.frame.origin.x + tutorial.frame.size.width/2 - 74, tutorial.frame.origin.y + 70, 118, 38);
-    [okTutorial addTarget:self action:@selector(hideTutorial) forControlEvents:UIControlEventTouchDown];
+    tutorial = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tutorialBueno.png"]];
+    tutorial.frame = CGRectMake(294, 50, 720, 258);
     [tutorial setUserInteractionEnabled:YES];
-    [okTutorial setUserInteractionEnabled:YES];
     [self.view setUserInteractionEnabled:YES];
     [self.cascadeNavigationController.view addSubview:tutorial];
-    [self.cascadeNavigationController.view addSubview:okTutorial];
     
 }
 
@@ -51,12 +45,10 @@
 - (void)dealloc
 {
     [tutorial release];
-    [okTutorial release];   
     [super dealloc];
 }
 
 - (void)hideTutorial {
-    [okTutorial setHidden:YES];
     [tutorial setHidden:YES];
 }
 

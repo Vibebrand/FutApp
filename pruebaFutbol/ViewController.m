@@ -53,10 +53,11 @@
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
     NSBundle *bundle = [NSBundle mainBundle];
+    
     NSString *path = [bundle pathForResource:[[self.dataSource dataOfTeam:self.teamOneChosenData.chosenTeam] objectForKey:@"teamBadge"] ofType:nil];
     UIImage *image = [UIImage imageWithContentsOfFile:path]; 
     if (!image) {
-        image = [UIImage imageNamed:@"DefaultTeam.png"];
+        image = [UIImage imageNamed:@"MéxicoBadge.png"];
     }
     
     //Numbers of players
@@ -239,7 +240,7 @@
     namesVisibles = YES;
     
     //Imagen del campo
-    NSString *Path = [[NSBundle mainBundle] pathForResource:@"field.png" ofType:nil];
+    NSString *Path = [[NSBundle mainBundle] pathForResource:@"field.jpg" ofType:nil];
     image = [UIImage imageWithContentsOfFile:Path];
     soccerField = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.height, screenRect.size.width-70)];
     soccerField.image = image;
