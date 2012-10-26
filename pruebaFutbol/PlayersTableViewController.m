@@ -130,7 +130,7 @@
         cell.textLabel.text = [[[self.dataSource playersForTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"name"];
     else {
         cell.textLabel.text = [[[self.dataSource playersForSpecialTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"name"];
-        if ([self.chosenTeam isEqualToString:@"En México"]) {
+        if ([self.chosenTeam isEqualToString:@"Jugadores mexicanos"]) {
             cell.imageView.image = [UIImage imageNamed:[[[self.dataSource playersForSpecialTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"imgName"]];
         }
         

@@ -62,7 +62,7 @@
     teams = [[NSMutableArray alloc] initWithCapacity:files.count];
     locals = [[NSMutableDictionary alloc] init];
     [locals setValue:[[[NSMutableArray alloc] init] autorelease] forKey:@"players"];
-    [locals setValue:@"En México" forKey:@"name"];
+    [locals setValue:@"Jugadores mexicanos" forKey:@"name"];
     [locals setValue:@"MéxicoTeam.png" forKey:@"teamImage"];
     [locals setValue:@"MéxicoBadge.png" forKey:@"teamBadge"];
     foreigns = [[NSMutableDictionary alloc] init];
