@@ -127,8 +127,6 @@
 		9274F9B71638C46800EB5AF1 /* CustomCLSplitCascadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9274F9B61638C46800EB5AF1 /* CustomCLSplitCascadeViewController.m */; };
 		9274F9BA1638CC3100EB5AF1 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9B81638CC3100EB5AF1 /* background.jpg */; };
 		9274F9BB1638CC3100EB5AF1 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9B91638CC3100EB5AF1 /* background@2x.jpg */; };
-		9274F9BF1638D98900EB5AF1 /* field.png in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9BD1638D98900EB5AF1 /* field.png */; };
-		9274F9C01638D98900EB5AF1 /* field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9BE1638D98900EB5AF1 /* field@2x.png */; };
 		9274F9C91638FE1100EB5AF1 /* Internacional.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9C81638FE0F00EB5AF1 /* Internacional.csv */; };
 		927D01011627609A00BF2D2E /* CRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927D01001627609A00BF2D2E /* CRTableViewController.m */; };
 		927D012F162789EA00BF2D2E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927D012E162789EA00BF2D2E /* ProfileViewController.m */; };
@@ -273,6 +271,8 @@
 		92EC183B1625EFA5004811E9 /* CascadeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC183A1625EFA5004811E9 /* CascadeController.m */; };
 		92F085F0163A11B200B8E0BD /* tutorialBueno.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F085EE163A11B200B8E0BD /* tutorialBueno.png */; };
 		92F085F1163A11B200B8E0BD /* tutorialBueno@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F085EF163A11B200B8E0BD /* tutorialBueno@2x.png */; };
+		92F085F4163A130800B8E0BD /* field@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92F085F2163A130800B8E0BD /* field@2x.jpg */; };
+		92F085F5163A130800B8E0BD /* field.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92F085F3163A130800B8E0BD /* field.jpg */; };
 		92F7F7E61631B730003521F7 /* oneteamButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E21631B730003521F7 /* oneteamButton.png */; };
 		92F7F7E71631B730003521F7 /* oneteamButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E31631B730003521F7 /* oneteamButton@2x.png */; };
 		92F7F7EB1631C9C3003521F7 /* ChosenPlayersService.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7F7EA1631C9C3003521F7 /* ChosenPlayersService.m */; };
@@ -411,8 +411,6 @@
 		9274F9B81638CC3100EB5AF1 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		9274F9B91638CC3100EB5AF1 /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		9274F9BC1638CE2500EB5AF1 /* IHideTutorial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IHideTutorial.h; sourceTree = "<group>"; };
-		9274F9BD1638D98900EB5AF1 /* field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = field.png; sourceTree = "<group>"; };
-		9274F9BE1638D98900EB5AF1 /* field@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "field@2x.png"; sourceTree = "<group>"; };
 		9274F9C81638FE0F00EB5AF1 /* Internacional.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Internacional.csv; sourceTree = "<group>"; };
 		927D00FF1627609A00BF2D2E /* CRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRTableViewController.h; sourceTree = "<group>"; };
 		927D01001627609A00BF2D2E /* CRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTableViewController.m; sourceTree = "<group>"; };
@@ -609,6 +607,8 @@
 		92EC183A1625EFA5004811E9 /* CascadeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CascadeController.m; sourceTree = "<group>"; };
 		92F085EE163A11B200B8E0BD /* tutorialBueno.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorialBueno.png; sourceTree = "<group>"; };
 		92F085EF163A11B200B8E0BD /* tutorialBueno@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorialBueno@2x.png"; sourceTree = "<group>"; };
+		92F085F2163A130800B8E0BD /* field@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "field@2x.jpg"; sourceTree = "<group>"; };
+		92F085F3163A130800B8E0BD /* field.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = field.jpg; sourceTree = "<group>"; };
 		92F7F7E21631B730003521F7 /* oneteamButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oneteamButton.png; sourceTree = "<group>"; };
 		92F7F7E31631B730003521F7 /* oneteamButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "oneteamButton@2x.png"; sourceTree = "<group>"; };
 		92F7F7E81631C9A5003521F7 /* IChosenPlayersInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IChosenPlayersInfo.h; sourceTree = "<group>"; };
@@ -806,6 +806,8 @@
 		9299D65B162F832D004BCD9F /* Cancha */ = {
 			isa = PBXGroup;
 			children = (
+				92F085F2163A130800B8E0BD /* field@2x.jpg */,
+				92F085F3163A130800B8E0BD /* field.jpg */,
 				92977E7E1630D3A1009641F1 /* facebookButton.png */,
 				92977E7F1630D3A1009641F1 /* facebookButton@2x.png */,
 				92977E801630D3A1009641F1 /* twitterButton.png */,
@@ -828,8 +830,6 @@
 				9299D669162F832D004BCD9F /* orangebutton@2x.png */,
 				92977E7A1630CAB1009641F1 /* okbutton.png */,
 				92977E7B1630CAB1009641F1 /* okbutton@2x.png */,
-				9274F9BD1638D98900EB5AF1 /* field.png */,
-				9274F9BE1638D98900EB5AF1 /* field@2x.png */,
 				9299D66A162F832D004BCD9F /* penbutton.png */,
 				92F7F7E21631B730003521F7 /* oneteamButton.png */,
 				92F7F7E31631B730003521F7 /* oneteamButton@2x.png */,
@@ -1361,8 +1361,6 @@
 				9274F9B31638ABE800EB5AF1 /* tuit@2x.png in Resources */,
 				9274F9BA1638CC3100EB5AF1 /* background.jpg in Resources */,
 				9274F9BB1638CC3100EB5AF1 /* background@2x.jpg in Resources */,
-				9274F9BF1638D98900EB5AF1 /* field.png in Resources */,
-				9274F9C01638D98900EB5AF1 /* field@2x.png in Resources */,
 				9274F9C91638FE1100EB5AF1 /* Internacional.csv in Resources */,
 				9208DFDD1639C7EF00E05A61 /* contador@2x.png in Resources */,
 				9208DFDE1639C7EF00E05A61 /* contador.png in Resources */,
@@ -1436,6 +1434,8 @@
 				9208E078163A047E00E05A61 /* MéxicoBadge@2x.png in Resources */,
 				92F085F0163A11B200B8E0BD /* tutorialBueno.png in Resources */,
 				92F085F1163A11B200B8E0BD /* tutorialBueno@2x.png in Resources */,
+				92F085F4163A130800B8E0BD /* field@2x.jpg in Resources */,
+				92F085F5163A130800B8E0BD /* field.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
