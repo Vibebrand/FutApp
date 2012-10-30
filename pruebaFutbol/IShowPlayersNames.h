@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class TKDragView;
+
 @protocol IShowPlayersNames <NSObject>
 
 - (void)showPlayersName;
 - (void)hidePlayersName;
+- (void)showPlayer: (id)sender;
 
 @end

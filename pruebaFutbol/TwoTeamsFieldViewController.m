@@ -258,9 +258,9 @@
 }
 
 - (void)initTextBoxes {
-    textBoxes = [[NSMutableArray alloc] initWithCapacity:22];
-    labels = [[NSMutableArray alloc] initWithCapacity:22];
-    for (int i = 0; i < 22; i++) {
+    textBoxes = [[NSMutableArray alloc] initWithCapacity:self.teamOneChosenData.indexOfPlayers.count + self.teamTwoChosenData.indexOfPlayers.count];
+    labels = [[NSMutableArray alloc] initWithCapacity:self.teamOneChosenData.indexOfPlayers.count + self.teamTwoChosenData.indexOfPlayers.count];
+    for (int i = 0; i < self.teamOneChosenData.indexOfPlayers.count + self.teamTwoChosenData.indexOfPlayers.count; i++) {
         UIImageView *imgView = [[UIImageView alloc] init];
         [textBoxes addObject:imgView];
         [imgView release];
@@ -281,6 +281,74 @@
         [lb removeFromSuperview];
     for(UIImageView *img in textBoxes)
         [img removeFromSuperview];
+}
+
+- (void)showPlayer:(id)sender {
+    
+    int indx = [self.dragViews indexOfObject:sender];
+    NSDictionary *player;
+    CGRect rect = [[self.dragViews objectAtIndex:indx] frame];
+    NSNumber *num;
+    
+    if (indx >= [[self.teamOneChosenData indexOfPlayers] count]) {
+        num = [[self.teamTwoChosenData indexOfPlayers] objectAtIndex:indx - self.teamOneChosenData.indexOfPlayers.count];
+        player = [[self.dataSource playersForTeam:teamTwoChosenData.chosenTeam] objectAtIndex:[num integerValue]];
+    } else {
+        num = [[self.teamOneChosenData indexOfPlayers] objectAtIndex:indx];
+        player = [[self.dataSource playersForTeam:teamOneChosenData.chosenTeam] objectAtIndex:[num integerValue]];
+    }
+    
+    CGRect frame;
+    NSString *img;
+    CGFloat angle = 0;
+    if (rect.origin.x < rect.size.width/2) {
+        img = @"leftBubble.png";
+        frame = CGRectMake(rect.origin.x + rect.size.width/2, rect.origin.y - rect.size.height, 100, 35);
+        if (rect.origin.y < rect.size.height*2) {
+            angle = M_PI;
+            img = @"rightBubble.png";
+            frame = CGRectMake(rect.origin.x + rect.size.width/2, rect.origin.y + rect.size.height, 100, 35);
+        }
+    } else {
+        
+        if (rect.origin.x > [[UIScreen mainScreen] bounds].size.height - rect.size.width * 2) {
+            img = @"rightBubble.png";
+            frame = CGRectMake(rect.origin.x - rect.size.width * 2.2, rect.origin.y - rect.size.height, 100, 35);
+            if (rect.origin.y < rect.size.height*2) {
+                angle = M_PI;
+                img = @"leftBubble.png";
+                frame = CGRectMake(rect.origin.x - rect.size.width * 2.2, rect.origin.y + rect.size.height, 100, 35);
+            }
+        } else {
+            
+            img = @"middlebubble.png";
+            frame = CGRectMake(rect.origin.x - rect.size.width + 8, rect.origin.y - rect.size.height, 100, 35);
+            if (rect.origin.y < rect.size.height*2) {
+                angle = M_PI;
+                frame = CGRectMake(rect.origin.x - rect.size.width + 8, rect.origin.y + rect.size.height, 100, 35);
+            }
+        }
+    }
+    
+    if (rect.origin.y == [[UIScreen mainScreen]bounds].size.width - 70) {
+        frame = CGRectMake(frame.origin.x + 25, frame.origin.y, frame.size.width, frame.size.height);
+    }
+    
+    UIImageView *imgView = [textBoxes objectAtIndex:indx];
+    imgView.image = [UIImage imageNamed:img];
+    imgView.frame = frame;
+    imgView.transform = CGAffineTransformMakeRotation(angle);
+    
+    UILabel *label = [labels objectAtIndex:indx];
+    label.frame = frame;
+    label.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+    label.textColor = [UIColor whiteColor];
+    label.font = [label.font fontWithSize:12];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = [player objectForKey:@"short name"];
+    
+    [self.view addSubview:imgView];
+    [self.view addSubview:label];
 }
 
 - (void)showPlayersNameTeamOne {
