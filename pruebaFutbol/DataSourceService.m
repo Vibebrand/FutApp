@@ -65,11 +65,18 @@
     [locals setValue:@"Jugadores mexicanos" forKey:@"name"];
     [locals setValue:@"MéxicoTeam.png" forKey:@"teamImage"];
     [locals setValue:@"MéxicoBadge.png" forKey:@"teamBadge"];
+    
     foreigns = [[NSMutableDictionary alloc] init];
     [foreigns setValue:[[[NSMutableArray alloc] init] autorelease] forKey:@"players"];
     [foreigns setValue:@"En el extranjero" forKey:@"name"];
     [foreigns setValue:@"DefaultTeam.png" forKey:@"teamImage"];
     [foreigns setValue:@"Default.png" forKey:@"teamBadge"];
+    
+    eleven = [[NSMutableDictionary alloc] init];
+    [eleven setValue:[[[NSMutableArray alloc]init]autorelease] forKey:@"players"];
+    [eleven setValue:@"11 ideal" forKey:@"name"];
+    [eleven setValue:@"MéxicoTeam.png" forKey:@"teamImage"];
+    [eleven setValue:@"MéxicoBadge.png" forKey:@"teamBadge"];
     
     NSString *file;
     for (file in files) {
@@ -95,7 +102,7 @@
         }
     
     }
-    
+    [teams addObject:eleven];
     specialTeams = [[NSArray alloc] initWithObjects:locals, nil];
 }
 
@@ -124,6 +131,7 @@
             NSDictionary *player = [[NSDictionary alloc] initWithObjectsAndKeys:[attr objectAtIndex:0], @"name", [attr objectAtIndex:1], @"number", [attr objectAtIndex:2], @"position", [attr objectAtIndex:3], @"foreign", [attr objectAtIndex:4], @"short name",imgName, @"imgName", nil];
             
             [players addObject:player];
+            [[eleven objectForKey:@"players"] addObject:player];
             
             if ([[player objectForKey:@"foreign"] integerValue] != 1) {
                 [[locals objectForKey:@"players"] addObject:player];
