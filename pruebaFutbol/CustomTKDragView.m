@@ -42,4 +42,8 @@
     [self.playersNames showPlayer:self];
 }
 
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.playersNames hidePlayersName];
+}
+
 @end
