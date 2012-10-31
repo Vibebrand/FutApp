@@ -227,7 +227,7 @@
     [self.view addSubview:redColorButton];
     
     undoButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    undoButton.frame = CGRectMake(222, screenRect.size.width - 65, 40, 40);
+    undoButton.frame =  CGRectMake(222, screenRect.size.width - 65, 40, 40);
     [undoButton addTarget:self action:@selector(undoButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [undoButton setImage:[UIImage imageNamed:@"bookbutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:undoButton];

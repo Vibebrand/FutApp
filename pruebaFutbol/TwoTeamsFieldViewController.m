@@ -38,7 +38,7 @@
     self.upScrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"navbar.jpg"]];
     self.upScrollView.contentSize = CGSizeMake(self.upScrollView.frame.size.width, self.upScrollView.frame.size.height);
     self.upScrollView.scrollEnabled = NO;
-    [self.view insertSubview:self.upScrollView atIndex:3];
+    [self.view insertSubview:self.upScrollView atIndex:4];
     
     backButton.frame = CGRectMake(backButton.frame.origin.x, 5, backButton.frame.size.width, backButton.frame.size.height);
     [backButton setImage:[UIImage imageNamed:@"backbutton.png"] forState:UIControlStateNormal];
@@ -97,12 +97,12 @@
         dragView.playersNames = self;
         [downScrollView.elements addObject:dragView];
         [self.dragViews addObject:dragView];
-        [self.view insertSubview:dragView atIndex:4];
+        [self.view insertSubview:dragView atIndex:5];
         [dragView release];
     }
     delegado.dragViews = self.dragViews;
     [numbersOfPlayers release];
-    [self.view insertSubview:downScrollView atIndex:3];
+    [self.view insertSubview:downScrollView atIndex:4];
     
     
     
@@ -199,12 +199,12 @@
         dragView.playersNames = self;
         [downScrollView.elements addObject:dragView];
         [self.dragViews addObject:dragView];
-        [self.view insertSubview:dragView atIndex:4];
+        [self.view insertSubview:dragView atIndex:5];
         [dragView release];
     }
     delegado.dragViews = self.dragViews;
     [numbersOfPlayers release];
-    [self.view insertSubview:downScrollView atIndex:3];
+    [self.view insertSubview:downScrollView atIndex:4];
     
     
     int oLimit = [[UIScreen mainScreen]bounds].size.height / (sizeOfPlayers * 0.75);
