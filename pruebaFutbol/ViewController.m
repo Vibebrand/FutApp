@@ -49,7 +49,7 @@
     
     CustomTKDragViewDelegate *delegado = [[CustomTKDragViewDelegate alloc] init];
     delegado.logger = self.logger;
-    
+    delegado.playersNames = self;
     self.canUseTheSameFrameManyTimes = NO;
     self.canDragMultipleViewsAtOnce = NO;
     NSBundle *bundle = [NSBundle mainBundle];
