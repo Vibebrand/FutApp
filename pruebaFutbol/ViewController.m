@@ -238,7 +238,7 @@
     [drawDragButton setImage:[UIImage imageNamed:@"handbutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:drawDragButton];
     
-    twitterButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    twitterButton = [UIButton buttonWithType:UIButtonTypeCustom];
     twitterButton.frame = CGRectMake(310, screenRect.size.width - 65, 40, 40);
     [twitterButton addTarget:self action:@selector(twitterButtonClicked:) forControlEvents:UIControlEventTouchDown];
     [twitterButton setImage:[UIImage imageNamed:@"tuit.png"] forState:UIControlStateNormal];
