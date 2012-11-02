@@ -134,7 +134,7 @@
         }
     }
     else {
-        cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",[[[self.dataSource playersForSpecialTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"number"],[[[self.dataSource playersForSpecialTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"name"]];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@",[[[self.dataSource playersForSpecialTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"name"]];
         cell.detailTextLabel.text = [[[self.dataSource playersForSpecialTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"position"];
         if ([self.chosenTeam isEqualToString:@"Jugadores mexicanos"]) {
             cell.imageView.image = [UIImage imageNamed:[[[self.dataSource playersForSpecialTeam:self.chosenTeam] objectAtIndex:indexPath.row] objectForKey:@"imgName"]];
