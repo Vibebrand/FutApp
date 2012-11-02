@@ -81,7 +81,13 @@
     for (int i = 0; i < self.teamOneChosenData.indexOfPlayers.count; i++) {
         CGFloat xOrigin = i * 60;
         CGRect startFrame = CGRectMake(xOrigin, screenRect.size.width - 70, 50, 50);
-        CustomTKDragView *dragView = [[CustomTKDragView alloc] initWithImage:[UIImage drawText:[numbersOfPlayers objectAtIndex:i] inImage:image atPoint:CGPointMake(image.size.width/4, image.size.height/4)] startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:delegado];
+        CustomTKDragView *dragView;
+        if ([self.dataSource playersForTeam:teamOneChosenData.chosenTeam]) {
+           dragView = [[CustomTKDragView alloc] initWithImage:[UIImage drawText:[numbersOfPlayers objectAtIndex:i] inImage:image atPoint:CGPointMake(image.size.width/4, image.size.height/4)] startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:delegado];
+        } else {
+            dragView = [[CustomTKDragView alloc] initWithImage:image startFrame:startFrame goodFrames:goodFrames badFrames:badFrames andDelegate:delegado];
+        }
+    
         dragView.canDragMultipleDragViewsAtOnce = NO;
         dragView.playersNames = self;
         [downScrollView.elements addObject:dragView];

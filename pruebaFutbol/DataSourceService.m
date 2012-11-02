@@ -92,7 +92,7 @@
                 if ([txt length]) {
                     NSArray *attr = [txt componentsSeparatedByString:@","];
                     NSDictionary *player = [[NSDictionary alloc] initWithObjectsAndKeys:[attr objectAtIndex:0],@"name", [attr objectAtIndex:1], @"short name", [attr objectAtIndex:2], @"number",@"extranjeroTeam",@"imgName", nil];
-                    [[locals objectForKey:@"players"] addObject:player];
+                    [[locals objectForKey:@"players"] insertObject:player atIndex:0];
                     [players addObject:player];
                     [player release];
                 }
@@ -102,8 +102,8 @@
         }
     
     }
-    [teams addObject:eleven];
-    [teams exchangeObjectAtIndex:0 withObjectAtIndex:teams.count - 1];
+    [teams insertObject:eleven atIndex:0];
+    NSLog(@"%@", locals);
     specialTeams = [[NSArray alloc] initWithObjects:locals, nil];
 }
 
