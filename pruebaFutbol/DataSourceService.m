@@ -102,8 +102,7 @@
         }
     
     }
-    [teams addObject:eleven];
-    [teams exchangeObjectAtIndex:0 withObjectAtIndex:teams.count - 1];
+    [teams insertObject:eleven atIndex:0];
     NSLog(@"%@", locals);
     specialTeams = [[NSArray alloc] initWithObjects:locals, nil];
 }
