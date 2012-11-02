@@ -70,6 +70,8 @@
 		9226CE0F161D2B2B00511116 /* gray.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9226CE0E161D2B2B00511116 /* gray.jpeg */; };
 		923B18E01611197D00856A9D /* TKDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 923B18DF1611197D00856A9D /* TKDragView.m */; };
 		923B18E216111ECD00856A9D /* tile_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 923B18E116111ECD00856A9D /* tile_green.png */; };
+		923EF87E1644737200894764 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 923EF87C1644737200894764 /* background.jpg */; };
+		923EF87F1644737200894764 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 923EF87D1644737200894764 /* background@2x.jpg */; };
 		924AB69016162A4B006FCA89 /* CustomTKDragViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 924AB68F16162A4B006FCA89 /* CustomTKDragViewDelegate.m */; };
 		924B6C80162E3C8900B12605 /* TwitterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 924B6C7F162E3C8900B12605 /* TwitterService.m */; };
 		924B6C83162E439600B12605 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924B6C82162E439600B12605 /* Social.framework */; };
@@ -99,8 +101,6 @@
 		9274F9B21638ABE800EB5AF1 /* tuit.png in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9AA1638ABE800EB5AF1 /* tuit.png */; };
 		9274F9B31638ABE800EB5AF1 /* tuit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9AB1638ABE800EB5AF1 /* tuit@2x.png */; };
 		9274F9B71638C46800EB5AF1 /* CustomCLSplitCascadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9274F9B61638C46800EB5AF1 /* CustomCLSplitCascadeViewController.m */; };
-		9274F9BA1638CC3100EB5AF1 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9B81638CC3100EB5AF1 /* background.jpg */; };
-		9274F9BB1638CC3100EB5AF1 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9B91638CC3100EB5AF1 /* background@2x.jpg */; };
 		9274F9C91638FE1100EB5AF1 /* Internacional.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9C81638FE0F00EB5AF1 /* Internacional.csv */; };
 		927D01011627609A00BF2D2E /* CRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927D01001627609A00BF2D2E /* CRTableViewController.m */; };
 		927D012F162789EA00BF2D2E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927D012E162789EA00BF2D2E /* ProfileViewController.m */; };
@@ -348,6 +348,8 @@
 		923B18DE1611197D00856A9D /* TKDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKDragView.h; sourceTree = "<group>"; };
 		923B18DF1611197D00856A9D /* TKDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKDragView.m; sourceTree = "<group>"; };
 		923B18E116111ECD00856A9D /* tile_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile_green.png; sourceTree = "<group>"; };
+		923EF87C1644737200894764 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		923EF87D1644737200894764 /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		924AB68E16162A4B006FCA89 /* CustomTKDragViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTKDragViewDelegate.h; sourceTree = "<group>"; };
 		924AB68F16162A4B006FCA89 /* CustomTKDragViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTKDragViewDelegate.m; sourceTree = "<group>"; };
 		924B6C7E162E3C8900B12605 /* TwitterService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterService.h; sourceTree = "<group>"; };
@@ -386,8 +388,6 @@
 		9274F9AB1638ABE800EB5AF1 /* tuit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tuit@2x.png"; sourceTree = "<group>"; };
 		9274F9B51638C46800EB5AF1 /* CustomCLSplitCascadeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCLSplitCascadeViewController.h; sourceTree = "<group>"; };
 		9274F9B61638C46800EB5AF1 /* CustomCLSplitCascadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCLSplitCascadeViewController.m; sourceTree = "<group>"; };
-		9274F9B81638CC3100EB5AF1 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
-		9274F9B91638CC3100EB5AF1 /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		9274F9BC1638CE2500EB5AF1 /* IHideTutorial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IHideTutorial.h; sourceTree = "<group>"; };
 		9274F9C81638FE0F00EB5AF1 /* Internacional.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Internacional.csv; sourceTree = "<group>"; };
 		927D00FF1627609A00BF2D2E /* CRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRTableViewController.h; sourceTree = "<group>"; };
@@ -845,8 +845,8 @@
 		9299D672162F832D004BCD9F /* Portada */ = {
 			isa = PBXGroup;
 			children = (
-				9274F9B81638CC3100EB5AF1 /* background.jpg */,
-				9274F9B91638CC3100EB5AF1 /* background@2x.jpg */,
+				923EF87C1644737200894764 /* background.jpg */,
+				923EF87D1644737200894764 /* background@2x.jpg */,
 				9299D675162F832D004BCD9F /* teambutton.png */,
 				9299D676162F832D004BCD9F /* teambutton@2x.png */,
 			);
@@ -1369,8 +1369,6 @@
 				9274F9B11638ABE800EB5AF1 /* popup1@2x.png in Resources */,
 				9274F9B21638ABE800EB5AF1 /* tuit.png in Resources */,
 				9274F9B31638ABE800EB5AF1 /* tuit@2x.png in Resources */,
-				9274F9BA1638CC3100EB5AF1 /* background.jpg in Resources */,
-				9274F9BB1638CC3100EB5AF1 /* background@2x.jpg in Resources */,
 				9274F9C91638FE1100EB5AF1 /* Internacional.csv in Resources */,
 				9208DFDD1639C7EF00E05A61 /* contador@2x.png in Resources */,
 				9208DFDE1639C7EF00E05A61 /* contador.png in Resources */,
@@ -1460,6 +1458,8 @@
 				92846D86164072C0009DA833 /* TigresBadge@2x.png in Resources */,
 				92846D87164072C0009DA833 /* TigresTeam.png in Resources */,
 				92846D88164072C0009DA833 /* TigresTeam@2x.png in Resources */,
+				923EF87E1644737200894764 /* background.jpg in Resources */,
+				923EF87F1644737200894764 /* background@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
