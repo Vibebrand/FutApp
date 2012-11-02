@@ -145,8 +145,8 @@
 		92846D7C164072C0009DA833 /* MonterreyTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D6C164072C0009DA833 /* MonterreyTeam@2x.png */; };
 		92846D7D164072C0009DA833 /* PachucaBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D6D164072C0009DA833 /* PachucaBadge.png */; };
 		92846D7E164072C0009DA833 /* PachucaBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D6E164072C0009DA833 /* PachucaBadge@2x.png */; };
-		92846D7F164072C0009DA833 /* PachuchaTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D6F164072C0009DA833 /* PachuchaTeam.png */; };
-		92846D80164072C0009DA833 /* PachuchaTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D70164072C0009DA833 /* PachuchaTeam@2x.png */; };
+		92846D7F164072C0009DA833 /* PachucaTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D6F164072C0009DA833 /* PachucaTeam.png */; };
+		92846D80164072C0009DA833 /* PachucaTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D70164072C0009DA833 /* PachucaTeam@2x.png */; };
 		92846D81164072C0009DA833 /* San LuisBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D71164072C0009DA833 /* San LuisBadge.png */; };
 		92846D82164072C0009DA833 /* San LuisBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D72164072C0009DA833 /* San LuisBadge@2x.png */; };
 		92846D83164072C0009DA833 /* San LuisTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D73164072C0009DA833 /* San LuisTeam.png */; };
@@ -442,8 +442,8 @@
 		92846D6C164072C0009DA833 /* MonterreyTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MonterreyTeam@2x.png"; sourceTree = "<group>"; };
 		92846D6D164072C0009DA833 /* PachucaBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PachucaBadge.png; sourceTree = "<group>"; };
 		92846D6E164072C0009DA833 /* PachucaBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PachucaBadge@2x.png"; sourceTree = "<group>"; };
-		92846D6F164072C0009DA833 /* PachuchaTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PachuchaTeam.png; sourceTree = "<group>"; };
-		92846D70164072C0009DA833 /* PachuchaTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PachuchaTeam@2x.png"; sourceTree = "<group>"; };
+		92846D6F164072C0009DA833 /* PachucaTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PachucaTeam.png; sourceTree = "<group>"; };
+		92846D70164072C0009DA833 /* PachucaTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PachucaTeam@2x.png"; sourceTree = "<group>"; };
 		92846D71164072C0009DA833 /* San LuisBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "San LuisBadge.png"; sourceTree = "<group>"; };
 		92846D72164072C0009DA833 /* San LuisBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "San LuisBadge@2x.png"; sourceTree = "<group>"; };
 		92846D73164072C0009DA833 /* San LuisTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "San LuisTeam.png"; sourceTree = "<group>"; };
@@ -862,8 +862,8 @@
 				92846D6C164072C0009DA833 /* MonterreyTeam@2x.png */,
 				92846D6D164072C0009DA833 /* PachucaBadge.png */,
 				92846D6E164072C0009DA833 /* PachucaBadge@2x.png */,
-				92846D6F164072C0009DA833 /* PachuchaTeam.png */,
-				92846D70164072C0009DA833 /* PachuchaTeam@2x.png */,
+				92846D6F164072C0009DA833 /* PachucaTeam.png */,
+				92846D70164072C0009DA833 /* PachucaTeam@2x.png */,
 				92846D71164072C0009DA833 /* San LuisBadge.png */,
 				92846D72164072C0009DA833 /* San LuisBadge@2x.png */,
 				92846D73164072C0009DA833 /* San LuisTeam.png */,
@@ -1450,8 +1450,8 @@
 				92846D7C164072C0009DA833 /* MonterreyTeam@2x.png in Resources */,
 				92846D7D164072C0009DA833 /* PachucaBadge.png in Resources */,
 				92846D7E164072C0009DA833 /* PachucaBadge@2x.png in Resources */,
-				92846D7F164072C0009DA833 /* PachuchaTeam.png in Resources */,
-				92846D80164072C0009DA833 /* PachuchaTeam@2x.png in Resources */,
+				92846D7F164072C0009DA833 /* PachucaTeam.png in Resources */,
+				92846D80164072C0009DA833 /* PachucaTeam@2x.png in Resources */,
 				92846D81164072C0009DA833 /* San LuisBadge.png in Resources */,
 				92846D82164072C0009DA833 /* San LuisBadge@2x.png in Resources */,
 				92846D83164072C0009DA833 /* San LuisTeam.png in Resources */,
