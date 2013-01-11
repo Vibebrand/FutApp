@@ -34,6 +34,9 @@
         [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
     #endif
     [TestFlight takeOff:@"fc94afbf9058e48097c399875eb34c13_MTA5NjA4MjAxMi0wNy0xMiAxNDozNDowOC40ODc0MjA"];
+    
+    sleep(2);
+    
     self.masterController = [[[MasterController alloc] init] autorelease];
     
     TestFlightLogger *tfl = [[TestFlightLogger alloc] init];
