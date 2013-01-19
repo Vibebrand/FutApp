@@ -11,6 +11,8 @@
 #import "CascadeController.h"
 #import "TwoTeamsFieldViewController.h"
 #import "ChosenPlayersService.h"
+#import "CLSplitCascadeViewController.h"
+#import "ThirdTeamViewController.h"
 
 @implementation MasterController
 
@@ -43,6 +45,7 @@
     field.teamOneChosenData = self.teamOneChosen;
     field.dataSource = self.dataSource;
     [self.navigator pushViewController:field animated:YES];
+    [field release];
 }
 
 - (void)toFieldWithTwoTeams:(NSDictionary *)local And:(NSDictionary *)visitor {
@@ -54,6 +57,7 @@
     field.teamTwoChosenData = self.teamTwoChosen;
     field.dataSource = self.dataSource;
     [self.navigator pushViewController:field animated:YES];
+    [field release];
 }
 
 - (void)backToRootView {
@@ -62,12 +66,19 @@
 
 - (void)willchangeToOption:(int)index
 {
-    self.cascadeController = [[CascadeController alloc] init];
+    
+    if (index == 2) {
+        self.cascadeController = [[[CascadeController alloc] initForNationalTeam] autorelease];
+    } else {
+        self.cascadeController = [[[CascadeController alloc] init] autorelease];
+    }
+    
     self.cascadeController.dataSource = self.dataSource;
     self.cascadeController.twoTeams = index;
     self.cascadeController.flowManager = self;
     self.cascadeController.teamOneChosenData = self.teamOneChosen;
     self.cascadeController.teamTwoChosenData = self.teamTwoChosen;
+    
     [self.navigator pushViewController:self.cascadeController.splitCascadeViewController animated:YES];
 }
 

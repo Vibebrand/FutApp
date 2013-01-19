@@ -16,14 +16,8 @@
 
 @implementation TeamsViewController
 
-@synthesize teamsInfo, flowManager, dataSource;
+@synthesize  flowManager, dataSource, hideTutorial;
 
-- (id<ITeamInfoService>)teamsInfo {
-    if (!teamsInfo) {
-        teamsInfo = [[TeamInfoServiceArray alloc] init];
-    }
-    return teamsInfo;
-}
 
 - (void)viewDidLoad
 {
@@ -35,7 +29,6 @@
     backButton.frame = CGRectMake(10, 8, 60, 35);
     [backButton setBackgroundImage:[UIImage imageNamed:@"backupbutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:backButton];
-    [backButton release];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -48,8 +41,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (self.teamsInfo){
-        return [self.teamsInfo numberOfTeams];
+    if (self.dataSource){
+        return [[self.dataSource allData] count];
     }
     return 0;
 }
@@ -62,14 +55,17 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         
         [cell.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:17.0]];
-        [cell.textLabel setTextColor: [UIColor colorWithRed:0.894117 green:0.839215 blue:0.788235 alpha:1.0]];
-      //  [cell.textLabel setShadowColor: [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.75]];
         [cell.textLabel setShadowOffset:CGSizeMake(0.0, 1.0)];
         
     }
     
+    UIImage *img = [UIImage imageNamed:[[[self.dataSource allData] objectAtIndex:indexPath.row] objectForKey:@"teamImage"]];
     
-    cell.imageView.image = [UIImage imageNamed:[[[self.dataSource allData] objectAtIndex:indexPath.row] objectForKey:@"teamImage"]];
+    if (!img) {
+        img = [UIImage imageNamed:@"DefaultTeam.png"];
+    }
+    
+    cell.imageView.image = img;
     cell.textLabel.text = [[[self.dataSource allData] objectAtIndex:indexPath.row] objectForKey:@"name"];
     
     
@@ -77,6 +73,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [hideTutorial hideTutorial];
     [flowManager asignCascadeView:indexPath.row];
 }
 

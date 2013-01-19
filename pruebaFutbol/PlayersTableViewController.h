@@ -17,12 +17,10 @@
 @class ChosenPlayersService;
 
 @interface PlayersTableViewController : CLTableViewController<CLCascadeViewDelegate, ISelectedPlayersInfo> {
-    NSMutableArray *selectedMarks;
     UIButton *doneButton;
     UILabel *playersLeft;
 }
 
-@property(nonatomic, retain) id<IPlayerInfoService> playersInfo;
 @property(nonatomic, retain) id<IInstantiatorDelegate> instantiator;
 @property(nonatomic, assign) BOOL isFinal;
 @property(nonatomic, assign) id<IFlowManager> flowManager;

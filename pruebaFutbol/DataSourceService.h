@@ -10,7 +10,11 @@
 #import "IDataSource.h"
 
 @interface DataSourceService : NSObject <IDataSource>{
-    NSArray *teams;
+    NSMutableArray *teams;
+    NSMutableDictionary *locals;
+    NSMutableDictionary *foreigns;
+    NSMutableDictionary *eleven;
+    NSArray *specialTeams;
 }
 
 @end

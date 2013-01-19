@@ -834,7 +834,7 @@ static TKDragManager *manager; // it's a singleton, but how to relase it under A
 }
 
 + (TKOccupancyIndicator *)indicatorWithFrame:(CGRect)frame{
-    return [[TKOccupancyIndicator alloc] initWithFrame:frame];
+    return [[[TKOccupancyIndicator alloc] initWithFrame:frame] autorelease];
 }
 
 - (NSString *)description{

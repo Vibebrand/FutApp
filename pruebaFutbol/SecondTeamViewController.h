@@ -8,14 +8,12 @@
 
 #import "ViewController.h"
 #import "CLTableViewController.h"
-#import "ITeamInfoService.h"
 #import "IFlowManager.h"
 #import "IInstantiatorDelegate.h"
 #import "IDataSource.h"
 
 @interface SecondTeamViewController : CLTableViewController
 
-@property(nonatomic, retain) id<ITeamInfoService> teamsInfo;
 @property(nonatomic, retain) id<IFlowManager> flowManager;
 @property(nonatomic, retain) id<IInstantiatorDelegate> instantiator;
 @property (nonatomic, retain) id<IDataSource> dataSource;

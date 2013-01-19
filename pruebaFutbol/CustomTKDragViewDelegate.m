@@ -10,7 +10,7 @@
 
 @implementation CustomTKDragViewDelegate
 
-@synthesize dragViews, logger;
+@synthesize dragViews, logger, playersNames;
 
 - (id)init
 {
@@ -87,5 +87,8 @@
     return sum;
 }
 
+- (void)dragViewDidLeaveStartFrame:(TKDragView *)dragView {
+    [self.playersNames hidePlayersName];
+}
 
 @end

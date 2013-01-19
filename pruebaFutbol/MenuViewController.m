@@ -37,20 +37,22 @@
     [background release];
         
     UIButton *oneTeam = [UIButton buttonWithType:UIButtonTypeCustom];
-    oneTeam.frame = CGRectMake(380, 450, 104, 104);
+    oneTeam.frame = CGRectMake(340, 450, 104, 104);
     [oneTeam addTarget:self action:@selector(oneTeamButtonClicked) forControlEvents:UIControlEventTouchDown];
     [oneTeam setImage:[UIImage imageNamed:@"oneteamButton.png"] forState:UIControlStateNormal];
     [self.view addSubview:oneTeam];
-    [oneTeam release];
     
     UIButton *twoTeams = [UIButton buttonWithType:UIButtonTypeCustom];
-    twoTeams.frame = CGRectMake(530, 450, 104, 104);
+    twoTeams.frame = CGRectMake(578, 450, 104, 104);
     [twoTeams addTarget:self action:@selector(twoTeamsButtonClicked) forControlEvents:UIControlEventTouchDown];
     [twoTeams setImage:[UIImage imageNamed:@"teambutton.png"] forState:UIControlStateNormal];
     [self.view addSubview:twoTeams];
-    [twoTeams release];
     
-    
+    UIButton *nationalTeam = [UIButton buttonWithType:UIButtonTypeCustom];
+    nationalTeam.frame = CGRectMake(454, 445, 114, 114);
+    [nationalTeam addTarget:self action:@selector(nationalTeamButtonClicked) forControlEvents:UIControlEventTouchDown];
+    [nationalTeam setImage:[UIImage imageNamed:@"seleccion.png"] forState:UIControlStateNormal];
+    [self.view addSubview:nationalTeam];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -71,6 +73,10 @@
 
 - (void)twoTeamsButtonClicked {
     [flowManager willchangeToOption:1];
+}
+
+- (void)nationalTeamButtonClicked {
+    [flowManager willchangeToOption:2];
 }
 
 

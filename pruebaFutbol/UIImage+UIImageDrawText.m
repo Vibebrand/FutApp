@@ -36,7 +36,6 @@
 }
 
 + (UIImage*)captureView:(UIView *)view {
-	CGRect rect = [[UIScreen mainScreen] bounds];
 	UIGraphicsBeginImageContext(CGSizeMake([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width));
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	[view.layer renderInContext:context];

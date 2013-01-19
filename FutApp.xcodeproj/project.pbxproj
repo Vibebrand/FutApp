@@ -7,6 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9206D870163729C500BD73D6 /* ThirdTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9206D86F163729C400BD73D6 /* ThirdTeamViewController.m */; };
+		9208DFDD1639C7EF00E05A61 /* contador@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFDB1639C7EC00E05A61 /* contador@2x.png */; };
+		9208DFDE1639C7EF00E05A61 /* contador.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFDC1639C7EE00E05A61 /* contador.png */; };
+		9208E00B1639FE6800E05A61 /* PueblaBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFE91639FE6800E05A61 /* PueblaBadge@2x.png */; };
+		9208E00F1639FE6800E05A61 /* LeónBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFED1639FE6800E05A61 /* LeónBadge@2x.png */; };
+		9208E0101639FE6800E05A61 /* MoreliaBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFEE1639FE6800E05A61 /* MoreliaBadge@2x.png */; };
+		9208E0111639FE6800E05A61 /* PumasBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFEF1639FE6800E05A61 /* PumasBadge@2x.png */; };
+		9208E0121639FE6800E05A61 /* JaguaresBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFF01639FE6800E05A61 /* JaguaresBadge@2x.png */; };
+		9208E0131639FE6800E05A61 /* AtlanteBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFF11639FE6800E05A61 /* AtlanteBadge@2x.png */; };
+		9208E0141639FE6800E05A61 /* Cruz AzulBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFF21639FE6800E05A61 /* Cruz AzulBadge@2x.png */; };
+		9208E0151639FE6800E05A61 /* TijuanaBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFF31639FE6800E05A61 /* TijuanaBadge@2x.png */; };
+		9208E0161639FE6800E05A61 /* QuerétaroBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFF41639FE6800E05A61 /* QuerétaroBadge@2x.png */; };
+		9208E0171639FE6800E05A61 /* AtlasBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFF51639FE6800E05A61 /* AtlasBadge@2x.png */; };
+		9208E0181639FE6800E05A61 /* PueblaBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFF61639FE6800E05A61 /* PueblaBadge.png */; };
+		9208E01B1639FE6800E05A61 /* MoreliaBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFF91639FE6800E05A61 /* MoreliaBadge.png */; };
+		9208E01D1639FE6800E05A61 /* LeónBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFFB1639FE6800E05A61 /* LeónBadge.png */; };
+		9208E01F1639FE6800E05A61 /* Cruz AzulBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFFD1639FE6800E05A61 /* Cruz AzulBadge.png */; };
+		9208E0201639FE6800E05A61 /* JaguaresBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFFE1639FE6800E05A61 /* JaguaresBadge.png */; };
+		9208E0211639FE6800E05A61 /* AtlanteBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208DFFF1639FE6800E05A61 /* AtlanteBadge.png */; };
+		9208E0221639FE6800E05A61 /* PumasBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0001639FE6800E05A61 /* PumasBadge.png */; };
+		9208E0231639FE6800E05A61 /* TijuanaBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0011639FE6800E05A61 /* TijuanaBadge.png */; };
+		9208E0241639FE6800E05A61 /* QuerétaroBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0021639FE6800E05A61 /* QuerétaroBadge.png */; };
+		9208E0251639FE6800E05A61 /* AtlasBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0031639FE6800E05A61 /* AtlasBadge.png */; };
+		9208E0261639FE6800E05A61 /* TolucaBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0041639FE6800E05A61 /* TolucaBadge@2x.png */; };
+		9208E0281639FE6800E05A61 /* SantosBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0061639FE6800E05A61 /* SantosBadge@2x.png */; };
+		9208E0291639FE6800E05A61 /* TolucaBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0071639FE6800E05A61 /* TolucaBadge.png */; };
+		9208E02A1639FE6800E05A61 /* MéxicoBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0081639FE6800E05A61 /* MéxicoBadge.png */; };
+		9208E02B1639FE6800E05A61 /* SantosBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0091639FE6800E05A61 /* SantosBadge.png */; };
+		9208E04F1639FE7700E05A61 /* PumasTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E02D1639FE7700E05A61 /* PumasTeam@2x.png */; };
+		9208E0501639FE7700E05A61 /* PueblaTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E02E1639FE7700E05A61 /* PueblaTeam@2x.png */; };
+		9208E0551639FE7700E05A61 /* TijuanaTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0331639FE7700E05A61 /* TijuanaTeam@2x.png */; };
+		9208E0561639FE7700E05A61 /* QuerétaroTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0341639FE7700E05A61 /* QuerétaroTeam@2x.png */; };
+		9208E0571639FE7700E05A61 /* JaguaresTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0351639FE7700E05A61 /* JaguaresTeam@2x.png */; };
+		9208E0581639FE7700E05A61 /* MoreliaTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0361639FE7700E05A61 /* MoreliaTeam@2x.png */; };
+		9208E0591639FE7700E05A61 /* AtlanteTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0371639FE7700E05A61 /* AtlanteTeam@2x.png */; };
+		9208E05A1639FE7700E05A61 /* Cruz AzulTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0381639FE7700E05A61 /* Cruz AzulTeam@2x.png */; };
+		9208E05B1639FE7700E05A61 /* AtlasTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0391639FE7700E05A61 /* AtlasTeam@2x.png */; };
+		9208E05C1639FE7700E05A61 /* PueblaTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E03A1639FE7700E05A61 /* PueblaTeam.png */; };
+		9208E05E1639FE7700E05A61 /* PumasTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E03C1639FE7700E05A61 /* PumasTeam.png */; };
+		9208E0601639FE7700E05A61 /* LeónTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E03E1639FE7700E05A61 /* LeónTeam.png */; };
+		9208E0621639FE7700E05A61 /* JaguaresTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0401639FE7700E05A61 /* JaguaresTeam.png */; };
+		9208E0641639FE7700E05A61 /* TijuanaTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0421639FE7700E05A61 /* TijuanaTeam.png */; };
+		9208E0651639FE7700E05A61 /* QuerétaroTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0431639FE7700E05A61 /* QuerétaroTeam.png */; };
+		9208E0661639FE7700E05A61 /* Cruz AzulTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0441639FE7700E05A61 /* Cruz AzulTeam.png */; };
+		9208E0671639FE7700E05A61 /* AtlanteTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0451639FE7700E05A61 /* AtlanteTeam.png */; };
+		9208E0681639FE7700E05A61 /* MoreliaTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0461639FE7700E05A61 /* MoreliaTeam.png */; };
+		9208E0691639FE7700E05A61 /* AtlasTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0471639FE7700E05A61 /* AtlasTeam.png */; };
+		9208E06A1639FE7700E05A61 /* TolucaTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0481639FE7700E05A61 /* TolucaTeam@2x.png */; };
+		9208E06B1639FE7700E05A61 /* MéxicoTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E0491639FE7700E05A61 /* MéxicoTeam@2x.png */; };
+		9208E06C1639FE7700E05A61 /* SantosTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E04A1639FE7700E05A61 /* SantosTeam@2x.png */; };
+		9208E06D1639FE7700E05A61 /* TolucaTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E04B1639FE7700E05A61 /* TolucaTeam.png */; };
+		9208E06E1639FE7700E05A61 /* MéxicoTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E04C1639FE7700E05A61 /* MéxicoTeam.png */; };
+		9208E06F1639FE7700E05A61 /* SantosTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E04D1639FE7700E05A61 /* SantosTeam.png */; };
+		9208E076163A03B700E05A61 /* LeónTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E075163A03B700E05A61 /* LeónTeam@2x.png */; };
+		9208E078163A047E00E05A61 /* MéxicoBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9208E077163A047800E05A61 /* MéxicoBadge@2x.png */; };
 		921DCC25161CBFFC00386E5E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC22161CBFB400386E5E /* libTestFlight.a */; };
 		921DCC26161CBFFC00386E5E /* TestFlight.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC23161CBFB400386E5E /* TestFlight.h */; };
 		921DCC28161CC03200386E5E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 921DCC27161CC03200386E5E /* libz.dylib */; };
@@ -14,48 +69,73 @@
 		9226CE0F161D2B2B00511116 /* gray.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9226CE0E161D2B2B00511116 /* gray.jpeg */; };
 		923B18E01611197D00856A9D /* TKDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 923B18DF1611197D00856A9D /* TKDragView.m */; };
 		923B18E216111ECD00856A9D /* tile_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 923B18E116111ECD00856A9D /* tile_green.png */; };
+		923EF87E1644737200894764 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 923EF87C1644737200894764 /* background.jpg */; };
+		923EF87F1644737200894764 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 923EF87D1644737200894764 /* background@2x.jpg */; };
 		924AB69016162A4B006FCA89 /* CustomTKDragViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 924AB68F16162A4B006FCA89 /* CustomTKDragViewDelegate.m */; };
 		924B6C80162E3C8900B12605 /* TwitterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 924B6C7F162E3C8900B12605 /* TwitterService.m */; };
 		924B6C83162E439600B12605 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924B6C82162E439600B12605 /* Social.framework */; };
-		924B6CDB162E5D2300B12605 /* tweet.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6CDA162E5D2300B12605 /* tweet.png */; };
 		924B6CFE162E6E4D00B12605 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6CFD162E6E4D00B12605 /* Icon-72.png */; };
 		924B6D00162E6E5800B12605 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6CFF162E6E5800B12605 /* Icon-72@2x.png */; };
 		924B6D02162E6E8100B12605 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D01162E6E8000B12605 /* Default-Portrait~ipad.png */; };
 		924B6D04162E6E8800B12605 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D03162E6E8800B12605 /* Default-Portrait@2x~ipad.png */; };
 		924B6D06162E6E9700B12605 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D05162E6E9700B12605 /* Default-Landscape~ipad.png */; };
 		924B6D08162E6E9C00B12605 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D07162E6E9C00B12605 /* Default-Landscape@2x~ipad.png */; };
-		924B6D51162E78C900B12605 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D41162E78C900B12605 /* Icon-72.png */; };
-		924B6D52162E78C900B12605 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D42162E78C900B12605 /* Icon-72@2x.png */; };
-		924B6D53162E78C900B12605 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D43162E78C900B12605 /* Icon-Small-50.png */; };
-		924B6D54162E78C900B12605 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D44162E78C900B12605 /* Icon-Small-50@2x.png */; };
-		924B6D55162E78C900B12605 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D45162E78C900B12605 /* Icon-Small.png */; };
-		924B6D56162E78C900B12605 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D46162E78C900B12605 /* Icon-Small@2x.png */; };
-		924B6D57162E78C900B12605 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D47162E78C900B12605 /* Icon.png */; };
-		924B6D58162E78C900B12605 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D48162E78C900B12605 /* Icon@2x.png */; };
-		924B6D59162E78C900B12605 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D49162E78C900B12605 /* iTunesArtwork.png */; };
-		924B6D5A162E78C900B12605 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D4A162E78C900B12605 /* iTunesArtwork@2x.png */; };
 		924B6D5B162E78C900B12605 /* splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D4B162E78C900B12605 /* splashscreen.png */; };
 		924B6D5C162E78C900B12605 /* splashscreen2@x.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D4C162E78C900B12605 /* splashscreen2@x.png */; };
 		924B6D5D162E78C900B12605 /* splashVerticalipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D4D162E78C900B12605 /* splashVerticalipad.png */; };
 		924B6D5E162E78C900B12605 /* splashVerticalipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D4E162E78C900B12605 /* splashVerticalipad@2x.png */; };
 		924B6D5F162E78C900B12605 /* splashVerticalIphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D4F162E78C900B12605 /* splashVerticalIphone.png */; };
 		924B6D60162E78C900B12605 /* splashVerticalIphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 924B6D50162E78C900B12605 /* splashVerticalIphone@2x.png */; };
-		925B639E161E565000954A55 /* chivasadidas.png in Resources */ = {isa = PBXBuildFile; fileRef = 925B639D161E564F00954A55 /* chivasadidas.png */; };
 		925B63A4161E650B00954A55 /* TestFlightLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 925B63A3161E650B00954A55 /* TestFlightLogger.m */; };
-		9261F1BE162697E800467C6F /* america.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9261F1BD162697E800467C6F /* america.jpeg */; };
 		9261F1C716269B7A00467C6F /* CRTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9261F1C616269B7A00467C6F /* CRTableViewCell.m */; };
 		9261F1CA1626A0B400467C6F /* PlayersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9261F1C91626A0B400467C6F /* PlayersTableViewController.m */; };
 		9261F1CC1626A34200467C6F /* ToolBar_479x45.png in Resources */ = {isa = PBXBuildFile; fileRef = 9261F1CB1626A34200467C6F /* ToolBar_479x45.png */; };
 		926FF759161A78B1003E4B29 /* MGDrawingSlate.m in Sources */ = {isa = PBXBuildFile; fileRef = 926FF758161A78B1003E4B29 /* MGDrawingSlate.m */; };
+		9274F9AC1638ABE800EB5AF1 /* grass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9A41638ABE800EB5AF1 /* grass.jpg */; };
+		9274F9AD1638ABE800EB5AF1 /* grass@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9A51638ABE800EB5AF1 /* grass@2x.jpg */; };
+		9274F9AE1638ABE800EB5AF1 /* ok1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9A61638ABE800EB5AF1 /* ok1.png */; };
+		9274F9AF1638ABE800EB5AF1 /* ok1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9A71638ABE800EB5AF1 /* ok1@2x.png */; };
+		9274F9B01638ABE800EB5AF1 /* popup1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9A81638ABE800EB5AF1 /* popup1.png */; };
+		9274F9B11638ABE800EB5AF1 /* popup1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9A91638ABE800EB5AF1 /* popup1@2x.png */; };
+		9274F9B21638ABE800EB5AF1 /* tuit.png in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9AA1638ABE800EB5AF1 /* tuit.png */; };
+		9274F9B31638ABE800EB5AF1 /* tuit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9274F9AB1638ABE800EB5AF1 /* tuit@2x.png */; };
+		9274F9B71638C46800EB5AF1 /* CustomCLSplitCascadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9274F9B61638C46800EB5AF1 /* CustomCLSplitCascadeViewController.m */; };
 		927D01011627609A00BF2D2E /* CRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927D01001627609A00BF2D2E /* CRTableViewController.m */; };
 		927D012F162789EA00BF2D2E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927D012E162789EA00BF2D2E /* ProfileViewController.m */; };
-		927D0132162799E300BF2D2E /* UnknownProfile1.png in Resources */ = {isa = PBXBuildFile; fileRef = 927D0131162799E300BF2D2E /* UnknownProfile1.png */; };
+		927EF94D163686250042064A /* AméricaBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF94A163686240042064A /* AméricaBadge.png */; };
+		927EF94E163686250042064A /* AméricaBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF94B163686250042064A /* AméricaBadge@2x.png */; };
+		927EF94F163686250042064A /* AméricaTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF94C163686250042064A /* AméricaTeam@2x.png */; };
+		927EF95716369C780042064A /* DefaultTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF95516369C780042064A /* DefaultTeam@2x.png */; };
+		927EF95816369C780042064A /* DefaultTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF95616369C780042064A /* DefaultTeam.png */; };
+		927EF9651636A4F80042064A /* popup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF95B1636A4F40042064A /* popup@2x.png */; };
+		927EF9661636A4F80042064A /* popup.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF95C1636A4F40042064A /* popup.png */; };
+		927EF9671636A4F80042064A /* seleccion@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF95D1636A4F50042064A /* seleccion@2x.png */; };
+		927EF9681636A4F80042064A /* tutorial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF95E1636A4F60042064A /* tutorial@2x.png */; };
+		927EF9691636A4F80042064A /* seleccion.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF95F1636A4F60042064A /* seleccion.png */; };
+		927EF96A1636A4F80042064A /* ok@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF9601636A4F70042064A /* ok@2x.png */; };
+		927EF96B1636A4F80042064A /* tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF9611636A4F70042064A /* tutorial.png */; };
+		927EF96C1636A4F80042064A /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 927EF9621636A4F80042064A /* ok.png */; };
 		927F51AB16260BAD002DA762 /* TeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927F51AA16260BAD002DA762 /* TeamsViewController.m */; };
 		927F51AF16262C99002DA762 /* TeamsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927F51AE16262C99002DA762 /* TeamsViewController.xib */; };
 		927F51B116264864002DA762 /* Categories_header_view_289x89.png in Resources */ = {isa = PBXBuildFile; fileRef = 927F51B016264864002DA762 /* Categories_header_view_289x89.png */; };
 		927F51BC16265410002DA762 /* TeamInfoServiceArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 927F51BB16265410002DA762 /* TeamInfoServiceArray.m */; };
 		927F51BF162661A0002DA762 /* TeamInfoDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 927F51BE162661A0002DA762 /* TeamInfoDataSource.m */; };
-		927F51C1162681F3002DA762 /* guadalajara.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 927F51C0162681F3002DA762 /* guadalajara.jpeg */; };
+		92846D79164072C0009DA833 /* MonterreyBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D69164072C0009DA833 /* MonterreyBadge.png */; };
+		92846D7A164072C0009DA833 /* MonterreyBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D6A164072C0009DA833 /* MonterreyBadge@2x.png */; };
+		92846D7B164072C0009DA833 /* MonterreyTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D6B164072C0009DA833 /* MonterreyTeam.png */; };
+		92846D7C164072C0009DA833 /* MonterreyTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D6C164072C0009DA833 /* MonterreyTeam@2x.png */; };
+		92846D7D164072C0009DA833 /* PachucaBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D6D164072C0009DA833 /* PachucaBadge.png */; };
+		92846D7E164072C0009DA833 /* PachucaBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D6E164072C0009DA833 /* PachucaBadge@2x.png */; };
+		92846D7F164072C0009DA833 /* PachucaTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D6F164072C0009DA833 /* PachucaTeam.png */; };
+		92846D80164072C0009DA833 /* PachucaTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D70164072C0009DA833 /* PachucaTeam@2x.png */; };
+		92846D81164072C0009DA833 /* San LuisBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D71164072C0009DA833 /* San LuisBadge.png */; };
+		92846D82164072C0009DA833 /* San LuisBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D72164072C0009DA833 /* San LuisBadge@2x.png */; };
+		92846D83164072C0009DA833 /* San LuisTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D73164072C0009DA833 /* San LuisTeam.png */; };
+		92846D84164072C0009DA833 /* San LuisTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D74164072C0009DA833 /* San LuisTeam@2x.png */; };
+		92846D85164072C0009DA833 /* TigresBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D75164072C0009DA833 /* TigresBadge.png */; };
+		92846D86164072C0009DA833 /* TigresBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D76164072C0009DA833 /* TigresBadge@2x.png */; };
+		92846D87164072C0009DA833 /* TigresTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D77164072C0009DA833 /* TigresTeam.png */; };
+		92846D88164072C0009DA833 /* TigresTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92846D78164072C0009DA833 /* TigresTeam@2x.png */; };
 		92912F03160EA18A00A4C05E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92912F02160EA18A00A4C05E /* UIKit.framework */; };
 		92912F05160EA18A00A4C05E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92912F04160EA18A00A4C05E /* Foundation.framework */; };
 		92912F07160EA18A00A4C05E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92912F06160EA18A00A4C05E /* CoreGraphics.framework */; };
@@ -101,25 +181,31 @@
 		9299D693162F832D004BCD9F /* whitebutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D66F162F832D004BCD9F /* whitebutton@2x.png */; };
 		9299D694162F832D004BCD9F /* yellowbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D670162F832D004BCD9F /* yellowbutton.png */; };
 		9299D695162F832D004BCD9F /* yellowbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D671162F832D004BCD9F /* yellowbutton@2x.png */; };
-		9299D696162F832D004BCD9F /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9299D673162F832D004BCD9F /* background.jpg */; };
-		9299D697162F832D004BCD9F /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9299D674162F832D004BCD9F /* background@2x.jpg */; };
 		9299D698162F832D004BCD9F /* teambutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D675162F832D004BCD9F /* teambutton.png */; };
 		9299D699162F832D004BCD9F /* teambutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D676162F832D004BCD9F /* teambutton@2x.png */; };
-		9299D69A162F832D004BCD9F /* redteam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D678162F832D004BCD9F /* redteam.png */; };
-		9299D69B162F832D004BCD9F /* redteam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D679162F832D004BCD9F /* redteam@2x.png */; };
-		9299D69C162F832D004BCD9F /* redteamdot.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67A162F832D004BCD9F /* redteamdot.png */; };
-		9299D69D162F832D004BCD9F /* redteamdot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67B162F832D004BCD9F /* redteamdot@2x.png */; };
-		9299D69E162F832D004BCD9F /* yelloweteamdot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67C162F832D004BCD9F /* yelloweteamdot@2x.png */; };
-		9299D69F162F832D004BCD9F /* yellowteam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67D162F832D004BCD9F /* yellowteam.png */; };
-		9299D6A0162F832D004BCD9F /* yellowteam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67E162F832D004BCD9F /* yellowteam@2x.png */; };
-		9299D6A1162F832D004BCD9F /* yellowteamdot.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67F162F832D004BCD9F /* yellowteamdot.png */; };
+		9299D69A162F832D004BCD9F /* GuadalajaraTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D678162F832D004BCD9F /* GuadalajaraTeam.png */; };
+		9299D69B162F832D004BCD9F /* GuadalajaraTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D679162F832D004BCD9F /* GuadalajaraTeam@2x.png */; };
+		9299D69C162F832D004BCD9F /* GuadalajaraBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67A162F832D004BCD9F /* GuadalajaraBadge.png */; };
+		9299D69D162F832D004BCD9F /* GuadalajaraBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67B162F832D004BCD9F /* GuadalajaraBadge@2x.png */; };
+		9299D69F162F832D004BCD9F /* AméricaTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9299D67D162F832D004BCD9F /* AméricaTeam.png */; };
 		929BF887162A4187007B2C8A /* TwoTeamsFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 929BF886162A4187007B2C8A /* TwoTeamsFieldViewController.m */; };
+		929FC31B163B21F6000EC283 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 929FC311163B21F6000EC283 /* Icon-72.png */; };
+		929FC31C163B21F6000EC283 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 929FC312163B21F6000EC283 /* Icon-72@2x.png */; };
+		929FC31D163B21F6000EC283 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 929FC313163B21F6000EC283 /* Icon-Small-50.png */; };
+		929FC31E163B21F6000EC283 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 929FC314163B21F6000EC283 /* Icon-Small-50@2x.png */; };
+		929FC31F163B21F6000EC283 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 929FC315163B21F6000EC283 /* Icon-Small.png */; };
+		929FC320163B21F6000EC283 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 929FC316163B21F6000EC283 /* Icon-Small@2x.png */; };
+		929FC321163B21F6000EC283 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 929FC317163B21F6000EC283 /* Icon.png */; };
+		929FC322163B21F6000EC283 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 929FC318163B21F6000EC283 /* Icon@2x.png */; };
+		929FC323163B21F6000EC283 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 929FC319163B21F6000EC283 /* iTunesArtwork.png */; };
+		929FC324163B21F6000EC283 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 929FC31A163B21F6000EC283 /* iTunesArtwork@2x.png */; };
 		92A04FF616323FC300026BF8 /* middlebubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF016323FC300026BF8 /* middlebubble@2x.png */; };
 		92A04FF716323FC300026BF8 /* rightBubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF116323FC300026BF8 /* rightBubble@2x.png */; };
 		92A04FF816323FC300026BF8 /* leftBubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF216323FC300026BF8 /* leftBubble@2x.png */; };
 		92A04FF916323FC300026BF8 /* middlebubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF316323FC300026BF8 /* middlebubble.png */; };
 		92A04FFA16323FC300026BF8 /* rightBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF416323FC300026BF8 /* rightBubble.png */; };
 		92A04FFB16323FC300026BF8 /* leftBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A04FF516323FC300026BF8 /* leftBubble.png */; };
+		92A2549B1635D23C009FBE1A /* CustomTKDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A2549A1635D23C009FBE1A /* CustomTKDragView.m */; };
 		92A362A51620922E0095A4F8 /* chivasBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362A11620922E0095A4F8 /* chivasBadge.png */; };
 		92A362A61620922E0095A4F8 /* chivasBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362A21620922E0095A4F8 /* chivasBadge@2x.png */; };
 		92A362C9162117410095A4F8 /* chivasBadgeNum.png in Resources */ = {isa = PBXBuildFile; fileRef = 92A362C8162117410095A4F8 /* chivasBadgeNum.png */; };
@@ -164,8 +250,33 @@
 		92EC18211625E488004811E9 /* CLRetractableSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC181D1625E488004811E9 /* CLRetractableSectionHeaderView.m */; };
 		92EC18221625E488004811E9 /* CLRetractableSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC181F1625E488004811E9 /* CLRetractableSectionItem.m */; };
 		92EC183B1625EFA5004811E9 /* CascadeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EC183A1625EFA5004811E9 /* CascadeController.m */; };
-		92F7F7E41631B730003521F7 /* field.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E01631B730003521F7 /* field.jpg */; };
-		92F7F7E51631B730003521F7 /* field@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E11631B730003521F7 /* field@2x.jpg */; };
+		92EE3C6616A9A5CD00A767D9 /* Internacional.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C6516A9A5CD00A767D9 /* Internacional.csv */; };
+		92EE3C7916A9A5DD00A767D9 /* América.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C6716A9A5DD00A767D9 /* América.csv */; };
+		92EE3C7A16A9A5DD00A767D9 /* Atlante.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C6816A9A5DD00A767D9 /* Atlante.csv */; };
+		92EE3C7B16A9A5DD00A767D9 /* Atlas.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C6916A9A5DD00A767D9 /* Atlas.csv */; };
+		92EE3C7C16A9A5DD00A767D9 /* Cruz Azul.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C6A16A9A5DD00A767D9 /* Cruz Azul.csv */; };
+		92EE3C7D16A9A5DD00A767D9 /* Guadalajara.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C6B16A9A5DD00A767D9 /* Guadalajara.csv */; };
+		92EE3C7E16A9A5DD00A767D9 /* Jaguares.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C6C16A9A5DD00A767D9 /* Jaguares.csv */; };
+		92EE3C7F16A9A5DD00A767D9 /* León.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C6D16A9A5DD00A767D9 /* León.csv */; };
+		92EE3C8016A9A5DD00A767D9 /* Monterrey.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C6E16A9A5DD00A767D9 /* Monterrey.csv */; };
+		92EE3C8116A9A5DD00A767D9 /* Morelia.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C6F16A9A5DD00A767D9 /* Morelia.csv */; };
+		92EE3C8216A9A5DD00A767D9 /* Pachuca.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C7016A9A5DD00A767D9 /* Pachuca.csv */; };
+		92EE3C8316A9A5DD00A767D9 /* Puebla.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C7116A9A5DD00A767D9 /* Puebla.csv */; };
+		92EE3C8416A9A5DD00A767D9 /* Pumas.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C7216A9A5DD00A767D9 /* Pumas.csv */; };
+		92EE3C8516A9A5DD00A767D9 /* Querétaro.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C7316A9A5DD00A767D9 /* Querétaro.csv */; };
+		92EE3C8616A9A5DD00A767D9 /* San Luis.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C7416A9A5DD00A767D9 /* San Luis.csv */; };
+		92EE3C8716A9A5DD00A767D9 /* Santos.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C7516A9A5DD00A767D9 /* Santos.csv */; };
+		92EE3C8816A9A5DD00A767D9 /* Tigres.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C7616A9A5DD00A767D9 /* Tigres.csv */; };
+		92EE3C8916A9A5DD00A767D9 /* Tijuana.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C7716A9A5DD00A767D9 /* Tijuana.csv */; };
+		92EE3C8A16A9A5DD00A767D9 /* Toluca.csv in Resources */ = {isa = PBXBuildFile; fileRef = 92EE3C7816A9A5DD00A767D9 /* Toluca.csv */; };
+		92F085F0163A11B200B8E0BD /* tutorialBueno.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F085EE163A11B200B8E0BD /* tutorialBueno.png */; };
+		92F085F1163A11B200B8E0BD /* tutorialBueno@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F085EF163A11B200B8E0BD /* tutorialBueno@2x.png */; };
+		92F085F4163A130800B8E0BD /* field@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92F085F2163A130800B8E0BD /* field@2x.jpg */; };
+		92F085F5163A130800B8E0BD /* field.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92F085F3163A130800B8E0BD /* field.jpg */; };
+		92F085FA163A164E00B8E0BD /* extranjeroBadge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F085F6163A164E00B8E0BD /* extranjeroBadge@2x.png */; };
+		92F085FB163A164E00B8E0BD /* extranjeroTeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F085F7163A164E00B8E0BD /* extranjeroTeam@2x.png */; };
+		92F085FC163A164E00B8E0BD /* extranjeroTeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F085F8163A164E00B8E0BD /* extranjeroTeam.png */; };
+		92F085FD163A164E00B8E0BD /* extranjeroBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F085F9163A164E00B8E0BD /* extranjeroBadge.png */; };
 		92F7F7E61631B730003521F7 /* oneteamButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E21631B730003521F7 /* oneteamButton.png */; };
 		92F7F7E71631B730003521F7 /* oneteamButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F7F7E31631B730003521F7 /* oneteamButton@2x.png */; };
 		92F7F7EB1631C9C3003521F7 /* ChosenPlayersService.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F7F7EA1631C9C3003521F7 /* ChosenPlayersService.m */; };
@@ -173,6 +284,62 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9206D86E163729C400BD73D6 /* ThirdTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTeamViewController.h; sourceTree = "<group>"; };
+		9206D86F163729C400BD73D6 /* ThirdTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTeamViewController.m; sourceTree = "<group>"; };
+		9208DFDB1639C7EC00E05A61 /* contador@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contador@2x.png"; sourceTree = "<group>"; };
+		9208DFDC1639C7EE00E05A61 /* contador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contador.png; sourceTree = "<group>"; };
+		9208DFE91639FE6800E05A61 /* PueblaBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PueblaBadge@2x.png"; sourceTree = "<group>"; };
+		9208DFED1639FE6800E05A61 /* LeónBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LeónBadge@2x.png"; sourceTree = "<group>"; };
+		9208DFEE1639FE6800E05A61 /* MoreliaBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreliaBadge@2x.png"; sourceTree = "<group>"; };
+		9208DFEF1639FE6800E05A61 /* PumasBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PumasBadge@2x.png"; sourceTree = "<group>"; };
+		9208DFF01639FE6800E05A61 /* JaguaresBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JaguaresBadge@2x.png"; sourceTree = "<group>"; };
+		9208DFF11639FE6800E05A61 /* AtlanteBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AtlanteBadge@2x.png"; sourceTree = "<group>"; };
+		9208DFF21639FE6800E05A61 /* Cruz AzulBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cruz AzulBadge@2x.png"; sourceTree = "<group>"; };
+		9208DFF31639FE6800E05A61 /* TijuanaBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TijuanaBadge@2x.png"; sourceTree = "<group>"; };
+		9208DFF41639FE6800E05A61 /* QuerétaroBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuerétaroBadge@2x.png"; sourceTree = "<group>"; };
+		9208DFF51639FE6800E05A61 /* AtlasBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AtlasBadge@2x.png"; sourceTree = "<group>"; };
+		9208DFF61639FE6800E05A61 /* PueblaBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PueblaBadge.png; sourceTree = "<group>"; };
+		9208DFF91639FE6800E05A61 /* MoreliaBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MoreliaBadge.png; sourceTree = "<group>"; };
+		9208DFFB1639FE6800E05A61 /* LeónBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LeónBadge.png"; sourceTree = "<group>"; };
+		9208DFFD1639FE6800E05A61 /* Cruz AzulBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cruz AzulBadge.png"; sourceTree = "<group>"; };
+		9208DFFE1639FE6800E05A61 /* JaguaresBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JaguaresBadge.png; sourceTree = "<group>"; };
+		9208DFFF1639FE6800E05A61 /* AtlanteBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AtlanteBadge.png; sourceTree = "<group>"; };
+		9208E0001639FE6800E05A61 /* PumasBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PumasBadge.png; sourceTree = "<group>"; };
+		9208E0011639FE6800E05A61 /* TijuanaBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TijuanaBadge.png; sourceTree = "<group>"; };
+		9208E0021639FE6800E05A61 /* QuerétaroBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuerétaroBadge.png"; sourceTree = "<group>"; };
+		9208E0031639FE6800E05A61 /* AtlasBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AtlasBadge.png; sourceTree = "<group>"; };
+		9208E0041639FE6800E05A61 /* TolucaBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TolucaBadge@2x.png"; sourceTree = "<group>"; };
+		9208E0061639FE6800E05A61 /* SantosBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SantosBadge@2x.png"; sourceTree = "<group>"; };
+		9208E0071639FE6800E05A61 /* TolucaBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TolucaBadge.png; sourceTree = "<group>"; };
+		9208E0081639FE6800E05A61 /* MéxicoBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MéxicoBadge.png"; sourceTree = "<group>"; };
+		9208E0091639FE6800E05A61 /* SantosBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SantosBadge.png; sourceTree = "<group>"; };
+		9208E02D1639FE7700E05A61 /* PumasTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PumasTeam@2x.png"; sourceTree = "<group>"; };
+		9208E02E1639FE7700E05A61 /* PueblaTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PueblaTeam@2x.png"; sourceTree = "<group>"; };
+		9208E0331639FE7700E05A61 /* TijuanaTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TijuanaTeam@2x.png"; sourceTree = "<group>"; };
+		9208E0341639FE7700E05A61 /* QuerétaroTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuerétaroTeam@2x.png"; sourceTree = "<group>"; };
+		9208E0351639FE7700E05A61 /* JaguaresTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JaguaresTeam@2x.png"; sourceTree = "<group>"; };
+		9208E0361639FE7700E05A61 /* MoreliaTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreliaTeam@2x.png"; sourceTree = "<group>"; };
+		9208E0371639FE7700E05A61 /* AtlanteTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AtlanteTeam@2x.png"; sourceTree = "<group>"; };
+		9208E0381639FE7700E05A61 /* Cruz AzulTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cruz AzulTeam@2x.png"; sourceTree = "<group>"; };
+		9208E0391639FE7700E05A61 /* AtlasTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AtlasTeam@2x.png"; sourceTree = "<group>"; };
+		9208E03A1639FE7700E05A61 /* PueblaTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PueblaTeam.png; sourceTree = "<group>"; };
+		9208E03C1639FE7700E05A61 /* PumasTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PumasTeam.png; sourceTree = "<group>"; };
+		9208E03E1639FE7700E05A61 /* LeónTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LeónTeam.png"; sourceTree = "<group>"; };
+		9208E0401639FE7700E05A61 /* JaguaresTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JaguaresTeam.png; sourceTree = "<group>"; };
+		9208E0421639FE7700E05A61 /* TijuanaTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TijuanaTeam.png; sourceTree = "<group>"; };
+		9208E0431639FE7700E05A61 /* QuerétaroTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuerétaroTeam.png"; sourceTree = "<group>"; };
+		9208E0441639FE7700E05A61 /* Cruz AzulTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cruz AzulTeam.png"; sourceTree = "<group>"; };
+		9208E0451639FE7700E05A61 /* AtlanteTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AtlanteTeam.png; sourceTree = "<group>"; };
+		9208E0461639FE7700E05A61 /* MoreliaTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MoreliaTeam.png; sourceTree = "<group>"; };
+		9208E0471639FE7700E05A61 /* AtlasTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AtlasTeam.png; sourceTree = "<group>"; };
+		9208E0481639FE7700E05A61 /* TolucaTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TolucaTeam@2x.png"; sourceTree = "<group>"; };
+		9208E0491639FE7700E05A61 /* MéxicoTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MéxicoTeam@2x.png"; sourceTree = "<group>"; };
+		9208E04A1639FE7700E05A61 /* SantosTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SantosTeam@2x.png"; sourceTree = "<group>"; };
+		9208E04B1639FE7700E05A61 /* TolucaTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TolucaTeam.png; sourceTree = "<group>"; };
+		9208E04C1639FE7700E05A61 /* MéxicoTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MéxicoTeam.png"; sourceTree = "<group>"; };
+		9208E04D1639FE7700E05A61 /* SantosTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SantosTeam.png; sourceTree = "<group>"; };
+		9208E075163A03B700E05A61 /* LeónTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LeónTeam@2x.png"; sourceTree = "<group>"; };
+		9208E077163A047800E05A61 /* MéxicoBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MéxicoBadge@2x.png"; sourceTree = "<group>"; };
 		921DCC22161CBFB400386E5E /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		921DCC23161CBFB400386E5E /* TestFlight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		921DCC27161CC03200386E5E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -181,39 +348,28 @@
 		923B18DE1611197D00856A9D /* TKDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKDragView.h; sourceTree = "<group>"; };
 		923B18DF1611197D00856A9D /* TKDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKDragView.m; sourceTree = "<group>"; };
 		923B18E116111ECD00856A9D /* tile_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile_green.png; sourceTree = "<group>"; };
+		923EF87C1644737200894764 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		923EF87D1644737200894764 /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		924AB68E16162A4B006FCA89 /* CustomTKDragViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTKDragViewDelegate.h; sourceTree = "<group>"; };
 		924AB68F16162A4B006FCA89 /* CustomTKDragViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTKDragViewDelegate.m; sourceTree = "<group>"; };
 		924B6C7E162E3C8900B12605 /* TwitterService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterService.h; sourceTree = "<group>"; };
 		924B6C7F162E3C8900B12605 /* TwitterService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterService.m; sourceTree = "<group>"; };
 		924B6C82162E439600B12605 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		924B6CDA162E5D2300B12605 /* tweet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tweet.png; sourceTree = "<group>"; };
 		924B6CFD162E6E4D00B12605 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
 		924B6CFF162E6E5800B12605 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "../Icon-72@2x.png"; sourceTree = "<group>"; };
 		924B6D01162E6E8000B12605 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		924B6D03162E6E8800B12605 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		924B6D05162E6E9700B12605 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		924B6D07162E6E9C00B12605 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x~ipad.png"; path = "../Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
-		924B6D41162E78C900B12605 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
-		924B6D42162E78C900B12605 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
-		924B6D43162E78C900B12605 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
-		924B6D44162E78C900B12605 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
-		924B6D45162E78C900B12605 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
-		924B6D46162E78C900B12605 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
-		924B6D47162E78C900B12605 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		924B6D48162E78C900B12605 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		924B6D49162E78C900B12605 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
-		924B6D4A162E78C900B12605 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		924B6D4B162E78C900B12605 /* splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashscreen.png; sourceTree = "<group>"; };
 		924B6D4C162E78C900B12605 /* splashscreen2@x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splashscreen2@x.png"; sourceTree = "<group>"; };
 		924B6D4D162E78C900B12605 /* splashVerticalipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashVerticalipad.png; sourceTree = "<group>"; };
 		924B6D4E162E78C900B12605 /* splashVerticalipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splashVerticalipad@2x.png"; sourceTree = "<group>"; };
 		924B6D4F162E78C900B12605 /* splashVerticalIphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashVerticalIphone.png; sourceTree = "<group>"; };
 		924B6D50162E78C900B12605 /* splashVerticalIphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splashVerticalIphone@2x.png"; sourceTree = "<group>"; };
-		925B639D161E564F00954A55 /* chivasadidas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasadidas.png; sourceTree = "<group>"; };
 		925B63A1161E643E00954A55 /* ICheckpointMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICheckpointMessages.h; sourceTree = "<group>"; };
 		925B63A2161E650B00954A55 /* TestFlightLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlightLogger.h; sourceTree = "<group>"; };
 		925B63A3161E650B00954A55 /* TestFlightLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFlightLogger.m; sourceTree = "<group>"; };
-		9261F1BD162697E800467C6F /* america.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = america.jpeg; sourceTree = "<group>"; };
 		9261F1C516269B7A00467C6F /* CRTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRTableViewCell.h; sourceTree = "<group>"; };
 		9261F1C616269B7A00467C6F /* CRTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTableViewCell.m; sourceTree = "<group>"; };
 		9261F1C81626A0B400467C6F /* PlayersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersTableViewController.h; sourceTree = "<group>"; };
@@ -222,13 +378,36 @@
 		9261F1CD1626A59800467C6F /* IPlayerInfoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPlayerInfoService.h; sourceTree = "<group>"; };
 		926FF757161A78B1003E4B29 /* MGDrawingSlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDrawingSlate.h; sourceTree = "<group>"; };
 		926FF758161A78B1003E4B29 /* MGDrawingSlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDrawingSlate.m; sourceTree = "<group>"; };
+		9274F9A41638ABE800EB5AF1 /* grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass.jpg; sourceTree = "<group>"; };
+		9274F9A51638ABE800EB5AF1 /* grass@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "grass@2x.jpg"; sourceTree = "<group>"; };
+		9274F9A61638ABE800EB5AF1 /* ok1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok1.png; sourceTree = "<group>"; };
+		9274F9A71638ABE800EB5AF1 /* ok1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ok1@2x.png"; sourceTree = "<group>"; };
+		9274F9A81638ABE800EB5AF1 /* popup1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popup1.png; sourceTree = "<group>"; };
+		9274F9A91638ABE800EB5AF1 /* popup1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popup1@2x.png"; sourceTree = "<group>"; };
+		9274F9AA1638ABE800EB5AF1 /* tuit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tuit.png; sourceTree = "<group>"; };
+		9274F9AB1638ABE800EB5AF1 /* tuit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tuit@2x.png"; sourceTree = "<group>"; };
+		9274F9B51638C46800EB5AF1 /* CustomCLSplitCascadeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCLSplitCascadeViewController.h; sourceTree = "<group>"; };
+		9274F9B61638C46800EB5AF1 /* CustomCLSplitCascadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCLSplitCascadeViewController.m; sourceTree = "<group>"; };
+		9274F9BC1638CE2500EB5AF1 /* IHideTutorial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IHideTutorial.h; sourceTree = "<group>"; };
 		927D00FF1627609A00BF2D2E /* CRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRTableViewController.h; sourceTree = "<group>"; };
 		927D01001627609A00BF2D2E /* CRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTableViewController.m; sourceTree = "<group>"; };
 		927D012D162789EA00BF2D2E /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		927D012E162789EA00BF2D2E /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		927D0130162791C400BF2D2E /* IPlayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPlayerInfo.h; sourceTree = "<group>"; };
-		927D0131162799E300BF2D2E /* UnknownProfile1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UnknownProfile1.png; sourceTree = "<group>"; };
 		927D01331627A5D200BF2D2E /* IInstantiatorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IInstantiatorDelegate.h; sourceTree = "<group>"; };
+		927EF94A163686240042064A /* AméricaBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AméricaBadge.png"; sourceTree = "<group>"; };
+		927EF94B163686250042064A /* AméricaBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AméricaBadge@2x.png"; sourceTree = "<group>"; };
+		927EF94C163686250042064A /* AméricaTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AméricaTeam@2x.png"; sourceTree = "<group>"; };
+		927EF95516369C780042064A /* DefaultTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DefaultTeam@2x.png"; sourceTree = "<group>"; };
+		927EF95616369C780042064A /* DefaultTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultTeam.png; sourceTree = "<group>"; };
+		927EF95B1636A4F40042064A /* popup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popup@2x.png"; sourceTree = "<group>"; };
+		927EF95C1636A4F40042064A /* popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popup.png; sourceTree = "<group>"; };
+		927EF95D1636A4F50042064A /* seleccion@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seleccion@2x.png"; sourceTree = "<group>"; };
+		927EF95E1636A4F60042064A /* tutorial@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorial@2x.png"; sourceTree = "<group>"; };
+		927EF95F1636A4F60042064A /* seleccion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seleccion.png; sourceTree = "<group>"; };
+		927EF9601636A4F70042064A /* ok@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ok@2x.png"; sourceTree = "<group>"; };
+		927EF9611636A4F70042064A /* tutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial.png; sourceTree = "<group>"; };
+		927EF9621636A4F80042064A /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
 		927F51A916260BAD002DA762 /* TeamsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamsViewController.h; sourceTree = "<group>"; };
 		927F51AA16260BAD002DA762 /* TeamsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamsViewController.m; sourceTree = "<group>"; };
 		927F51AE16262C99002DA762 /* TeamsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamsViewController.xib; sourceTree = "<group>"; };
@@ -238,7 +417,22 @@
 		927F51BB16265410002DA762 /* TeamInfoServiceArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamInfoServiceArray.m; sourceTree = "<group>"; };
 		927F51BD162661A0002DA762 /* TeamInfoDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamInfoDataSource.h; sourceTree = "<group>"; };
 		927F51BE162661A0002DA762 /* TeamInfoDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamInfoDataSource.m; sourceTree = "<group>"; };
-		927F51C0162681F3002DA762 /* guadalajara.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guadalajara.jpeg; sourceTree = "<group>"; };
+		92846D69164072C0009DA833 /* MonterreyBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MonterreyBadge.png; sourceTree = "<group>"; };
+		92846D6A164072C0009DA833 /* MonterreyBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MonterreyBadge@2x.png"; sourceTree = "<group>"; };
+		92846D6B164072C0009DA833 /* MonterreyTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MonterreyTeam.png; sourceTree = "<group>"; };
+		92846D6C164072C0009DA833 /* MonterreyTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MonterreyTeam@2x.png"; sourceTree = "<group>"; };
+		92846D6D164072C0009DA833 /* PachucaBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PachucaBadge.png; sourceTree = "<group>"; };
+		92846D6E164072C0009DA833 /* PachucaBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PachucaBadge@2x.png"; sourceTree = "<group>"; };
+		92846D6F164072C0009DA833 /* PachucaTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PachucaTeam.png; sourceTree = "<group>"; };
+		92846D70164072C0009DA833 /* PachucaTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PachucaTeam@2x.png"; sourceTree = "<group>"; };
+		92846D71164072C0009DA833 /* San LuisBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "San LuisBadge.png"; sourceTree = "<group>"; };
+		92846D72164072C0009DA833 /* San LuisBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "San LuisBadge@2x.png"; sourceTree = "<group>"; };
+		92846D73164072C0009DA833 /* San LuisTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "San LuisTeam.png"; sourceTree = "<group>"; };
+		92846D74164072C0009DA833 /* San LuisTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "San LuisTeam@2x.png"; sourceTree = "<group>"; };
+		92846D75164072C0009DA833 /* TigresBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TigresBadge.png; sourceTree = "<group>"; };
+		92846D76164072C0009DA833 /* TigresBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TigresBadge@2x.png"; sourceTree = "<group>"; };
+		92846D77164072C0009DA833 /* TigresTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TigresTeam.png; sourceTree = "<group>"; };
+		92846D78164072C0009DA833 /* TigresTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TigresTeam@2x.png"; sourceTree = "<group>"; };
 		92912EFE160EA18A00A4C05E /* FutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92912F02160EA18A00A4C05E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		92912F04160EA18A00A4C05E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -294,20 +488,25 @@
 		9299D66F162F832D004BCD9F /* whitebutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whitebutton@2x.png"; sourceTree = "<group>"; };
 		9299D670162F832D004BCD9F /* yellowbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowbutton.png; sourceTree = "<group>"; };
 		9299D671162F832D004BCD9F /* yellowbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowbutton@2x.png"; sourceTree = "<group>"; };
-		9299D673162F832D004BCD9F /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
-		9299D674162F832D004BCD9F /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		9299D675162F832D004BCD9F /* teambutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teambutton.png; sourceTree = "<group>"; };
 		9299D676162F832D004BCD9F /* teambutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "teambutton@2x.png"; sourceTree = "<group>"; };
-		9299D678162F832D004BCD9F /* redteam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redteam.png; sourceTree = "<group>"; };
-		9299D679162F832D004BCD9F /* redteam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redteam@2x.png"; sourceTree = "<group>"; };
-		9299D67A162F832D004BCD9F /* redteamdot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redteamdot.png; sourceTree = "<group>"; };
-		9299D67B162F832D004BCD9F /* redteamdot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redteamdot@2x.png"; sourceTree = "<group>"; };
-		9299D67C162F832D004BCD9F /* yelloweteamdot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yelloweteamdot@2x.png"; sourceTree = "<group>"; };
-		9299D67D162F832D004BCD9F /* yellowteam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowteam.png; sourceTree = "<group>"; };
-		9299D67E162F832D004BCD9F /* yellowteam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellowteam@2x.png"; sourceTree = "<group>"; };
-		9299D67F162F832D004BCD9F /* yellowteamdot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowteamdot.png; sourceTree = "<group>"; };
+		9299D678162F832D004BCD9F /* GuadalajaraTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GuadalajaraTeam.png; sourceTree = "<group>"; };
+		9299D679162F832D004BCD9F /* GuadalajaraTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GuadalajaraTeam@2x.png"; sourceTree = "<group>"; };
+		9299D67A162F832D004BCD9F /* GuadalajaraBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GuadalajaraBadge.png; sourceTree = "<group>"; };
+		9299D67B162F832D004BCD9F /* GuadalajaraBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GuadalajaraBadge@2x.png"; sourceTree = "<group>"; };
+		9299D67D162F832D004BCD9F /* AméricaTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AméricaTeam.png"; sourceTree = "<group>"; };
 		929BF885162A4187007B2C8A /* TwoTeamsFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoTeamsFieldViewController.h; sourceTree = "<group>"; };
 		929BF886162A4187007B2C8A /* TwoTeamsFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoTeamsFieldViewController.m; sourceTree = "<group>"; };
+		929FC311163B21F6000EC283 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		929FC312163B21F6000EC283 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		929FC313163B21F6000EC283 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		929FC314163B21F6000EC283 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		929FC315163B21F6000EC283 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		929FC316163B21F6000EC283 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		929FC317163B21F6000EC283 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		929FC318163B21F6000EC283 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		929FC319163B21F6000EC283 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		929FC31A163B21F6000EC283 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		92A04FF016323FC300026BF8 /* middlebubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "middlebubble@2x.png"; sourceTree = "<group>"; };
 		92A04FF116323FC300026BF8 /* rightBubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rightBubble@2x.png"; sourceTree = "<group>"; };
 		92A04FF216323FC300026BF8 /* leftBubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftBubble@2x.png"; sourceTree = "<group>"; };
@@ -315,6 +514,9 @@
 		92A04FF416323FC300026BF8 /* rightBubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightBubble.png; sourceTree = "<group>"; };
 		92A04FF516323FC300026BF8 /* leftBubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftBubble.png; sourceTree = "<group>"; };
 		92A1DD43162CDAD10041F748 /* ISelectedPlayersInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISelectedPlayersInfo.h; sourceTree = "<group>"; };
+		92A254991635D23C009FBE1A /* CustomTKDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTKDragView.h; sourceTree = "<group>"; };
+		92A2549A1635D23C009FBE1A /* CustomTKDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTKDragView.m; sourceTree = "<group>"; };
+		92A2549C1635D277009FBE1A /* IShowPlayersNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IShowPlayersNames.h; sourceTree = "<group>"; };
 		92A362A11620922E0095A4F8 /* chivasBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasBadge.png; sourceTree = "<group>"; };
 		92A362A21620922E0095A4F8 /* chivasBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chivasBadge@2x.png"; sourceTree = "<group>"; };
 		92A362C8162117410095A4F8 /* chivasBadgeNum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chivasBadgeNum.png; sourceTree = "<group>"; };
@@ -388,8 +590,33 @@
 		92EC181F1625E488004811E9 /* CLRetractableSectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLRetractableSectionItem.m; sourceTree = "<group>"; };
 		92EC18391625EFA5004811E9 /* CascadeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CascadeController.h; sourceTree = "<group>"; };
 		92EC183A1625EFA5004811E9 /* CascadeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CascadeController.m; sourceTree = "<group>"; };
-		92F7F7E01631B730003521F7 /* field.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = field.jpg; sourceTree = "<group>"; };
-		92F7F7E11631B730003521F7 /* field@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "field@2x.jpg"; sourceTree = "<group>"; };
+		92EE3C6516A9A5CD00A767D9 /* Internacional.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Internacional.csv; sourceTree = "<group>"; };
+		92EE3C6716A9A5DD00A767D9 /* América.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "América.csv"; sourceTree = "<group>"; };
+		92EE3C6816A9A5DD00A767D9 /* Atlante.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Atlante.csv; sourceTree = "<group>"; };
+		92EE3C6916A9A5DD00A767D9 /* Atlas.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Atlas.csv; sourceTree = "<group>"; };
+		92EE3C6A16A9A5DD00A767D9 /* Cruz Azul.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Cruz Azul.csv"; sourceTree = "<group>"; };
+		92EE3C6B16A9A5DD00A767D9 /* Guadalajara.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Guadalajara.csv; sourceTree = "<group>"; };
+		92EE3C6C16A9A5DD00A767D9 /* Jaguares.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jaguares.csv; sourceTree = "<group>"; };
+		92EE3C6D16A9A5DD00A767D9 /* León.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "León.csv"; sourceTree = "<group>"; };
+		92EE3C6E16A9A5DD00A767D9 /* Monterrey.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Monterrey.csv; sourceTree = "<group>"; };
+		92EE3C6F16A9A5DD00A767D9 /* Morelia.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Morelia.csv; sourceTree = "<group>"; };
+		92EE3C7016A9A5DD00A767D9 /* Pachuca.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pachuca.csv; sourceTree = "<group>"; };
+		92EE3C7116A9A5DD00A767D9 /* Puebla.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Puebla.csv; sourceTree = "<group>"; };
+		92EE3C7216A9A5DD00A767D9 /* Pumas.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pumas.csv; sourceTree = "<group>"; };
+		92EE3C7316A9A5DD00A767D9 /* Querétaro.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Querétaro.csv"; sourceTree = "<group>"; };
+		92EE3C7416A9A5DD00A767D9 /* San Luis.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "San Luis.csv"; sourceTree = "<group>"; };
+		92EE3C7516A9A5DD00A767D9 /* Santos.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Santos.csv; sourceTree = "<group>"; };
+		92EE3C7616A9A5DD00A767D9 /* Tigres.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tigres.csv; sourceTree = "<group>"; };
+		92EE3C7716A9A5DD00A767D9 /* Tijuana.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tijuana.csv; sourceTree = "<group>"; };
+		92EE3C7816A9A5DD00A767D9 /* Toluca.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Toluca.csv; sourceTree = "<group>"; };
+		92F085EE163A11B200B8E0BD /* tutorialBueno.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorialBueno.png; sourceTree = "<group>"; };
+		92F085EF163A11B200B8E0BD /* tutorialBueno@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorialBueno@2x.png"; sourceTree = "<group>"; };
+		92F085F2163A130800B8E0BD /* field@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "field@2x.jpg"; sourceTree = "<group>"; };
+		92F085F3163A130800B8E0BD /* field.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = field.jpg; sourceTree = "<group>"; };
+		92F085F6163A164E00B8E0BD /* extranjeroBadge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "extranjeroBadge@2x.png"; sourceTree = "<group>"; };
+		92F085F7163A164E00B8E0BD /* extranjeroTeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "extranjeroTeam@2x.png"; sourceTree = "<group>"; };
+		92F085F8163A164E00B8E0BD /* extranjeroTeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = extranjeroTeam.png; sourceTree = "<group>"; };
+		92F085F9163A164E00B8E0BD /* extranjeroBadge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = extranjeroBadge.png; sourceTree = "<group>"; };
 		92F7F7E21631B730003521F7 /* oneteamButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oneteamButton.png; sourceTree = "<group>"; };
 		92F7F7E31631B730003521F7 /* oneteamButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "oneteamButton@2x.png"; sourceTree = "<group>"; };
 		92F7F7E81631C9A5003521F7 /* IChosenPlayersInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IChosenPlayersInfo.h; sourceTree = "<group>"; };
@@ -421,16 +648,6 @@
 		924B6D40162E78C900B12605 /* vibebrand icons */ = {
 			isa = PBXGroup;
 			children = (
-				924B6D41162E78C900B12605 /* Icon-72.png */,
-				924B6D42162E78C900B12605 /* Icon-72@2x.png */,
-				924B6D43162E78C900B12605 /* Icon-Small-50.png */,
-				924B6D44162E78C900B12605 /* Icon-Small-50@2x.png */,
-				924B6D45162E78C900B12605 /* Icon-Small.png */,
-				924B6D46162E78C900B12605 /* Icon-Small@2x.png */,
-				924B6D47162E78C900B12605 /* Icon.png */,
-				924B6D48162E78C900B12605 /* Icon@2x.png */,
-				924B6D49162E78C900B12605 /* iTunesArtwork.png */,
-				924B6D4A162E78C900B12605 /* iTunesArtwork@2x.png */,
 				924B6D4B162E78C900B12605 /* splashscreen.png */,
 				924B6D4C162E78C900B12605 /* splashscreen2@x.png */,
 				924B6D4D162E78C900B12605 /* splashVerticalipad.png */,
@@ -454,6 +671,8 @@
 				92977E681630933C009641F1 /* ISelectedInfo.h */,
 				92977E6D1630C138009641F1 /* IDataSource.h */,
 				92F7F7E81631C9A5003521F7 /* IChosenPlayersInfo.h */,
+				92A2549C1635D277009FBE1A /* IShowPlayersNames.h */,
+				9274F9BC1638CE2500EB5AF1 /* IHideTutorial.h */,
 			);
 			name = protocolos;
 			sourceTree = "<group>";
@@ -467,6 +686,32 @@
 				9261F1C616269B7A00467C6F /* CRTableViewCell.m */,
 			);
 			name = CRMultiRowSelect;
+			sourceTree = "<group>";
+		};
+		927EF94916366B930042064A /* CSV */ = {
+			isa = PBXGroup;
+			children = (
+				92EE3C6716A9A5DD00A767D9 /* América.csv */,
+				92EE3C6816A9A5DD00A767D9 /* Atlante.csv */,
+				92EE3C6916A9A5DD00A767D9 /* Atlas.csv */,
+				92EE3C6A16A9A5DD00A767D9 /* Cruz Azul.csv */,
+				92EE3C6B16A9A5DD00A767D9 /* Guadalajara.csv */,
+				92EE3C6C16A9A5DD00A767D9 /* Jaguares.csv */,
+				92EE3C6D16A9A5DD00A767D9 /* León.csv */,
+				92EE3C6E16A9A5DD00A767D9 /* Monterrey.csv */,
+				92EE3C6F16A9A5DD00A767D9 /* Morelia.csv */,
+				92EE3C7016A9A5DD00A767D9 /* Pachuca.csv */,
+				92EE3C7116A9A5DD00A767D9 /* Puebla.csv */,
+				92EE3C7216A9A5DD00A767D9 /* Pumas.csv */,
+				92EE3C7316A9A5DD00A767D9 /* Querétaro.csv */,
+				92EE3C7416A9A5DD00A767D9 /* San Luis.csv */,
+				92EE3C7516A9A5DD00A767D9 /* Santos.csv */,
+				92EE3C7616A9A5DD00A767D9 /* Tigres.csv */,
+				92EE3C7716A9A5DD00A767D9 /* Tijuana.csv */,
+				92EE3C7816A9A5DD00A767D9 /* Toluca.csv */,
+				92EE3C6516A9A5CD00A767D9 /* Internacional.csv */,
+			);
+			name = CSV;
 			sourceTree = "<group>";
 		};
 		927F51B516265019002DA762 /* DataSources */ = {
@@ -547,6 +792,8 @@
 		9299D65A162F8320004BCD9F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				92F085EE163A11B200B8E0BD /* tutorialBueno.png */,
+				92F085EF163A11B200B8E0BD /* tutorialBueno@2x.png */,
 				9299D65B162F832D004BCD9F /* Cancha */,
 				9299D672162F832D004BCD9F /* Portada */,
 				9299D677162F832D004BCD9F /* Team */,
@@ -557,6 +804,8 @@
 		9299D65B162F832D004BCD9F /* Cancha */ = {
 			isa = PBXGroup;
 			children = (
+				92F085F2163A130800B8E0BD /* field@2x.jpg */,
+				92F085F3163A130800B8E0BD /* field.jpg */,
 				92977E7E1630D3A1009641F1 /* facebookButton.png */,
 				92977E7F1630D3A1009641F1 /* facebookButton@2x.png */,
 				92977E801630D3A1009641F1 /* twitterButton.png */,
@@ -580,8 +829,6 @@
 				92977E7A1630CAB1009641F1 /* okbutton.png */,
 				92977E7B1630CAB1009641F1 /* okbutton@2x.png */,
 				9299D66A162F832D004BCD9F /* penbutton.png */,
-				92F7F7E01631B730003521F7 /* field.jpg */,
-				92F7F7E11631B730003521F7 /* field@2x.jpg */,
 				92F7F7E21631B730003521F7 /* oneteamButton.png */,
 				92F7F7E31631B730003521F7 /* oneteamButton@2x.png */,
 				9299D66B162F832D004BCD9F /* penbutton@2x.png */,
@@ -598,8 +845,8 @@
 		9299D672162F832D004BCD9F /* Portada */ = {
 			isa = PBXGroup;
 			children = (
-				9299D673162F832D004BCD9F /* background.jpg */,
-				9299D674162F832D004BCD9F /* background@2x.jpg */,
+				923EF87C1644737200894764 /* background.jpg */,
+				923EF87D1644737200894764 /* background@2x.jpg */,
 				9299D675162F832D004BCD9F /* teambutton.png */,
 				9299D676162F832D004BCD9F /* teambutton@2x.png */,
 			);
@@ -609,21 +856,132 @@
 		9299D677162F832D004BCD9F /* Team */ = {
 			isa = PBXGroup;
 			children = (
-				9299D678162F832D004BCD9F /* redteam.png */,
-				9299D679162F832D004BCD9F /* redteam@2x.png */,
-				9299D67A162F832D004BCD9F /* redteamdot.png */,
-				9299D67B162F832D004BCD9F /* redteamdot@2x.png */,
-				9299D67C162F832D004BCD9F /* yelloweteamdot@2x.png */,
-				9299D67D162F832D004BCD9F /* yellowteam.png */,
-				9299D67E162F832D004BCD9F /* yellowteam@2x.png */,
-				9299D67F162F832D004BCD9F /* yellowteamdot.png */,
+				92846D69164072C0009DA833 /* MonterreyBadge.png */,
+				92846D6A164072C0009DA833 /* MonterreyBadge@2x.png */,
+				92846D6B164072C0009DA833 /* MonterreyTeam.png */,
+				92846D6C164072C0009DA833 /* MonterreyTeam@2x.png */,
+				92846D6D164072C0009DA833 /* PachucaBadge.png */,
+				92846D6E164072C0009DA833 /* PachucaBadge@2x.png */,
+				92846D6F164072C0009DA833 /* PachucaTeam.png */,
+				92846D70164072C0009DA833 /* PachucaTeam@2x.png */,
+				92846D71164072C0009DA833 /* San LuisBadge.png */,
+				92846D72164072C0009DA833 /* San LuisBadge@2x.png */,
+				92846D73164072C0009DA833 /* San LuisTeam.png */,
+				92846D74164072C0009DA833 /* San LuisTeam@2x.png */,
+				92846D75164072C0009DA833 /* TigresBadge.png */,
+				92846D76164072C0009DA833 /* TigresBadge@2x.png */,
+				92846D77164072C0009DA833 /* TigresTeam.png */,
+				92846D78164072C0009DA833 /* TigresTeam@2x.png */,
+				927EF94A163686240042064A /* AméricaBadge.png */,
+				927EF94B163686250042064A /* AméricaBadge@2x.png */,
+				9299D67D162F832D004BCD9F /* AméricaTeam.png */,
+				927EF94C163686250042064A /* AméricaTeam@2x.png */,
+				9208DFFF1639FE6800E05A61 /* AtlanteBadge.png */,
+				9208DFF11639FE6800E05A61 /* AtlanteBadge@2x.png */,
+				9208E0451639FE7700E05A61 /* AtlanteTeam.png */,
+				9208E0371639FE7700E05A61 /* AtlanteTeam@2x.png */,
+				9208E0031639FE6800E05A61 /* AtlasBadge.png */,
+				9208DFF51639FE6800E05A61 /* AtlasBadge@2x.png */,
+				9208E0471639FE7700E05A61 /* AtlasTeam.png */,
+				9208E0391639FE7700E05A61 /* AtlasTeam@2x.png */,
+				9208DFFD1639FE6800E05A61 /* Cruz AzulBadge.png */,
+				9208DFF21639FE6800E05A61 /* Cruz AzulBadge@2x.png */,
+				9208E0441639FE7700E05A61 /* Cruz AzulTeam.png */,
+				9208E0381639FE7700E05A61 /* Cruz AzulTeam@2x.png */,
+				92F085F9163A164E00B8E0BD /* extranjeroBadge.png */,
+				92F085F6163A164E00B8E0BD /* extranjeroBadge@2x.png */,
+				92F085F8163A164E00B8E0BD /* extranjeroTeam.png */,
+				92F085F7163A164E00B8E0BD /* extranjeroTeam@2x.png */,
+				9299D67A162F832D004BCD9F /* GuadalajaraBadge.png */,
+				9299D67B162F832D004BCD9F /* GuadalajaraBadge@2x.png */,
+				9299D678162F832D004BCD9F /* GuadalajaraTeam.png */,
+				9299D679162F832D004BCD9F /* GuadalajaraTeam@2x.png */,
+				9208DFFE1639FE6800E05A61 /* JaguaresBadge.png */,
+				9208DFF01639FE6800E05A61 /* JaguaresBadge@2x.png */,
+				9208E0401639FE7700E05A61 /* JaguaresTeam.png */,
+				9208E0351639FE7700E05A61 /* JaguaresTeam@2x.png */,
+				9208DFFB1639FE6800E05A61 /* LeónBadge.png */,
+				9208DFED1639FE6800E05A61 /* LeónBadge@2x.png */,
+				9208E03E1639FE7700E05A61 /* LeónTeam.png */,
+				9208E075163A03B700E05A61 /* LeónTeam@2x.png */,
+				9208E0081639FE6800E05A61 /* MéxicoBadge.png */,
+				9208E077163A047800E05A61 /* MéxicoBadge@2x.png */,
+				9208E04C1639FE7700E05A61 /* MéxicoTeam.png */,
+				9208E0491639FE7700E05A61 /* MéxicoTeam@2x.png */,
+				9208DFF91639FE6800E05A61 /* MoreliaBadge.png */,
+				9208DFEE1639FE6800E05A61 /* MoreliaBadge@2x.png */,
+				9208E0461639FE7700E05A61 /* MoreliaTeam.png */,
+				9208E0361639FE7700E05A61 /* MoreliaTeam@2x.png */,
+				9208DFF61639FE6800E05A61 /* PueblaBadge.png */,
+				9208DFE91639FE6800E05A61 /* PueblaBadge@2x.png */,
+				9208E03A1639FE7700E05A61 /* PueblaTeam.png */,
+				9208E02E1639FE7700E05A61 /* PueblaTeam@2x.png */,
+				9208E0001639FE6800E05A61 /* PumasBadge.png */,
+				9208DFEF1639FE6800E05A61 /* PumasBadge@2x.png */,
+				9208E03C1639FE7700E05A61 /* PumasTeam.png */,
+				9208E02D1639FE7700E05A61 /* PumasTeam@2x.png */,
+				9208E0021639FE6800E05A61 /* QuerétaroBadge.png */,
+				9208DFF41639FE6800E05A61 /* QuerétaroBadge@2x.png */,
+				9208E0431639FE7700E05A61 /* QuerétaroTeam.png */,
+				9208E0341639FE7700E05A61 /* QuerétaroTeam@2x.png */,
+				9208E0091639FE6800E05A61 /* SantosBadge.png */,
+				9208E0061639FE6800E05A61 /* SantosBadge@2x.png */,
+				9208E04D1639FE7700E05A61 /* SantosTeam.png */,
+				9208E04A1639FE7700E05A61 /* SantosTeam@2x.png */,
+				9208E0011639FE6800E05A61 /* TijuanaBadge.png */,
+				9208DFF31639FE6800E05A61 /* TijuanaBadge@2x.png */,
+				9208E0421639FE7700E05A61 /* TijuanaTeam.png */,
+				9208E0331639FE7700E05A61 /* TijuanaTeam@2x.png */,
+				9208E0071639FE6800E05A61 /* TolucaBadge.png */,
+				9208E0041639FE6800E05A61 /* TolucaBadge@2x.png */,
+				9208E04B1639FE7700E05A61 /* TolucaTeam.png */,
+				9208E0481639FE7700E05A61 /* TolucaTeam@2x.png */,
 			);
 			path = Team;
+			sourceTree = "<group>";
+		};
+		929FC310163B21F6000EC283 /* Futapp Icons */ = {
+			isa = PBXGroup;
+			children = (
+				929FC311163B21F6000EC283 /* Icon-72.png */,
+				929FC312163B21F6000EC283 /* Icon-72@2x.png */,
+				929FC313163B21F6000EC283 /* Icon-Small-50.png */,
+				929FC314163B21F6000EC283 /* Icon-Small-50@2x.png */,
+				929FC315163B21F6000EC283 /* Icon-Small.png */,
+				929FC316163B21F6000EC283 /* Icon-Small@2x.png */,
+				929FC317163B21F6000EC283 /* Icon.png */,
+				929FC318163B21F6000EC283 /* Icon@2x.png */,
+				929FC319163B21F6000EC283 /* iTunesArtwork.png */,
+				929FC31A163B21F6000EC283 /* iTunesArtwork@2x.png */,
+			);
+			path = "Futapp Icons";
 			sourceTree = "<group>";
 		};
 		92A362AA1620923C0095A4F8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				929FC310163B21F6000EC283 /* Futapp Icons */,
+				9208DFDB1639C7EC00E05A61 /* contador@2x.png */,
+				9208DFDC1639C7EE00E05A61 /* contador.png */,
+				9274F9A41638ABE800EB5AF1 /* grass.jpg */,
+				9274F9A51638ABE800EB5AF1 /* grass@2x.jpg */,
+				9274F9A61638ABE800EB5AF1 /* ok1.png */,
+				9274F9A71638ABE800EB5AF1 /* ok1@2x.png */,
+				9274F9A81638ABE800EB5AF1 /* popup1.png */,
+				9274F9A91638ABE800EB5AF1 /* popup1@2x.png */,
+				9274F9AA1638ABE800EB5AF1 /* tuit.png */,
+				9274F9AB1638ABE800EB5AF1 /* tuit@2x.png */,
+				927EF95B1636A4F40042064A /* popup@2x.png */,
+				927EF95C1636A4F40042064A /* popup.png */,
+				927EF95D1636A4F50042064A /* seleccion@2x.png */,
+				927EF95E1636A4F60042064A /* tutorial@2x.png */,
+				927EF95F1636A4F60042064A /* seleccion.png */,
+				927EF9601636A4F70042064A /* ok@2x.png */,
+				927EF9611636A4F70042064A /* tutorial.png */,
+				927EF9621636A4F80042064A /* ok.png */,
+				927EF95516369C780042064A /* DefaultTeam@2x.png */,
+				927EF95616369C780042064A /* DefaultTeam.png */,
+				927EF94916366B930042064A /* CSV */,
 				9299D65A162F8320004BCD9F /* Images */,
 				924B6D40162E78C900B12605 /* vibebrand icons */,
 				924B6D07162E6E9C00B12605 /* Default-Landscape@2x~ipad.png */,
@@ -640,12 +998,7 @@
 				92A04FF316323FC300026BF8 /* middlebubble.png */,
 				92A04FF416323FC300026BF8 /* rightBubble.png */,
 				92A04FF516323FC300026BF8 /* leftBubble.png */,
-				927D0131162799E300BF2D2E /* UnknownProfile1.png */,
-				9261F1BD162697E800467C6F /* america.jpeg */,
-				927F51C0162681F3002DA762 /* guadalajara.jpeg */,
-				925B639D161E564F00954A55 /* chivasadidas.png */,
 				9261F1CB1626A34200467C6F /* ToolBar_479x45.png */,
-				924B6CDA162E5D2300B12605 /* tweet.png */,
 				9226CE0E161D2B2B00511116 /* gray.jpeg */,
 				923B18E116111ECD00856A9D /* tile_green.png */,
 				92A362C8162117410095A4F8 /* chivasBadgeNum.png */,
@@ -669,6 +1022,8 @@
 				92A362AE1620969E0095A4F8 /* Nibs */,
 				92F95F2716332722001F08EE /* CustomMGDrawingSlate.h */,
 				92F95F2816332722001F08EE /* CustomMGDrawingSlate.m */,
+				92A254991635D23C009FBE1A /* CustomTKDragView.h */,
+				92A2549A1635D23C009FBE1A /* CustomTKDragView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -728,8 +1083,12 @@
 				927D012E162789EA00BF2D2E /* ProfileViewController.m */,
 				92E7F00316281868003A460E /* SecondTeamViewController.h */,
 				92E7F00416281868003A460E /* SecondTeamViewController.m */,
+				9206D86E163729C400BD73D6 /* ThirdTeamViewController.h */,
+				9206D86F163729C400BD73D6 /* ThirdTeamViewController.m */,
 				929BF885162A4187007B2C8A /* TwoTeamsFieldViewController.h */,
 				929BF886162A4187007B2C8A /* TwoTeamsFieldViewController.m */,
+				9274F9B51638C46800EB5AF1 /* CustomCLSplitCascadeViewController.h */,
+				9274F9B61638C46800EB5AF1 /* CustomCLSplitCascadeViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -891,7 +1250,6 @@
 				923B18E216111ECD00856A9D /* tile_green.png in Resources */,
 				9226CE0C161D292100511116 /* tshirt-icon.png in Resources */,
 				9226CE0F161D2B2B00511116 /* gray.jpeg in Resources */,
-				925B639E161E565000954A55 /* chivasadidas.png in Resources */,
 				92A362A51620922E0095A4F8 /* chivasBadge.png in Resources */,
 				92A362A61620922E0095A4F8 /* chivasBadge@2x.png in Resources */,
 				92A362C9162117410095A4F8 /* chivasBadgeNum.png in Resources */,
@@ -914,27 +1272,13 @@
 				92EC18091625E46B004811E9 /* CLSplitCascadeViewController.xib in Resources */,
 				927F51AF16262C99002DA762 /* TeamsViewController.xib in Resources */,
 				927F51B116264864002DA762 /* Categories_header_view_289x89.png in Resources */,
-				927F51C1162681F3002DA762 /* guadalajara.jpeg in Resources */,
-				9261F1BE162697E800467C6F /* america.jpeg in Resources */,
 				9261F1CC1626A34200467C6F /* ToolBar_479x45.png in Resources */,
-				927D0132162799E300BF2D2E /* UnknownProfile1.png in Resources */,
-				924B6CDB162E5D2300B12605 /* tweet.png in Resources */,
 				924B6CFE162E6E4D00B12605 /* Icon-72.png in Resources */,
 				924B6D00162E6E5800B12605 /* Icon-72@2x.png in Resources */,
 				924B6D02162E6E8100B12605 /* Default-Portrait~ipad.png in Resources */,
 				924B6D04162E6E8800B12605 /* Default-Portrait@2x~ipad.png in Resources */,
 				924B6D06162E6E9700B12605 /* Default-Landscape~ipad.png in Resources */,
 				924B6D08162E6E9C00B12605 /* Default-Landscape@2x~ipad.png in Resources */,
-				924B6D51162E78C900B12605 /* Icon-72.png in Resources */,
-				924B6D52162E78C900B12605 /* Icon-72@2x.png in Resources */,
-				924B6D53162E78C900B12605 /* Icon-Small-50.png in Resources */,
-				924B6D54162E78C900B12605 /* Icon-Small-50@2x.png in Resources */,
-				924B6D55162E78C900B12605 /* Icon-Small.png in Resources */,
-				924B6D56162E78C900B12605 /* Icon-Small@2x.png in Resources */,
-				924B6D57162E78C900B12605 /* Icon.png in Resources */,
-				924B6D58162E78C900B12605 /* Icon@2x.png in Resources */,
-				924B6D59162E78C900B12605 /* iTunesArtwork.png in Resources */,
-				924B6D5A162E78C900B12605 /* iTunesArtwork@2x.png in Resources */,
 				924B6D5B162E78C900B12605 /* splashscreen.png in Resources */,
 				924B6D5C162E78C900B12605 /* splashscreen2@x.png in Resources */,
 				924B6D5D162E78C900B12605 /* splashVerticalipad.png in Resources */,
@@ -959,18 +1303,13 @@
 				9299D693162F832D004BCD9F /* whitebutton@2x.png in Resources */,
 				9299D694162F832D004BCD9F /* yellowbutton.png in Resources */,
 				9299D695162F832D004BCD9F /* yellowbutton@2x.png in Resources */,
-				9299D696162F832D004BCD9F /* background.jpg in Resources */,
-				9299D697162F832D004BCD9F /* background@2x.jpg in Resources */,
 				9299D698162F832D004BCD9F /* teambutton.png in Resources */,
 				9299D699162F832D004BCD9F /* teambutton@2x.png in Resources */,
-				9299D69A162F832D004BCD9F /* redteam.png in Resources */,
-				9299D69B162F832D004BCD9F /* redteam@2x.png in Resources */,
-				9299D69C162F832D004BCD9F /* redteamdot.png in Resources */,
-				9299D69D162F832D004BCD9F /* redteamdot@2x.png in Resources */,
-				9299D69E162F832D004BCD9F /* yelloweteamdot@2x.png in Resources */,
-				9299D69F162F832D004BCD9F /* yellowteam.png in Resources */,
-				9299D6A0162F832D004BCD9F /* yellowteam@2x.png in Resources */,
-				9299D6A1162F832D004BCD9F /* yellowteamdot.png in Resources */,
+				9299D69A162F832D004BCD9F /* GuadalajaraTeam.png in Resources */,
+				9299D69B162F832D004BCD9F /* GuadalajaraTeam@2x.png in Resources */,
+				9299D69C162F832D004BCD9F /* GuadalajaraBadge.png in Resources */,
+				9299D69D162F832D004BCD9F /* GuadalajaraBadge@2x.png in Resources */,
+				9299D69F162F832D004BCD9F /* AméricaTeam.png in Resources */,
 				92977E701630CA7B009641F1 /* twitterButtton.jpg in Resources */,
 				92977E711630CA7B009641F1 /* twitterButtton@2x.jpg in Resources */,
 				92977E741630CA85009641F1 /* facebookButton.jpg in Resources */,
@@ -983,8 +1322,6 @@
 				92977E831630D3A1009641F1 /* facebookButton@2x.png in Resources */,
 				92977E841630D3A1009641F1 /* twitterButton.png in Resources */,
 				92977E851630D3A1009641F1 /* twitterButton@2x.png in Resources */,
-				92F7F7E41631B730003521F7 /* field.jpg in Resources */,
-				92F7F7E51631B730003521F7 /* field@2x.jpg in Resources */,
 				92F7F7E61631B730003521F7 /* oneteamButton.png in Resources */,
 				92F7F7E71631B730003521F7 /* oneteamButton@2x.png in Resources */,
 				92A04FF616323FC300026BF8 /* middlebubble@2x.png in Resources */,
@@ -993,6 +1330,136 @@
 				92A04FF916323FC300026BF8 /* middlebubble.png in Resources */,
 				92A04FFA16323FC300026BF8 /* rightBubble.png in Resources */,
 				92A04FFB16323FC300026BF8 /* leftBubble.png in Resources */,
+				927EF94D163686250042064A /* AméricaBadge.png in Resources */,
+				927EF94E163686250042064A /* AméricaBadge@2x.png in Resources */,
+				927EF94F163686250042064A /* AméricaTeam@2x.png in Resources */,
+				927EF95716369C780042064A /* DefaultTeam@2x.png in Resources */,
+				927EF95816369C780042064A /* DefaultTeam.png in Resources */,
+				927EF9651636A4F80042064A /* popup@2x.png in Resources */,
+				927EF9661636A4F80042064A /* popup.png in Resources */,
+				927EF9671636A4F80042064A /* seleccion@2x.png in Resources */,
+				927EF9681636A4F80042064A /* tutorial@2x.png in Resources */,
+				927EF9691636A4F80042064A /* seleccion.png in Resources */,
+				927EF96A1636A4F80042064A /* ok@2x.png in Resources */,
+				927EF96B1636A4F80042064A /* tutorial.png in Resources */,
+				927EF96C1636A4F80042064A /* ok.png in Resources */,
+				9274F9AC1638ABE800EB5AF1 /* grass.jpg in Resources */,
+				9274F9AD1638ABE800EB5AF1 /* grass@2x.jpg in Resources */,
+				9274F9AE1638ABE800EB5AF1 /* ok1.png in Resources */,
+				9274F9AF1638ABE800EB5AF1 /* ok1@2x.png in Resources */,
+				9274F9B01638ABE800EB5AF1 /* popup1.png in Resources */,
+				9274F9B11638ABE800EB5AF1 /* popup1@2x.png in Resources */,
+				9274F9B21638ABE800EB5AF1 /* tuit.png in Resources */,
+				9274F9B31638ABE800EB5AF1 /* tuit@2x.png in Resources */,
+				9208DFDD1639C7EF00E05A61 /* contador@2x.png in Resources */,
+				9208DFDE1639C7EF00E05A61 /* contador.png in Resources */,
+				9208E00B1639FE6800E05A61 /* PueblaBadge@2x.png in Resources */,
+				9208E00F1639FE6800E05A61 /* LeónBadge@2x.png in Resources */,
+				9208E0101639FE6800E05A61 /* MoreliaBadge@2x.png in Resources */,
+				9208E0111639FE6800E05A61 /* PumasBadge@2x.png in Resources */,
+				9208E0121639FE6800E05A61 /* JaguaresBadge@2x.png in Resources */,
+				9208E0131639FE6800E05A61 /* AtlanteBadge@2x.png in Resources */,
+				9208E0141639FE6800E05A61 /* Cruz AzulBadge@2x.png in Resources */,
+				9208E0151639FE6800E05A61 /* TijuanaBadge@2x.png in Resources */,
+				9208E0161639FE6800E05A61 /* QuerétaroBadge@2x.png in Resources */,
+				9208E0171639FE6800E05A61 /* AtlasBadge@2x.png in Resources */,
+				9208E0181639FE6800E05A61 /* PueblaBadge.png in Resources */,
+				9208E01B1639FE6800E05A61 /* MoreliaBadge.png in Resources */,
+				9208E01D1639FE6800E05A61 /* LeónBadge.png in Resources */,
+				9208E01F1639FE6800E05A61 /* Cruz AzulBadge.png in Resources */,
+				9208E0201639FE6800E05A61 /* JaguaresBadge.png in Resources */,
+				9208E0211639FE6800E05A61 /* AtlanteBadge.png in Resources */,
+				9208E0221639FE6800E05A61 /* PumasBadge.png in Resources */,
+				9208E0231639FE6800E05A61 /* TijuanaBadge.png in Resources */,
+				9208E0241639FE6800E05A61 /* QuerétaroBadge.png in Resources */,
+				9208E0251639FE6800E05A61 /* AtlasBadge.png in Resources */,
+				9208E0261639FE6800E05A61 /* TolucaBadge@2x.png in Resources */,
+				9208E0281639FE6800E05A61 /* SantosBadge@2x.png in Resources */,
+				9208E0291639FE6800E05A61 /* TolucaBadge.png in Resources */,
+				9208E02A1639FE6800E05A61 /* MéxicoBadge.png in Resources */,
+				9208E02B1639FE6800E05A61 /* SantosBadge.png in Resources */,
+				9208E04F1639FE7700E05A61 /* PumasTeam@2x.png in Resources */,
+				9208E0501639FE7700E05A61 /* PueblaTeam@2x.png in Resources */,
+				9208E0551639FE7700E05A61 /* TijuanaTeam@2x.png in Resources */,
+				9208E0561639FE7700E05A61 /* QuerétaroTeam@2x.png in Resources */,
+				9208E0571639FE7700E05A61 /* JaguaresTeam@2x.png in Resources */,
+				9208E0581639FE7700E05A61 /* MoreliaTeam@2x.png in Resources */,
+				9208E0591639FE7700E05A61 /* AtlanteTeam@2x.png in Resources */,
+				9208E05A1639FE7700E05A61 /* Cruz AzulTeam@2x.png in Resources */,
+				9208E05B1639FE7700E05A61 /* AtlasTeam@2x.png in Resources */,
+				9208E05C1639FE7700E05A61 /* PueblaTeam.png in Resources */,
+				9208E05E1639FE7700E05A61 /* PumasTeam.png in Resources */,
+				9208E0601639FE7700E05A61 /* LeónTeam.png in Resources */,
+				9208E0621639FE7700E05A61 /* JaguaresTeam.png in Resources */,
+				9208E0641639FE7700E05A61 /* TijuanaTeam.png in Resources */,
+				9208E0651639FE7700E05A61 /* QuerétaroTeam.png in Resources */,
+				9208E0661639FE7700E05A61 /* Cruz AzulTeam.png in Resources */,
+				9208E0671639FE7700E05A61 /* AtlanteTeam.png in Resources */,
+				9208E0681639FE7700E05A61 /* MoreliaTeam.png in Resources */,
+				9208E0691639FE7700E05A61 /* AtlasTeam.png in Resources */,
+				9208E06A1639FE7700E05A61 /* TolucaTeam@2x.png in Resources */,
+				9208E06B1639FE7700E05A61 /* MéxicoTeam@2x.png in Resources */,
+				9208E06C1639FE7700E05A61 /* SantosTeam@2x.png in Resources */,
+				9208E06D1639FE7700E05A61 /* TolucaTeam.png in Resources */,
+				9208E06E1639FE7700E05A61 /* MéxicoTeam.png in Resources */,
+				9208E06F1639FE7700E05A61 /* SantosTeam.png in Resources */,
+				9208E076163A03B700E05A61 /* LeónTeam@2x.png in Resources */,
+				9208E078163A047E00E05A61 /* MéxicoBadge@2x.png in Resources */,
+				92F085F0163A11B200B8E0BD /* tutorialBueno.png in Resources */,
+				92F085F1163A11B200B8E0BD /* tutorialBueno@2x.png in Resources */,
+				92F085F4163A130800B8E0BD /* field@2x.jpg in Resources */,
+				92F085F5163A130800B8E0BD /* field.jpg in Resources */,
+				92F085FA163A164E00B8E0BD /* extranjeroBadge@2x.png in Resources */,
+				92F085FB163A164E00B8E0BD /* extranjeroTeam@2x.png in Resources */,
+				92F085FC163A164E00B8E0BD /* extranjeroTeam.png in Resources */,
+				92F085FD163A164E00B8E0BD /* extranjeroBadge.png in Resources */,
+				929FC31B163B21F6000EC283 /* Icon-72.png in Resources */,
+				929FC31C163B21F6000EC283 /* Icon-72@2x.png in Resources */,
+				929FC31D163B21F6000EC283 /* Icon-Small-50.png in Resources */,
+				929FC31E163B21F6000EC283 /* Icon-Small-50@2x.png in Resources */,
+				929FC31F163B21F6000EC283 /* Icon-Small.png in Resources */,
+				929FC320163B21F6000EC283 /* Icon-Small@2x.png in Resources */,
+				929FC321163B21F6000EC283 /* Icon.png in Resources */,
+				929FC322163B21F6000EC283 /* Icon@2x.png in Resources */,
+				929FC323163B21F6000EC283 /* iTunesArtwork.png in Resources */,
+				929FC324163B21F6000EC283 /* iTunesArtwork@2x.png in Resources */,
+				92846D79164072C0009DA833 /* MonterreyBadge.png in Resources */,
+				92846D7A164072C0009DA833 /* MonterreyBadge@2x.png in Resources */,
+				92846D7B164072C0009DA833 /* MonterreyTeam.png in Resources */,
+				92846D7C164072C0009DA833 /* MonterreyTeam@2x.png in Resources */,
+				92846D7D164072C0009DA833 /* PachucaBadge.png in Resources */,
+				92846D7E164072C0009DA833 /* PachucaBadge@2x.png in Resources */,
+				92846D7F164072C0009DA833 /* PachucaTeam.png in Resources */,
+				92846D80164072C0009DA833 /* PachucaTeam@2x.png in Resources */,
+				92846D81164072C0009DA833 /* San LuisBadge.png in Resources */,
+				92846D82164072C0009DA833 /* San LuisBadge@2x.png in Resources */,
+				92846D83164072C0009DA833 /* San LuisTeam.png in Resources */,
+				92846D84164072C0009DA833 /* San LuisTeam@2x.png in Resources */,
+				92846D85164072C0009DA833 /* TigresBadge.png in Resources */,
+				92846D86164072C0009DA833 /* TigresBadge@2x.png in Resources */,
+				92846D87164072C0009DA833 /* TigresTeam.png in Resources */,
+				92846D88164072C0009DA833 /* TigresTeam@2x.png in Resources */,
+				923EF87E1644737200894764 /* background.jpg in Resources */,
+				923EF87F1644737200894764 /* background@2x.jpg in Resources */,
+				92EE3C6616A9A5CD00A767D9 /* Internacional.csv in Resources */,
+				92EE3C7916A9A5DD00A767D9 /* América.csv in Resources */,
+				92EE3C7A16A9A5DD00A767D9 /* Atlante.csv in Resources */,
+				92EE3C7B16A9A5DD00A767D9 /* Atlas.csv in Resources */,
+				92EE3C7C16A9A5DD00A767D9 /* Cruz Azul.csv in Resources */,
+				92EE3C7D16A9A5DD00A767D9 /* Guadalajara.csv in Resources */,
+				92EE3C7E16A9A5DD00A767D9 /* Jaguares.csv in Resources */,
+				92EE3C7F16A9A5DD00A767D9 /* León.csv in Resources */,
+				92EE3C8016A9A5DD00A767D9 /* Monterrey.csv in Resources */,
+				92EE3C8116A9A5DD00A767D9 /* Morelia.csv in Resources */,
+				92EE3C8216A9A5DD00A767D9 /* Pachuca.csv in Resources */,
+				92EE3C8316A9A5DD00A767D9 /* Puebla.csv in Resources */,
+				92EE3C8416A9A5DD00A767D9 /* Pumas.csv in Resources */,
+				92EE3C8516A9A5DD00A767D9 /* Querétaro.csv in Resources */,
+				92EE3C8616A9A5DD00A767D9 /* San Luis.csv in Resources */,
+				92EE3C8716A9A5DD00A767D9 /* Santos.csv in Resources */,
+				92EE3C8816A9A5DD00A767D9 /* Tigres.csv in Resources */,
+				92EE3C8916A9A5DD00A767D9 /* Tijuana.csv in Resources */,
+				92EE3C8A16A9A5DD00A767D9 /* Toluca.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1048,6 +1515,9 @@
 				92977E881630DDC7009641F1 /* DataSourceService.m in Sources */,
 				92F7F7EB1631C9C3003521F7 /* ChosenPlayersService.m in Sources */,
 				92F95F2916332722001F08EE /* CustomMGDrawingSlate.m in Sources */,
+				92A2549B1635D23C009FBE1A /* CustomTKDragView.m in Sources */,
+				9206D870163729C500BD73D6 /* ThirdTeamViewController.m in Sources */,
+				9274F9B71638C46800EB5AF1 /* CustomCLSplitCascadeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1132,6 +1602,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pruebaFutbol/FutApp-Prefix.pch";
@@ -1142,6 +1613,7 @@
 				);
 				PRODUCT_NAME = FutApp;
 				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

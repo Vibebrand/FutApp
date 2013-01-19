@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        [self initializeData];
+        [self initData];
     }
     return self;
 }
@@ -38,6 +38,15 @@
     return nil;
 }
 
+- (NSArray *)playersForSpecialTeam:(NSString *)team {
+    for (NSDictionary *dict in specialTeams) {
+        if ([dict objectForKey:@"name"] == team) {
+            return [dict objectForKey:@"players"];
+        }
+    }
+    return nil;
+}
+
 - (NSDictionary *)dataOfTeam: (NSString *)team {
     for (NSDictionary *dict in teams) {
         if ([dict objectForKey:@"name"] == team) {
@@ -47,41 +56,102 @@
     
     return nil;
 }
+
+- (void)initData {
+    NSArray *files = [[NSBundle mainBundle] pathsForResourcesOfType:@".csv" inDirectory:@"."];
+    teams = [[NSMutableArray alloc] initWithCapacity:files.count];
+    locals = [[NSMutableDictionary alloc] init];
+    [locals setValue:[[[NSMutableArray alloc] init] autorelease] forKey:@"players"];
+    [locals setValue:@"Jugadores mexicanos" forKey:@"name"];
+    [locals setValue:@"MéxicoTeam.png" forKey:@"teamImage"];
+    [locals setValue:@"MéxicoBadge.png" forKey:@"teamBadge"];
     
-- (void)initializeData {
-    NSArray *gdlPlayersNames = [NSArray arrayWithObjects:@"Luis Ernesto Michel", @"Héctor Reynoso", @"Omar Esparza",@"Juan Antonio Ocampo",  @"Miguel Ángel Ponce",  @"José Antonio Rodríguez",  @"Librorio Vicente Sánches", @"Mario de Luna", @"Christian Alejandro Pérez",@"Kristian Álavarez", @"Jorge Enríquez", @"Abraham Coronado",@"Xavier Báez", @"Patricio Araujo", @"Luis Ernesto Pérez",@"Antonio Gallardo",@"Marco Fabián de la Mora",@"Erick Estefano Torres",@"Giovanni Casillas", nil];
-    NSArray *gdlPlayerNumbers = [NSArray arrayWithObjects:@"1",@"4", @"6", @"24", @"16", @"26", @"30", @"2",@"27", @"3", @"14", @"13", @"18", @"5", @"8", @"25", @"10", @"19", @"20", nil];
+    foreigns = [[NSMutableDictionary alloc] init];
+    [foreigns setValue:[[[NSMutableArray alloc] init] autorelease] forKey:@"players"];
+    [foreigns setValue:@"En el extranjero" forKey:@"name"];
+    [foreigns setValue:@"DefaultTeam.png" forKey:@"teamImage"];
+    [foreigns setValue:@"Default.png" forKey:@"teamBadge"];
     
-    NSMutableArray *gdlPlayers = [[NSMutableArray alloc] init];
+    eleven = [[NSMutableDictionary alloc] init];
+    [eleven setValue:[[[NSMutableArray alloc]init]autorelease] forKey:@"players"];
+    [eleven setValue:@"11 ideal" forKey:@"name"];
+    [eleven setValue:@"MéxicoTeam.png" forKey:@"teamImage"];
+    [eleven setValue:@"MéxicoBadge.png" forKey:@"teamBadge"];
     
-    for (int i = 0; i < gdlPlayerNumbers.count; i++) {
-        NSDictionary *player = [NSDictionary dictionaryWithObjectsAndKeys: [gdlPlayersNames objectAtIndex:i], @"name", [gdlPlayerNumbers objectAtIndex:i], @"number", nil];
-        [gdlPlayers addObject:player];
+    NSString *file;
+    for (file in files) {
+        NSArray *components = [file componentsSeparatedByString:@"/"];
+        NSString *nameOfTeam = [[[components objectAtIndex:components.count - 1] componentsSeparatedByString:@"."] objectAtIndex:0];
+        if (![nameOfTeam isEqualToString:@"Internacional"]) {
+            [self addTeamFromFile:file];
+        } else {
+            NSString *text = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
+            NSArray *lines = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+            NSMutableArray *players = [[NSMutableArray alloc] initWithCapacity:lines.count];
+            for (NSString *txt in lines) {
+                if ([txt length]) {
+                    NSArray *attr = [txt componentsSeparatedByString:@","];
+                    NSDictionary *player = [[NSDictionary alloc] initWithObjectsAndKeys:[attr objectAtIndex:0],@"name", [attr objectAtIndex:1], @"short name", [attr objectAtIndex:2], @"number",@"extranjeroTeam",@"imgName", nil];
+                    [[locals objectForKey:@"players"] insertObject:player atIndex:0];
+                    [players addObject:player];
+                    [player release];
+                }
+            }
+            [foreigns setValue:players forKey:@"players"];
+            [players release];
+        }
+    
     }
-    
+    [teams insertObject:eleven atIndex:0];
+    NSLog(@"%@", locals);
+    specialTeams = [[NSArray alloc] initWithObjects:locals, nil];
+}
+
+- (NSDictionary *)locals {
+    return locals;
+}
+
+- (NSDictionary *)foreigns {
+    return foreigns;
+}
+
+- (NSArray *)specialTeams {
+    return specialTeams;
+}
+
+- (void)addTeamFromFile: (NSString *)file {
+    NSArray *components = [file componentsSeparatedByString:@"/"];
+    NSString *nameOfTeam = [[[components objectAtIndex:components.count - 1] componentsSeparatedByString:@"."] objectAtIndex:0];
+    NSString *imgName = [NSString stringWithFormat:@"%@Team.png", nameOfTeam];
+    NSString *imgBadge = [NSString stringWithFormat:@"%@Badge.png", nameOfTeam];
+    NSString *text = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
+    NSArray *lines = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    NSMutableArray *players = [[NSMutableArray alloc] initWithCapacity:lines.count];
+        for (NSString *txt in lines) {
+            if ([txt length]) {
+                NSArray *attr = [txt componentsSeparatedByString:@","];
+                NSDictionary *player = [[NSDictionary alloc] initWithObjectsAndKeys:[attr objectAtIndex:0], @"name", [attr objectAtIndex:1], @"number", [attr objectAtIndex:2], @"position", [attr objectAtIndex:3], @"foreign", [attr objectAtIndex:4], @"short name",imgName, @"imgName", nil];
+                
+                [players addObject:player];
+                [[eleven objectForKey:@"players"] addObject:player];
+                
+                if ([[player objectForKey:@"foreign"] integerValue] != 1) {
+                    [[locals objectForKey:@"players"] addObject:player];
+                }
+                
+                [player release];
+            }
+        }
         
-    NSDictionary *gdlTeam = [NSDictionary dictionaryWithObjectsAndKeys:@"Guadalajara", @"name", @"redteam.png", @"teamImage", @"redteamdot.png", @"teamBadge", gdlPlayers, @"players", nil];
-    [gdlPlayers release];
-    
-    
-    NSArray *amePlayerNames = [NSArray arrayWithObjects:@"Moisés Muñóz", @"Andrés Ademar Rodríguez", @"Erik Pimentel", @"Jorge Reyes", @"Migul Layún", @"Hugo Gonzálex", @"Carlos Aurelio López", @"Adrián Aldrete", @"Paul Nicolás Aguilar", @"Efraín Juárez", @"Aquivaldo Mosquera", @"Diego Reyes", @"Daniel Acosta", @"Rosinei Adolfo", @"Rubens Sambueza", @"Jesús Molina", @"Antonio López", @"Christian Benítez", @"Martín Zúñiga", nil];
-    
-    NSArray *amePlayerNumbers = [NSArray arrayWithObjects:@"23", @"29", @"2", @"20", @"19", @"1", @"12", @"16", @"22", @"4", @"3", @"13", @"27", @"8", @"14", @"5", @"17", @"11", @"28", nil];
-    
-    NSMutableArray *amePlayers = [[NSMutableArray alloc] init];
-    
-    for (int i = 0; i < amePlayerNumbers.count; i++) {
-        NSDictionary *player = [NSDictionary dictionaryWithObjectsAndKeys:[amePlayerNames objectAtIndex:i], @"name", [amePlayerNumbers objectAtIndex:i], @"number", nil];
-        [amePlayers addObject:player];
-    }
-    
-    NSDictionary *ameTeam = [NSDictionary dictionaryWithObjectsAndKeys:@"América", @"name", @"yellowteam.png", @"teamImage", @"yellowteamdot.png", @"teamBadge", amePlayers, @"players", nil];
-
-    [amePlayers release];
-
-    teams = [[NSArray alloc] initWithObjects:gdlTeam, ameTeam, nil];
-
-
+        NSDictionary *team = [[NSDictionary alloc] initWithObjectsAndKeys:nameOfTeam, @"name", imgName, @"teamImage", imgBadge, @"teamBadge", players, @"players", nil];
+        [players release];
+        
+        if ([[team objectForKey:@"players"] count]) {
+            [teams addObject:team];
+        }
+        
+        
+        [team release];
 }
 
 @end
